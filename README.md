@@ -99,3 +99,18 @@ https://medium.com/@orweinberger/how-to-create-a-raw-transaction-using-bitcoinjs
 https://blockchain.info/
 
 到上面網站的輸入框輸入你的比特幣地址即可看到
+
+
+加密方法:
+
+```
+Mnemonic code for generating deterministic keys (BIP 39), credits to Thasshiznets
+
+Hierarchical Deterministic Wallets (BIP 32)
+
+Payment Protocol (BIP 70)
+
+Payment URLs (BIP 21,BIP 72)
+
+Two-Factor keys (BIP 38)
+```
