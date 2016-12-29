@@ -1,32 +1,33 @@
-# 
-
-
+#使用BitcoinJS
 
 ```
-describe('bitcoinjs-lib (basic)', function () {
-  it('can generate a random bitcoin address', function () {
-    // for testing only
+npm install bitcoinjs-lib
+```
+
+
+產生隨機地址
+```
+
     function rng () { return new Buffer('zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz') }
 
     // generate random keyPair
     var keyPair = bitcoin.ECPair.makeRandom({ rng: rng })
     var address = keyPair.getAddress()
 
-    assert.strictEqual(address, '1F5VhMHukdnUES9kfXqzPzMeF1GPHKiF64')
-  })
+```
 
-  it('can generate an address from a SHA256 hash', function () {
+
+從SHA256 hash產生地址
+```
     var hash = bitcoin.crypto.sha256('correct horse battery staple')
     var d = bigi.fromBuffer(hash)
 
     var keyPair = new bitcoin.ECPair(d)
     var address = keyPair.getAddress()
+```
 
-    assert.strictEqual(address, '1C7zdTfnkzmr13HfA2vNm5SJYRK6nEKyq8')
-  })
-
-  it('can generate a random keypair for alternative networks', function () {
-    // for testing only
+產生一組萊特比的address跟WIF
+```
     function rng () { return new Buffer('zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz') }
 
     var litecoin = bitcoin.networks.litecoin
@@ -34,19 +35,18 @@ describe('bitcoinjs-lib (basic)', function () {
     var keyPair = bitcoin.ECPair.makeRandom({ network: litecoin, rng: rng })
     var wif = keyPair.toWIF()
     var address = keyPair.getAddress()
+```
 
-    assert.strictEqual(address, 'LZJSxZbjqJ2XVEquqfqHg1RQTDdfST5PTn')
-    assert.strictEqual(wif, 'T7A4PUSgTDHecBxW1ZiYFrDNRih2o7M8Gf9xpoCgudPF9gDiNvuS')
-  })
 
-  it('can import an address via WIF', function () {
+把WIF格式的私鑰轉換為地址
+```
     var keyPair = bitcoin.ECPair.fromWIF('Kxr9tQED9H44gCmp6HAdmemAzU3n84H3dGkuWTKvE23JgHMW8gct')
     var address = keyPair.getAddress()
 
-    assert.strictEqual(address, '19AAjaTUbRjQCMuVczepkoPswiZRhjtg31')
-  })
+```
 
-  it('can create a Transaction', function () {
+產生交易
+```
     var keyPair = bitcoin.ECPair.fromWIF('L1uyy5qTuGrVXrmrsvHWHgVzW9kKdrp27wBC7Vs6nZDTF2BRUVwy')
     var tx = new bitcoin.TransactionBuilder()
 
@@ -54,12 +54,10 @@ describe('bitcoinjs-lib (basic)', function () {
     tx.addOutput('1Gokm82v6DmtwKEB8AiVhm82hyFSsEvBDK', 15000)
     tx.sign(0, keyPair)
 
-    assert.strictEqual(tx.build().toHex(), '0100000001313eb630b128102b60241ca895f1d0ffca2170d5a0990e094f2182c102ab94aa000000006b483045022100aefbcf847900b01dd3e3debe054d3b6d03d715d50aea8525f5ea3396f168a1fb022013d181d05b15b90111808b22ef4f9ebe701caf2ab48db269691fdf4e9048f4f60121029f50f51d63b345039a290c94bffd3180c99ed659ff6ea6b1242bca47eb93b59fffffffff01983a0000000000001976a914ad618cf4333b3b248f9744e8e81db2964d0ae39788ac00000000')
-  })
+```
 
-  it('can create a [complex] Transaction', function (done) {
-    this.timeout(30000)
-
+產生較複雜的交易，並廣播到bitcoin network
+```
     var network = bitcoin.networks.testnet
     var alice = bitcoin.ECPair.makeRandom({ network: network })
     var bob = bitcoin.ECPair.makeRandom({ network: network })
@@ -87,21 +85,37 @@ describe('bitcoinjs-lib (basic)', function () {
       tx.sign(1, bob)
 
       blockchain.t.transactions.propagate(tx.build().toHex(), done)
-    })
-  })
-})
+
 ```
 
 一篇不錯的教學:
 https://medium.com/@orweinberger/how-to-create-a-raw-transaction-using-bitcoinjs-lib-1347a502a3a#.gbnwu2863
 
-查看上次交易的Txid:
+### #查看上次交易的Txid:
 https://blockchain.info/
 
 到上面網站的輸入框輸入你的比特幣地址即可看到
 
 
-加密方法:
+### #把產生的交易hex廣播到bitcoin network
+
+先到
+
+https://blockchain.info/pushtx
+
+貼上如下
+(此為確實發生的以前交易)
+```
+0100000001313eb630b128102b60241ca895f1d0ffca2170d5a0990e094f2182c102ab94aa000000006b483045022100aefbcf847900b01dd3e3debe054d3b6d03d715d50aea8525f5ea3396f168a1fb022013d181d05b15b90111808b22ef4f9ebe701caf2ab48db269691fdf4e9048f4f60121029f50f51d63b345039a290c94bffd3180c99ed659ff6ea6b1242bca47eb93b59fffffffff01983a0000000000001976a914ad618cf4333b3b248f9744e8e81db2964d0ae39788ac00000000
+```
+
+接著
+
+試著把一些字改掉上按送出看看
+
+
+
+### #加密方法:
 
 ```
 Mnemonic code for generating deterministic keys (BIP 39), credits to Thasshiznets
