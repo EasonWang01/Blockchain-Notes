@@ -128,3 +128,11 @@ Payment URLs (BIP 21,BIP 72)
 
 Two-Factor keys (BIP 38)
 ```
+
+
+
+#gcoin(DIQI)
+
+```
+由台大教授領導的團隊使用c++開發，目前富邦銀行之帳聯網採用
+```
