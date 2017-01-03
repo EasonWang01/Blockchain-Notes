@@ -2,5 +2,5 @@
 
 * [Bitcoin介紹](bitcoin介紹.md)
 * [BitcoinJS](README.md)
-* [First Chapter](chapter1.md)
+* [Bitcoin原理與實作](chapter1.md)
 

@@ -1,3 +1,20 @@
-# First Chapter
+# #產生公鑰和私鑰
 
-GitBook allows you to organize your book into chapters, each chapter is stored in a separate file like this one.
+http://zhibimo.com/read/wang-miao/mastering-bitcoin/Chapter04.html
+
+以下使用node.js實作
+```
+var crypto = require('crypto');
+var hash2 = crypto.createHmac('sha256', 'hash1')
+                   .update('powered by flowchain')
+                   .digest('hex');
+
+                   console.log(hash2);
+console.log('--------')
+
+
+var ecdh = crypto.createECDH('secp256k1');
+var x = ecdh.setPrivateKey(hash2,'hex');
+
+console.log(ecdh.getPublicKey('hex'));
+```
