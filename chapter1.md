@@ -9,12 +9,12 @@ var hash2 = crypto.createHmac('sha256', 'hash1')
                    .update('powered by flowchain')
                    .digest('hex');
 
-                   console.log(hash2);
+                   console.log(hash2);  //私鑰
 console.log('--------')
 
 
 var ecdh = crypto.createECDH('secp256k1');
 var x = ecdh.setPrivateKey(hash2,'hex');
 
-console.log(ecdh.getPublicKey('hex'));
+console.log(ecdh.getPublicKey('hex')); //公鑰(使用橢圓算法)
 ```
