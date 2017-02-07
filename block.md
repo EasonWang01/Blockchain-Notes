@@ -11,6 +11,12 @@
 
 5.你可以下載https://bitcoin.org/en/full-node，讓你電腦執行程式後成為一個full node
 
+full node 意思是讓你電腦成為一個節點，擁有比特幣的開始到現在的所有交易訊息，並且你會需要幫忙認證區塊的正確性
+
+全世界的full node https://bitnodes.21.co/
+
+
+
 ```
 wget https://bitcoin.org/bin/bitcoin-core-0.13.2/bitcoin-0.13.2-x86_64-linux-gnu.tar.gz
 
