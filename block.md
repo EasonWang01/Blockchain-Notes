@@ -22,5 +22,9 @@ wget https://bitcoin.org/bin/bitcoin-core-0.13.2/bitcoin-0.13.2-x86_64-linux-gnu
 
 tar -xvzf bitcoin-0.13.2-x86_64-linux-gnu.tar.gz 
 
-cd bitcoin-0.13.2 
+cd bitcoin-0.13.2/bin
+
+./bitcoind &
+
+./bitcoin-cli getinfo    
 ```
