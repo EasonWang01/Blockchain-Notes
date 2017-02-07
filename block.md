@@ -52,4 +52,14 @@ https://en.bitcoin.it/wiki/Original_Bitcoin_client/API_calls_list
 
 #Merkel Tree
 
+![](/assets/螢幕快照 2017-02-07 下午5.03.21.png)
+
 Merkle樹被用來歸納一個區塊中的所有交易，同時生成整個交易集合的數字指紋，且提供了一種校驗區塊是否存在某交易的高效途徑
+
+為了創建父節點HAB，子節點A和子節點B的兩個32字節的哈希值將被串聯成64字節的字符串。隨後將字符串進行兩次哈希來產生父節點的哈希值:
+
+
+
+```
+HAB~=SHA256(SHA256(HA + HB))
+```
