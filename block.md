@@ -16,6 +16,11 @@ full node 意思是讓你電腦成為一個節點，擁有比特幣的開始到�
 全世界的full node https://bitnodes.21.co/
 
 
+上面的安裝需要至少90GB
+
+
+
+所以我們可以直接使用編譯好的且不包含一些其他例如DB等檔案在內的壓縮檔
 
 ```
 wget https://bitcoin.org/bin/bitcoin-core-0.13.2/bitcoin-0.13.2-x86_64-linux-gnu.tar.gz
