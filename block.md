@@ -50,7 +50,7 @@ cd bitcoin-0.13.2/bin
 https://en.bitcoin.it/wiki/Original_Bitcoin_client/API_calls_list
 
 
-#Merkel Tree
+#Merkle Tree
 
 ![](/assets/螢幕快照 2017-02-07 下午5.03.21.png)
 
@@ -63,3 +63,4 @@ Merkle樹被用來歸納一個區塊中的所有交易，同時生成整個交�
 ```
 HAB~=SHA256(SHA256(HA + HB))
 ```
+
