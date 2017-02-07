@@ -21,4 +21,6 @@ full node 意思是讓你電腦成為一個節點，擁有比特幣的開始到�
 wget https://bitcoin.org/bin/bitcoin-core-0.13.2/bitcoin-0.13.2-x86_64-linux-gnu.tar.gz
 
 tar -xvzf bitcoin-0.13.2-x86_64-linux-gnu.tar.gz 
+
+cd bitcoin-0.13.2 
 ```
