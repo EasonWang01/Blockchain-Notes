@@ -75,3 +75,11 @@ HAB~=SHA256(SHA256(HA + HB))
 #交易
 
 每筆交易均須付手續費，最少為`0.00001BTC`付越多交易越快被確認
+
+
+
+#Satoshi
+
+```
+0.00000001 bitcoin 為一個 satoshi，此也為bitcoin的最小單位
+```
