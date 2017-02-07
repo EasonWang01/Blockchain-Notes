@@ -23,8 +23,23 @@ wget https://bitcoin.org/bin/bitcoin-core-0.13.2/bitcoin-0.13.2-x86_64-linux-gnu
 tar -xvzf bitcoin-0.13.2-x86_64-linux-gnu.tar.gz 
 
 cd bitcoin-0.13.2/bin
+```
 
-./bitcoind &
+啟動server
+```
+./bitcoind &  
+```
 
+```
 ./bitcoin-cli getinfo    
 ```
+
+停止server
+
+```
+./bitcoin-cli stop
+```
+
+有關cli command的所有指令
+
+https://en.bitcoin.it/wiki/Original_Bitcoin_client/API_calls_list
