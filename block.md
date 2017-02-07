@@ -48,3 +48,8 @@ cd bitcoin-0.13.2/bin
 有關cli command的所有指令
 
 https://en.bitcoin.it/wiki/Original_Bitcoin_client/API_calls_list
+
+
+#Merkel Tree
+
+Merkle樹被用來歸納一個區塊中的所有交易，同時生成整個交易集合的數字指紋，且提供了一種校驗區塊是否存在某交易的高效途徑
