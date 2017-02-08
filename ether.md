@@ -198,6 +198,7 @@ windows
 ```
 D:\Ethereum-Wallet\Ethereum-Wallet.exe --help
 ```
+>ps:有時直接cd 到他的目錄下下指令會無法執行
 
 #常見名詞:
 
