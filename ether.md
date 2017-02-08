@@ -51,12 +51,16 @@ docker logs ethereum-node
 https://github.com/ethereum/wiki/wiki/JavaScript-API
 
 
-但我們這邊主要教學部分為Private chain，所以我們下載一個專門給ethereum private chain 使用的docker container
-
-```
-docker pull vertigo/ethereum
-```
+但我們這邊主要教學部分為Private chain
 https://github.com/vertigobr/ethereum
+
+使用
+```
+git clone https://github.com/vertigobr/ethereum.git
+
+cd ethereum
+```
+
 
 我們可以到他的repo中點選`Dockerfile`
 
