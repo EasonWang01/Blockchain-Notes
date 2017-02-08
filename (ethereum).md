@@ -18,7 +18,7 @@ http://ethereum.stackexchange.com/questions/8/what-are-the-different-guis-availa
 
 簡介:
 想像是一個虛擬主機，上面設定好了環境，每次我們下`Docker run`
-指令會去Docker的線上倉庫下載image之後執行
+指令會去Docker的線上倉庫下載image之後執行，省去我們設定環境的時間
 
 
 安裝網址:
@@ -29,7 +29,7 @@ https://www.docker.com/products/overview
 
 開始使用ethereum的go client的image
 
-1.輸入以下來加入public network
+1.打開terminal輸入以下來加入public network
 
 ```
 docker run -d --name ethereum-node \
@@ -38,7 +38,7 @@ docker run -d --name ethereum-node \
     ethereum/client-go --fast --cache=512
 ```
 
-加入test network
+或是加入test network
 
 ```
 docker run -d --name ethereum-node \
