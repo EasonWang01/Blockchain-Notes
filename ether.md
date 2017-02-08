@@ -186,6 +186,16 @@ I0208 08:27:35.041222 core/blockchain.go:962] imported 1 block(s) (0 queued 0 ig
 https://github.com/ethereum/mist/releases
 
 
+之後試著用command執行--help，前面需要先指定為wallet程式安裝路徑
+
+ex:(OSX)
+
+```
+/Applications/Ethereum\ Wallet.app/Contents/MacOS/Ethereum\ Wallet --help
+
+```
+
+
 #常見名詞:
 
 Dapp:
