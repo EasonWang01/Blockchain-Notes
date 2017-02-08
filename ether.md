@@ -169,6 +169,16 @@ I0208 08:26:48.411384 miner/worker.go:435] 🔨 🔗  Mined 5 blocks back: block
 I0208 08:26:48.411470 core/database_util.go:353] stored block receipts [989a7a59…]
 
 ```
+這時可再次查看剛才node1的logs
+
+`docker logs ethereum-node1`
+```
+I0208 08:27:35.038805 core/database_util.go:303] stored block body [2f9292d4…]
+I0208 08:27:35.039183 core/database_util.go:288] stored header #22 [2f9292d4…]
+I0208 08:27:35.040653 core/blockchain.go:931] [1486542455040638728] inserted block #22 (0 TXs 0 G 0 UNCs) (2f9292d4...). Took 16.003523ms
+I0208 08:27:35.041222 core/blockchain.go:962] imported 1 block(s) (0 queued 0 ignored) including 0 txs in 16.594944ms. #22 [2f9292d4 / 2f9292d4]
+```
+其他節點將會確認被挖出的block
 
 
 #常見名詞:
