@@ -155,6 +155,13 @@ Peer e4a6e56cf9096420 [eth/63]: peer connected [Geth/v1.4.11-stable/linux/go1.5.
 docker logs ethereum-miner1
 ```
 
+挖礦前他會花一些時間準備，所以一開始只會看到如下
+
+```
+I0208 08:18:46.744549 ethash.go:291] Generating DAG: 33%
+I0208 08:18:53.107984 ethash.go:291] Generating DAG: 34%
+```
+
 #常見名詞:
 
 Dapp:
