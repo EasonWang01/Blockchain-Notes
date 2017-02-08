@@ -181,6 +181,11 @@ I0208 08:27:35.041222 core/blockchain.go:962] imported 1 block(s) (0 queued 0 ig
 其他節點將會確認被挖出的block
 
 
+#下載wallet GUI軟體
+
+https://github.com/ethereum/mist/releases
+
+
 #常見名詞:
 
 Dapp:
