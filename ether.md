@@ -1,5 +1,5 @@
 #簡介:
-以太坊（英語：Ethereum）是一個開源且具有智慧合約區塊鏈平台，設計上是為了解決比特幣擴展性不足的問題
+以太坊（英語：Ethereum）是一個開源且具有智慧合約區塊鏈平台，設計上是為了解決比特幣擴展性不足的問題，以太坊區塊鏈上的代幣稱為以太幣（Ether），代碼為ETH
 
 合約:
 
@@ -49,6 +49,33 @@ docker logs ethereum-node
 
 >attach的意思是在terminal啟動一個javascript的相關以太坊API執行環境
 https://github.com/ethereum/wiki/wiki/JavaScript-API
+
+
+但我們這邊主要教學部分為Private chain，所以我們下載一個專門給ethereum private chain 使用的docker container
+
+```
+docker pull vertigo/ethereum
+```
+https://github.com/vertigobr/ethereum
+
+我們可以到他的repo中點選`Dockerfile`
+
+看到
+
+```
+ENV GEN_NONCE="0xeddeadbabeeddead" \
+
+    NET_ID=1981
+```
+
+
+這兩個分別是創世區塊的識別ID與private network的識別ID，所以未來加入其他節點這兩個都要與其他節點的值相同才會加入，預設我們不用去改他
+
+
+我們也可以用`-e`來指定執行docker時的環境變數
+```
+docker run -e GEN_NONCE='stag0x2222ing' 
+```
 
 
 #常見名詞:
