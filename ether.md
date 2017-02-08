@@ -189,3 +189,7 @@ Dapp:
 geth:
 
 >geth is the the command line interface for running a full ethereum node implemented in Go. 
+
+Ethash:
+
+>以太幣(ether)的挖礦算法叫做Ethash, 又名Dashimoto (Dagger-Hashimoto)，是Hashimoto算法結合Dagger之後產成的一個變種
