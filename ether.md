@@ -96,6 +96,42 @@ killall.sh: 將會執行"docker stop" 與 "docker rm" ;
 wipeall.sh: 將會執行"docker stop" 與 "docker rm" 並且清空 volume folders.
 ```
 
+進入到資料夾後使用
+
+1.啟動起始節點
+```
+./bootnode.sh
+```
+使用`docker logs ethereum-bootnode`查看log
+
+查看剛才的boot節點
+```
+./getbootnodeurl.sh
+```
+
+2.再來啟動另一個非mining的節點
+
+```
+./runnode.sh node1
+```
+查看logs
+```
+docker logs ethereum-node1
+```
+這時發現這個node沒找到任何其他節點，只出現以下，像bootnode不停查詢是否有其他節點，所以他覺得滿孤單
+```
+dial tcp 172.17.0.2:30301
+與
+seed node
+```
+
+3.新增第二個非mining的節點
+
+```
+./runnode.sh node2
+```
+
+
 #常見名詞:
 
 Dapp:
