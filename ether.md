@@ -165,6 +165,8 @@ I0208 08:18:53.107984 ethash.go:291] Generating DAG: 34%
 等到他跑到100%，準備完成後他會開始挖礦，可看如下logs
 
 ```
+I0208 08:26:48.411384 miner/worker.go:435] 🔨 🔗  Mined 5 blocks back: block #3
+I0208 08:26:48.411470 core/database_util.go:353] stored block receipts [989a7a59…]
 
 ```
 
