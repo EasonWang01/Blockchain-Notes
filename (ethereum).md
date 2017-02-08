@@ -63,4 +63,18 @@ docker exec -ti ethereum-node \
 
 >Attach意思是執行JavaScript Console，接著即可在terminal上使用web3.js library
 
+ex:創建一個帳號
+
+```
+personal.newAccount('passwd')
+```
+之後輸入exit可離開
+
 https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console
+
+
+但是
+
+
+我們這邊不會用public 或 test network，我們會用private network
+
