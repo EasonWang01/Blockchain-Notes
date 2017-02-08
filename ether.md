@@ -143,6 +143,12 @@ Peer e4a6e56cf9096420 [eth/63]: peer connected [Geth/v1.4.11-stable/linux/go1.5.
 ./showpeers.sh ethereum-node1
 ```
 
+5.啟動一個mining節點(挖礦節點)
+
+```
+./runminer.sh miner1
+```
+
 #常見名詞:
 
 Dapp:
