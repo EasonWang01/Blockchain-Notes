@@ -137,6 +137,12 @@ Peer e4a6e56cf9096420 [eth/63]: peer connected [Geth/v1.4.11-stable/linux/go1.5.
 ```
 這時2與1兩節點就發現彼此了
 
+4.查看節點所連結的節點
+(bootnode)不包含在內
+```
+./showpeers.sh ethereum-node1
+```
+
 #常見名詞:
 
 Dapp:
