@@ -131,6 +131,11 @@ seed node
 ./runnode.sh node2
 ```
 
+這時我們回去察看node1的log，可看到類似如下
+```
+Peer e4a6e56cf9096420 [eth/63]: peer connected [Geth/v1.4.11-stable/linux/go1.5.1/node2]
+```
+這時2與1兩節點就發現彼此了
 
 #常見名詞:
 
