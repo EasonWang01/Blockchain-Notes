@@ -35,6 +35,7 @@ CONTAINER           CPU %               MEM USAGE / LIMIT       MEM %           
 docker stop 01f51f8c9f7b
 ```
 
+
 ##4.停止所有container
 
 ```
@@ -47,4 +48,10 @@ docker stop $(docker ps -a -q)
 
 ```
 docker rm `docker ps -aq`
+```
+
+##6.以名字顯示running中的container
+
+```
+docker stats $(docker ps --format={{.Names}})
 ```
