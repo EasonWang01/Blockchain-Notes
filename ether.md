@@ -162,9 +162,18 @@ I0208 08:18:46.744549 ethash.go:291] Generating DAG: 33%
 I0208 08:18:53.107984 ethash.go:291] Generating DAG: 34%
 ```
 
+等到他跑到100%，準備完成後他會開始挖礦，可看如下logs
+
+```
+
+```
+
+
 #常見名詞:
 
 Dapp:
 >A Dapp (‘decentralized app’) consists of two parts: a frontend, written in HTML, and a backend (think of it as the ‘database’ for your frontend).
 
+geth:
 
+>geth is the the command line interface for running a full ethereum node implemented in Go. 
