@@ -188,13 +188,16 @@ https://github.com/ethereum/mist/releases
 
 之後試著用command執行--help，前面需要先指定為wallet程式安裝路徑
 
-ex:(OSX)
-
+ex:
+OSX
 ```
 /Applications/Ethereum\ Wallet.app/Contents/MacOS/Ethereum\ Wallet --help
 
 ```
-
+windows
+```
+D:\Ethereum-Wallet\Ethereum-Wallet.exe --help
+```
 
 #常見名詞:
 
