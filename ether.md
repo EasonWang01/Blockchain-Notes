@@ -77,6 +77,20 @@ ENV GEN_NONCE="0xeddeadbabeeddead" \
 docker run -e GEN_NONCE='stag0x2222ing' 
 ```
 
+講解其中的一些.sh程式
+```
+bootnode.sh: 執行Ethereum bootnode 啟動節點;
+
+runnode.sh: 執行Ethereum 非挖礦節點;
+
+runminer.sh: 執行Ethereum 挖礦節點;
+
+showpeers.sh: 顯示所有連線到此節點的節點
+
+killall.sh: 將會執行"docker stop" 與 "docker rm" ;
+
+wipeall.sh: 將會執行"docker stop" 與 "docker rm" 並且清空 volume folders.
+```
 
 #常見名詞:
 
