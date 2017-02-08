@@ -38,7 +38,12 @@ docker run -d --name ethereum-node \
     ethereum/client-go --fast --cache=512
 ```
 
-或是加入test network
+接著即可執行attach
+```
+docker exec -ti ethereum-node geth attach
+```
+
+2.或是加入test network
 
 ```
 docker run -d --name ethereum-node \
@@ -47,3 +52,15 @@ docker run -d --name ethereum-node \
     ethereum/client-go --testnet --fast --cache=512
 ```
 
+接著即可執行attach
+```
+docker exec -ti ethereum-node \
+    geth attach ipc:/root/.ethereum/testnet/geth.ipc
+```
+
+接著即可執行attach
+
+
+>Attach意思是執行JavaScript Console，接著即可在terminal上使用web3.js library
+
+https://github.com/ethereum/go-ethereum/wiki/JavaScript-Console
