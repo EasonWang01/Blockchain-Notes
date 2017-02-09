@@ -208,6 +208,14 @@ D:\Ethereum-Wallet\Ethereum-Wallet.exe --help
 
 
 使用Mist執行private network
+
+1.
+開啟RPC server
+```
+RPC_PORT=8545 ./runminer.sh wallet
+```
+
+2.使用錢包讀取該RPC server
 ```
 /Applications/Ethereum\ Wallet.app/Contents/MacOS/Ethereum\ Wallet --rpc http://localhost:8545
 ```
