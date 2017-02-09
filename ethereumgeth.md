@@ -20,6 +20,7 @@ make geth
 
 #使用
 
+https://github.com/ethereum/go-ethereum/wiki/geth
 ```
 ~/go-ethereum/build/bin/geth
 ```
