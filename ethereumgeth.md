@@ -24,3 +24,7 @@ https://github.com/ethereum/go-ethereum/wiki/geth
 ```
 ~/go-ethereum/build/bin/geth
 ```
+
+####Command option
+https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options
+
