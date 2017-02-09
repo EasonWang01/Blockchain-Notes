@@ -220,6 +220,20 @@ RPC_PORT=8545 ./runminer.sh wallet
 /Applications/Ethereum\ Wallet.app/Contents/MacOS/Ethereum\ Wallet --rpc http://localhost:8545
 ```
 
+從Mist新建一個account
+
+之後到`ethereum/src`修改`genesis.json`
+
+```
+  "alloc"      : {
+     "改為你的帳號":
+         { "balance": "8000000000000000000000" }
+  }
+```
+
+即可看到該帳號金額改變了，因為我們使用創世區塊，再起始時分配資金，但記得，之後要更改只能把bootnode整個移除重新啟動，並且要等待Dag之後才會在Mist顯示金額
+
+
 #常見名詞:
 
 Dapp:
