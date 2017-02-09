@@ -108,6 +108,11 @@ wipeall.sh: 將會執行"docker stop" 與 "docker rm" 並且清空 volume folder
 ```
 ./getbootnodeurl.sh
 ```
+查看log
+
+```
+docker logs ethereum-bootnode
+```
 
 2.再來啟動另一個非mining的節點
 
