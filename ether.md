@@ -200,6 +200,13 @@ D:\Ethereum-Wallet\Ethereum-Wallet.exe --help
 ```
 >ps:有時直接cd 到他的目錄下下指令會無法執行
 
+
+
+使用Mist執行private network
+```
+/Applications/Ethereum\ Wallet.app/Contents/MacOS/Ethereum\ Wallet --rpc http://localhost:8545
+```
+
 #常見名詞:
 
 Dapp:
