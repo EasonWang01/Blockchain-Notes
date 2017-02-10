@@ -123,6 +123,8 @@ miner.start()
 
 
 ####3.加入其他節點
+https://github.com/ethereum/go-ethereum/wiki/Setting-up-private-network-or-local-cluster
+
 
 
 
