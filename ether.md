@@ -214,8 +214,9 @@ RPC_PORT=8545 ./runminer.sh wallet
 /Applications/Ethereum\ Wallet.app/Contents/MacOS/Ethereum\ Wallet --rpc http://localhost:8545
 ```
 
-####從Mist新建一個account，並且複製帳號，之後開始挖礦
+####從Mist新建一個account，並且綁定帳號，之後開始挖礦
 
+從錢包複製新建帳號好把他與礦工節點綁定
 
 ETHERBASE後面為你剛才複製的帳號
 ```
