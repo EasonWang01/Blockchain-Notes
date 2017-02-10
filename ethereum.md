@@ -11,12 +11,30 @@
 
 Dapp:
 >A Dapp (‘decentralized app’) consists of two parts: a frontend, written in HTML, and a backend (think of it as the ‘database’ for your frontend).
-f m
+
+
 geth:
 
 >geth is the the command line interface for running a full ethereum node implemented in Go. 
 
+JSON-PRC:
+https://github.com/ethereum/wiki/wiki/JSON-RPC
+>簡單說即為一個會回應json格式的server
+
+https://github.com/ethereum/wiki/wiki/JSON-RPC
+
+
+IPC:
+
+>為系統中兩個兩個執行緒互相傳遞資料的方法
+
+https://zh.wikipedia.org/wiki/%E8%A1%8C%E7%A8%8B%E9%96%93%E9%80%9A%E8%A8%8A
+
+http://albert-oma.blogspot.tw/2013/06/linux-ipc.html
+
 Ethash:
 
 >以太幣(ether)的挖礦算法叫做Ethash, 又名Dashimoto (Dagger-Hashimoto)，是Hashimoto算法結合Dagger之後產成的一個變種
-hmm f
+
+Dag:
+https://github.com/ethereum/wiki/blob/master/Dagger-Hashimoto.md
