@@ -107,7 +107,7 @@ geth --ipcpath ~/Library/Ethereum/geth.ipc --datadir "./privatechain" --networki
 ```
 >每次init genesis  chaindata資料夾下都會多一個ldb但他會去讀取最新的
 
-##注意:每次從terminal啟動其他ethereum程序後開啟錢包，錢包都只會去讀取最新開啟的terminal的程序
+>注意:每次從terminal啟動其他ethereum程序後開啟錢包，錢包都只會去讀取最新開啟的terminal的程序
 
 ####試著挖礦
 
@@ -117,7 +117,12 @@ geth attach
 
 進入了console
 
+```
+miner.start()
+```
 
-####Command option
-https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options
+
+####3.加入其他節點
+
+
 
