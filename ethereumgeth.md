@@ -147,17 +147,41 @@ geth  --ipcdisable --rpc --rpcport 8104 --datadir "./privatechain/01" --networki
 
 geth  --ipcdisable --rpc --rpcport 8103 --datadir "./privatechain/02" --networkid 123 --port=30308 console     
 ```
-4.之後再其中一個節點的console輸入
+4.之後於01節點的console輸入
 ```
 admin.nodeInfo
 ```
+把`enode`部分複製
 
-5.Mist要設定錢包要連線到哪個位置，所以這次我們不能直接點選圖案開啟，要使用命令列開啟，並加上`--rpc <PORT>`
+![](/assets/螢幕快照 2017-02-10 下午3.20.45.png)
+
+5.於02節點輸入
+
+```
+admin.addPeer("貼上剛才複製的enode")
+```
+6.之後於兩個節點分別輸入`admin.peers`即可找到彼此
+
+![](/assets/螢幕快照 2017-02-10 下午3.24.28.png)
+
+
+7.這時開啟Mist要設定錢包要連線到哪個位置，所以這次我們不能直接點選圖案開啟，要使用命令列開啟，並加上`--rpc <PORT>`
+
+```
+我們可以先輸入 curl http://localhost:8104 
+8104是該RPC的port，來看一下有沒有啟動
+```
+![](/assets/螢幕快照 2017-02-10 下午3.27.47.png)
+
+
+
+
+7.這時開啟Mist要設定錢包要連線到哪個位置，所以這次我們不能直接點選圖案開啟，要使用命令列開啟，並加上`--rpc <PORT>`
 
 -----
 OSX
 ```
-/Applications/Ethereum\ Wallet.app/Contents/MacOS/Ethereum\ Wallet --rpc http://localhost:8545
+/Applications/Ethereum\ Wallet.app/Contents/MacOS/Ethereum\ Wallet --rpc http://localhost:8104
 ```
 
 Windows
