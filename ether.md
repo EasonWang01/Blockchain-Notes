@@ -228,15 +228,3 @@ docker logs ethereum-wallet
 ```
 然後等待DAG完成後會開始挖礦
 
-#常見名詞:
-
-Dapp:
->A Dapp (‘decentralized app’) consists of two parts: a frontend, written in HTML, and a backend (think of it as the ‘database’ for your frontend).
-
-geth:
-
->geth is the the command line interface for running a full ethereum node implemented in Go. 
-
-Ethash:
-
->以太幣(ether)的挖礦算法叫做Ethash, 又名Dashimoto (Dagger-Hashimoto)，是Hashimoto算法結合Dagger之後產成的一個變種

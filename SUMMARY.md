@@ -5,7 +5,7 @@
 * [Bitcoin原理與實作](chapter1.md)
 * [區塊鏈運作原理](block.md)
 * [Docker常用指令](docker.md)
-* [ethereum\(以太坊\)](ether.md)
-* [ethereum中的Geth](ethereumgeth.md)
-* ethereum初探
+* [ethereum初探](ethereum.md)
+* [ethereum\(Docker\)](ether.md)
+* [ethereum中\(Geth\)](ethereumgeth.md)
 
