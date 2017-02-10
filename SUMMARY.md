@@ -8,4 +8,5 @@
 * [ethereum初探](ethereum.md)
 * [ethereum\(Docker\)](ether.md)
 * [ethereum中\(Geth\)](ethereumgeth.md)
+* [contract](contract.md)
 
