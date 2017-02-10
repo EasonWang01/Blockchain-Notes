@@ -192,12 +192,6 @@ admin.addPeer("貼上剛才複製的enode")
 start <加上程式路徑> --rpc <PORT>
 ```
 
-再來輸入以下查看我們第一個node的url
-```
-admin.nodeInfo.enode
-```
-
-
 #注意事項
 
 1.
