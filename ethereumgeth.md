@@ -38,7 +38,7 @@ https://github.com/ethereum/go-ethereum/wiki/geth
 geth help
 ```
 
-####創建創世區塊(genesis block)
+####1.創建創世區塊(genesis block)
 
 genesis.json
 ```
@@ -88,6 +88,24 @@ geth networkid=5
 -----
 
 
+####2.預先分配ether給account
+
+剛才打開錢包後先創建帳戶，然後把帳戶號碼複製，之後貼到剛才genesis的alloc下面的一串hash，然後重新init 即可
+```
+ "alloc": {    "0x66A2e289b35147188876c2007f9a810Dd20e480d": {
+                                     "balance": "1337000000000000000000"}
+                                      }
+```
+
+
+```
+geth --datadir "./privatechain" --networkid 123 init custom_genesis.json
+```
+之後再次啟動，並且打開錢包
+```
+geth --ipcpath ~/Library/Ethereum/geth.ipc --datadir "./privatechain" --networkid 123
+```
+>每次init genesis  chaindata資料夾下都會多一個ldb但他會去讀取最新的
 
 
 建立其他節點
