@@ -216,7 +216,7 @@ start <加上程式路徑> --rpc <PORT>
 #注意事項
 
 1.
->注意:每次從terminal啟動其他ethereum程序後開啟錢包，錢包都只會去讀取最新開啟的terminal的程序
+>注意:每次從terminal啟動其他ethereum程序後開啟錢包，如果你沒有指定RPC 或IPC port，錢包都只會去讀取最新開啟的terminal的程序
 
 2.
 
