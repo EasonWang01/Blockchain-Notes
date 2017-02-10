@@ -133,7 +133,10 @@ miner.start()
 ####3.加入其他節點
 https://github.com/ethereum/go-ethereum/wiki/Setting-up-private-network-or-local-cluster
 
-
+因為geth預設會使用ipc進行內部通訊，但我們要多個節點可能會在其他網路，所以我們用RPC，記得要使用`--rpc`，上面那個官網wiki沒寫
+```
+geth  --ipcdisable --rpc --rpcport 8101 --datadir "./privatechain" --networkid 123 --port=30305
+```
 
 
 #注意事項
