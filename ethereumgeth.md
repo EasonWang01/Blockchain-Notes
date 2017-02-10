@@ -57,8 +57,9 @@ genesis.json
 ```
 然後輸入
 ```
-geth init genesis.json
+geth --datadir "./privatechain" --networkid 123 init custom_genesis.json
 ```
+>上面將會創建一個privatechain資料夾，裡面存放我們private chain的資訊，genesis blcok會放在/privatechain資料夾/geth/chaindata/...ldb，而account會放在keystore裡面
 
 然後輸入以下，之後開啟Mist wallet就會進入private network
 ```
