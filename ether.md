@@ -228,3 +228,6 @@ docker logs ethereum-wallet
 ```
 然後等待DAG完成後會開始挖礦
 
+![](/assets/螢幕快照 2017-02-10 下午4.52.15.png)
+
+之後重新啟動錢包，即可看到ether增加
