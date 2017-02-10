@@ -138,6 +138,17 @@ https://github.com/ethereum/go-ethereum/wiki/Setting-up-private-network-or-local
 geth  --ipcdisable --rpc --rpcport 8101 --datadir "./privatechain" --networkid 123 --port=30305
 ```
 
+再來Mist要設定錢包要連線到哪個位置，所以這次我們不能直接點選圖案開啟，要使用命令列開啟，並加上`--rpc <PORT>`
+
+OSX
+```
+/Applications/Ethereum\ Wallet.app/Contents/MacOS/Ethereum\ Wallet --rpc http://localhost:8545
+```
+
+Windows
+```
+start <加上程式路徑> --rpc <PORT>
+```
 
 #注意事項
 
