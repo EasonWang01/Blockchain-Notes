@@ -111,12 +111,20 @@ geth --ipcpath ~/Library/Ethereum/geth.ipc --datadir "./privatechain" --networki
 
 ####試著挖礦
 
+
+進入console
+
+>或是可在剛才啟動ethereum後面加上console字樣
+
 ```
 geth attach
 ```
 
-進入了console
-
+加入挖礦要放錢的地址
+```
+web3.miner.setEtherbase('0xB4eb9148CD0Aa801215f0e62A354F55A7E1AA67A')
+```
+開始挖礦
 ```
 miner.start()
 ```
