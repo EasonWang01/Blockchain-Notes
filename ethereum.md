@@ -38,3 +38,10 @@ Ethash:
 
 Dag:
 https://github.com/ethereum/wiki/blob/master/Dagger-Hashimoto.md
+
+
+EVM:
+>以太坊虛擬機，輕量級虛擬機環境，是以太坊中智能合約的運行環境
+
+Gas:
+>燃料，每執行一條合約指令會消耗一定的燃料，當某個交易還未執行結束，而燃料消耗完時，合約執行終止並回滾(rollback)狀態，可與ether進行換算。
