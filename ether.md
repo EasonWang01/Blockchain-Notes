@@ -92,7 +92,7 @@ wipeall.sh: 將會執行"docker stop" 與 "docker rm" 並且清空 volume folder
 
 進入到資料夾後使用
 
-1.啟動起始節點
+##1.啟動起始節點
 ```
 ./bootnode.sh
 ```
@@ -108,7 +108,7 @@ wipeall.sh: 將會執行"docker stop" 與 "docker rm" 並且清空 volume folder
 docker logs ethereum-bootnode
 ```
 
-2.再來啟動另一個非mining的節點
+##2.再來啟動另一個非mining的節點
 
 ```
 ./runnode.sh node1
@@ -124,7 +124,7 @@ dial tcp 172.17.0.2:30301
 seed node
 ```
 
-3.新增第二個非mining的節點
+##3.新增第二個非mining的節點
 
 ```
 ./runnode.sh node2
@@ -136,13 +136,13 @@ Peer e4a6e56cf9096420 [eth/63]: peer connected [Geth/v1.4.11-stable/linux/go1.5.
 ```
 這時2與1兩節點就發現彼此了
 
-4.查看節點所連結的節點
+##4.查看節點所連結的節點
 (bootnode)不包含在內
 ```
 ./showpeers.sh ethereum-node1
 ```
 
-5.啟動一個mining節點(挖礦節點)
+##5.啟動一個mining節點(挖礦節點)
 
 ```
 ./runminer.sh miner1
@@ -180,7 +180,7 @@ I0208 08:27:35.041222 core/blockchain.go:962] imported 1 block(s) (0 queued 0 ig
 其他節點將會確認被挖出的block
 
 
-#下載wallet GUI軟體
+####下載wallet GUI軟體
 
 https://github.com/ethereum/mist/releases
 
@@ -201,7 +201,7 @@ D:\Ethereum-Wallet\Ethereum-Wallet.exe --help
 
 
 
-####使用Mist讀取private network
+##6.使用Mist讀取private network
 
 1.
 開啟RPC server
@@ -214,7 +214,7 @@ RPC_PORT=8545 ./runminer.sh wallet
 /Applications/Ethereum\ Wallet.app/Contents/MacOS/Ethereum\ Wallet --rpc http://localhost:8545
 ```
 
-####從Mist新建一個account，並且綁定帳號，之後開始挖礦
+##7.從Mist新建一個account，並且綁定帳號，之後開始挖礦
 
 從錢包複製新建帳號好把他與礦工節點綁定
 
@@ -232,3 +232,10 @@ docker logs ethereum-wallet
 ![](/assets/螢幕快照 2017-02-10 下午4.52.15.png)
 
 之後重新啟動錢包，即可看到ether增加
+
+
+##8.轉帳
+
+我們再從Mist中新增一個帳號，然後點選該新帳號，點選右側的`Transfer Ether`
+
+輸入轉出金額=>調整手續費=>確認密碼=>轉帳成功
