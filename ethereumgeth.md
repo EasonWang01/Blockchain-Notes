@@ -65,8 +65,32 @@ geth --datadir "./privatechain" --networkid 123 init custom_genesis.json
 ```
 geth --ipcpath ~/Library/Ethereum/geth.ipc --datadir "./privatechain" --networkid 123
 
-```
 
+```
+>上面要寫上--ipcpath原因是我們指令了datadir
+
+
+
+方法2
+
+
+-----
+
+也可使用下面產生private network
+
+```
+geth init custom_genesis.json 
+
+geth networkid=5
+```
+這樣打開錢包也可進入private network
+
+-----
+
+
+
+
+建立其他節點
 
 
 ####Command option
