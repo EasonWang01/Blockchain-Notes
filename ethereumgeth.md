@@ -140,6 +140,7 @@ geth  --ipcdisable --rpc --rpcport 8101 --datadir "./privatechain" --networkid 1
 
 再來Mist要設定錢包要連線到哪個位置，所以這次我們不能直接點選圖案開啟，要使用命令列開啟，並加上`--rpc <PORT>`
 
+-----
 OSX
 ```
 /Applications/Ethereum\ Wallet.app/Contents/MacOS/Ethereum\ Wallet --rpc http://localhost:8545
@@ -149,6 +150,13 @@ Windows
 ```
 start <加上程式路徑> --rpc <PORT>
 ```
+-----
+
+再來輸入以下查看我們第一個node的url
+```
+admin.nodeInfo.enode
+```
+
 
 #注意事項
 
