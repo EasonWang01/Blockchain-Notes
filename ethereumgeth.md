@@ -38,6 +38,10 @@ https://github.com/ethereum/go-ethereum/wiki/geth
 geth help
 ```
 
+
+可用命令
+https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options
+
 ####1.創建創世區塊(genesis block)
 
 genesis.json
@@ -170,6 +174,12 @@ admin.addPeer("貼上剛才複製的enode")
 
 ![](/assets/螢幕快照 2017-02-10 下午3.24.28.png)
 
+>注意
+1.
+>我們沒有設預設bootnode所以要手動加入
+2.
+>如果有三個節點ABC，A加入B之後，A再加入C
+這時B仍然找不到C要B主動加入C才可
 
 
 7.測試RPC-JSON server
