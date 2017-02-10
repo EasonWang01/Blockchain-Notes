@@ -101,12 +101,17 @@ geth networkid=5
 ```
 geth --datadir "./privatechain" --networkid 123 init custom_genesis.json
 ```
-之後再次啟動，並且打開錢包
+>每次init genesis  chaindata資料夾下都會多一個ldb但他會去讀取最新的
+
+
+
+之後再次啟動
 ```
 geth --ipcpath ~/Library/Ethereum/geth.ipc --datadir "./privatechain" --networkid 123
 ```
->每次init genesis  chaindata資料夾下都會多一個ldb但他會去讀取最新的
 
+
+點選圖案打開錢包即可看到帳戶餘額增加
 
 
 ####試著挖礦
