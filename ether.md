@@ -207,7 +207,7 @@ D:\Ethereum-Wallet\Ethereum-Wallet.exe --help
 
 
 
-使用Mist執行private network
+####使用Mist讀取private network
 
 1.
 開啟RPC server
@@ -220,19 +220,19 @@ RPC_PORT=8545 ./runminer.sh wallet
 /Applications/Ethereum\ Wallet.app/Contents/MacOS/Ethereum\ Wallet --rpc http://localhost:8545
 ```
 
-從Mist新建一個account
+####從Mist新建一個account，並且複製帳號，之後開始挖礦
 
-之後到`ethereum/src`修改`genesis.json`
 
+ETHERBASE後面為你剛才複製的帳號
 ```
-  "alloc"      : {
-     "改為你的帳號":
-         { "balance": "8000000000000000000000" }
-  }
+ETHERBASE=0xC21026c0026D47B76B5e3249b981b73E6f734212 RPC_PORT=8545 ./runminer.sh wallet
 ```
 
-即可看到該帳號金額改變了，因為我們使用創世區塊，再起始時分配資金，但記得，之後要更改只能把bootnode整個移除重新啟動，並且要等待Dag之後才會在Mist顯示金額
-
+查看log
+```
+docker logs ethereum-wallet
+```
+然後等待DAG完成後會開始挖礦
 
 #常見名詞:
 
