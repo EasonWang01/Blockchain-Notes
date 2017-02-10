@@ -143,6 +143,8 @@ miner.start()
 ####3.加入其他節點
 https://github.com/ethereum/go-ethereum/wiki/Setting-up-private-network-or-local-cluster
 
+https://github.com/ethereum/go-ethereum/wiki/Connecting-to-the-network#connecting-to-the-network
+
 1.因為geth預設會使用ipc進行內部通訊，但我們要多個節點可能會在其他網路，所以我們用RPC，記得要使用`--rpc`，上面那個官網wiki沒寫
 
 2.每個節點要使用同一個創世區塊，才能找到彼此，我們先輸入如下指令，分別創建兩個節點的資料夾，並且用同一個genesis.json個別於兩資料夾產生相同創世區塊
@@ -180,7 +182,8 @@ admin.addPeer("貼上剛才複製的enode")
 2.
 >如果有三個節點ABC，A加入B之後，A再加入C
 這時B仍然找不到C要B主動加入C才可
-
+3.
+>一開始沒有加入peers時會發現有時輸入admin.peers會出現有時沒有，原因是在連線到任何peers時他會試著去連接其他網路上的節點
 
 7.測試RPC-JSON server
 
