@@ -7,6 +7,6 @@
 * [Docker常用指令](docker.md)
 * [ethereum初探](ethereum.md)
 * [ethereum\(Docker\)](ether.md)
-* [ethereum中\(Geth\)](ethereumgeth.md)
-* [contract](contract.md)
+* [ethereum\(Geth\)](ethereumgeth.md)
+* [ethereu\(智能合約\)](contract.md)
 
