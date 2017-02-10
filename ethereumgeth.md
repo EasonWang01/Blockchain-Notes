@@ -184,6 +184,8 @@ admin.addPeer("貼上剛才複製的enode")
 這時B仍然找不到C要B主動加入C才可
 3.
 >一開始沒有加入peers時會發現有時輸入admin.peers會出現有時沒有，原因是在連線到任何peers時他會試著去連接其他網路上的節點
+4.
+>節點互相找不到的原因通常為你沒有輸入init genesis.json，所以兩個節點間的genesis.json不相同
 
 7.測試RPC-JSON server
 
