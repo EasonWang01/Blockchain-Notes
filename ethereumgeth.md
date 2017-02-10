@@ -107,7 +107,7 @@ geth --ipcpath ~/Library/Ethereum/geth.ipc --datadir "./privatechain" --networki
 ```
 >每次init genesis  chaindata資料夾下都會多一個ldb但他會去讀取最新的
 
->注意:每次從terminal啟動其他ethereum程序後開啟錢包，錢包都只會去讀取最新開啟的terminal的程序
+
 
 ####試著挖礦
 
@@ -126,3 +126,11 @@ miner.start()
 
 
 
+#注意事項
+
+1.
+>注意:每次從terminal啟動其他ethereum程序後開啟錢包，錢包都只會去讀取最新開啟的terminal的程序
+
+2.
+
+>如果進入到錢包，但是testnet與main都無法點選，表示你嘗試進入到private network但是參數沒有下成功
