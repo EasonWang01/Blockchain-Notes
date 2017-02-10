@@ -59,10 +59,10 @@ genesis.json
 ```
 geth init genesis.json
 ```
-來啟動bootnode
 
+然後輸入以下，之後開啟Mist wallet就會進入private network
 ```
-geth networkid=5 console
+geth --ipcpath ~/Library/Ethereum/geth.ipc --datadir "./privatechain" --networkid 123
 
 ```
 
