@@ -117,13 +117,14 @@ geth --ipcpath ~/Library/Ethereum/geth.ipc --datadir "./privatechain" --networki
 ####試著挖礦
 
 
-進入console
-
->或是可在剛才啟動ethereum後面加上console字樣
+打開另一個termianl輸入以下，進入console
 
 ```
 geth attach
 ```
+>或是可在剛才啟動ethereum後面加上console字樣，而geth attach預設只會找ipc不會找rpc
+
+
 
 加入挖礦要放錢的地址
 ```
