@@ -133,12 +133,26 @@ miner.start()
 ####3.加入其他節點
 https://github.com/ethereum/go-ethereum/wiki/Setting-up-private-network-or-local-cluster
 
-因為geth預設會使用ipc進行內部通訊，但我們要多個節點可能會在其他網路，所以我們用RPC，記得要使用`--rpc`，上面那個官網wiki沒寫
+1.因為geth預設會使用ipc進行內部通訊，但我們要多個節點可能會在其他網路，所以我們用RPC，記得要使用`--rpc`，上面那個官網wiki沒寫
+
+2.每個節點要使用同一個創世區塊，才能找到彼此，我們先輸入如下指令，分別創建兩個節點的資料夾，並且用同一個genesis.json個別於兩資料夾產生相同創世區塊
 ```
-geth  --ipcdisable --rpc --rpcport 8101 --datadir "./privatechain" --networkid 123 --port=30305
+geth --datadir "./privatechain/01" init ./privatechain/src/custom_genesis.json   
+
+geth --datadir "./privatechain/02" init ./privatechain/src/custom_genesis.json  
+```
+3.再來分別啟動兩個節點(networkid要相同，而`--rpcport`與`--port`要不同)
+```
+geth  --ipcdisable --rpc --rpcport 8104 --datadir "./privatechain/01" --networkid 123 --port=30310 console
+
+geth  --ipcdisable --rpc --rpcport 8103 --datadir "./privatechain/02" --networkid 123 --port=30308 console     
+```
+4.之後再其中一個節點的console輸入
+```
+admin.nodeInfo
 ```
 
-再來Mist要設定錢包要連線到哪個位置，所以這次我們不能直接點選圖案開啟，要使用命令列開啟，並加上`--rpc <PORT>`
+5.Mist要設定錢包要連線到哪個位置，所以這次我們不能直接點選圖案開啟，要使用命令列開啟，並加上`--rpc <PORT>`
 
 -----
 OSX
