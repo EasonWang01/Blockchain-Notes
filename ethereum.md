@@ -45,3 +45,37 @@ EVM:
 
 Gas:
 >燃料，每執行一條合約指令會消耗一定的燃料，當某個交易還未執行結束，而燃料消耗完時，合約執行終止並回滾(rollback)狀態，可與ether進行換算，但不可交易。
+
+#相關實用網站
+
+1、以太坊官方網站：https://ethereum.org/
+
+2、以太坊原始碼（官方）：https://github.com/ethereum/
+
+3、以太坊說明文件（官方）：http://www.ethdocs.org/en/latest/index.html
+
+4、以太坊網路狀態（官方）：https://ethstats.Net /
+
+5、以太坊相關工具與資源網站（官方）：http://ether.fund/
+
+6、Solidity說明文件（官方）：http://solidity.readthedocs.io/en/latest/
+
+7、以太坊網路掃描（官方）：http://etherscan.io/
+
+8、以太坊官方部落格：https://blog.ethereum.org/
+
+9、以太坊wiki百科：https://github.com/ethereum/wiki/wiki
+
+10、以太坊中文愛好者網站：http://ethfa​​ns.org/
+
+11、以太坊的gitter的實時交流網站：https://gitter.im/orgs/ethereum/rooms    
+
+12、以太坊的官方論壇：https://forum.ethereum.org/
+
+13、以太坊第三方強大的IDE（Solidity IDE）：https://live.ether.camp/
+
+14、以太坊開發框架Truffle說明書：http://truffle.readthedocs.io/en/latest/
+
+15、以太坊開發框架dapple說明書：http://dapple.readthedocs.io/en/master/
+
+16、以太坊官方推薦開發框架Meteor說明書：https://github.com/ethereum/wiki/wiki/Dapp-using-Meteor
