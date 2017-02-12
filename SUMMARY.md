@@ -9,5 +9,4 @@
 * [ethereum初探](ethereum.md)
 * [ethereum\(Docker\)](ether.md)
 * [ethereum\(Geth\)](ethereumgeth.md)
-* Serverless 架構實作
 
