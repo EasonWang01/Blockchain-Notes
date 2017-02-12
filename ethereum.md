@@ -11,7 +11,7 @@
 
 Dapp:
 >A Dapp (‘decentralized app’) consists of two parts: a frontend, written in HTML, and a backend (think of it as the ‘database’ for your frontend).
-
+以太坊社區把基於智能合約的應用稱為去中心化的應用程序(Decentralized App)。DApp的目標是(或者應該是)讓你的智能合約有一個友好的界面
 
 geth:
 
