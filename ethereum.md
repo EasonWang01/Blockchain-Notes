@@ -79,3 +79,11 @@ Gas:
 15、以太坊開發框架dapple說明書：http://dapple.readthedocs.io/en/master/
 
 16、以太坊官方推薦開發框架Meteor說明書：https://github.com/ethereum/wiki/wiki/Dapp-using-Meteor
+
+#Testnet
+
+取得免費的ether 
+https://ropsten.ether.camp/transactions
+http://faucet.ropsten.be:3001/
+查看區塊情況  https://testnet.etherscan.io/
+

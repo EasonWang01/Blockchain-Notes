@@ -9,7 +9,7 @@
 
 4.區塊內包含以下，區塊頭80字節(byte)，而平均每個交易至少是250字節，而且平均每個區塊至少包含超過500個交易
 
-5.你可以下載https://bitcoin.org/en/full-node，讓你電腦執行程式後成為一個full node
+5.你可以下載 https://bitcoin.org/en/full-node ，讓你電腦執行程式後成為一個full node
 
 full node 意思是讓你電腦成為一個節點，擁有比特幣的開始到現在的所有交易訊息，並且你會需要幫忙認證區塊的正確性
 
