@@ -71,11 +71,18 @@ web3.eth.accounts
 web3.miner.setEtherbase("輸入地址")
 ```
 
+然後輸入以下來解鎖帳號(讓帳號可以交易)
+
+```
+personal.unlockAccount("address", "password")
+```
+
 
 接著是部署
 
 ```
 var greeter = greeterContract.new(_greeting,{from:web3.eth.accounts[0], data: greeterCompiled["<stdin>:greeter"].code, gas: 300000}, function(e, contract){
+if(e) { console.log(e) };
     if(!e) {
       if(!contract.address) {
         console.log("Contract transaction send: TransactionHash: " + contract.transactionHash + " waiting to be mined...");
