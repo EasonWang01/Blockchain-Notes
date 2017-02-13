@@ -158,7 +158,7 @@ greeter.greet()
 
 所以先把第一個節點加入，步驟如下
 
-於第一個節點輸入`admin.nodeInfo` => 複製enode=> 第二個節點輸入`admin.addPeer("剛才複製的enode url")`
+於第一個節點輸入`admin.nodeInfo` => 複製enode url=> 第二個節點輸入`admin.addPeer("剛才複製的enode url")`
 
 之後再到第二個節點輸入以下，即可同步區塊
 ```
