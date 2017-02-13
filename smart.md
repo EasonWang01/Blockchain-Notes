@@ -115,5 +115,9 @@ miner.start(1)
 ```
 miner.stop()
 ```
+然後就可以輸入以下，如果出現`Hello world`就成功了
 
+```
+greeter.greet();
+```
 
