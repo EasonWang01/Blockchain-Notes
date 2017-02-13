@@ -1,8 +1,10 @@
 #智能合約
 
+
+-----
 #Solidity
 
-安裝
+##1.安裝
 
 
 此方法速度較快，其他需花比較長時間
@@ -121,5 +123,19 @@ miner.stop()
 greeter.greet();
 ```
 
-##把剛才的合約部署到其他節點
+##2.把剛才的合約部署到其他節點
 
+為了使得其他人可以運行你的智能合約，你需要兩個資訊：
+1.智能合約地址Address
+2.智能合約ABI（Application Binary Interface），ABI其實就是一個有序的用戶手冊，描述了所有方法的名字和如何調用它們。
+
+我們可以使用如下獲得其ABI和智能合約地址:
+
+
+```
+greeterCompiled["<stdin>:greeter"].info.abiDefinition
+```
+
+```
+greeter.address
+```
