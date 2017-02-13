@@ -155,9 +155,9 @@ geth --datadir "./privatechain/02" init ./privatechain/src/custom_genesis.json
 ```
 3.再來分別啟動兩個節點(networkid要相同，而`--rpcport`與`--port`要不同)
 ```
-geth  --ipcdisable --rpc --rpcport 8104 --datadir "./privatechain/01" --networkid 123 --port=30310 console
+geth  --ipcdisable --rpc --rpcport 8104 --datadir "./privatechain/01" --networkid 123 --rpcapi="db,eth,net,web3,personal" --port=30310 console
 
-geth  --ipcdisable --rpc --rpcport 8103 --datadir "./privatechain/02" --networkid 123 --port=30308 console     
+geth  --ipcdisable --rpc --rpcport 8103 --datadir "./privatechain/02" --networkid 123 --rpcapi="db,eth,net,web3,personal" --port=30308 console     
 ```
 4.之後於01節點的console輸入
 ```
