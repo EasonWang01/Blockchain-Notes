@@ -121,3 +121,5 @@ miner.stop()
 greeter.greet();
 ```
 
+##把剛才的合約部署到其他節點
+
