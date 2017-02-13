@@ -94,6 +94,12 @@ if(e) { console.log(e) };
 })
 ```
 
+正常的話會出現如下
+```
+Contract transaction send: TransactionHash: 0xd913a9fef18e0464b99c2db1d4e847d92647a6dc1054aef310e3104914a6440a waiting to be mined...
+```
+
+
 再來為了要把合約加入Blockchain我們要用挖礦方式產生新區塊
 
 因為在私鏈所以我們要自己挖
@@ -102,7 +108,9 @@ if(e) { console.log(e) };
 miner.start(1)
 ```
 
-產生完Dag後可以stop
+產生完Dag後接著挖到contract後可以stop
+
+![](/assets/螢幕快照 2017-02-13 下午4.01.53.png)
 
 ```
 miner.stop()
