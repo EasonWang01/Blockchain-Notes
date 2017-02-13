@@ -15,8 +15,9 @@ cd solidity
 之後我們一樣先執行剛才的節點
 
 ```
-geth  --ipcdisable --rpc --rpcport 8104 --datadir "./privatechain/01" --networkid 123 --port=30310 console
+geth  --ipcdisable --rpc --rpcport 8104 --datadir "./privatechain/01" --networkid 123 --rpcapi="db,eth,net,web3,personal" --port=30310 console
 ```
+
 
 然後加入我們的第一個合約
 
@@ -43,3 +44,21 @@ greeterCompiled["<stdin>:greeter"].code   //編譯好的機器碼
 
 greeterCompiled["<stdin>:greeter"].info.abiDefinition //查看我們合約的API
 ```
+
+我們剛才程式碼中的` _greeting`還沒定義所以輸入以下
+
+```
+var _greeting = "Hello World!"
+```
+
+接著把我們剛才的合約實例化
+
+```
+var greeterContract = web3.eth.contract(greeterCompiled["<stdin>:greeter"].info.abiDefinition);
+```
+
+然後我們先用以下指令，確定我們鏈上有帳號(也可查看keystore資料夾)，如果沒有可打開Mist新增
+```
+web3.eth.accounts
+```
+
