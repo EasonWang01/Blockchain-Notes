@@ -68,7 +68,7 @@ web3.eth.accounts
 ```
 之後輸入以下綁定帳號到節點
 ```
-web3.miner.setEtherbase(...)
+web3.miner.setEtherbase("輸入地址")
 ```
 
 
