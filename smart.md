@@ -57,8 +57,48 @@ var _greeting = "Hello World!"
 var greeterContract = web3.eth.contract(greeterCompiled["<stdin>:greeter"].info.abiDefinition);
 ```
 
-然後我們先用以下指令，確定我們鏈上有帳號(也可查看keystore資料夾)，如果沒有可打開Mist新增
+然後我們先用以下指令，確定我們鏈上有帳號(也可查看keystore資料夾)
 ```
 web3.eth.accounts
 ```
+如果沒有可打開Mist新增
+
+```
+/Applications/Ethereum\ Wallet.app/Contents/MacOS/Ethereum\ Wallet --rpc http://localhost:8104
+```
+之後輸入以下綁定帳號到節點
+```
+web3.miner.setEtherbase(...)
+```
+
+
+接著是部署
+
+```
+var greeter = greeterContract.new(_greeting,{from:web3.eth.accounts[0], data: greeterCompiled["<stdin>:greeter"].code, gas: 300000}, function(e, contract){
+    if(!e) {
+      if(!contract.address) {
+        console.log("Contract transaction send: TransactionHash: " + contract.transactionHash + " waiting to be mined...");
+      } else {
+        console.log("Contract mined! Address: " + contract.address);
+        console.log(contract);
+      }
+    }
+})
+```
+
+再來為了要把合約加入Blockchain我們要用挖礦方式產生新區塊
+
+因為在私鏈所以我們要自己挖
+
+```
+miner.start(1)
+```
+
+產生完Dag後可以stop
+
+```
+miner.stop()
+```
+
 
