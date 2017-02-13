@@ -139,3 +139,30 @@ greeterCompiled["<stdin>:greeter"].info.abiDefinition
 ```
 greeter.address
 ```
+
+接著我們到另一個節點的console輸入如下，把ABI與Address更改為剛讀取出來的值(建議開一個檔案修改，之後再貼到console，因為code多console不好修改)
+
+```javascript
+var greeter = eth.contract(ABI).at(Address);
+```
+
+再來於另外一個terminal輸入
+
+```
+greeter.greet()
+```
+
+如果出現下圖錯誤，我們可以跟另一個節點做區塊鏈同步即可解決
+
+![](/assets/螢幕快照 2017-02-13 下午4.23.53.png)
+
+所以先把第一個節點加入，步驟如下
+
+於第一個節點輸入`admin.nodeInfo` => 複製enode=> 第二個節點輸入`admin.addPeer("剛才複製的enode url")`
+
+之後再到第二個節點輸入以下，即可同步區塊
+```
+miner.start(1)
+```
+
+此時第二個節點也會出現Hello World了!
