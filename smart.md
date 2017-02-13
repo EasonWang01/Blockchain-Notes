@@ -38,5 +38,8 @@ var greeterCompiled = web3.eth.compile.solidity(greeterSource)
 
 ```
 greeterCompiled["<stdin>:greeter"]
-```
 
+greeterCompiled["<stdin>:greeter"].code   //編譯好的機器碼
+
+greeterCompiled["<stdin>:greeter"].info.abiDefinition //查看我們合約的API
+```
