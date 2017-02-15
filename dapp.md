@@ -194,12 +194,19 @@ token.coinBalanceOf(web3.eth.accounts[1])
 
 
 ```
-greeterCompiled["<stdin>:greeter"].info.abiDefinition
+tokenCompiled["<stdin>:token"].info.abiDefinition
 ```
 
 ```
 greeter.address
 ```
+
+執行另一個節點
+```
+geth  --ipcdisable --rpc --rpcport 8105 --datadir "./privatechain/02" --networkid 123 --rpcapi="db,eth,net,web3,personal" --port=30311 console
+```
+
+
 
 接著我們到另一個節點的console輸入如下，把ABI與Address更改為剛讀取出來的值(建議開一個檔案修改，之後再貼到console，因為code多console不好修改)
 
@@ -214,8 +221,6 @@ greeter.greet()
 ```
 
 如果出現下圖錯誤，我們可以跟另一個節點做區塊鏈同步即可解決
-
-![](/assets/螢幕快照 2017-02-13 下午4.23.53.png)
 
 所以先把第一個節點加入，步驟如下
 
