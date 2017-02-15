@@ -11,6 +11,8 @@ npm install -g create-react-app
 
 create-react-app my-Dapp
 cd my-Dapp
+
+npm install web3 --save
 yarnpkg start
 
 ```
