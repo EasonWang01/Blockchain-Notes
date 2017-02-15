@@ -21,22 +21,6 @@ npm install -g ethereumjs-testrpc
 之後輸入`testrpc`，他會預設給你九組帳號和對應私鑰
 
 
-####2.
->Truffle更改了API
-```
-...deployed()後面要用then來接
-```
-
->ex:
-```
-HelloWorld.deployed().then(a => console.log(a.address))
-```
-```
-HelloWorld.deployed().then(a => console.log(a.balance().then(console.log)))﻿
-```
-
-http://ethereum.stackexchange.com/questions/11935/problem-with-truffle-console-cannot-read-property-call-of-undefined
-
 
 3.在contract下新增一個HelloWorld.sol
 
@@ -88,3 +72,27 @@ HelloWorld.deployed().then(ins => ins.balance().then(a => console.log(a)))
 ```
 HelloWorld.deployed().then(a => {a.deposit(200)})
 ```
+
+
+
+
+
+
+注意事項:
+1.
+>Truffle更改了API
+```
+...deployed()後面要用then來接
+```
+
+>ex:
+```
+HelloWorld.deployed().then(a => console.log(a.address))
+```
+```
+HelloWorld.deployed().then(a => console.log(a.balance().then(console.log)))﻿
+```
+http://ethereum.stackexchange.com/questions/11935/problem-with-truffle-console-cannot-read-property-call-of-undefined
+
+2.
+>檔案sol的名稱要跟contract名稱相同
