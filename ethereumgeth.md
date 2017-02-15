@@ -223,3 +223,15 @@ start <加上程式路徑> --rpc <PORT>
 2.
 
 >如果進入到錢包，但是testnet與main都無法點選，表示你嘗試進入到private network但是參數沒有下成功
+
+3.
+
+>每個 `--` 參數都要和前面空一格，否則無效
+
+4
+
+>windows作業系統的terminal如果不好複製，可以使用git bash
+
+5.
+
+>節點互相找不到的原因通常為你沒有輸入init genesis.json，所以兩個節點間的genesis.json不相同以及沒有輸入--nodiscover 所以他會加上網路上其他相同genesis和networkid的陌生人
