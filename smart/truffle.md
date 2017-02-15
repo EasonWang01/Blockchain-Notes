@@ -96,3 +96,7 @@ http://ethereum.stackexchange.com/questions/11935/problem-with-truffle-console-c
 
 2.
 >檔案sol的名稱要跟contract名稱相同
+
+3.
+>如果想更改已部署到RPC上的contract要輸入
+`truffle migrate --reset`
