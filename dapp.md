@@ -232,3 +232,69 @@ miner.start(1)
 ```
 
 此時第二個節點也會出現相同金額了!
+
+
+
+
+之後有新節點加入都是類似輸入如下，並且`addPeer`
+```
+
+
+var token = web3.eth.contract([{
+    constant: false,
+    inputs: [{
+        name: "receiver",
+        type: "address"
+    }, {
+        name: "amount",
+        type: "uint256"
+    }],
+    name: "sendCoin",
+    outputs: [{
+        name: "sufficient",
+        type: "bool"
+    }],
+    payable: false,
+    type: "function"
+}, {
+    constant: true,
+    inputs: [{
+        name: "",
+        type: "address"
+    }],
+    name: "coinBalanceOf",
+    outputs: [{
+        name: "",
+        type: "uint256"
+    }],
+    payable: false,
+    type: "function"
+}, {
+    inputs: [{
+        name: "supply",
+        type: "uint256"
+    }],
+    payable: false,
+    type: "constructor"
+}, {
+    anonymous: false,
+    inputs: [{
+        indexed: false,
+        name: "sender",
+        type: "address"
+    }, {
+        indexed: false,
+        name: "receiver",
+        type: "address"
+    }, {
+        indexed: false,
+        name: "amount",
+        type: "uint256"
+    }],
+    name: "CoinTransfer",
+    type: "event"
+}]).at("0x14067c5707025c4dabba49949c0c166070b4f5c9");
+
+```
+
+接著我們看第二章來做成一個網頁
