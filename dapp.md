@@ -128,11 +128,13 @@ miner.start(1)
 ```
 miner.stop()
 ```
-然後就可以輸入以下，如果出現`Hello world`就成功了
+然後就可以輸入以下
 
 ```
-greeter.greet();
+token.coinBalanceOf(web3.eth.accounts[0])
 ```
+即會出現餘額
+
 
 ##2.把剛才的合約部署到其他節點
 
