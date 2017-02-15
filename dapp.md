@@ -147,6 +147,31 @@ var event = token.CoinTransfer({}, '', function(error, result){
 之後有人使用這個合約都會有通知
 
 
+再來我們要試著轉一些token從帳號0給帳號1
+(如果沒有一樣用錢包新增)
+
+
+先解鎖兩個帳號
+```
+personal.unlockAccount(web3.eth.accounts[1], "輸入password")
+
+personal.unlockAccount(web3.eth.accounts[0], "輸入password")
+
+```
+查看餘額
+```
+token.coinBalanceOf(web3.eth.accounts[1])
+```
+轉帳
+```
+token.sendCoin.sendTransaction(web3.eth.accounts[1], 1000, {from: web3.eth.accounts[0]})
+```
+成功會console如下
+```
+I0215 20:47:15.628190 internal/ethapi/api.go:1076] Tx(0x0bf7ec2dc727fb9d9943aeabca86c92616f178691f96667db251c16370b0d367) to: 0x14067c5707025c4dabba49949c0c166070b4f5c9
+
+```
+
 ##2.把剛才的合約部署到其他節點
 
 為了使得其他人可以運行你的智能合約，你需要兩個資訊：
