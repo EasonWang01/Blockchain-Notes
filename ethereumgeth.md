@@ -129,7 +129,7 @@ geth attach
 >或是可在剛才啟動ethereum後面加上console字樣，而geth attach預設只會找ipc不會找rpc
 
 
-
+>可在mist新增地址或是在console輸入`personal.newAccount("密碼")`
 加入挖礦要放錢的地址
 ```
 web3.miner.setEtherbase('0xB4eb9148CD0Aa801215f0e62A354F55A7E1AA67A')
