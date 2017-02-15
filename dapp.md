@@ -211,13 +211,13 @@ geth  --ipcdisable --rpc --rpcport 8105 --datadir "./privatechain/02" --networki
 接著我們到另一個節點的console輸入如下，把ABI與Address更改為剛讀取出來的值(建議開一個檔案修改，之後再貼到console，因為code多console不好修改)
 
 ```javascript
-var greeter = eth.contract(ABI).at(Address);
+var token = web3.eth.contract(ABI).at(Address);
 ```
 
 再來於另外一個terminal輸入
 
 ```
-greeter.greet()
+token. coinBalanceOf(web3.eth.accounts[1])
 ```
 
 如果出現下圖錯誤，我們可以跟另一個節點做區塊鏈同步即可解決
