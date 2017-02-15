@@ -57,6 +57,18 @@ contract HelloWorld {
     }
 }
 ```
+把migrate資料夾下的_deploy_contracts.js改為如下
+
+```
+
+var HelloWorld = artifacts.require("./HelloWorld.sol");
+
+module.exports = function(deployer) {
+  deployer.deploy(HelloWorld);
+};
+
+```
+
 
 
 之後
