@@ -60,7 +60,7 @@ module.exports = function(deployer) {
 ```
 truffle compile  => truffle migrate  => truffle console 
 ```
-
+>compile是把sol compile之後會多出json檔案，migrate是把contract部署到RPC上
 
 查看餘額
 ```
