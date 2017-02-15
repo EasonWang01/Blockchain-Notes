@@ -176,7 +176,8 @@ I0215 20:47:15.628190 internal/ethapi/api.go:1076] Tx(0x0bf7ec2dc727fb9d9943aeab
 ```
 miner.start(1)
 ```
-即可看到剛才的交易紀錄
+即可看到剛才的交易紀錄(即為我們剛才寫的event)
+![](/assets/螢幕快照 2017-02-15 下午8.51.39.png)
 然後輸入如下
 ```
 token.coinBalanceOf(web3.eth.accounts[1])
