@@ -22,18 +22,57 @@ npm install -g ethereumjs-testrpc
 
 
 ####2.
-Truffle更改了API
-
+>Truffle更改了API
 ```
 ...deployed()後面要用then來接
 ```
-ex:
 
+>ex:
 ```
 HelloWorld.deployed().then(a => console.log(a.address))
-
+```
+```
 HelloWorld.deployed().then(a => console.log(a.balance().then(console.log)))﻿
 ```
 
 http://ethereum.stackexchange.com/questions/11935/problem-with-truffle-console-cannot-read-property-call-of-undefined
 
+
+3.在contract下新增一個HelloWorld.sol
+
+```
+pragma solidity ^0.4.8;
+
+contract HelloWorld {
+
+    uint public balance;
+
+    function HelloWorld() {
+        balance = 2000;
+    }
+
+    function deposit(uint _value) {
+      // ...
+      balance += _value;
+    }
+}
+```
+
+
+之後
+
+```
+truffle compile  => truffle migrate  => truffle console 
+```
+
+
+查看餘額
+```
+HelloWorld.deployed().then(ins => ins.balance().then(a => console.log(a)))
+
+```
+存錢
+
+```
+HelloWorld.deployed().then(a => {a.deposit(200)})
+```
