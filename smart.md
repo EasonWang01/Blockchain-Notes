@@ -169,3 +169,25 @@ miner.start(1)
 
 
 線上編譯合約：https://ethereum.github.io/browser-solidity/#version=soljson-v0.4.9+commit.364da425.js
+
+
+>如果出現錯誤如下，記得指定solidity版本
+```
+Untitled:2:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.9
+contract HelloWorld {
+^
+Spanning multiple lines.
+```
+
+```
+   pragma solidity ^0.4.8;
+
+contract HelloWorld {
+  
+    uint public balance;
+
+    function HelloWorld() {
+        balance = 1000;
+    }
+}
+```
