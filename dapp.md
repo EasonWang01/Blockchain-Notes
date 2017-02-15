@@ -73,7 +73,7 @@ web3.miner.setEtherbase("輸入地址")
 然後輸入以下來解鎖帳號(讓帳號可以交易)
 
 ```
-personal.unlockAccount("address", "password")
+personal.unlockAccount(web3.eth.accounts[0], "輸入此帳號的password")
 ```
 
 
