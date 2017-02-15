@@ -51,24 +51,10 @@ var tokenCompiled= web3.eth.compile.solidity(tokenSource)
 之後試著輸入以下，即可看到剛才compile後的部分
 
 ```
-greeterCompiled["<stdin>:greeter"]
 
-greeterCompiled["<stdin>:greeter"].code //編譯好的機器碼
-
-greeterCompiled["<stdin>:greeter"].info.abiDefinition //查看我們合約的API
+tokenCompiled["<stdin>:token"].info.abiDefinition //查看我們合約的API
 ```
 
-我們剛才程式碼中的` _greeting`還沒定義所以輸入以下
-
-```
-var _greeting = "Hello World!"
-```
-
-接著把我們剛才的合約實例化
-
-```
-var greeterContract = web3.eth.contract(greeterCompiled["<stdin>:greeter"].info.abiDefinition);
-```
 
 然後我們先用以下指令，確定我們鏈上有帳號(也可查看keystore資料夾)
 ```
@@ -91,25 +77,39 @@ personal.unlockAccount("address", "password")
 ```
 
 
-接著是部署
+接著把我們剛才的合約實例化，並部署
 
 ```
-var greeter = greeterContract.new(_greeting,{from:web3.eth.accounts[0], data: greeterCompiled["<stdin>:greeter"].code, gas: 300000}, function(e, contract){
-if(e) { console.log(e) };
-if(!e) {
-if(!contract.address) {
-console.log("Contract transaction send: TransactionHash: " + contract.transactionHash + " waiting to be mined...");
-} else {
-console.log("Contract mined! Address: " + contract.address);
-console.log(contract);
-}
-}
+var supply = 10000;
+var tokenContract = web3.eth.contract(tokenCompiled["<stdin>:token"].info.abiDefinition);
+var token = tokenContract.new(
+  supply,
+  {
+    from:web3.eth.accounts[0], 
+    data:tokenCompiled["<stdin>:token"].code, 
+    gas: 1000000
+  }, function(e, contract){
+      if(e){console.log(e); }
+    if(!e) {
+      if(!contract.address) {
+        console.log("Contract transaction send: TransactionHash: " + contract.transactionHash + " waiting to be mined...");
+
+      } else {
+        console.log("Contract mined! Address: " + contract.address);
+        console.log(contract);
+      }
+
+    }
 })
 ```
 
+
+
 正常的話會出現如下
 ```
-Contract transaction send: TransactionHash: 0xd913a9fef18e0464b99c2db1d4e847d92647a6dc1054aef310e3104914a6440a waiting to be mined...
+I0215 20:34:36.263099 internal/ethapi/api.go:1074] Tx(0x09d25084b1d471a48c371bb98f54dde88b59af24348a7b2b29a09bc91c7c9727) created: 0x14067c5707025c4dabba49949c0c166070b4f5c9
+Contract transaction send: TransactionHash: 0x09d25084b1d471a48c371bb98f54dde88b59af24348a7b2b29a09bc91c7c9727 waiting to be mined...
+
 ```
 
 
