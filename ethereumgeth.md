@@ -155,9 +155,9 @@ geth --datadir "./privatechain/02" init ./privatechain/src/custom_genesis.json
 ```
 3.再來分別啟動兩個節點(networkid要相同，而`--rpcport`與`--port`要不同)
 ```
-geth  --ipcdisable --rpc --rpcport 8104 --datadir "./privatechain/01" --networkid 123 --rpcapi="db,eth,net,web3,personal" --port=30310 console
+geth  --ipcdisable --rpc --rpcport 8104 --datadir "./privatechain/01" --networkid 123 --rpcapi="db,eth,net,web3,personal" --nodiscover   --port=30310 console
 
-geth  --ipcdisable --rpc --rpcport 8103 --datadir "./privatechain/02" --networkid 123 --rpcapi="db,eth,net,web3,personal" --port=30308 console     
+geth  --ipcdisable --rpc --rpcport 8103 --datadir "./privatechain/02" --networkid 123 --rpcapi="db,eth,net,web3,personal" --nodiscover    --port=30308 console     
 ```
 4.之後於01節點的console輸入
 ```
@@ -185,7 +185,7 @@ admin.addPeer("貼上剛才複製的enode")
 3.
 >一開始沒有加入peers時會發現有時輸入admin.peers會出現有時沒有，原因是在連線到任何peers時他會試著去連接其他網路上的節點
 4.
->節點互相找不到的原因通常為你沒有輸入init genesis.json，所以兩個節點間的genesis.json不相同
+>節點互相找不到的原因通常為你沒有輸入init genesis.json，所以兩個節點間的genesis.json不相同以及沒有輸入--nodiscover 所以他會加上網路上其他相同genesis和networkid的陌生人
 5.
 >重新啟動某節點該節點的peer會斷掉，要重新加入
 
