@@ -2,7 +2,7 @@
 我們一樣先執行剛才的節點
 
 ```
-geth  --ipcdisable --rpc --rpcport 8104 --datadir "./privatechain/01" --networkid 123 --rpcapi="db,eth,net,web3,personal" --port=30310 console
+geth  --ipcdisable --rpc --rpcport 8104 --datadir "./privatechain/01" --networkid 123 --rpcapi="db,eth,net,web3,personal" --nodiscover --port=30310 console
 ```
 
 
@@ -203,7 +203,7 @@ token.address
 
 執行另一個節點
 ```
-geth  --ipcdisable --rpc --rpcport 8105 --datadir "./privatechain/02" --networkid 123 --rpcapi="db,eth,net,web3,personal" --port=30311 console
+geth  --ipcdisable --rpc --rpcport 8105 --datadir "./privatechain/02" --networkid 123 --rpcapi="db,eth,net,web3,personal" --nodiscover --port=30311 console
 ```
 
 
