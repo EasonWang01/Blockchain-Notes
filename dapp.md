@@ -217,10 +217,10 @@ var token = web3.eth.contract(ABI).at(Address);
 再來於另外一個terminal輸入
 
 ```
-token. coinBalanceOf(web3.eth.accounts[1])
+token.coinBalanceOf(web3.eth.accounts[1])
 ```
 
-如果出現下圖錯誤，我們可以跟另一個節點做區塊鏈同步即可解決
+發現金額仍然是0，但應該要是1000，我們可以跟另一個節點做區塊鏈同步即可解決
 
 所以先把第一個節點加入，步驟如下
 
