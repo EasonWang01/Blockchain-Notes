@@ -231,4 +231,4 @@ token.coinBalanceOf(web3.eth.accounts[1])
 miner.start(1)
 ```
 
-此時第二個節點也會出現Hello World了!
+此時第二個節點也會出現相同金額了!
