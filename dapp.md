@@ -136,6 +136,17 @@ token.coinBalanceOf(web3.eth.accounts[0])
 即會出現餘額
 
 
+##監聽
+在console貼上如下，因為我們剛contract有寫event
+```
+var event = token.CoinTransfer({}, '', function(error, result){
+  if (!error)
+    console.log("Coin transfer: " + result.args.amount + " tokens were sent. Balances now are as following: \n Sender:\t" + result.args.sender + " \t" + token.coinBalanceOf.call(result.args.sender) + " tokens \n Receiver:\t" + result.args.receiver + " \t" + token.coinBalanceOf.call(result.args.receiver) + " tokens" )
+});
+```
+之後有人使用這個合約都會有通知
+
+
 ##2.把剛才的合約部署到其他節點
 
 為了使得其他人可以運行你的智能合約，你需要兩個資訊：
