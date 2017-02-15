@@ -198,7 +198,7 @@ tokenCompiled["<stdin>:token"].info.abiDefinition
 ```
 
 ```
-greeter.address
+token.address
 ```
 
 執行另一個節點
