@@ -87,3 +87,24 @@ var root = hash1 + hash2;
 
 console.log('ROOT為:' + root);
 ```
+
+# #挖礦
+
+
+在挖礦過程中成功“挖出”新區塊的礦工可以得到該區塊中包含的所有交易手續費。目前，這筆費用占礦工收入的0.5%或更少，大部分收益仍來自挖礦所得的比特幣獎勵
+
+可以先參考此網站
+http://www.yogh.io/#mine:last
+
+他會用區塊頭
+```
+Version: 536870912
+Prev block: 0000000000000000008D8AF3B55F92BFFEBF286D9C87C54F80C780224F8DD06C
+Merkle root: AA5FB4AFB0154D2BDD3315E074F219351FDF13908F1C515E07BE12124A3D3760
+Timestamp: February 16, 2017, 17:35:35 +0800
+Bits: 18029AB9
+Nonce: 一個隨機數
+
+```
+來做兩次sha256加密，只要比一個target數小，及為挖到新的區塊
+
