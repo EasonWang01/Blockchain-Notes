@@ -1,4 +1,7 @@
 
+可以在以下網站看到目前的相關比特幣交易資訊
+
+https://blockchain.info/zh-cn/
 
 你可以下載 https://bitcoin.org/en/full-node ，讓你電腦執行程式後成為一個full node
 
@@ -37,9 +40,21 @@ https://bitcoin.org/bin/bitcoin-core-0.13.2/
 ./bitcoin-cli stop
 ```
 
+開啟server後他會開始做sync同步其他區塊，所以電腦會開始佔用儲存空間，可以到他資料夾內的block資料夾刪除同步的部分，因為我們這裡只是要測試他的基本指令
+
+
 有關cli command的所有指令
 
 https://en.bitcoin.it/wiki/Original_Bitcoin_client/API_calls_list
+
+
+產生一個比特幣錢包地址
+
+```
+./bitcoin-cli getnewaddress
+```
+
+
 
 
 # #有關手續費
@@ -59,8 +74,3 @@ https://en.bitcoin.it/wiki/Original_Bitcoin_client/API_calls_list
 ```
 0.00000001 bitcoin 為一個 satoshi，此也為bitcoin的最小單位
 ```
-
-
-可以在以下網站看到目前的相關比特幣交易資訊
-
-https://blockchain.info/zh-cn/
