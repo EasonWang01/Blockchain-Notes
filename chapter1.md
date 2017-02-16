@@ -36,3 +36,25 @@ https://blockchain.info/block/000000000019d6689c085ae165831e934ff763ae46a2a6c172
 4字節	難度目標	該區塊工作量證明算法的難度目標
 4字節	Nonce	用於工作量證明算法的計數器
 ```
+
+bitcoin genesis 創建的原始碼
+https://github.com/bitcoin/bitcoin/blob/3955c3940eff83518c186facfec6f50545b5aab5/src/chainparams.cpp#L123
+
+
+# #Merkel tree
+
+區塊鏈中的每個區塊都包含了產生於該區塊的所有交易，且以Merkle樹表示
+
+
+![](/assets/螢幕快照 2017-02-16 下午4.00.56.png)
+
+他是把每一筆資料的txid用兩次sha256做加密
+
+```
+HA =  SHA256(SHA256(交易A))
+```
+
+```
+HB =  SHA256(SHA256(交易B))
+```
+然後再把兩個字串連結再一起，之後再繼續做一樣的加密，直到出現Merkel根為止
