@@ -3,6 +3,11 @@
 
 https://blockchain.info/zh-cn/
 
+比特幣歷史訊息圖表
+
+https://blockchain.info/charts
+
+
 你可以下載 https://bitcoin.org/en/full-node ，讓你電腦執行程式後成為一個full node
 
 full node 意思是讓你電腦成為一個節點，擁有比特幣的開始到現在的所有交易訊息，並且你會需要幫忙認證區塊的正確性
