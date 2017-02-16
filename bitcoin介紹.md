@@ -40,9 +40,9 @@ https://bitcoin.org/bin/bitcoin-core-0.13.2/
 ./bitcoin-cli stop
 ```
 
-開啟server後他會開始做sync同步其他區塊，所以電腦會開始佔用儲存空間，可以到他資料夾內的block資料夾刪除同步的部分，因為我們這裡只是要測試他的基本指令
+開啟server後他會開始做sync同步其他區塊，所以電腦會開始佔用儲存空間，之後可以把它整個bitcoin資料夾刪除，因為我們這裡只是要測試他的基本指令
 
-Bitcoin儲存位置
+Bitcoin 資料夾儲存位置
 
 OSX
 ```
