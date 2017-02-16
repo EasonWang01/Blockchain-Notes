@@ -71,7 +71,7 @@ geth --ipcpath ~/Library/Ethereum/geth.ipc --datadir "./privatechain" --networki
 
 
 ```
->上面要寫上--ipcpath原因是我們指令了datadir
+>上面要寫上--ipcpath原因是我們指定了datadir
 
 
 
@@ -145,7 +145,7 @@ https://github.com/ethereum/go-ethereum/wiki/Setting-up-private-network-or-local
 
 https://github.com/ethereum/go-ethereum/wiki/Connecting-to-the-network#connecting-to-the-network
 
-1.因為geth預設會使用ipc進行內部通訊，但我們要多個節點可能會在其他網路，所以我們用RPC，記得要使用`--rpc`，上面那個官網wiki沒寫
+1.用RPC，記得要使用`--rpc`，上面那個官網wiki沒寫
 
 2.每個節點要使用同一個創世區塊，才能找到彼此，我們先輸入如下指令，分別創建兩個節點的資料夾，並且用同一個genesis.json個別於兩資料夾產生相同創世區塊
 ```
