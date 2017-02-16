@@ -10,14 +10,19 @@ full node 意思是讓你電腦成為一個節點，擁有比特幣的開始到�
 上面的安裝需要至少90GB
 
 
+https://bitcoin.org/bin/bitcoin-core-0.13.2/
 
 所以我們可以直接使用編譯好的且不包含一些其他例如DB等檔案在內的壓縮檔
 
 ```
-https://bitcoin.org/bin/bitcoin-core-0.13.2/
+在剛才網址內選擇tar.gz或是zip的檔案下載
 ```
 
-啟動server
+之後開啟terminal進入該解壓後的資料夾即可
+
+![](/assets/螢幕快照 2017-02-16 下午2.17.24.png)
+
+啟動server(&意思是讓他在背景程序執行)
 ```
 ./bitcoind &
 ```
