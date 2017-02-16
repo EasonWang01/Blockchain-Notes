@@ -18,3 +18,11 @@ var x = ecdh.setPrivateKey(hash2,'hex');
 
 console.log(ecdh.getPublicKey('hex')); //公鑰(使用橢圓算法)
 ```
+
+# #genesis block
+
+也稱為創世區塊，為區塊鏈在一開始產生時的區塊
+
+```
+
+```
