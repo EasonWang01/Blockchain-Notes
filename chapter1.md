@@ -6,7 +6,7 @@ http://zhibimo.com/read/wang-miao/mastering-bitcoin/Chapter04.html
 ```
 var crypto = require('crypto');
 var hash2 = crypto.createHmac('sha256', 'hash1')
-                   .update('powered by flowchain')
+                   .update('test')
                    .digest('hex');
 
                    console.log(hash2);  //私鑰
