@@ -1,5 +1,5 @@
 # #Dapp
-我們可以讓網頁使用web3.js連線到我們本地端的IPC 或 RPC 來讀取資料顯示到網頁，而mainnet和testnet都一樣，因為都是從geth 讀取同步區塊鏈後用IPC或RPC把資料以類似`API`方式傳給網頁
+我們可以讓網頁使用web3.js連線到我們本地端的IPC 或 RPC 來讀取資料顯示到網頁，而mainnet和testnet都一樣，因為都是從geth 讀取同步區塊鏈後用本機的IPC或RPC把資料以類似`API`方式傳給網頁
 
 
 ##實作
