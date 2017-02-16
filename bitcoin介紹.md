@@ -60,3 +60,7 @@ https://en.bitcoin.it/wiki/Original_Bitcoin_client/API_calls_list
 0.00000001 bitcoin 為一個 satoshi，此也為bitcoin的最小單位
 ```
 
+
+可以在以下網站看到目前的相關比特幣交易資訊
+
+https://blockchain.info/zh-cn/
