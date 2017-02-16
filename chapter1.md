@@ -58,3 +58,32 @@ HA =  SHA256(SHA256(交易A))
 HB =  SHA256(SHA256(交易B))
 ```
 然後再把兩個字串連結再一起，之後再繼續做一樣的加密，直到出現Merkel根為止
+
+
+ex:
+
+```
+var crypto = require('crypto');
+
+
+var tx1 = '51b78168d94ec307e2855697209275d477e05d8647caf29cb9e38fb6a4661145';
+var tx2 = 'dasd94ec307e2855697209275d477e05d8647caf29cb9e38fb6a4661145ddddd';
+
+function crypto256(input) {
+  var final = crypto.createHmac('sha256', input)
+                .update('test')
+                .digest('hex');
+  return final
+} 
+
+var hash1 = crypto256(crypto256(tx1));
+
+var hash2 = crypto256(crypto256(tx2));
+
+console.log(hash1);
+console.log(hash2);
+
+var root = hash1 + hash2;
+
+console.log('ROOT為:' + root);
+```
