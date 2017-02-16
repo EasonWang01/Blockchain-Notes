@@ -61,6 +61,31 @@ https://en.bitcoin.it/wiki/Original_Bitcoin_client/API_calls_list
 ./bitcoin-cli getnewaddress
 ```
 
+接著取得私鑰
+```
+./bitcoin-cli dumpprivkey <輸入剛才的地址>
+```
+>因為地址跟私鑰都是在我們電腦產生才可以這樣去取得，不然通常是要用私鑰來產生地址
+
+查看地址內的餘額
+
+```
+./bitcoin-cli getreceivedbyaddress 1KixkqDyrDkwoEnYbwiha4D5oyjzVbrQLB
+```
+
+getrawtransaction把交易哈希值（txid）當做一個參數，並且把整個交易以一個十六進位字串的形式返回，而這也是交易在比特幣網路上存在的形式：
+
+```
+./bitcoin-cli getrawtransaction <txid>
+```
+
+解碼這個十六進製字符串，我們使用decoderawtransaction命令
+
+```
+./bitcoin-cli decoderawtransaction <剛才得到的字串>
+```
+
+
 
 
 
