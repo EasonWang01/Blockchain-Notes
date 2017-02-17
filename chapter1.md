@@ -1,5 +1,9 @@
 # #產生公鑰和私鑰與比特幣地址
 
+```
+十六進制hex每個字為4 bits也就是0.5bytes
+```
+
 以下使用node.js實作
 先安裝`npm install bs58`
 
