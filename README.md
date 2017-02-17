@@ -1,3 +1,14 @@
+# #簡介:
+
+操作相關bitcoin的API提供者
+
+https://blockexplorer.com/api-ref   
+
+https://github.com/blockchain/service-my-wallet-v3  (此為跑在自己local端的server)
+
+
+
+
 #使用BitcoinJS
 
 ```

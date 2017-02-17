@@ -1,22 +1,61 @@
-# #產生公鑰和私鑰
+# #產生公鑰和私鑰與比特幣地址
 
 http://zhibimo.com/read/wang-miao/mastering-bitcoin/Chapter04.html
 
 以下使用node.js實作
+先安裝`npm install bs58`
+
+
 ```
 var crypto = require('crypto');
-var hash2 = crypto.createHmac('sha256', 'hash1')
-                   .update('test')
-                   .digest('hex');
+var ecdh = crypto.createECDH('secp256k1');
 
-                   console.log(hash2);  //私鑰
+
+var hash2 = crypto.randomBytes(32)
+console.log('--------')
+console.log('私鑰')
+console.log(hash2); //私鑰
 console.log('--------')
 
 
-var ecdh = crypto.createECDH('secp256k1');
-var x = ecdh.setPrivateKey(hash2,'hex');
 
-console.log(ecdh.getPublicKey('hex')); //公鑰(使用橢圓算法)
+var publickey = ecdh.setPrivateKey(hash2,'hex').getPublicKey('hex')
+console.log('公鑰')
+console.log(publickey); //公鑰(使用橢圓算法)
+console.log('--------')
+
+
+var hash = crypto.createHash('sha256').update(publickey).digest();
+hash = crypto.createHash('ripemd160').update(hash).digest();
+console.log('publickeyHash')
+console.log(hash);
+console.log('--------')
+
+
+//對publickeyHash加上一个00前缀
+var version = new Buffer('00', 'hex');
+var checksum = Buffer.concat([version, hash]);
+//兩次256雙重加密
+checksum = crypto.createHash('sha256').update(checksum).digest();
+checksum = crypto.createHash('sha256').update(checksum).digest();
+//取前4位得到效驗碼
+checksum = checksum.slice(0, 4);
+console.log('checksum')
+console.log(checksum);
+console.log('--------')
+
+
+var address = Buffer.concat([version, hash, checksum]);
+console.log('編碼前地址')
+console.log(address);
+console.log('--------')
+
+
+var bs58 = require('bs58');
+address = bs58.encode(address);
+console.log('編碼後的比特幣地址')
+console.log(address);
+console.log('--------')
 ```
 
 # #genesis block
