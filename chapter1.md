@@ -1,7 +1,5 @@
 # #產生公鑰和私鑰與比特幣地址
 
-http://zhibimo.com/read/wang-miao/mastering-bitcoin/Chapter04.html
-
 以下使用node.js實作
 先安裝`npm install bs58`
 
