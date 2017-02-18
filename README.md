@@ -37,7 +37,7 @@ npm install bitcoinjs-lib
     var address = keyPair.getAddress()
 ```
 
-產生一組萊特比的address跟WIF
+產生一組萊特幣的address跟WIF
 ```
     function rng () { return new Buffer('zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz') }
 
