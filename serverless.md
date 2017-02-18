@@ -194,6 +194,8 @@ export AWS_SECRET_ACCESS_KEY=填入你的access key
 region: ap-northeast-1
 ```
 並且把function下面的event註解拿掉
+>(yml等描述檔很注重對齊與空格，如果看到indent相關錯誤可以先去查範例然後來檢查)
+
 ```
     events:
       - http:
