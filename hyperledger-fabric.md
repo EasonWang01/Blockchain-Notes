@@ -10,6 +10,10 @@ https://www.hyperledger.org/community/projects
 官方有提供三種方式
 https://www.ibm.com/developerworks/cloud/library/cl-ibm-blockchain-101-quick-start-guide-for-developers-bluemix-trs/index.html#2-3
 
+
+
+# #寫chaincode
+
 ####1.本地安裝
 
 https://github.com/EasonWang01/learn-chaincode/blob/master/docs/setup.md
