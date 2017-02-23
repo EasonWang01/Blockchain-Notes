@@ -11,6 +11,11 @@ https://www.hyperledger.org/community/projects
 https://www.ibm.com/developerworks/cloud/library/cl-ibm-blockchain-101-quick-start-guide-for-developers-bluemix-trs/index.html#2-3
 
 
+#### #使用bluemix(在以下網址申請帳號之後認證信箱然後再到此網址點選建立)
+https://console.au-syd.bluemix.net/catalog/services/blockchain/
+
+
+
 # #與Blockchain互動
 
 
