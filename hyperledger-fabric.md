@@ -72,6 +72,22 @@ https://console.ng.bluemix.net/docs/services/blockchain/etn_sdk.html
 https://github.com/IBM-Blockchain/learn-chaincode
 
 
+####先登入一個使用者
+
+如果使用bluemix可在此查看預設的ID
+
+
+![](/assets/螢幕快照 2017-02-24 上午9.20.44.png)
+
+
+如果是local部署可查看
+https://github.com/hyperledger/fabric/blob/v0.6/membersrvc/membersrvc.yaml#L199
+
+之後使用postman等工具像節點url發出request
+
+![](/assets/螢幕快照 2017-02-24 上午9.26.09.png)
+
+
 #### #使用bluemix(在以下網址申請帳號之後認證信箱然後再到此網址點選建立)
 https://console.au-syd.bluemix.net/catalog/services/blockchain/
 
