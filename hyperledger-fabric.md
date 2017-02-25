@@ -87,6 +87,11 @@ https://github.com/hyperledger/fabric/blob/v0.6/membersrvc/membersrvc.yaml#L199
 
 ![](/assets/螢幕快照 2017-02-24 上午9.26.09.png)
 
+####部署chaincode
+
+官方目前規定要部署必須將code先放在一個公開的repo上(ex:github)
+
+
 
 #### #使用bluemix(在以下網址申請帳號之後認證信箱然後再到此網址點選建立)
 https://console.au-syd.bluemix.net/catalog/services/blockchain/
