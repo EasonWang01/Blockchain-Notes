@@ -38,7 +38,7 @@ docker-compose port bdb-server 9984
 ```
 
 
-之後試試看範例程式，然後使用`python test.py`執行
+之後試試看如下範例程式，然後使用`python test.py`執行
 
 test.py
 ```
