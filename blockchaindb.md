@@ -38,8 +38,9 @@ docker-compose port bdb-server 9984
 ```
 
 
-之後試試看範例程式
+之後試試看範例程式，然後使用`python test.py`執行
 
+test.py
 ```
 from bigchaindb_driver import BigchainDB
 from bigchaindb_driver.crypto import generate_keypair
