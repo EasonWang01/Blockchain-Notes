@@ -36,7 +36,7 @@ $ docker-compose up -d bdb-server
 
 https://docs.bigchaindb.com/projects/py-driver/en/latest/connect.html
 
-執行完以下她會給你一個url記得把他填入以下範例程式
+執行完以下她會給你一個url記得把他填入以下範例程式的連線url
 ```
 docker-compose port bdb-server 9984
 ```
