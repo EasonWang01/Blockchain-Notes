@@ -24,6 +24,10 @@ pip install --upgrade setuptools
 
 https://docs.bigchaindb.com/projects/py-driver/en/latest/contributing.html
 ```
+git clone https://github.com/bigchaindb/bigchaindb-driver.git
+ 
+cd bigchaindb-driver
+
 $ docker-compose up -d rdb
 $ docker-compose up -d bdb-server
 ```
