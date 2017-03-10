@@ -24,6 +24,10 @@ brew tap ethereum/ethereum
 brew install ethereum
 ```
 
+Arm embeded system
+
+http://ethembedded.com/?page_id=171
+
 #使用
 
 https://github.com/ethereum/go-ethereum/wiki/geth
