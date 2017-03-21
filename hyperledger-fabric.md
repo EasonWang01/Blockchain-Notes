@@ -166,6 +166,13 @@ CORE_PEER_ADDRESS=peer0:7051 CORE_PEER_COMMITTER_LEDGER_ORDERER=orderer:7050 pee
 ```
 
 
+最後，如果你不想在一開始時就有預設channel，可把docker-compose-gettingstarted.yml的以下部分註解即可
+
+```
+#  command: sh -c './channel_test.sh; sleep 1000'
+```
+
+
 -----------
 
 #以下為舊資料
