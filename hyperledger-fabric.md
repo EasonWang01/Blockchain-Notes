@@ -4,6 +4,49 @@ https://www.hyperledger.org/community/projects
 
 但其中只有 Fabric比較成熟
 
+# #hyperledger安裝使用Docker
+
+官方文件先前非常不齊全，大多是IBM上較齊全，但最近官方的Docker安裝已經寫好，所以可以參考
+
+
+http://hyperledger-fabric.readthedocs.io/en/latest/asset_setup.html
+
+以下是前期需求
+
+```
+Go - 最新版
+Docker - v1.13 or higher
+Docker Compose - v1.8 or higher
+Node.js & npm - node v6.9.5 and npm v3.10.10
+```
+
+之後啟動Docker後新增一個資料夾
+
+```
+mkdir -p my_dev_workspace/hackfest
+cd my_dev_workspace/hackfest
+```
+
+之後下載環境
+
+```
+curl -L https://raw.githubusercontent.com/hyperledger/fabric/master/examples/sfhackfest/sfhackfest.tar.gz
+```
+
+啟動六個Docker container
+(3 peers, a “solo” orderer, cli and CA)
+
+```
+docker-compose -f docker-compose-gettingstarted.yml build
+
+docker-compose -f docker-compose-gettingstarted.yml up -d
+```
+
+
+
+
+
+
 
 # #安裝環境
 
