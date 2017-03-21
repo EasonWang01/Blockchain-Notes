@@ -69,7 +69,9 @@ var http = require('http');
 這時先開啟terminal
 
 ```
-mkdir lambdaTest
+mkdir lambda_test
+
+cd lambdaTest
 
 npm init(記得先安裝好Node.js)
 
@@ -85,7 +87,6 @@ index.js
 
 
 
-////
 var mongo = require('mongodb');
 var Server = mongo.Server;
 var Db = mongo.Db;
@@ -122,6 +123,9 @@ db.open(function(err, client) {
 ```
 npm install mongodb
 ```
+
+>記得把上面new Server的URL與 改為自己的
+client.authenticate 改為mLab上的user密碼
 
 之後輸入`open .` 把資料夾的內容index.js和node_modules壓縮成zip
 
