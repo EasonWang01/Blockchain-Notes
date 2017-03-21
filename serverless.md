@@ -127,6 +127,16 @@ npm install mongodb
 >記得把上面new Server的URL與 改為自己的
 client.authenticate 改為mLab上的user密碼
 
+>如果還沒申請mLab帳戶可以先去https://mlab.com/home，然後註冊帳號並且新增使用者帳號以及資料庫，然後點擊進去新增一個collection插入一個document為以下資料
+
+
+```
+{
+    "hi": 123,
+    "Hello": 456
+}
+```
+
 
 可以先本地端測試，把exports.handler與context.succeed(doc);
 註解掉即可
