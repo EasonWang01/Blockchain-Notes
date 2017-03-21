@@ -154,6 +154,18 @@ CORE_PEER_COMMITTER_LEDGER_ORDERER=orderer:7050 CORE_PEER_ADDRESS=peer2:7051 pee
 CORE_PEER_ADDRESS=peer0:7051 CORE_PEER_COMMITTER_LEDGER_ORDERER=orderer:7050 peer chaincode deploy -C myc2 -n mycc -p github.com/hyperledger/fabric/examples -c '{"Args":["init","a","100","b","200"]}'
 ```
 
+之後轉帳
+```
+CORE_PEER_ADDRESS=peer0:7051 CORE_PEER_COMMITTER_LEDGER_ORDERER=orderer:7050 peer chaincode invoke -C myc2 -n mycc -c '{"function":"invoke","Args":["move","a","b","10"]}'
+```
+
+
+查詢B餘額
+```
+CORE_PEER_ADDRESS=peer0:7051 CORE_PEER_COMMITTER_LEDGER_ORDERER=orderer:7050 peer chaincode query -C myc2 -n mycc -c '{"function":"invoke","Args":["query","a"]}'
+```
+
+
 -----------
 
 #以下為舊資料
