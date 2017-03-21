@@ -83,9 +83,13 @@ exit
 curl -OOOOOO https://raw.githubusercontent.com/hyperledger/fabric-sdk-node/v1.0-alpha/examples/balance-transfer/{config.json,deploy.js,helper.js,invoke.js,query.js,package.json}
 ```
 
+然後輸入
 
+```
+npm install
+```
 
-
+目前為止我們就具有使用Fabric的基本環境
 
 
 
