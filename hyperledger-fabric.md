@@ -136,6 +136,17 @@ docker exec -it cli bash
 ```
 CORE_PEER_COMMITTER_LEDGER_ORDERER=orderer:7050 peer channel create -c myc2https://yicheng01.github.io/article/test4.html
 ```
+之後會產生`myc2.block` 這個genesis block
+
+接著把三個節點加入channel
+
+```
+CORE_PEER_COMMITTER_LEDGER_ORDERER=orderer:7050 CORE_PEER_ADDRESS=peer0:7051 peer channel join -b myc2.block
+
+CORE_PEER_COMMITTER_LEDGER_ORDERER=orderer:7050 CORE_PEER_ADDRESS=peer1:7051 peer channel join -b myc2.block
+
+CORE_PEER_COMMITTER_LEDGER_ORDERER=orderer:7050 CORE_PEER_ADDRESS=peer2:7051 peer channel join -b myc2.block
+```
 
 
 -----------
