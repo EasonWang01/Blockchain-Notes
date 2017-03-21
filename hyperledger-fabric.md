@@ -43,7 +43,35 @@ docker-compose -f docker-compose-gettingstarted.yml up -d
 ```
 
 
+試著輸入以下來查看是否有六個container
 
+```
+docker ps
+```
+
+然後輸入以下使用cli這個container 並執行bash指令
+
+```
+docker exec -it cli bash
+```
+
+進入bash後可輸入以下查看已經加入的節點
+
+```
+more results.txt
+```
+或是查看genesis block
+
+```
+more myc1.block
+```
+
+然後離開
+
+
+```
+exit
+```
 
 
 
