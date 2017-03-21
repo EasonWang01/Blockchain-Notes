@@ -121,6 +121,23 @@ node query.js
 ```
 
 
+# #使用Cli
+
+我們已經有了一個channel名稱為`myc1`接著我們可以新增一個`myc2`
+
+再次輸入
+
+```
+docker exec -it cli bash
+```
+
+新增`myc2`channel
+
+```
+CORE_PEER_COMMITTER_LEDGER_ORDERER=orderer:7050 peer channel create -c myc2https://yicheng01.github.io/article/test4.html
+```
+
+
 -----------
 
 #以下為舊資料
