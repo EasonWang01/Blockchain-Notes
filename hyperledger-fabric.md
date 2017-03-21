@@ -148,6 +148,11 @@ CORE_PEER_COMMITTER_LEDGER_ORDERER=orderer:7050 CORE_PEER_ADDRESS=peer1:7051 pee
 CORE_PEER_COMMITTER_LEDGER_ORDERER=orderer:7050 CORE_PEER_ADDRESS=peer2:7051 peer channel join -b myc2.block
 ```
 
+接著以下這個指令，會使用`mycc`這個chaincode 並且 在channel`myc2`的`peer0`結點部署
+
+```
+CORE_PEER_ADDRESS=peer0:7051 CORE_PEER_COMMITTER_LEDGER_ORDERER=orderer:7050 peer chaincode deploy -C myc2 -n mycc -p github.com/hyperledger/fabric/examples -c '{"Args":["init","a","100","b","200"]}'
+```
 
 -----------
 
