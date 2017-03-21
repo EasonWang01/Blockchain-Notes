@@ -210,7 +210,12 @@ export AWS_SECRET_ACCESS_KEY=填入你的access key
 
 ```
 
-然後點選左側選單`Users`選擇`Permissios` Tab 點選`Add permissions` 然後選擇`Attach existing policies directly`
+如果忘記可在建立一個
+
+![](/assets/螢幕快照 2017-03-21 上午11.17.50.png)
+
+
+然後點選左側選單`Users`點擊剛創建的user，然後選擇`Permissios` Tab 點選`Add permissions` 然後選擇`Attach existing policies directly`
 
 在輸入框輸入`AdministratorAccess`然後把他加入
 
@@ -228,6 +233,38 @@ region: ap-northeast-1
           path: users/create
           method: get
 ```
+
+
+
+完整版
+
+```
+
+
+service: aws-nodejs # NOTE: update this with your service name
+
+# You can pin your service to only deploy with a specific Serverless version
+# Check out our docs for more details
+# frameworkVersion: "=X.X.X"
+
+provider:
+  name: aws
+  runtime: nodejs4.3
+
+# you can overwrite defaults here
+#  stage: dev
+  region: ap-northeast-1
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: users/create
+          method: get
+
+```
+
 
 
 最後
