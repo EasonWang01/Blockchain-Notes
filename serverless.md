@@ -152,7 +152,16 @@ client.authenticate 改為mLab上的user密碼
 
 再來前往API Gateway
 
-點選`Actions`選單，選擇`Deploy API`，選擇new stage然後輸入名稱
+點選藍色的`Create API`
+
+點選`Actions`選單，點選`Create Method`
+
+然後選單選擇`GET`，右方選擇Lambda Function，選擇地區，輸入function名稱，然後點選`save`
+
+![](/assets/螢幕快照 2017-03-21 上午11.04.08.png)
+
+
+選擇`Deploy API`，選擇new stage然後輸入名稱
 
 過幾秒他會跳出`invoke url`，如下圖
 
