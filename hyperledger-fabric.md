@@ -73,7 +73,35 @@ more myc1.block
 exit
 ```
 
+接著要下載相關 application source code 與 SDK modules
 
+
+一樣在剛hackfest
+的目錄底
+
+```
+curl -OOOOOO https://raw.githubusercontent.com/hyperledger/fabric-sdk-node/v1.0-alpha/examples/balance-transfer/{config.json,deploy.js,helper.js,invoke.js,query.js,package.json}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------
+
+#以下為舊資料
 
 
 # #安裝環境
