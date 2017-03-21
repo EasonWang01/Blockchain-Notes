@@ -173,6 +173,12 @@ CORE_PEER_ADDRESS=peer0:7051 CORE_PEER_COMMITTER_LEDGER_ORDERER=orderer:7050 pee
 ```
 
 
+
+之後要寫相關合約可參考以下教學文章
+
+https://github.com/IBM-Blockchain/learn-chaincode
+
+
 -----------
 
 #以下為舊資料
