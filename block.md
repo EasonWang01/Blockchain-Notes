@@ -17,6 +17,10 @@ https://www.youtube.com/watch?v=sYduOfRLHq0
 
 4.區塊內包含以下，區塊頭80字節(byte)，而平均每個交易至少是250字節，而且平均每個區塊至少包含超過500個交易
 
+
+另一個相關介紹影片
+https://www.youtube.com/watch?v=r43LhSUUGTQ
+
 #Merkle Tree
 
 ![](/assets/螢幕快照 2017-02-07 下午5.03.21.png)
@@ -39,4 +43,8 @@ HAB~=SHA256(SHA256(HA + HB))
 礦工們在挖礦過程中會得到兩種類型的獎勵：創建新區塊的新幣獎勵，以及區塊中所含交易的交易費
 
 在挖礦過程中成功“挖出”新區塊的礦工可以得到該區塊中包含的所有交易“小費”。目前，這筆費用佔礦工收入的0.5%或更少，大部分收益仍來自挖礦所得的比特幣獎勵
+
+
+https://www.youtube.com/watch?v=lik9aaFIsl4&t=1s
+
 
