@@ -92,15 +92,33 @@ npm install
 目前為止我們就具有使用Fabric的基本環境
 
 
+# #Asset Transfer with SDK
+
+以下使用SDK進行設定 key value pairs of "a","100" & "b","200".
 
 
+```
+GOPATH=$PWD node deploy.js
+```
+
+成功後如下圖
+
+![](/assets/ㄉ.png)
 
 
+然後從A轉帳100給B
 
+```
+node invoke.js
+```
 
+![](/assets/螢幕快照 2017-03-21 下午3.00.59.png)
 
+然後查看B的餘額
 
-
+```
+node query.js
+```
 
 
 -----------
