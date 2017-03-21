@@ -127,6 +127,10 @@ npm install mongodb
 >記得把上面new Server的URL與 改為自己的
 client.authenticate 改為mLab上的user密碼
 
+
+可以先本地端測試，把exports.handler與context.succeed(doc);
+註解掉即可
+
 之後輸入`open .` 把資料夾的內容index.js和node_modules壓縮成zip
 
 >注意:不可直接壓縮資料夾，要進入資料夾後選擇index.js和node_modules再按壓縮，因為index.js必須在zip檔案的根目錄
@@ -134,7 +138,16 @@ client.authenticate 改為mLab上的user密碼
 
 回到AWS Lambda上的function，將`Code entry type`旁的選單選擇為`Upload a ZIP file ` 然後把剛才的ZIP檔案拉上去
 
-之後點選TEST即可
+
+![](/assets/螢幕快照 2017-03-21 上午10.50.01.png)
+
+之後點選TEST即可下拉看結果
+
+>如果下方出現Timeout 3s 可把程式碼中的console拿掉
+或是修改configure的Advance的 setting 中 timeout時間
+
+
+![](/assets/螢幕快照 2017-03-21 上午10.58.44.png)
 
 
 再來前往API Gateway
