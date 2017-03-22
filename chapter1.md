@@ -219,3 +219,4 @@ https://en.bitcoin.it/wiki/Difficulty
 
 https://github.com/bitcoin/bitcoin/blob/aab1e55860dea1e40fc02bc0e535c1d1474a5ae3/src/chainparams.cpp  124行
 
+其他回答可參考http://bitcoin.stackexchange.com/questions/3536/how-do-bitcoin-clients-find-each-other
