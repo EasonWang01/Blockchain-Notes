@@ -212,3 +212,10 @@ https://en.bitcoin.it/wiki/Difficulty
 # #從TXid hash找出某筆交易詳細訊息
 
 會有一個HASH表，所以用很短的時間複雜度即可從hash對應到直接的資訊，也因為這些txid的hash之後會在兩兩家密為merkel tree 並將merkel root 存在block中，所以就算可以看到資訊也不怕被修改，具有hash通常都有hash table可以查到它裡面對應的值
+
+# #新加入節點如何找到其他節點
+
+利用寫在原始碼的DNS seed
+
+https://github.com/bitcoin/bitcoin/blob/aab1e55860dea1e40fc02bc0e535c1d1474a5ae3/src/chainparams.cpp  124行
+
