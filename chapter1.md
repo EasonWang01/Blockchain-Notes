@@ -1,4 +1,4 @@
-被挖出後# #產生公鑰和私鑰與比特幣地址
+# #產生公鑰和私鑰與比特幣地址
 
 ```
 十六進制hex每個字為4 bits也就是0.5bytes
@@ -204,4 +204,7 @@ https://en.bitcoin.it/wiki/Protocol_rules#.22tx.22_messages
 
 
 # #難度difficulty的更改
-難度在每2016個block會更改一次
+
+https://en.bitcoin.it/wiki/Difficulty
+
+難度在每2016個block被挖出後會自動按照公式更改一次
