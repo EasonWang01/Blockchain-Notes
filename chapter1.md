@@ -208,3 +208,7 @@ https://en.bitcoin.it/wiki/Protocol_rules#.22tx.22_messages
 https://en.bitcoin.it/wiki/Difficulty
 
 難度在每2016個block被挖出後會自動按照公式更改一次
+
+# #從TXid hash找出某筆交易詳細訊息
+
+會有一個HASH表，所以用很短的時間複雜度即可從hash對應到直接的資訊，兒也因為這些txid的hash之後
