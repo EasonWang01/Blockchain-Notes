@@ -201,3 +201,7 @@ https://en.bitcoin.it/wiki/Protocol_rules#.22tx.22_messages
 發出交易後發出者會帶上用私鑰與相關交易訊息hash過的值，而發出的script包含公鑰，之後其他節點要驗證交易時就用這個公鑰看能不能解開即可
 
 意思為用發出者的公鑰解開他用私鑰加密後的東西即為交易本文
+
+
+# #難度difficulty的更改
+難度在每2016個block會更改一次
