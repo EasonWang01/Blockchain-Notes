@@ -275,10 +275,10 @@ geth  --ipcdisable --rpc --rpcport 8105 --datadir "./privatechain/02" --networki
 var token = web3.eth.contract(ABI).at(Address);
 ```
 
-再來於另外一個terminal輸入
+接著每個節點有自己的帳戶，所以我們先取的節點一的地址
 
 ```
-token.coinBalanceOf(web3.eth.accounts[1])
+ web3.eth.accounts[1] 
 ```
 
 發現金額仍然是0，但應該要是1000，我們可以跟另一個節點做區塊鏈同步即可解決
