@@ -12,18 +12,18 @@ https://hub.docker.com/r/ethereum/client-go/
 
 1.加入以太坊的public network
 ```
-docker run -d --name ethereum-node \
+docker run -d --name ethereum-PublicNode \
     -v $HOME/.ethereum:/root \
     -p 8545:8545 -p 30303:30303 \
     ethereum/client-go --fast --cache=512
 ```
 執行attach
 ```
-docker exec -ti ethereum-node geth attach
+docker exec -ti ethereum-PublicNode geth attach
 ```
 2.加入以太坊的test network
 ```
-docker run -d --name ethereum-node \
+docker run -d --name ethereum-TestNode \
     -v $HOME/.ethereum:/root \
     -p 8545:8545 -p 30303:30303 \
     ethereum/client-go --testnet --fast --cache=512
@@ -31,13 +31,13 @@ docker run -d --name ethereum-node \
 執行attach
 
 ```
-docker exec -ti ethereum-node \
+docker exec -ti ethereum-TestNode \
     geth attach ipc:/root/.ethereum/testnet/geth.ipc
 ```
 
 查看LOG
 ```
-docker logs ethereum-node
+docker logs ethereum-Testnode
 ```
 
 
@@ -72,7 +72,7 @@ ENV GEN_NONCE="0xeddeadbabeeddead" \
 
 我們也可以用`-e`來指定執行docker時的環境變數
 ```
-docker run -e GEN_NONCE='stag0x2222ing' 
+docker run .... -e GEN_NONCE='stag0x2222ing' 
 ```
 
 講解其中的一些.sh程式
