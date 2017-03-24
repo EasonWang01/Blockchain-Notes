@@ -48,7 +48,7 @@ https://github.com/ethereum/go-ethereum/wiki/Command-Line-Options
 
 ####1.創建創世區塊(genesis block)
 
-genesis.json
+custom_genesis.json
 ```
 {
     "nonce": "0x0000000000000042",
