@@ -181,6 +181,34 @@ greeter.address
 ```javascript
 var greeter = eth.contract(ABI).at(Address);
 ```
+>ex:
+```
+var greeter = eth.contract([{
+    constant: false,
+    inputs: [],
+    name: "kill",
+    outputs: [],
+    payable: false,
+    type: "function"
+}, {
+    constant: true,
+    inputs: [],
+    name: "greet",
+    outputs: [{
+        name: "",
+        type: "string"
+    }],
+    payable: false,
+    type: "function"
+}, {
+    inputs: [{
+        name: "_greeting",
+        type: "string"
+    }],
+    payable: false,
+    type: "constructor"
+}]).at("0xe3c599ac956bc790d7b7c140073004dc1ea03c2a");
+```
 
 再來於另外一個terminal輸入
 
