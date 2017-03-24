@@ -155,6 +155,17 @@ https://github.com/ethereum/go-ethereum/wiki/Connecting-to-the-network#connectin
 1.用RPC，記得要使用`--rpc`，上面那個官網wiki沒寫
 
 2.每個節點要使用同一個創世區塊，才能找到彼此，我們先輸入如下指令，分別創建兩個節點的資料夾，並且用同一個genesis.json個別於兩資料夾產生相同創世區塊
+
+
+先把剛privatechain資料夾刪除，重新創建一個./privatechain/src 然後裡面放入剛才的custom_genesis.json
+
+
+```
+rm -rf ./privatechain & mkdir ./privatechain & mkdir ./privatechain/src & mv ./custom_genesis.json ./privatechain/src/custom_genesis.json
+
+```
+
+
 ```
 geth --datadir "./privatechain/01" init ./privatechain/src/custom_genesis.json   
 
