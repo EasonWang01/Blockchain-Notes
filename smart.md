@@ -85,6 +85,8 @@ personal.unlockAccount("address", "password")
 
 接著是部署
 
+>如果說餘額不夠可先`miner.start(1)`，確認餘額eth.getBalance(eth.coinbase)
+
 ```
 var greeter = greeterContract.new(_greeting,{from:web3.eth.accounts[0], data: greeterCompiled["<stdin>:greeter"].code, gas: 300000}, function(e, contract){
 if(e) { console.log(e) };
