@@ -283,6 +283,9 @@ var token = web3.eth.contract(ABI).at(Address);
 
 然後到另一個terminal把地址貼上到框框中
 
+```
+token.coinBalanceOf("0x7d92564bf8e41e093f265da1532ef4143f398461")
+```
 
 發現金額仍然是0，但應該要是1000，我們可以跟另一個節點做區塊鏈同步即可解決
 
