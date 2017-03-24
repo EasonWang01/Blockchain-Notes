@@ -59,6 +59,63 @@ var tokenCompiled= web3.eth.compile.solidity(tokenSource)
 tokenCompiled["<stdin>:token"].info.abiDefinition //查看我們合約的API
 ```
 
+>
+```
+[{
+    constant: false,
+    inputs: [{
+        name: "receiver",
+        type: "address"
+    }, {
+        name: "amount",
+        type: "uint256"
+    }],
+    name: "sendCoin",
+    outputs: [{
+        name: "sufficient",
+        type: "bool"
+    }],
+    payable: false,
+    type: "function"
+}, {
+    constant: true,
+    inputs: [{
+        name: "",
+        type: "address"
+    }],
+    name: "coinBalanceOf",
+    outputs: [{
+        name: "",
+        type: "uint256"
+    }],
+    payable: false,
+    type: "function"
+}, {
+    inputs: [{
+        name: "supply",
+        type: "uint256"
+    }],
+    payable: false,
+    type: "constructor"
+}, {
+    anonymous: false,
+    inputs: [{
+        indexed: false,
+        name: "sender",
+        type: "address"
+    }, {
+        indexed: false,
+        name: "receiver",
+        type: "address"
+    }, {
+        indexed: false,
+        name: "amount",
+        type: "uint256"
+    }],
+    name: "CoinTransfer",
+    type: "event"
+}]
+```
 
 然後我們先用以下指令，確定我們鏈上有帳號(也可查看keystore資料夾)
 ```
