@@ -281,6 +281,9 @@ var token = web3.eth.contract(ABI).at(Address);
  web3.eth.accounts[1] 
 ```
 
+然後到另一個terminal把地址貼上到框框中
+
+
 發現金額仍然是0，但應該要是1000，我們可以跟另一個節點做區塊鏈同步即可解決
 
 所以先把第一個節點加入，步驟如下
