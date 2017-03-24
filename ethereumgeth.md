@@ -161,7 +161,8 @@ https://github.com/ethereum/go-ethereum/wiki/Connecting-to-the-network#connectin
 
 
 ```
-rm -rf ./privatechain & mkdir ./privatechain & mkdir ./privatechain/src & mv ./custom_genesis.json ./privatechain/src/custom_genesis.json
+sudo rm -rf ./privatechain ; mkdir ./privatechain ; mkdir ./privatechain/src ; mv ./custom_genesis.json ./privatechain/src/custom_genesis.json
+
 
 ```
 
