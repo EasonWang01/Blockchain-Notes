@@ -140,7 +140,7 @@ web3.miner.setEtherbase('0xB4eb9148CD0Aa801215f0e62A354F55A7E1AA67A')
 ```
 開始挖礦
 ```
-miner.start()
+miner.start(1)
 ```
 
 
