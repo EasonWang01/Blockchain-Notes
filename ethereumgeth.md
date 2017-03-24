@@ -138,11 +138,14 @@ geth attach
 ```
 web3.miner.setEtherbase('0xB4eb9148CD0Aa801215f0e62A354F55A7E1AA67A')
 ```
-開始挖礦
+開始挖礦(需稍等)
 ```
 miner.start(1)
 ```
-
+停止
+```
+miner.stop()
+```
 
 ####3.加入其他節點
 https://github.com/ethereum/go-ethereum/wiki/Setting-up-private-network-or-local-cluster
