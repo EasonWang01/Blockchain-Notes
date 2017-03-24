@@ -50,6 +50,36 @@ greeterCompiled["<stdin>:greeter"].code   //編譯好的機器碼
 greeterCompiled["<stdin>:greeter"].info.abiDefinition //查看我們合約的API
 ```
 
+以下為編譯好的合約內容
+
+```
+[{
+    constant: false,
+    inputs: [],
+    name: "kill",
+    outputs: [],
+    payable: false,
+    type: "function"
+}, {
+    constant: true,
+    inputs: [],
+    name: "greet",
+    outputs: [{
+        name: "",
+        type: "string"
+    }],
+    payable: false,
+    type: "function"
+}, {
+    inputs: [{
+        name: "_greeting",
+        type: "string"
+    }],
+    payable: false,
+    type: "constructor"
+}]
+```
+
 我們剛才程式碼中的` _greeting`還沒定義所以輸入以下
 
 ```
@@ -61,6 +91,7 @@ var _greeting = "Hello World!"
 ```
 var greeterContract = web3.eth.contract(greeterCompiled["<stdin>:greeter"].info.abiDefinition);
 ```
+
 
 然後我們先用以下指令，確定我們鏈上有帳號(也可查看keystore資料夾)
 ```
