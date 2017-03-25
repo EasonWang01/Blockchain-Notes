@@ -253,3 +253,5 @@ class App extends Component {
 
 export default App;
 ```
+
+![](/assets/螢幕快照 2017-03-25 下午8.42.42.png)
