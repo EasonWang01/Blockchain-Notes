@@ -196,9 +196,10 @@ export default App;
 ![](/assets/螢幕快照 2017-02-16 上午12.22.48.png)
 
 
-記得把程式碼37行改為剛才有餘額的地址
+記得把程式碼 改為剛才有餘額的地址
 
 
+加入簡單轉帳功能
 ```
 import React, { Component } from 'react';
 import logo from './logo.svg';
