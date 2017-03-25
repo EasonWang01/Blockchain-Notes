@@ -141,7 +141,7 @@ token.address
 
 之後App.js改為如下
 
-```
+```javascript
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -200,7 +200,7 @@ export default App;
 
 
 加入簡單轉帳功能
-```
+```javascript
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
@@ -221,13 +221,15 @@ class App extends Component {
 
   componentWillMount() {
     console.log(web3);
-    window.tokenContract = web3.eth.contract(contract01.ABI).at(contract01.address);
+    window.tokenContract = web3.eth.contract(contract01.ABI).at(contract01.address); //初始化合約
     window.web3 = web3;
     web3.setProvider(new web3.providers.HttpProvider('http://localhost:8104')); //指定為RPC server的位置
     this.setState({ accounts: web3.eth.accounts });
 
+    web3.personal.unlockAccount(web3.eth.accounts[0], "12345") //解鎖帳號，這裡記得要填入密碼，每次重啟geth都須重新解鎖
+
   }
-  unlock() {
+  send() {
     window.tokenContract.sendCoin.sendTransaction(web3.eth.accounts[1], this.state.coin, {from: web3.eth.accounts[0]})
   }
   render() {
@@ -238,7 +240,7 @@ class App extends Component {
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to My Dapp</h2>
-          <button onClick={() => this.unlock()}>轉帳</button>
+          <button onClick={() => this.send()}>轉帳</button>
           <input onChange={(e) => this.setState({coin: e.target.value})} />
         </div>
         <p className="App-intro">
