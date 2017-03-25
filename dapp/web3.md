@@ -25,7 +25,7 @@ geth  --ipcdisable --rpc --rpcport 8114 --datadir "./privatechain/03" --networki
 
 把src/App.js改為如下
 
-```
+```javascript
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
