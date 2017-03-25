@@ -197,3 +197,58 @@ export default App;
 
 
 記得把程式碼37行改為剛才有餘額的地址
+
+
+```
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+import contract01 from '../contract/contract01.js' //引入contract
+var Web3 = require('web3');
+var web3 = new Web3();
+
+class App extends Component {
+
+  constructor() {
+
+    super();
+    this.state = {
+      accounts : ''
+    }
+  }
+
+  componentWillMount() {
+    console.log(web3);
+    window.tokenContract = web3.eth.contract(contract01.ABI).at(contract01.address);
+    window.web3 = web3;
+    web3.setProvider(new web3.providers.HttpProvider('http://localhost:8104')); //指定為RPC server的位置
+    this.setState({ accounts: web3.eth.accounts });
+
+  }
+  unlock() {
+    window.tokenContract.sendCoin.sendTransaction(web3.eth.accounts[1], this.state.coin, {from: web3.eth.accounts[0]})
+  }
+  render() {
+    console.log(window.tokenContract);
+    //console.log(window.tokenContract.coinBalanceOf("0x66a2e289b35147188876c2007f9a810dd20e480d"))
+    return (
+      <div className="App">
+        <div className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h2>Welcome to My Dapp</h2>
+          <button onClick={() => this.unlock()}>轉帳</button>
+          <input onChange={(e) => this.setState({coin: e.target.value})} />
+        </div>
+        <p className="App-intro">
+          {this.state.accounts.map((i,idx) => (
+              <p key={idx}>帳號{idx}:  {i}  ，餘額: {window.tokenContract.coinBalanceOf(i).c[0]}</p>
+          ))}
+        </p>
+      </div>
+    );
+  }
+}
+
+export default App;
+```
