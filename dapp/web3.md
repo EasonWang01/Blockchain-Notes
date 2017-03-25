@@ -73,7 +73,7 @@ export default App;
 
 接著新增一個資料夾`contract`裡面放入`contract01.js`把我們剛才的contract的地址以及內容放入(記得要先去掉at)
 
-```
+```javascript
 module.exports = {
   ABI: [{constant: false,
         inputs: [{
