@@ -18,8 +18,8 @@ npm install bitcoinjs-lib
 
 產生隨機地址
 ```
-
-    function rng () { return new Buffer('zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz') }
+    var bitcoin = require('bitcoinjs-lib');
+    function rng () { return new Buffer('abc') }
 
     // generate random keyPair
     var keyPair = bitcoin.ECPair.makeRandom({ rng: rng })
@@ -30,6 +30,9 @@ npm install bitcoinjs-lib
 
 從SHA256 hash產生地址
 ```
+    var bitcoin = require('bitcoinjs-lib');
+    var bigi = require('bigi');
+    
     var hash = bitcoin.crypto.sha256('correct horse battery staple')
     var d = bigi.fromBuffer(hash)
 
@@ -39,25 +42,28 @@ npm install bitcoinjs-lib
 
 產生一組萊特幣的address跟WIF
 ```
-    function rng () { return new Buffer('zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz') }
+    var bitcoin = require('bitcoinjs-lib');
+    function rng () { return new Buffer('abc') };
 
     var litecoin = bitcoin.networks.litecoin
 
-    var keyPair = bitcoin.ECPair.makeRandom({ network: litecoin, rng: rng })
-    var wif = keyPair.toWIF()
-    var address = keyPair.getAddress()
+    var keyPair = bitcoin.ECPair.makeRandom({ network: litecoin, rng: rng });
+    var wif = keyPair.toWIF();
+    var address = keyPair.getAddress();
 ```
 
 
 把WIF格式的私鑰轉換為地址
 ```
-    var keyPair = bitcoin.ECPair.fromWIF('Kxr9tQED9H44gCmp6HAdmemAzU3n84H3dGkuWTKvE23JgHMW8gct')
-    var address = keyPair.getAddress()
+    var bitcoin = require('bitcoinjs-lib');
+    var keyPair = bitcoin.ECPair.fromWIF('Kxr9tQED9H44gCmp6HAdmemAzU3n84H3dGkuWTKvE23JgHMW8gct');
+    var address = keyPair.getAddress();
 
 ```
 
 產生交易
 ```
+    var bitcoin = require('bitcoinjs-lib')
     var keyPair = bitcoin.ECPair.fromWIF('L1uyy5qTuGrVXrmrsvHWHgVzW9kKdrp27wBC7Vs6nZDTF2BRUVwy')
     var tx = new bitcoin.TransactionBuilder()
 
@@ -69,6 +75,7 @@ npm install bitcoinjs-lib
 
 產生較複雜的交易，並廣播到bitcoin network
 ```
+    var bitcoin = require('bitcoinjs-lib')
     var network = bitcoin.networks.testnet
     var alice = bitcoin.ECPair.makeRandom({ network: network })
     var bob = bitcoin.ECPair.makeRandom({ network: network })
