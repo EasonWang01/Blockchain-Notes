@@ -91,6 +91,19 @@ getrawtransaction把交易哈希值（txid）當做一個參數，並且把整�
 ```
 
 
+#執行testenet
+
+可以用bitcoin-qt 或 bitcoind 執行testnet
+
+```
+<...Path>/bitcoin-qt.exe -testnet -datadir="可指定要存放鏈資料的資料夾"
+```
+
+執行後如下圖
+![](/assets/螢幕快照 2017-05-05 上午10.59.04.png)
+
+可到以下網站取得testnet的免費bitcoin
+https://testnet.manu.backend.hamburg/faucet
 
 
 
