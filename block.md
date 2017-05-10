@@ -48,3 +48,7 @@ HAB~=SHA256(SHA256(HA + HB))
 https://www.youtube.com/watch?v=lik9aaFIsl4&t=1s
 
 
+# 看到目前市面上的幣種以及價格
+
+https://coinmarketcap.com/
+
