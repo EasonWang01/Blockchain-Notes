@@ -67,7 +67,7 @@ custom\_genesis.json
 }
 ```
 
-如果不行試試看https://ethereum.stackexchange.com/questions/15283/getting-error-on-max-invalid-genesis-file-hex-string-has-odd-length
+如果不行試試看[https://ethereum.stackexchange.com/questions/15283/getting-error-on-max-invalid-genesis-file-hex-string-has-odd-length](https://ethereum.stackexchange.com/questions/15283/getting-error-on-max-invalid-genesis-file-hex-string-has-odd-length)
 
 ```
 {
@@ -85,8 +85,6 @@ custom\_genesis.json
     }
 }
 ```
-
-
 
 然後輸入
 
@@ -162,6 +160,8 @@ geth attach
 > ```
 >
 > 開始挖礦\(需稍等\)
+>
+> \(目前新版1.6有可能卡在dag產生完後\)
 >
 > ```
 > miner.start(1)
@@ -286,8 +286,7 @@ admin.addPeer("貼上剛才複製的enode")
 
 > 節點互相找不到的原因通常為你沒有輸入init genesis.json，所以兩個節點間的genesis.json不相同以及沒有輸入--nodiscover 所以他會加上網路上其他相同genesis和networkid的陌生人
 
-6.  
-兩節點加入後新加入節點不用挖礦就會自動同步，但如果有產生合約或是廣播交易網路上的其中一個節點必須挖礦
+1. 兩節點加入後新加入節點不用挖礦就會自動同步，但如果有產生合約或是廣播交易網路上的其中一個節點必須挖礦
 
 ![](/assets/螢幕快照 2017-03-25 下午9.16.18.png)
 
