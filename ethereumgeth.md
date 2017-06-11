@@ -290,3 +290,31 @@ admin.addPeer("貼上剛才複製的enode")
 
 ![](/assets/螢幕快照 2017-03-25 下午9.16.18.png)
 
+
+
+
+
+\#
+
+使用DEV
+
+Chain
+
+\(
+
+先前使用web3連線到GCE有點問題
+
+\)
+
+  
+
+
+\`\`\`
+
+geth --dev --ipcpath=/Users/admin/Library/Ethereum/geth.ipc
+
+  
+
+
+然後輸入 admin.startRPC\("127.0.0.1", 8545, "\*", "web3,net,eth,personal"\)
+
