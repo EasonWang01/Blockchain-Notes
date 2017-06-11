@@ -36,15 +36,13 @@ var greeterSource = 'contract mortal { address owner; function mortal() { owner 
 
 > 連官方本身的tutorial都還沒更新
 
-https://ethereum.github.io/browser-solidity/\#version=soljson-v0.4.11+commit.68ef5810.js
+[https://ethereum.github.io/browser-solidity/\#version=soljson-v0.4.11+commit.68ef5810.js](https://ethereum.github.io/browser-solidity/#version=soljson-v0.4.11+commit.68ef5810.js)
 
 然後直接貼上下圖右下方web3 deploy 的code到剛才執行terminal的web3 console中
 
 ![](/assets/螢幕快照 2017-06-11 上午9.44.22.png)
 
 之後直接跳到本講義第二部分
-
-
 
 把上面的部分複製到我們的geth console 中
 
@@ -55,8 +53,6 @@ https://ethereum.github.io/browser-solidity/\#version=soljson-v0.4.11+commit.68e
 ```
 var greeterCompiled = web3.eth.compile.solidity(greeterSource)
 ```
-
-
 
 之後試著輸入以下，即可看到剛才compile後的部分
 
@@ -160,8 +156,6 @@ Contract transaction send: TransactionHash: 0xd913a9fef18e0464b99c2db1d4e847d926
 
 # 第二部分
 
-
-
 再來為了要把合約加入Blockchain我們要用挖礦方式產生新區塊
 
 因為在私鏈所以我們要自己挖
@@ -184,7 +178,15 @@ miner.stop()
 greeter.greet();
 ```
 
-## 2.把剛才的合約部署到其他節點
+## PS:如果出現\`invalid address\`要先輸入以下
+
+```
+web3.eth.defaultAccount = web3.eth.accounts[0]
+```
+
+
+
+# 2.把剛才的合約部署到其他節點
 
 為了使得其他人可以運行你的智能合約，你需要兩個資訊：  
 1.智能合約地址Address  
