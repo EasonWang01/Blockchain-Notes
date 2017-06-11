@@ -6,7 +6,7 @@
 
 # Solidity
 
-## 1.安裝
+## 1.第ㄧ部分:安裝
 
 此方法速度較快，其他需花比較長時間
 
@@ -32,6 +32,20 @@ geth  --ipcdisable --rpc --rpcport 8104 --datadir "./privatechain/01" --networki
 var greeterSource = 'contract mortal { address owner; function mortal() { owner = msg.sender; } function kill() { if (msg.sender == owner) selfdestruct(owner); } } contract greeter is mortal { string greeting; function greeter(string _greeting) public { greeting = _greeting; } function greet() constant returns (string) { return greeting; } }'
 ```
 
+# 如果版本大於1.6建議直接使用online compiler
+
+> 連官方本身的tutorial都還沒更新
+
+https://ethereum.github.io/browser-solidity/\#version=soljson-v0.4.11+commit.68ef5810.js
+
+然後直接貼上下圖右下方web3 deploy 的code到剛才執行terminal的web3 console中
+
+![](/assets/螢幕快照 2017-06-11 上午9.44.22.png)
+
+之後直接跳到本講義第二部分
+
+
+
 把上面的部分複製到我們的geth console 中
 
 然後進行編譯
@@ -41,6 +55,8 @@ var greeterSource = 'contract mortal { address owner; function mortal() { owner 
 ```
 var greeterCompiled = web3.eth.compile.solidity(greeterSource)
 ```
+
+
 
 之後試著輸入以下，即可看到剛才compile後的部分
 
@@ -141,6 +157,10 @@ if(e) { console.log(e) };
 ```
 Contract transaction send: TransactionHash: 0xd913a9fef18e0464b99c2db1d4e847d92647a6dc1054aef310e3104914a6440a waiting to be mined...
 ```
+
+# 第二部分
+
+
 
 再來為了要把合約加入Blockchain我們要用挖礦方式產生新區塊
 
