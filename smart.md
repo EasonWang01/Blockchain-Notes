@@ -36,6 +36,8 @@ var greeterSource = 'contract mortal { address owner; function mortal() { owner 
 
 然後進行編譯
 
+\(注意：如果版本大於1.6之後以下會出現The method eth\_compileSolidity does not exist/is not available錯誤\)
+
 ```
 var greeterCompiled = web3.eth.compile.solidity(greeterSource)
 ```
