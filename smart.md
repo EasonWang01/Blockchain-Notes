@@ -34,6 +34,10 @@ var greeterSource = 'contract mortal { address owner; function mortal() { owner 
 
 # 如果版本大於1.6建議直接使用online compiler
 
+\(因為如果版本大於1.6之後web3.eth.compile.solidity會出現The method eth\_compileSolidity does not exist/is not available錯誤\)
+
+
+
 > 連官方本身的tutorial都還沒更新
 
 [https://ethereum.github.io/browser-solidity/\#version=soljson-v0.4.11+commit.68ef5810.js](https://ethereum.github.io/browser-solidity/#version=soljson-v0.4.11+commit.68ef5810.js)
@@ -42,13 +46,71 @@ var greeterSource = 'contract mortal { address owner; function mortal() { owner 
 
 ![](/assets/螢幕快照 2017-06-11 上午9.44.22.png)
 
-之後直接跳到本講義第二部分
-
 把上面的部分複製到我們的geth console 中
 
-然後進行編譯
+\(如果還沒有帳號先輸入personal.newAccount\(\) \)新增
 
-\(注意：如果版本大於1.6之後以下會出現The method eth\_compileSolidity does not exist/is not available錯誤\)
+之後輸入以下綁定帳號到節點
+
+```
+web3.miner.setEtherbase("輸入地址")
+```
+
+然後輸入以下來解鎖帳號\(讓帳號可以交易\)
+
+```
+personal.unlockAccount("address", "password")
+```
+
+然後挖出contract
+
+```
+miner.start(1)
+```
+
+試著輸入
+
+
+
+```
+ballot_sol_simplestorage.set('123')
+```
+
+
+
+## PS:如果出現\`invalid address\`要先輸入以下
+
+```
+web3.eth.defaultAccount = web3.eth.accounts[0]
+```
+
+# 然後輸入
+
+```
+ ballot_sol_simplestorage.set('123')
+```
+
+# 之後挖礦
+
+```
+miner.start(1)
+```
+
+# 然後即可看到剛才新設定的值
+
+```
+ballot_sol_simplestorage.get()
+```
+
+
+
+# 
+
+
+
+# 1.5.8版本之前適用以下
+
+
 
 ```
 var greeterCompiled = web3.eth.compile.solidity(greeterSource)
@@ -178,15 +240,7 @@ miner.stop()
 greeter.greet();
 ```
 
-## PS:如果出現\`invalid address\`要先輸入以下
-
-```
-web3.eth.defaultAccount = web3.eth.accounts[0]
-```
-
-
-
-# 2.把剛才的合約部署到其他節點
+## 2.把剛才的合約部署到其他節點
 
 為了使得其他人可以運行你的智能合約，你需要兩個資訊：  
 1.智能合約地址Address  
