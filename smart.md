@@ -36,8 +36,6 @@ var greeterSource = 'contract mortal { address owner; function mortal() { owner 
 
 \(因為如果版本大於1.6之後web3.eth.compile.solidity會出現The method eth\_compileSolidity does not exist/is not available錯誤\)
 
-
-
 > 連官方本身的tutorial都還沒更新
 
 [https://ethereum.github.io/browser-solidity/\#version=soljson-v0.4.11+commit.68ef5810.js](https://ethereum.github.io/browser-solidity/#version=soljson-v0.4.11+commit.68ef5810.js)
@@ -53,13 +51,13 @@ var greeterSource = 'contract mortal { address owner; function mortal() { owner 
 之後輸入以下綁定帳號到節點
 
 ```
-web3.miner.setEtherbase("輸入地址")
+web3.miner.setEtherbase(web3.eth.accounts[0])
 ```
 
 然後輸入以下來解鎖帳號\(讓帳號可以交易\)
 
 ```
-personal.unlockAccount("address", "password")
+personal.unlockAccount(web3.eth.accounts[0], "password")
 ```
 
 然後挖出contract
@@ -70,13 +68,9 @@ miner.start(1)
 
 試著輸入
 
-
-
 ```
 ballot_sol_simplestorage.set('123')
 ```
-
-
 
 ## PS:如果出現\`invalid address\`要先輸入以下
 
@@ -102,15 +96,9 @@ miner.start(1)
 ballot_sol_simplestorage.get()
 ```
 
-
-
 # 
 
-
-
 # 1.5.8版本之前適用以下
-
-
 
 ```
 var greeterCompiled = web3.eth.compile.solidity(greeterSource)
