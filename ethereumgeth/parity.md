@@ -18,6 +18,17 @@ C:\Program Files\Ethcore\Parity
 ```
 
 
+# Ubuntu install from command line
+```
+wget http://d1h4xl4cr1h0mo.cloudfront.net/v1.6.8/x86_64-unknown-linux-gnu/parity_1.6.8_amd64.deb
+
+sudo apt install gdebi-core
+
+sudo gdebi parity_1.6.8_amd64.deb
+
+
+```
+
 # 文件
 
 https://github.com/paritytech/parity/wiki
