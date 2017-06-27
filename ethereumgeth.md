@@ -266,9 +266,21 @@ admin.addPeer("貼上剛才複製的enode")
 
 # \# 1.6新增之puppeth  CLI可用來產生genesis\_block
 
-直接在terminal輸入 \`puppeth\` 之後會出現如下圖
+1.記得先產生account
+
+```
+geth --datadir ./privatechain account new
+```
+
+
+
+2.直接在terminal輸入 \`puppeth\` 之後會出現如下圖
 
 ![](/assets/sdc.png)
+
+然後造著步驟走即可，最後會產生一個創世json
+
+# 
 
 # 注意事項
 
