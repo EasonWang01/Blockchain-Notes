@@ -9,6 +9,7 @@
 * [ethereum初探](ethereum.md)
 * [ethereum\(Docker\)](ether.md)
 * [ethereum\(Geth\)](ethereumgeth.md)
+  * [Parity](ethereumgeth/parity.md)
 * [ethereum\(智能合約\)](smart.md)
   * [Truffle](smart/truffle.md)
 * [ethereum\(Dapp\)](dapp.md)
