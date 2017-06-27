@@ -1,3 +1,10 @@
+# 簡介: 
+
+目標是成為一個輕量快速的ethereum implementation
+
+
+> Fast, light, robust Ethereum implementation
+
 # 下載:
 https://github.com/paritytech/parity/releases
 
