@@ -67,7 +67,17 @@ custom\_genesis.json
 }
 ```
 
-如果不行試試看[https://ethereum.stackexchange.com/questions/15283/getting-error-on-max-invalid-genesis-file-hex-string-has-odd-length](https://ethereum.stackexchange.com/questions/15283/getting-error-on-max-invalid-genesis-file-hex-string-has-odd-length)
+然後輸入
+
+```
+geth --datadir "./privatechain" --networkid 123 init custom_genesis.json
+```
+
+> 上面將會創建一個privatechain資料夾，裡面存放我們private chain的資訊，genesis blcok會放在/privatechain資料夾/geth/chaindata/...ldb，而account會放在keystore裡面
+
+\(如果是1.6之後版本要改為如下\)
+
+[https://ethereum.stackexchange.com/questions/15283/getting-error-on-max-invalid-genesis-file-hex-string-has-odd-length](https://ethereum.stackexchange.com/questions/15283/getting-error-on-max-invalid-genesis-file-hex-string-has-odd-length)
 
 ```
 {
@@ -80,19 +90,9 @@ custom\_genesis.json
     "difficulty": "200000000",
     "gasLimit": "2100000",
     "alloc": {
-        "7df9a875a174b3bc565e6424a0050ebc1b2d1d82": { "balance": "300000" },
-        "f41c74c9ae680c1aa78f42e5647a62f353b7bdde": { "balance": "400000" }
     }
 }
 ```
-
-然後輸入
-
-```
-geth --datadir "./privatechain" --networkid 123 init custom_genesis.json
-```
-
-> 上面將會創建一個privatechain資料夾，裡面存放我們private chain的資訊，genesis blcok會放在/privatechain資料夾/geth/chaindata/...ldb，而account會放在keystore裡面
 
 然後輸入以下，之後開啟Mist wallet就會進入private network
 
@@ -292,29 +292,11 @@ admin.addPeer("貼上剛才複製的enode")
 
 
 
+\# 使用DEV Chain
 
-
-\#
-
-使用DEV
-
-Chain
-
-\(
-
-先前使用web3連線到GCE有點問題
-
-\)
-
-  
-
-
-\`\`\`
+\(先前使用web3連線到GCE有點問題，所以採用此方式\)
 
 geth --dev --ipcpath=/Users/admin/Library/Ethereum/geth.ipc
-
-  
-
 
 然後輸入 admin.startRPC\("127.0.0.1", 8545, "\*", "web3,net,eth,personal"\)
 
