@@ -266,9 +266,9 @@ admin.addPeer("貼上剛才複製的enode")
 
 # \# 1.6新增之puppeth  CLI可用來產生genesis\_block
 
-# 
+直接在terminal輸入 \`puppeth\` 之後會出現如下圖
 
-
+![](/assets/sdc.png)
 
 # 注意事項
 
@@ -295,8 +295,6 @@ admin.addPeer("貼上剛才複製的enode")
 1. 兩節點加入後新加入節點不用挖礦就會自動同步，但如果有產生合約或是廣播交易網路上的其中一個節點必須挖礦
 
 ![](/assets/螢幕快照 2017-03-25 下午9.16.18.png)
-
-
 
 \# 使用DEV Chain
 
