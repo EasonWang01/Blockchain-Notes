@@ -42,9 +42,24 @@ var greeterSource = 'contract mortal { address owner; function mortal() { owner 
 
 然後直接貼上下圖右下方web3 deploy 的code到剛才執行terminal的web3 console中
 
+```
+pragma solidity ^0.4.0;
+contract SimpleStorage {
+  uint storedData;
+  
+  function set(uint x) {
+      storedData = x;
+  }
+  
+  function get() constant returns (uint) {
+      return storedData;
+  }
+}
+```
+
 ![](/assets/螢幕快照 2017-06-11 上午9.44.22.png)
 
-把上面的部分複製到我們的geth console 中
+接著點選右側最下方的 \(contract detail\) 把interface的部分複製到我們的geth console 中
 
 \(如果還沒有帳號先輸入personal.newAccount\(\) \)新增
 
