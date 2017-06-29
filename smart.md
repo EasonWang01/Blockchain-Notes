@@ -59,7 +59,7 @@ contract SimpleStorage {
 
 ![](/assets/螢幕快照 2017-06-11 上午9.44.22.png)
 
-接著點選右側最下方的 \(contract detail\) 把interface的部分複製到我們的geth console 中
+
 
 \(如果還沒有帳號先輸入personal.newAccount\(\) \)新增
 
@@ -75,7 +75,7 @@ web3.miner.setEtherbase(web3.eth.accounts[0])
 personal.unlockAccount(web3.eth.accounts[0], "password")
 ```
 
-然後挖出contract
+然後挖出contract\(第一次要先等他跑Dag\)
 
 ```
 miner.start(1)
@@ -92,6 +92,8 @@ ballot_sol_simplestorage.set('123')
 ```
 web3.eth.defaultAccount = web3.eth.accounts[0]
 ```
+
+接著回到網頁點選右側最下方的 \(contract detail\) 把interface的部分複製到我們的geth console 中
 
 # 然後輸入
 
