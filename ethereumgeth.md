@@ -97,6 +97,8 @@ geth --datadir "./privatechain" --networkid 123 init custom_genesis.json
 然後輸入以下，之後開啟Mist wallet就會進入private network
 
 ```
+geth --datadir "./privatechain/01" init ./custom_genesis.json   
+
 geth --ipcpath ~/Library/Ethereum/geth.ipc --datadir "./privatechain" --networkid 123
 ```
 
