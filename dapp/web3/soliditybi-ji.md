@@ -23,5 +23,15 @@ ex:
     }
 ```
 
+4.無法直接進行字串比對，建議使用sha
+
+https://ethereum.stackexchange.com/questions/4559/operator-not-compatible-with-type-string-storage-ref-and-literal-string
+
+ex:
+
+```
+ if (sha3(patients[p].name) == sha3(name))
+```
+
 
 
