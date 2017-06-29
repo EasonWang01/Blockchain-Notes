@@ -11,5 +11,17 @@
     }
 ```
 
+3.有時會出現\`Error: new BigNumber\(\) not a base 16 number:\` 原因是return string時還沒sync
+
+使用\`miner.start\(1\)\`讓他sync即可解決
+
+ex:
+
+```
+    function allPatients(uint16 i) constant returns(string) {
+        return testss[i].name;
+    }
+```
+
 
 
