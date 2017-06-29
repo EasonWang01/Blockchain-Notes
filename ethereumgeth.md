@@ -278,9 +278,19 @@ geth --datadir ./privatechain account new
 
 然後造著步驟走即可，最後會產生一個創世.json
 
-但要記得如果共識節點選的是Poa
+但要記得如果共識方法選的是Poa，之後其他節點要挖礦會產生
 
-# 
+```
+ Block sealing failed    err=unauthorized
+```
+
+記得要
+
+```
+clique.propose("帳號", true)
+```
+
+clique指令只有POA才有
 
 # 注意事項
 
