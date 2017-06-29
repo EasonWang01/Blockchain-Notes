@@ -272,8 +272,6 @@ admin.addPeer("貼上剛才複製的enode")
 geth --datadir ./privatechain account new
 ```
 
-
-
 2.直接在terminal輸入 \`puppeth\` 之後會出現如下圖
 
 ![](/assets/sdc.png)
@@ -310,9 +308,17 @@ geth --datadir ./privatechain account new
 
 \# 使用DEV Chain
 
-\(先前使用web3連線到GCE有點問題，所以採用此方式\)
-
 geth --dev --ipcpath=/Users/admin/Library/Ethereum/geth.ipc
 
 然後輸入 admin.startRPC\("127.0.0.1", 8545, "\*", "web3,net,eth,personal"\)
+
+
+
+
+
+# 開放Remote 連線
+
+https://ethereum.stackexchange.com/questions/3163/how-can-i-expose-geths-rpc-server-to-external-connections
+
+
 
