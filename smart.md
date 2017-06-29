@@ -73,11 +73,7 @@ web3.miner.setEtherbase(web3.eth.accounts[0])
 personal.unlockAccount(web3.eth.accounts[0], "password")
 ```
 
-
-
 接著回到網頁點選右側最下方的 \(contract detail\) 把interface的部分複製到我們的geth console 中
-
-
 
 然後挖出contract\(第一次要先等他跑Dag\)
 
@@ -85,12 +81,10 @@ personal.unlockAccount(web3.eth.accounts[0], "password")
 miner.start(1)
 ```
 
-
-
 試著輸入
 
 ```
-ballot_sol_simplestorage.set('123')
+browser_ballot_sol_simplestorage.set('123')
 ```
 
 ## PS:如果出現\`invalid address\`要先輸入以下
@@ -98,8 +92,6 @@ ballot_sol_simplestorage.set('123')
 ```
 web3.eth.defaultAccount = web3.eth.accounts[0]
 ```
-
-
 
 # 然後輸入
 
