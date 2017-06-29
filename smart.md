@@ -343,3 +343,154 @@ contract HelloWorld {
 
 
 
+```
+pragma solidity ^0.4.0;
+
+contract bSimpleStorage {
+    uint storedData;
+    struct Patient {
+        string name;
+        uint weight; // weight is accumulated by delegation
+        uint height;  // if true, that person already voted
+        uint NHSNum;  //include timestamp
+        bytes32 specialty;  
+        bytes32 consultant;
+        bytes32 diagnoses;
+        uint Creatinite;
+        uint Sodium;
+        uint Potassium;
+        uint eGFR;
+        uint Urea;
+    }
+    struct tests {
+        string name ;
+    }
+    
+    tests[] testss; 
+    function x() {
+         testss.push(tests({
+            name: "123"
+        }));
+    }
+         
+    Patient[] patients;
+    
+    
+    uint16 [] aa = [1,2];
+    //新增病人
+    function addPatient(string name, uint weight, uint height, uint NHSNum) {
+        patients.push(Patient({
+            name: name,
+            weight: weight,
+            height: height,
+            NHSNum: NHSNum, 
+            specialty: '',  
+            consultant: '',
+            diagnoses: '',
+            Creatinite: 0,
+            Sodium: 0,
+            Potassium: 0,
+            eGFR: 0,
+            Urea: 0
+        }));
+    }
+    
+    
+    //更新肌酸酐
+    function updateCreatinite(string name, uint num) {
+        for (uint p = 0; p < patients.length; p++) {
+            if (sha3(patients[p].name) == sha3(name)) {
+               patients[p].Creatinite = num;
+            }
+        }
+    }
+    //讀取
+    function getCreatinite(string name) returns(uint Creatinite) {
+        for (uint p = 0; p < patients.length; p++) {
+            if (sha3(patients[p].name) == sha3(name)) {
+               return patients[p].Creatinite;
+            }
+        }
+    }
+    //更新鈉指數
+    function updateSodium(string name, uint num) {
+        for (uint p = 0; p < patients.length; p++) {
+            if (sha3(patients[p].name) == sha3(name)) {
+               patients[p].Sodium = num;
+            }
+        }
+    }
+    //讀取
+    function getSodium(string name) returns(uint Sodium) {
+        for (uint p = 0; p < patients.length; p++) {
+            if (sha3(patients[p].name) == sha3(name)) {
+               return patients[p].Sodium;
+            }
+        }
+    }
+    
+    //更新鉀指數
+    function updatePotassium(bytes32 name, uint num) {
+        for (uint p = 0; p < patients.length; p++) {
+            if (sha3(patients[p].name) == sha3(name)) {
+               patients[p].Potassium = num;
+            }
+        }
+    }
+    //讀取
+    function getPotassium(string name) returns(uint Potassium) {
+        for (uint p = 0; p < patients.length; p++) {
+            if (sha3(patients[p].name) == sha3(name)) {
+               return patients[p].Potassium;
+            }
+        }
+    }
+    
+    //更新腎功能
+    function updateeGFR(string name, uint num) {
+        for (uint p = 0; p < patients.length; p++) {
+            if (sha3(patients[p].name) == sha3(name)) {
+               patients[p].eGFR = num;
+            }
+        }
+    }
+    //讀取
+    function geteGFR(string name) returns(uint eGFR) {
+        for (uint p = 0; p < patients.length; p++) {
+            if (sha3(patients[p].name) == sha3(name)) {
+               return patients[p].eGFR;
+            }
+        }
+    }
+   //更新尿素
+    function updateeUrea(string name, uint num) {
+        for (uint p = 0; p < patients.length; p++) {
+            if (sha3(patients[p].name) == sha3(name)) {
+               patients[p].Urea = num;
+            }
+        }
+    }
+    //讀取
+    function getUrea(string name) returns(uint Urea) {
+        for (uint p = 0; p < patients.length; p++) {
+            if (sha3(patients[p].name) == sha3(name)) {
+               return patients[p].Urea;
+            }
+        }
+    }
+    
+    
+    function test() constant returns(uint16 []) {
+        return aa;
+    }
+    
+    
+    //獲得所有病人
+    function allPatients(uint16 i) constant returns(string, uint, uint, uint) {
+        return (patients[i].name, patients[i].weight ,patients[i].height, patients[i].NHSNum);
+    }
+}
+```
+
+
+
