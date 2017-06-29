@@ -25,12 +25,24 @@ ex:
 
 4.無法直接進行字串比對，建議使用sha
 
-https://ethereum.stackexchange.com/questions/4559/operator-not-compatible-with-type-string-storage-ref-and-literal-string
+[https://ethereum.stackexchange.com/questions/4559/operator-not-compatible-with-type-string-storage-ref-and-literal-string](https://ethereum.stackexchange.com/questions/4559/operator-not-compatible-with-type-string-storage-ref-and-literal-string)
 
 ex:
 
 ```
  if (sha3(patients[p].name) == sha3(name))
+```
+
+5.無法直接返回struct，須拆成多個參數返回
+
+https://ethereum.stackexchange.com/questions/3609/returning-a-struct-and-reading-via-web3/3614\#3614
+
+ex:
+
+```
+    function allPatients(uint16 i) constant returns(string, uint, uint, uint) {
+        return (patients[i].name, patients[i].weight ,patients[i].height, patients[i].NHSNum);
+    }
 ```
 
 
