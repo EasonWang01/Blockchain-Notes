@@ -59,9 +59,7 @@ contract SimpleStorage {
 
 ![](/assets/螢幕快照 2017-06-11 上午9.44.22.png)
 
-
-
-\(如果還沒有帳號先輸入personal.newAccount\(\) \)新增
+如果還沒有帳號先輸入personal.newAccount\(\) 新增
 
 之後輸入以下綁定帳號到節點
 
@@ -75,11 +73,19 @@ web3.miner.setEtherbase(web3.eth.accounts[0])
 personal.unlockAccount(web3.eth.accounts[0], "password")
 ```
 
+
+
+接著回到網頁點選右側最下方的 \(contract detail\) 把interface的部分複製到我們的geth console 中
+
+
+
 然後挖出contract\(第一次要先等他跑Dag\)
 
 ```
 miner.start(1)
 ```
+
+
 
 試著輸入
 
@@ -93,12 +99,12 @@ ballot_sol_simplestorage.set('123')
 web3.eth.defaultAccount = web3.eth.accounts[0]
 ```
 
-接著回到網頁點選右側最下方的 \(contract detail\) 把interface的部分複製到我們的geth console 中
+
 
 # 然後輸入
 
 ```
- ballot_sol_simplestorage.set('123')
+ browser_ballot_sol_simplestorage.set('123')
 ```
 
 # 之後挖礦
@@ -110,7 +116,7 @@ miner.start(1)
 # 然後即可看到剛才新設定的值
 
 ```
-ballot_sol_simplestorage.get()
+browser_ballot_sol_simplestorage.get()
 ```
 
 # 

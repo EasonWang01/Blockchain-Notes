@@ -276,7 +276,9 @@ geth --datadir ./privatechain account new
 
 ![](/assets/sdc.png)
 
-然後造著步驟走即可，最後會產生一個創世json
+然後造著步驟走即可，最後會產生一個創世.json
+
+但要記得如果共識節點選的是Poa
 
 # 
 
