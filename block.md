@@ -1,13 +1,11 @@
-##簡介
+## 簡介
 
-可先看這個簡單介紹影片
-https://www.youtube.com/watch?v=sYduOfRLHq0
-
+可先看這個簡單介紹影片  
+[https://www.youtube.com/watch?v=sYduOfRLHq0](https://www.youtube.com/watch?v=sYduOfRLHq0)
 
 想像今天主管口頭下令新政策，雖然沒有做記錄，但大家聽到後都會互相口耳相傳，之後這個政策雖然沒有被一個中心把它記錄下來，但大家心中都知道這件事情了，如果之後這個下這個政策的主管離職了，剩下的人會以大家多數人講的為算，但如果有人想更改，也會因為與大多數人講的不同而被拒絕
 
 ![](/assets/螢幕快照 2017-02-07 下午3.09.29.png)
-
 
 1.區塊鏈是由包含交易訊息的區塊，從後向前有序接起來的數據結構，區塊被從後向前有序地鏈接在這個鏈條裡，每個區塊都指向前一個區塊
 
@@ -15,13 +13,12 @@ https://www.youtube.com/watch?v=sYduOfRLHq0
 
 3.由於區塊頭包含“父區塊哈希值”，所以當前區塊的哈希值因此也受到該字段的影響。如果父區塊的hash不一樣，則子區塊也會有不同的hash，接著這個子區塊的子區塊也會有不同hash，這種瀑布效應將保證該區塊不會被改變
 
-4.區塊內包含以下，區塊頭80字節(byte)，而平均每個交易至少是250字節，而且平均每個區塊至少包含超過500個交易
+4.區塊內包含以下，區塊頭80字節\(byte\)，而平均每個交易至少是250字節，而且平均每個區塊至少包含超過500個交易
 
+另一個相關介紹影片  
+[https://www.youtube.com/watch?v=r43LhSUUGTQ](https://www.youtube.com/watch?v=r43LhSUUGTQ)
 
-另一個相關介紹影片
-https://www.youtube.com/watch?v=r43LhSUUGTQ
-
-#Merkle Tree
+# Merkle Tree
 
 ![](/assets/螢幕快照 2017-02-07 下午5.03.21.png)
 
@@ -29,14 +26,11 @@ Merkle樹被用來歸納一個區塊中的所有交易，同時生成整個交�
 
 為了創建父節點HAB，子節點A和子節點B的兩個32字節的哈希值將被串聯成64字節的字符串。隨後將字符串進行兩次哈希來產生父節點的哈希值:
 
-
-
 ```
 HAB~=SHA256(SHA256(HA + HB))
 ```
 
-
-#挖礦
+# 挖礦
 
 一個新的區塊被“挖掘”出來，每個區塊裡包含著從上一個區塊產生到目前這段時間內發生的所有交易，這些交易被依次添加到區塊鏈中。我們把包含在區塊內且被添加到區塊鏈上的交易稱為“確認”交易，交易經過“確認”之後，新的擁有者才能夠花費他在交易中得到的比特幣
 
@@ -44,11 +38,25 @@ HAB~=SHA256(SHA256(HA + HB))
 
 在挖礦過程中成功“挖出”新區塊的礦工可以得到該區塊中包含的所有交易“小費”。目前，這筆費用佔礦工收入的0.5%或更少，大部分收益仍來自挖礦所得的比特幣獎勵
 
-
-https://www.youtube.com/watch?v=lik9aaFIsl4&t=1s
-
+[https://www.youtube.com/watch?v=lik9aaFIsl4&t=1s](https://www.youtube.com/watch?v=lik9aaFIsl4&t=1s)
 
 # 看到目前市面上的幣種以及價格
 
-https://coinmarketcap.com/
+[https://coinmarketcap.com/](https://coinmarketcap.com/)
+
+
+
+# ICO
+
+　ICOs\(Initial Coin Offerings\)，一些新的加密貨幣項目會通過ICO的方式售賣部分平台代幣，而這些代幣的持有者和未來可以將代幣換成錢\(如成功上漲與被市場認可\)。ICOs是加密貨幣項目為平台運作募集資金的一種方式
+
+
+
+
+
+ICO calendar
+
+https://tokenmarket.net/ico-calendar
+
+
 
