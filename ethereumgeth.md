@@ -323,15 +323,13 @@ clique指令只有POA才有
 \# 使用DEV Chain
 
 ```
-geth --dev --rpccorsdomain="*" --ipcpath=/Users/admin/Library/Ethereum/geth.ipc console
+geth --dev --rpc --rpcport 8104 --rpccorsdomain="*"  console 
 ```
-
-然後輸入 admin.startRPC\("127.0.0.1", 8545, "\*", "web3,net,eth,personal"\)
 
 or
 
 ```
-geth --dev --rpcport 8104 --rpccorsdomain="*"  console
+可加上 --datadir ./test
 ```
 
 # 開放Remote 連線
