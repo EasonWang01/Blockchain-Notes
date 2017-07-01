@@ -202,7 +202,7 @@ miner.stop()
 然後就可以輸入以下
 
 ```
-token.coinBalanceOf(web3.eth.accounts[0])
+browser_ballot_sol_token.coinBalanceOf(web3.eth.accounts[0])
 ```
 
 即會出現餘額
@@ -234,13 +234,13 @@ personal.unlockAccount(web3.eth.accounts[0], "輸入password")
 查看餘額
 
 ```
-token.coinBalanceOf(web3.eth.accounts[1])
+browser_ballot_sol_token.coinBalanceOf(web3.eth.accounts[1])
 ```
 
 轉帳
 
 ```
-token.sendCoin.sendTransaction(web3.eth.accounts[1], 1000, {from: web3.eth.accounts[0]})
+browser_ballot_sol_token.sendCoin.sendTransaction(web3.eth.accounts[1], 1000, {from: web3.eth.accounts[0]})
 ```
 
 成功會console如下
