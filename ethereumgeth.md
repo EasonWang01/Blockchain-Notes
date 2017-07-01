@@ -328,6 +328,12 @@ geth --dev --rpccorsdomain="*" --ipcpath=/Users/admin/Library/Ethereum/geth.ipc 
 
 然後輸入 admin.startRPC\("127.0.0.1", 8545, "\*", "web3,net,eth,personal"\)
 
+or
+
+```
+geth --dev --rpcport 8104 --rpccorsdomain="*"  console
+```
+
 # 開放Remote 連線
 
 [https://ethereum.stackexchange.com/questions/3163/how-can-i-expose-geths-rpc-server-to-external-connections](https://ethereum.stackexchange.com/questions/3163/how-can-i-expose-geths-rpc-server-to-external-connections)
