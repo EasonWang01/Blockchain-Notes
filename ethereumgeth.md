@@ -322,7 +322,9 @@ clique指令只有POA才有
 
 \# 使用DEV Chain
 
-geth --dev --rpccorsdomain="\*" --ipcpath=/Users/admin/Library/Ethereum/geth.ipc
+```
+geth --dev --rpccorsdomain="*" --ipcpath=/Users/admin/Library/Ethereum/geth.ipc console
+```
 
 然後輸入 admin.startRPC\("127.0.0.1", 8545, "\*", "web3,net,eth,personal"\)
 
