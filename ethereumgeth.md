@@ -97,7 +97,7 @@ geth --datadir "./privatechain" --networkid 123 init custom_genesis.json
 然後輸入以下，之後開啟Mist wallet就會進入private network
 
 ```
-geth --datadir "./privatechain/01" init ./custom_genesis.json   
+geth --datadir "./privatechain" init ./custom_genesis.json   
 
 geth --ipcpath ~/Library/Ethereum/geth.ipc --datadir "./privatechain" --networkid 123
 ```
@@ -323,7 +323,7 @@ clique指令只有POA才有
 \# 使用DEV Chain
 
 ```
-geth --dev --rpc --rpcport 8104 --rpccorsdomain="*"  console 
+geth --dev --rpc --rpcport 8104 --rpccorsdomain="*"  console
 ```
 
 or
