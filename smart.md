@@ -341,8 +341,6 @@ contract HelloWorld {
 }
 ```
 
-
-
 ```
 pragma solidity ^0.4.0;
 
@@ -365,17 +363,17 @@ contract bSimpleStorage {
     struct tests {
         string name ;
     }
-    
+
     tests[] testss; 
     function x() {
          testss.push(tests({
             name: "123"
         }));
     }
-         
+
     Patient[] patients;
-    
-    
+
+
     uint16 [] aa = [1,2];
     //新增病人
     function addPatient(string name, uint weight, uint height, uint NHSNum) {
@@ -394,8 +392,8 @@ contract bSimpleStorage {
             Urea: 0
         }));
     }
-    
-    
+
+
     //更新肌酸酐
     function updateCreatinite(string name, uint num) {
         for (uint p = 0; p < patients.length; p++) {
@@ -428,7 +426,7 @@ contract bSimpleStorage {
             }
         }
     }
-    
+
     //更新鉀指數
     function updatePotassium(bytes32 name, uint num) {
         for (uint p = 0; p < patients.length; p++) {
@@ -445,7 +443,7 @@ contract bSimpleStorage {
             }
         }
     }
-    
+
     //更新腎功能
     function updateeGFR(string name, uint num) {
         for (uint p = 0; p < patients.length; p++) {
@@ -478,13 +476,13 @@ contract bSimpleStorage {
             }
         }
     }
-    
-    
+
+
     function test() constant returns(uint16 []) {
         return aa;
     }
-    
-    
+
+
     //獲得所有病人
     function allPatients(uint16 i) constant returns(string, uint, uint, uint) {
         return (patients[i].name, patients[i].weight ,patients[i].height, patients[i].NHSNum);
