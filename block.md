@@ -40,29 +40,11 @@ HAB~=SHA256(SHA256(HA + HB))
 
 [https://www.youtube.com/watch?v=lik9aaFIsl4&t=1s](https://www.youtube.com/watch?v=lik9aaFIsl4&t=1s)
 
+挖礦困難度解釋
+
+https://en.bitcoin.it/wiki/Target
+
 # 看到目前市面上的幣種以及價格
 
 [https://coinmarketcap.com/](https://coinmarketcap.com/)
-
-# ICO
-
-ICOs\(Initial Coin Offerings\)，一些新的加密貨幣項目會通過ICO的方式售賣部分平台代幣，而這些代幣的持有者和未來可以將代幣換成錢\(如成功上漲與被市場認可\)。ICOs是加密貨幣項目為平台運作募集資金的一種方式
-
-第一個ICO: [www.mastercoin.org](http://www.mastercoin.org/)
-
-其他ICO: 
-
-> BAT https://basicattentiontoken.org/
-
-
-
-ICO calendar
-
-[https://tokenmarket.net/ico-calendar](https://tokenmarket.net/ico-calendar)
-
-# 交易方式
-
-交易所: ex:  [https://poloniex.com/exchange\#usdt\_btc](https://poloniex.com/exchange#usdt_btc)
-
-個人對個人:[https://localbitcoins.com/](https://localbitcoins.com/)
 
