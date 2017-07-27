@@ -42,7 +42,11 @@ HAB~=SHA256(SHA256(HA + HB))
 
 挖礦困難度解釋
 
-https://en.bitcoin.it/wiki/Target
+[https://en.bitcoin.it/wiki/Target](https://en.bitcoin.it/wiki/Target)
+
+挖礦時間估計
+
+http://coinish.com/bitcoin-mining-calculator/\#calc-information
 
 # 看到目前市面上的幣種以及價格
 
