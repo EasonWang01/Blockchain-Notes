@@ -46,9 +46,15 @@ HAB~=SHA256(SHA256(HA + HB))
 
 挖礦時間估計
 
-http://coinish.com/bitcoin-mining-calculator/\#calc-information
+[http://coinish.com/bitcoin-mining-calculator/\#calc-information](http://coinish.com/bitcoin-mining-calculator/#calc-information)
 
 # 看到目前市面上的幣種以及價格
 
 [https://coinmarketcap.com/](https://coinmarketcap.com/)
+
+
+
+\# 其他相關schema介紹
+
+https://webbtc.com/api/schema
 
