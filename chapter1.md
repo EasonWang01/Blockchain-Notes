@@ -197,6 +197,8 @@ while(1) {
 
 意思為用發出者的公鑰解開他用私鑰加密後的東西即為交易本文
 
+(即為ECDSA的verify過程)
+
 # \#難度difficulty的更改
 
 [https://en.bitcoin.it/wiki/Difficulty](https://en.bitcoin.it/wiki/Difficulty)
