@@ -21,7 +21,7 @@ console.log(hash2); //私鑰，64位十六進制數   //使用hash2.toString('he
 console.log('--------')
 
 
-
+// ECDH和ECDSA產生公私鑰的方式都相同
 var publickey = ecdh.setPrivateKey(hash2,'hex').getPublicKey('hex')
 console.log('公鑰')
 console.log(publickey); //公鑰(通過橢圓曲線算法可以從私鑰計算得到公鑰)
