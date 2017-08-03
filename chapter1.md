@@ -1,3 +1,15 @@
+# \#錢包
+
+```
+錢包裡面含有多個Bitcoin Address以及公私鑰
+```
+
+錢包加密SourceCode: https://github.com/bitcoin/bitcoin/blob/af563971fcbece3659f501329afa9dc84ed733b2/src/wallet/crypter.cpp
+
+
+
+https://en.bitcoin.it/wiki/Wallet\_encryption
+
 # \#產生公鑰和私鑰與比特幣地址
 
 ```
@@ -7,7 +19,7 @@
 以下使用node.js實作  
 先安裝`npm install bs58`
 
-base58說明:https://zh.wikipedia.org/wiki/Base58
+base58說明:[https://zh.wikipedia.org/wiki/Base58](https://zh.wikipedia.org/wiki/Base58)
 
 ```
 var crypto = require('crypto');
@@ -197,7 +209,7 @@ while(1) {
 
 意思為用發出者的公鑰解開他用私鑰加密後的東西即為交易本文
 
-(即為ECDSA的verify過程)
+\(即為ECDSA的verify過程\)
 
 # \#難度difficulty的更改
 
