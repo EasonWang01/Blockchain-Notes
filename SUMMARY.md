@@ -2,6 +2,7 @@
 
 * [區塊鏈運作原理](block.md)
 * [Bitcoin介紹](bitcoin介紹.md)
+  * [Bitcoin其他知識](bitcoin介紹/bitcoinqi-ta-zhi-shi.md)
 * [Bitcoin原理與實作](chapter1.md)
 * [BitcoinJS](README.md)
 * [Serverless 架構實作](serverless.md)
