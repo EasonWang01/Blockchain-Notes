@@ -54,5 +54,13 @@ docker rm (docker ps -q -f status=exited)
 docker stats $(docker ps --format={{.Names}})
 ```
 
+# 7.進入特定PS的container bash
+
+先輸入docker ps ，然後跟去PS ID輸入以下指令
+
+```
+ docker exec -i -t 665b4a1e17b6 /bin/bash
+```
+
 
 
