@@ -37,7 +37,7 @@ docker stop 01f51f8c9f7b
 ## 4.停止所有container
 
 ```
-docker stop (docker ps -a -q)
+docker stop $(docker ps -a -q)
 ```
 
 ## 5.移除所有使用名稱的container
