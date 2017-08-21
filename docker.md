@@ -45,7 +45,7 @@ docker stop (docker ps -a -q)
 在kill或stop container後要再把名稱移除才可再次重新使用
 
 ```
-docker rm (docker ps -q -f status=exited)
+docker rm $(docker ps -q -f status=exited)
 ```
 
 ## 6.以名字顯示running中的container
