@@ -13,6 +13,7 @@
   * [Parity](ethereumgeth/parity.md)
 * [ethereum\(智能合約\)](smart.md)
   * [Truffle](smart/truffle.md)
+  * [合約部屬](smart/he-yue-bu-shu.md)
 * [ethereum\(Dapp\)](dapp.md)
   * [在網頁上使用web3並操作區塊鏈](dapp/web3.md)
     * [solidity筆記](dapp/web3/soliditybi-ji.md)
