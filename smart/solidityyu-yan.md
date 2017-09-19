@@ -1,8 +1,14 @@
 #### 有關從區塊鏈上移除contract
 
-> 合約只能disable  之後所有變數都會歸0，但合約本身不可完全從區塊鏈上刪除 
+> 合約只能disable  之後所有變數都會歸0，但合約本身不可完全從區塊鏈上刪除
 >
 > 並且還是可以往合約地址發送交易以及執行function 但發過去的ether會就此消失
+
+Ex:
+
+```
+function kill() { if (msg.sender == owner) selfdestruct(owner);}
+```
 
 參考以下說明
 
