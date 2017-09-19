@@ -1,8 +1,22 @@
-#### \#Event
+# \#Event
 
 通常當作log使用
 
-https://karl.tech/learning-solidity-part-1-deploy-a-contract/
+Ex:
+
+```
+event log_string(bytes32 log); // Event
+
+function c() returns(address){
+    log_string("Hello World!");
+}
+```
+
+之後執行c\(\) 後到etherscan可看到如下
+
+![](/assets/螢幕快照 2017-09-19 下午10.41.36.png)
+
+[https://karl.tech/learning-solidity-part-1-deploy-a-contract/](https://karl.tech/learning-solidity-part-1-deploy-a-contract/)
 
 #### 
 
@@ -10,7 +24,7 @@ https://karl.tech/learning-solidity-part-1-deploy-a-contract/
 
 #### 
 
-#### 有關從區塊鏈上移除contract
+# \#有關從區塊鏈上移除contract
 
 > 合約只能disable  之後所有變數都會歸0，但合約本身不可完全從區塊鏈上刪除
 >
