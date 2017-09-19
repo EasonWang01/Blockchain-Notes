@@ -12,6 +12,10 @@
 
 \(點選右方create\)
 
+![](/assets/343.png)
+
+
+
 4.使用myetherwallet執行合約
 
 [https://www.myetherwallet.com/\#contracts](https://www.myetherwallet.com/#contracts)
