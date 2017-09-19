@@ -1,6 +1,12 @@
+# \#智能合約部屬\(Testnet\)
+
+
+
 這裡示範使用Testnet\(Ropsten\)
 
 1.下載chrome plugin\(Metamask\)
+
+![](/assets/453.png)
 
 2.之後建立帳號並到以下網址取得免費的幣
 
@@ -13,8 +19,6 @@
 \(點選右方create\)
 
 ![](/assets/343.png)
-
-
 
 4.使用myetherwallet執行合約
 
