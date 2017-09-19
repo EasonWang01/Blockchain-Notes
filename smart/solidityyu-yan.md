@@ -1,3 +1,15 @@
+#### \#Event
+
+通常當作log使用
+
+https://karl.tech/learning-solidity-part-1-deploy-a-contract/
+
+#### 
+
+#### 
+
+#### 
+
 #### 有關從區塊鏈上移除contract
 
 > 合約只能disable  之後所有變數都會歸0，但合約本身不可完全從區塊鏈上刪除
