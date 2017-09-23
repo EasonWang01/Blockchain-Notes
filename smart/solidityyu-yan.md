@@ -46,13 +46,28 @@ function kill() { if (msg.sender == owner) selfdestruct(owner);}
 
 [http://solidity.readthedocs.io/en/develop/miscellaneous.html?highlight=destroy](http://solidity.readthedocs.io/en/develop/miscellaneous.html?highlight=destroy)
 
+# \# external 與 public  與 internal 與private
+
+[https://ethereum.stackexchange.com/questions/19380/external-vs-public-best-practices](https://ethereum.stackexchange.com/questions/19380/external-vs-public-best-practices)
 
 
 
+```
+Functions can be specified as being external, public, internal or private, where the default is public. For state variables, external is not possible and the default is internal.
 
-# \# external 與 public
+external:
+External functions are part of the contract interface, which means they can be called from other contracts and via transactions. An external function f cannot be called internally (i.e. f() does not work, but this.f() works). External functions are sometimes more efficient when they receive large arrays of data.
 
-https://ethereum.stackexchange.com/questions/19380/external-vs-public-best-practices
+public:
+Public functions are part of the contract interface and can be either called internally or via messages. For public state variables, an automatic getter function (see below) is generated.
+
+internal:
+Those functions and state variables can only be accessed internally (i.e. from within the current contract or contracts deriving from it), without using this.
+
+private:
+Private functions and state variables are only visible for the contract they are defined in and not in derived contracts.
+
+```
 
 
 
