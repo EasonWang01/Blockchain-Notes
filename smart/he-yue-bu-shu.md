@@ -1,7 +1,5 @@
 # \#智能合約部屬\(Testnet\)
 
-
-
 這裡示範使用Testnet\(Ropsten\)
 
 1.下載chrome plugin\(Metamask\)
@@ -25,4 +23,14 @@
 [https://www.myetherwallet.com/\#contracts](https://www.myetherwallet.com/#contracts)
 
 ![](/assets/213.png)
+
+
+
+
+
+# ＃發行
+
+https://ethereum.stackexchange.com/questions/23178/how-to-get-an-erc20-token-listed-in-etherscan-io
+
+
 
