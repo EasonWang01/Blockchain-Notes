@@ -46,3 +46,13 @@ function kill() { if (msg.sender == owner) selfdestruct(owner);}
 
 [http://solidity.readthedocs.io/en/develop/miscellaneous.html?highlight=destroy](http://solidity.readthedocs.io/en/develop/miscellaneous.html?highlight=destroy)
 
+
+
+
+
+# \# external 與 public
+
+https://ethereum.stackexchange.com/questions/19380/external-vs-public-best-practices
+
+
+
