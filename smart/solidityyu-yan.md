@@ -18,9 +18,13 @@ function c() returns(address){
 
 [https://karl.tech/learning-solidity-part-1-deploy-a-contract/](https://karl.tech/learning-solidity-part-1-deploy-a-contract/)
 
-#### 
+#### 通常用大寫命名
 
-#### 
+```
+event FrozenFunds(address target, bool frozen);    
+```
+
+
 
 #### 
 
@@ -72,11 +76,9 @@ Private functions and state variables are only visible for the contract they are
 
 return可以花費較少gas 但在return前的code會執行 ，而throw則會把之前的也取消
 
-
-
 # \#Modifier
 
-> _ \_;的意思為繼承這個modifier的function會先跑完寫在_modifier_ \_; 之前的東西才繼續該function_
+> _ \_;的意思為繼承這個modifier的function會先跑完寫在_modifier_ \_; 之前的東西才繼續該function\_
 
 ```
 modifier onlyOwner {
