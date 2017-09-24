@@ -21,10 +21,8 @@ function c() returns(address){
 #### 通常用大寫命名
 
 ```
-event FrozenFunds(address target, bool frozen);    
+event FrozenFunds(address target, bool frozen);
 ```
-
-
 
 #### 
 
@@ -94,6 +92,14 @@ function transferOwnership(address newOwner) onlyOwner {
         owner = newOwner;
     }
 ```
+
+
+
+# \#Require\(\) , assert\(\)
+
+> 用來確認這個行code正常執行  如果不正常就會拋出錯誤  直接中斷並取消整個function
+
+http://solidity.readthedocs.io/en/develop/control-structures.html?highlight=require\#error-handling-assert-require-revert-and-exceptions
 
 
 
