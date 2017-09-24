@@ -50,8 +50,6 @@ function kill() { if (msg.sender == owner) selfdestruct(owner);}
 
 [https://ethereum.stackexchange.com/questions/19380/external-vs-public-best-practices](https://ethereum.stackexchange.com/questions/19380/external-vs-public-best-practices)
 
-
-
 ```
 Functions can be specified as being external, public, internal or private, where the default is public. For state variables, external is not possible and the default is internal.
 
@@ -66,8 +64,15 @@ Those functions and state variables can only be accessed internally (i.e. from w
 
 private:
 Private functions and state variables are only visible for the contract they are defined in and not in derived contracts.
-
 ```
+
+
+
+# \#**return **or **throw**
+
+> The former will cost less gas but it can be more headache as any changes you did to the contract so far will be kept. In the other hand, 'throw' will cancel all contract execution, revert any changes that transaction could have made and the sender will lose all ether he sent for gas. But since the Wallet can detect that a contract will throw, it always shows an alert, therefore preventing any ether to be spent at all.
+
+return可以花費較少gas 但在return前的code會執行 ，而throw則會把之前的也取消
 
 
 
