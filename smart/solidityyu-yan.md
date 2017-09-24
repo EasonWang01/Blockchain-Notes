@@ -66,13 +66,32 @@ private:
 Private functions and state variables are only visible for the contract they are defined in and not in derived contracts.
 ```
 
-
-
 # \#**return **or **throw**
 
 > The former will cost less gas but it can be more headache as any changes you did to the contract so far will be kept. In the other hand, 'throw' will cancel all contract execution, revert any changes that transaction could have made and the sender will lose all ether he sent for gas. But since the Wallet can detect that a contract will throw, it always shows an alert, therefore preventing any ether to be spent at all.
 
 return可以花費較少gas 但在return前的code會執行 ，而throw則會把之前的也取消
+
+
+
+# \#Modifier
+
+> _ \_;的意思為繼承這個modifier的function會先跑完寫在_modifier_ \_; 之前的東西才繼續該function_
+
+```
+modifier onlyOwner {
+        require(msg.sender == owner);
+        _;
+    }
+```
+
+用法
+
+```
+function transferOwnership(address newOwner) onlyOwner {
+        owner = newOwner;
+    }
+```
 
 
 
