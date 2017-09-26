@@ -1,3 +1,5 @@
+> 聯繫作者:yichengww@gmail.com
+
 ## 簡介
 
 可先看這個簡單介紹影片  
@@ -52,9 +54,7 @@ HAB~=SHA256(SHA256(HA + HB))
 
 [https://coinmarketcap.com/](https://coinmarketcap.com/)
 
-
-
 \# 其他相關schema介紹
 
-https://webbtc.com/api/schema
+[https://webbtc.com/api/schema](https://webbtc.com/api/schema)
 
