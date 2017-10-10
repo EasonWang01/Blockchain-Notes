@@ -1,5 +1,7 @@
 # 簡單範例
 
+> 如果有安裝metamask記得要換一個瀏覽器
+
 記得先安裝
 
 ```
@@ -26,7 +28,7 @@ truffle init webpack //使用名稱為webpack的範例模板
 
 ```
 之後可以試著用頁面轉token
-然後更改地40行account = accounts[0]; 的數字查看 
+然後更改地40行account = accounts[0]; 的數字查看
 ```
 
 #### 
