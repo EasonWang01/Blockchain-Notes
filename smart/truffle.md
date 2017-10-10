@@ -24,15 +24,15 @@ truffle init webpack //使用名稱為webpack的範例模板
 
 然後部署到testrpc跑的測試鏈上`truffle migrate`
 
+
+
+#### 106/05/04
+
 [https://github.com/ConsenSys/truffle](https://github.com/ConsenSys/truffle)
 
 ```
 npm install -g truffle
 ```
-
-#### 
-
-#### 106/05/04
 
 #### 1.
 
