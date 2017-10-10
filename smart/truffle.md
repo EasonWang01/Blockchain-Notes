@@ -24,7 +24,12 @@ truffle init webpack //使用名稱為webpack的範例模板
 
 然後部署到testrpc跑的測試鏈上`truffle migrate`
 
+```
+之後可以試著用頁面轉token
+然後更改地40行account = accounts[0]; 的數字查看 
+```
 
+#### 
 
 #### 106/05/04
 
