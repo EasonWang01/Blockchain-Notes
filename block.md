@@ -1,4 +1,4 @@
-> 聯繫作者:yichengww@gmail.com
+> 作者:yichengww@gmail.com
 
 ## 簡介
 
@@ -60,9 +60,5 @@ HAB~=SHA256(SHA256(HA + HB))
 
 \# 圖表
 
-http://cryptomaps.org/
-
- 
-
-
+[http://cryptomaps.org/](http://cryptomaps.org/)
 
