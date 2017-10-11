@@ -3,11 +3,14 @@
 ```
 sudo docker daemon
 
-如果有錯誤可先確認有沒有之前的沒停掉
+// 如果有錯誤可先確認有沒有之前的沒停掉
 sudo service docker stop
+
+// 如果出現timeout無法啟動 可輸入如下
+ps axf | grep docker | grep -v grep | awk '{print "kill -9 " $1}' | sudo sh
+
+//如果docker run ... 出現找不到daemon但已經啟動了  在前面使用sudo run ...即可
 ```
-
-
 
 使用docker hub可搜尋所有別人寫好的可用container  
 [https://hub.docker.com/](https://hub.docker.com/)
