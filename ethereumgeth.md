@@ -161,6 +161,10 @@ geth --datadir "./privatechain" --networkid 123 init custom_genesis.json
 ```
 
 > 每次init genesis  chaindata資料夾下都會多一個ldb但他會去讀取最新的
+>
+> 有時上面訊息有Success 但下面又有Fatal可以不用理會
+
+![](/assets/螢幕快照 2017-10-12 上午5.52.58.png)
 
 之後再次啟動
 
