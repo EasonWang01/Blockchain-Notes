@@ -134,6 +134,10 @@ geth networkid=5
 
 這樣打開錢包也可進入private network
 
+> 如果出現錯誤:Fatal: Failed to write genesis block: database already contains an incompatible genesis block
+>
+> 把路徑下的chaindata資料夾刪除即可    ~/Library/Ethereum/geth/chaindata
+
 ---
 
 #### 2.預先分配ether給account
