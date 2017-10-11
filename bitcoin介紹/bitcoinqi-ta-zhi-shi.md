@@ -22,9 +22,9 @@ BTC則是使用SegWit2X解決問題
 
 # 隔離見證（SegWit2x）
 
-主要為將區塊容量從1M改為2M  並提出閃電網路
+主要為將區塊容量從1M改為2M
 
 [https://thenextweb.com/contributors/2017/09/13/fork-segwit-everything-need-know-bitcoin-scaling/](https://thenextweb.com/contributors/2017/09/13/fork-segwit-everything-need-know-bitcoin-scaling/)
 
-https://en.wikipedia.org/wiki/SegWit
+[https://en.wikipedia.org/wiki/SegWit](https://en.wikipedia.org/wiki/SegWit)
 
