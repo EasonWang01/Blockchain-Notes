@@ -12,6 +12,10 @@
 
 # 使用BitcoinJS
 
+範例:
+
+https://github.com/bitcoinjs/bitcoinjs-lib/blob/9bae30d1121a9d382f2f461fad0194a0e97dfd1e/test/integration/addresses.js
+
 ```
 npm install bitcoinjs-lib
 ```
@@ -55,7 +59,7 @@ console.log(keyPair.getAddress())
 
 產生多重簽章的地址2-of-3 multisig P2SH address
 
-https://en.bitcoin.it/wiki/Multisignature
+[https://en.bitcoin.it/wiki/Multisignature](https://en.bitcoin.it/wiki/Multisignature)
 
 ```js
 var bitcoin = require('bitcoinjs-lib');
@@ -70,12 +74,6 @@ var pubKeys = [
   var address = bitcoin.address.fromOutputScript(scriptPubKey)
   console.log(address)
 ```
-
-
-
-
-
-
 
 產生交易
 
