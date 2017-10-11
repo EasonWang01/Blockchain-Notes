@@ -8,9 +8,7 @@
 
 [https://www.block.io/docs](https://www.block.io/docs)
 
-https://blockchain.info/api/blockchain\_api
-
-
+[https://blockchain.info/api/blockchain\_api](https://blockchain.info/api/blockchain_api)
 
 # 使用BitcoinJS
 
@@ -21,12 +19,16 @@ npm install bitcoinjs-lib
 產生隨機地址
 
 ```
-    var bitcoin = require('bitcoinjs-lib');
-    function rng () { return new Buffer('abc') }
+var bitcoin = require('bitcoinjs-lib');
+var keyPair = bitcoin.ECPair.makeRandom()
 
-    // generate random keyPair
-    var keyPair = bitcoin.ECPair.makeRandom({ rng: rng })
-    var address = keyPair.getAddress()
+// Print your private key (in WIF format)
+console.log(keyPair.toWIF())
+// => Kxr9tQED9H44gCmp6HAdmemAzU3n84H3dGkuWTKvE23JgHMW8gct
+
+// Print your address
+console.log(keyPair.getAddress())
+// => 14bZ7YWde4KdRb5YN7GYkToz3EHVCvRxkF
 ```
 
 從SHA256 hash產生地址
