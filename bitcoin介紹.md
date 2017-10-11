@@ -20,6 +20,8 @@ full node 意思是讓你電腦成為一個節點，擁有比特幣的開始到�
 
 ```
 在剛才網址內選擇自己平台的版本安裝
+// 如果是下載window exe版本 bitcoind 跟bitcoin-cli會在C:\Program Files\Bitcoin\daemon
+//也可直接開啟bitcoin-qt圖形介面然後點選上方的說明->除錯視窗->主控台 也可輸入指令
 ```
 
 之後開啟terminal進入該解壓後的資料夾即可
