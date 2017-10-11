@@ -105,6 +105,20 @@ geth --ipcpath ~/Library/Ethereum/geth.ipc --datadir "./privatechain" --networki
 ```
 
 > 上面要寫上--ipcpath原因是我們指定了datadir
+>
+> 以下為各os路徑  後面記得加geth.ipc
+>
+> Mac
+>
+> `~/Library/Ethereum/`
+>
+> **Linux**
+>
+> `~/.ethereum/`
+>
+> **Windows**
+>
+> `~/AppData/Roaming/Ethereum`
 
 方法2
 
