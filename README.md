@@ -50,8 +50,6 @@ var address = keyPair.getAddress()
 console.log(address)
 ```
 
-
-
 把WIF格式的私鑰轉換為地址
 
 ```
@@ -89,6 +87,7 @@ var pubKeys = [
     tx.addInput('aa94ab02c182214f090e99a0d57021caffd0f195a81c24602b1028b130b63e31', 0)
     tx.addOutput('1Gokm82v6DmtwKEB8AiVhm82hyFSsEvBDK', 15000)
     tx.sign(0, keyPair)
+    console.log(tx);
 ```
 
 產生較複雜的交易，並廣播到bitcoin network
