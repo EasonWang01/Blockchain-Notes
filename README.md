@@ -124,11 +124,11 @@ var aliceChange = bitcoin.ECPair.makeRandom({ rng: rng, network: testnet })
 testnetUtils.faucetMany([
   {
     address: alice1.getAddress(),
-    value: 8e4
+    value: 5e4
   },
   {
     address: alice2.getAddress(),
-    value: 16e4
+    value: 7e4
   }
 ], function (err, unspents) {
   if (err) return done(err)
@@ -162,7 +162,7 @@ funding n2n3vHe6BHUwKybSsSSUXK1CtFTafzmR62 w/ 50000
 funding mvvrViCXRZD1czZduc4xCixmfG7DpZ7Lkb w/ 70000
 ```
 
-進入到此網站https://live.blockcypher.com/btc-testnet
+進入到此網站[https://live.blockcypher.com/btc-testnet](https://live.blockcypher.com/btc-testnet)
 
 然後在右上角輸入地址 即可查看剛才的交易紀錄
 
