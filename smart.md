@@ -33,7 +33,7 @@ var greeterSource = 'contract mortal { address owner; function mortal() { owner 
 
 \(因為如果版本大於1.6之後web3.eth.compile.solidity會出現The method eth\_compileSolidity does not exist/is not available錯誤\)
 
-> 連官方本身的tutorial都還沒更新
+> 官方本身的tutorial還沒更新
 
 [https://ethereum.github.io/browser-solidity/\#version=soljson-v0.4.11+commit.68ef5810.js](https://ethereum.github.io/browser-solidity/#version=soljson-v0.4.11+commit.68ef5810.js)
 
