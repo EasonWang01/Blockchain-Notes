@@ -20,7 +20,7 @@ BTC則是使用SegWit2X解決問題
 另外可參考  
 [http://blockcast.it/2017/07/09/bitcoin-segwit-jul-aug-event-timetable/](http://blockcast.it/2017/07/09/bitcoin-segwit-jul-aug-event-timetable/)
 
-# 隔離見證（SegWit）
+# 隔離見證（SegWit2x）
 
 主要為將區塊容量從1M改為2M  並提出閃電網路
 
