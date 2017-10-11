@@ -296,7 +296,7 @@ admin.addPeer("貼上剛才複製的enode")
 > Windows
 >
 > ```
-> start <加上程式路徑> --rpc <PORT>
+> start <加上程式路徑> --rpc <IP+PORT>
 > ```
 
 # \# 1.6新增之puppeth  CLI可用來產生genesis\_block
