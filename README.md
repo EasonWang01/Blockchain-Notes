@@ -14,7 +14,7 @@
 
 範例:
 
-[https://github.com/bitcoinjs/bitcoinjs-lib/blob/9bae30d1121a9d382f2f461fad0194a0e97dfd1e/test/integration/addresses.js](https://github.com/bitcoinjs/bitcoinjs-lib/blob/9bae30d1121a9d382f2f461fad0194a0e97dfd1e/test/integration/addresses.js)
+[https://github.com/bitcoinjs/bitcoinjs-lib/blob/9bae30d1121a9d382f2f461fad0194a0e97dfd1e/test/integration/addresses.js](https://github.com/bitcoinjs/bitcoinjs-lib/tree/9bae30d1121a9d382f2f461fad0194a0e97dfd1e/test/integration)
 
 ```
 npm install bitcoinjs-lib
