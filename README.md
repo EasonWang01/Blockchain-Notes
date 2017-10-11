@@ -37,18 +37,20 @@ console.log(keyPair.getAddress())
 
 產生一組萊特幣的address跟WIF
 
-之後可到此確認https://live.blockcypher.com/ltc/
+之後可到此確認[https://live.blockcypher.com/ltc/](https://live.blockcypher.com/ltc/)
 
+```js
+var bitcoin = require('bitcoinjs-lib');
+var litecoin = bitcoin.networks.litecoin
+function rng () { return Buffer.from('random_bufferrandom_buffer______') }
+// buffer 長度須為32
+var keyPair = bitcoin.ECPair.makeRandom({ network: litecoin, rng: rng })
+var wif = keyPair.toWIF()
+var address = keyPair.getAddress()
+console.log(address)
 ```
-    var bitcoin = require('bitcoinjs-lib');
-    function rng () { return new Buffer('abc') };
 
-    var litecoin = bitcoin.networks.litecoin
 
-    var keyPair = bitcoin.ECPair.makeRandom({ network: litecoin, rng: rng });
-    var wif = keyPair.toWIF();
-    var address = keyPair.getAddress();
-```
 
 把WIF格式的私鑰轉換為地址
 
