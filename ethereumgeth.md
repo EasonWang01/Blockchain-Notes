@@ -353,7 +353,9 @@ clique指令只有POA才有
 
 ![](/assets/螢幕快照 2017-03-25 下午9.16.18.png)
 
-\# 使用DEV Chain
+# 使用DEV Chain
+
+> 不用自己init genesis block 和指定datadir 以及自動幫你配好一些參數 可直接啟動私有鏈
 
 ```
 geth --dev --rpc --rpcport 8104 --rpccorsdomain="*"  console
