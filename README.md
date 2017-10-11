@@ -90,41 +90,84 @@ var pubKeys = [
     console.log(tx);
 ```
 
-產生較複雜的交易，並廣播到bitcoin network
+產生較複雜的交易，並廣播到Bitcoin Test Network
 
 ```
-    var bitcoin = require('bitcoinjs-lib')
-    var network = bitcoin.networks.testnet
-    var alice = bitcoin.ECPair.makeRandom({ network: network })
-    var bob = bitcoin.ECPair.makeRandom({ network: network })
-    var alicesAddress = alice.getAddress()
-    var bobsAddress = bob.getAddress()
-
-    blockchain.t.faucetMany([
-      {
-        address: alicesAddress,
-        value: 4e4
-      },
-      {
-        address: bobsAddress,
-        value: 2e4
-      }
-    ], function (err, unspents) {
-      if (err) return done(err)
-
-      var tx = new bitcoin.TransactionBuilder(network)
-      tx.addInput(unspents[0].txId, unspents[0].vout)
-      tx.addInput(unspents[1].txId, unspents[1].vout)
-      tx.addOutput(blockchain.t.RETURN, 3e4)
-      tx.addOutput('mvGVHWi6gbkBZZPaqBVRcxvKVPYd9r3fp7', 1e4)
-      tx.sign(0, alice)
-      tx.sign(1, bob)
-
-      blockchain.t.transactions.propagate(tx.build().toHex(), done)
+git clone https://github.com/bitcoinjs/bitcoinjs-lib.git
+cd bitcoinjs-lib/test/integration
+npm install
 ```
 
-一篇不錯的教學:  
-[https://medium.com/@orweinberger/how-to-create-a-raw-transaction-using-bitcoinjs-lib-1347a502a3a\#.gbnwu2863](https://medium.com/@orweinberger/how-to-create-a-raw-transaction-using-bitcoinjs-lib-1347a502a3a#.gbnwu2863)
+```
+點選transaction.js 然後把code整個刪掉改為如下
+```
+
+```js
+/* global describe, it */
+
+var assert = require('assert')
+var bitcoin = require('../../')
+var dhttp = require('dhttp/200')
+var testnet = bitcoin.networks.testnet
+var testnetUtils = require('./_testnet')
+
+
+function rng () {
+  return Buffer.from('YT8dAtK4d16A3P1z+TpwB2jJ4aFH3g9M1EioIBkLEV4=', 'base64')
+}
+
+var alice1 = bitcoin.ECPair.makeRandom({ network: testnet })
+var alice2 = bitcoin.ECPair.makeRandom({ network: testnet })
+var aliceChange = bitcoin.ECPair.makeRandom({ rng: rng, network: testnet })
+
+// "simulate" on testnet that Alice has 2 unspent outputs
+testnetUtils.faucetMany([
+  {
+    address: alice1.getAddress(),
+    value: 8e4
+  },
+  {
+    address: alice2.getAddress(),
+    value: 16e4
+  }
+], function (err, unspents) {
+  if (err) return done(err)
+
+  var tx = new bitcoin.TransactionBuilder(testnet)
+  tx.addInput(unspents[0].txId, unspents[0].vout) // alice1 unspent
+  tx.addInput(unspents[1].txId, unspents[1].vout) // alice2 unspent
+  tx.addOutput('mwCwTceJvYV27KXBc3NJZys6CjsgsoeHmf', 8e4) // the actual "spend"
+  tx.addOutput(aliceChange.getAddress(), 1e4) // Alice's change
+  // (in)(4e4 + 2e4) - (out)(1e4 + 3e4) = (fee)2e4 = 20000, this is the miner fee
+
+  // Alice signs each input with the respective private keys
+  tx.sign(0, alice1)
+  tx.sign(1, alice2)
+
+  // build and broadcast to the Bitcoin Testnet network
+  dhttp({
+    method: 'POST',
+    url: 'https://api.ei8ht.com.au:9443/3/pushtx',
+//          url: 'http://tbtc.blockr.io/api/v1/tx/push',
+    body: tx.build().toHex()
+  },() => {})
+  // to build and broadcast to the actual Bitcoin network, see https://github.com/bitcoinjs/bitcoinjs-lib/issues/839
+})
+```
+
+之後會看到如下輸出
+
+```
+funding n2n3vHe6BHUwKybSsSSUXK1CtFTafzmR62 w/ 50000
+funding mvvrViCXRZD1czZduc4xCixmfG7DpZ7Lkb w/ 70000
+```
+
+進入到此網站https://live.blockcypher.com/btc-testnet
+
+然後在右上角輸入地址 即可查看剛才的交易紀錄
+
+> 一篇不錯的教學:  
+> [https://medium.com/@orweinberger/how-to-create-a-raw-transaction-using-bitcoinjs-lib-1347a502a3a\#.gbnwu2863](https://medium.com/@orweinberger/how-to-create-a-raw-transaction-using-bitcoinjs-lib-1347a502a3a#.gbnwu2863)
 
 ### \#查看上次交易的Txid:
 
