@@ -14,7 +14,7 @@
 
 範例:
 
-https://github.com/bitcoinjs/bitcoinjs-lib/blob/9bae30d1121a9d382f2f461fad0194a0e97dfd1e/test/integration/addresses.js
+[https://github.com/bitcoinjs/bitcoinjs-lib/blob/9bae30d1121a9d382f2f461fad0194a0e97dfd1e/test/integration/addresses.js](https://github.com/bitcoinjs/bitcoinjs-lib/blob/9bae30d1121a9d382f2f461fad0194a0e97dfd1e/test/integration/addresses.js)
 
 ```
 npm install bitcoinjs-lib
@@ -36,6 +36,8 @@ console.log(keyPair.getAddress())
 ```
 
 產生一組萊特幣的address跟WIF
+
+之後可到此確認https://live.blockcypher.com/ltc/
 
 ```
     var bitcoin = require('bitcoinjs-lib');
