@@ -67,6 +67,8 @@ custom\_genesis.json
 }
 ```
 
+> 如果出現Fatal: invalid genesis file: json: cannot unmarshal hex string of odd length into Go struct field Genesis.extraData of type hexutil.Bytes 為版本&gt;1.6 請參考下面
+
 然後輸入
 
 ```
