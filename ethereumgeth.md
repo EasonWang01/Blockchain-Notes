@@ -172,7 +172,7 @@ geth --datadir "./privatechain" --networkid 123 init custom_genesis.json
 geth --ipcpath ~/Library/Ethereum/geth.ipc --datadir "./privatechain" --networkid 123
 ```
 
-點選圖案打開錢包即可看到帳戶餘額增加
+點選Mist圖案打開錢包即可看到帳戶餘額增加
 
 #### 試著挖礦
 
