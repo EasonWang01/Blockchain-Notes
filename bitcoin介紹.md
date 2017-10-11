@@ -1,3 +1,13 @@
+> 產生主鏈地址網站
+>
+> https://www.bitaddress.org/bitaddress.org-v1.9-SHA1-a487b495d710d6f617d688e5f758e40c8b6c510e.html?mainnet=true
+
+> 產生測試鏈testnet地址網站
+>
+> https://www.bitaddress.org/bitaddress.org-v1.9-SHA1-a487b495d710d6f617d688e5f758e40c8b6c510e.html?testnet=true
+>
+> 取得測試比特幣https://testnet.manu.backend.hamburg/faucet
+
 可以在以下網站看到目前的相關比特幣交易資訊
 
 [https://blockchain.info/zh-cn/](https://blockchain.info/zh-cn/)
