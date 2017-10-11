@@ -1,3 +1,14 @@
+啟動
+
+```
+sudo docker daemon
+
+如果有錯誤可先確認有沒有之前的沒停掉
+sudo service docker stop
+```
+
+
+
 使用docker hub可搜尋所有別人寫好的可用container  
 [https://hub.docker.com/](https://hub.docker.com/)
 
