@@ -31,19 +31,6 @@ console.log(keyPair.getAddress())
 // => 14bZ7YWde4KdRb5YN7GYkToz3EHVCvRxkF
 ```
 
-從SHA256 hash產生地址
-
-```
-    var bitcoin = require('bitcoinjs-lib');
-    var bigi = require('bigi');
-
-    var hash = bitcoin.crypto.sha256('correct horse battery staple')
-    var d = bigi.fromBuffer(hash)
-
-    var keyPair = new bitcoin.ECPair(d)
-    var address = keyPair.getAddress()
-```
-
 產生一組萊特幣的address跟WIF
 
 ```
@@ -63,7 +50,32 @@ console.log(keyPair.getAddress())
     var bitcoin = require('bitcoinjs-lib');
     var keyPair = bitcoin.ECPair.fromWIF('Kxr9tQED9H44gCmp6HAdmemAzU3n84H3dGkuWTKvE23JgHMW8gct');
     var address = keyPair.getAddress();
+    console.log(address);
 ```
+
+產生多重簽章的地址2-of-3 multisig P2SH address
+
+https://en.bitcoin.it/wiki/Multisignature
+
+```js
+var bitcoin = require('bitcoinjs-lib');
+var pubKeys = [
+    '026477115981fe981a6918a6297d9803c4dc04f328f22041bedff886bbc2962e01',
+    '02c96db2302d19b43d4c69368babace7854cc84eb9e061cde51cfa77ca4a22b8b9',
+    '03c6103b3b83e4a24a0e33a4df246ef11772f9992663db0c35759a5e2ebf68d8e9'
+  ].map(function (hex) { return Buffer.from(hex, 'hex') })
+
+  var redeemScript = bitcoin.script.multisig.output.encode(2, pubKeys) // 2 of 3
+  var scriptPubKey = bitcoin.script.scriptHash.output.encode(bitcoin.crypto.hash160(redeemScript))
+  var address = bitcoin.address.fromOutputScript(scriptPubKey)
+  console.log(address)
+```
+
+
+
+
+
+
 
 產生交易
 
