@@ -28,3 +28,11 @@ BTC則是使用SegWit2X解決問題
 
 [https://en.wikipedia.org/wiki/SegWit](https://en.wikipedia.org/wiki/SegWit)
 
+
+
+# **BIP\(**Bitcoin\_Improvement\_Proposals**\)**
+
+https://en.bitcoin.it/wiki/Bitcoin\_Improvement\_Proposals
+
+
+
