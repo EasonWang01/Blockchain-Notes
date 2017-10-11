@@ -142,7 +142,13 @@ geth networkid=5
 
 #### 2.預先分配ether給account
 
-剛才打開錢包後先創建帳戶，然後把帳戶號碼複製，之後貼到剛才genesis的alloc下面的一串hash，然後重新init 即可
+> 先把剛才的節點啟動
+>
+> ```
+> geth --ipcpath ~/Library/Ethereum/geth.ipc --datadir "./privatechain" --networkid 123
+> ```
+
+然後打開Mist錢包後先創建帳戶，然後把帳戶號碼複製，之後貼到剛才genesis的alloc下面的一串hash，然後重新init 即可
 
 ```
  "alloc": {    "0x66A2e289b35147188876c2007f9a810Dd20e480d": {
