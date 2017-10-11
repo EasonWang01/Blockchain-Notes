@@ -189,6 +189,9 @@ geth attach
 >
 > ```
 > web3.miner.setEtherbase('0xB4eb9148CD0Aa801215f0e62A354F55A7E1AA67A')
+> // 上面為剛才新增的地址
+> // 也可以直接寫如下 會去讀取剛才創建得地址
+> web3.miner.setEtherbase(personal.listAccounts[0])
 > ```
 >
 > 開始挖礦\(需稍等\)
