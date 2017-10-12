@@ -67,8 +67,6 @@ custom\_genesis.json
 }
 ```
 
-
-
 然後輸入
 
 ```
@@ -96,7 +94,6 @@ geth --datadir "./privatechain" --networkid 123 init custom_genesis.json
     "alloc": {
     }
 }
-
 ```
 
 然後輸入以下，之後開啟Mist wallet就會進入private network
@@ -373,4 +370,39 @@ or
 # 開放Remote 連線
 
 [https://ethereum.stackexchange.com/questions/3163/how-can-i-expose-geths-rpc-server-to-external-connections](https://ethereum.stackexchange.com/questions/3163/how-can-i-expose-geths-rpc-server-to-external-connections)
+
+
+
+  
+   
+
+
+\# 設定Bootnode
+
+  
+
+
+\`\`\`
+
+因為homebrew的安裝沒有bootnode executable
+
+所以要build from source
+
+\`\`\`
+
+以為步驟
+
+ 
+
+\`\`\`
+
+git clone [https://github.com/ethereum/go-ethereum.git](https://github.com/ethereum/go-ethereum.git)
+
+make all
+
+cd ./build/bin
+
+./bootnode 
+
+\`\`\`
 
