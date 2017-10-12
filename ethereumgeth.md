@@ -389,7 +389,7 @@ git clone [https://github.com/ethereum/go-ethereum.git](https://github.com/ether
 
 make all
 
-cd ./build/bin 
+cd ./build/bin
 
 ./bootnode -genkey bootnode.key
 
@@ -399,7 +399,7 @@ cd ./build/bin
 
 然後輸入
 
- \`\`\`
+\`\`\`
 
 ./bootnode -nodekey bootnode.key
 
@@ -407,5 +407,45 @@ cd ./build/bin
 
 會產生如下
 
-![](/assets/螢幕快照 2017-10-12 下午9.17.19.png)
+![](/assets/螢幕快照 2017-10-12 下午9.17.19.png)  
+
+
+之後我們開啟terminal輸入以下啟動節點
+
+&gt;
+
+記得--nodiscover要拿掉 然後--bootnodes後面填上剛才出現的enode:
+
+並且把enode\[::\]換成ip地址
+
+bootnode本身不算是節點 只啟動下面一個時在admin.peers還是空的
+
+  
+
+
+\`\`\`
+
+geth --ipcdisable --rpc --rpcport 8106 --datadir "./privatechain/01" --networkid 123 --rpcapi="db,eth,net,web3,personal" --bootnodes "enode://92d7f28e8ca3bd1e1fa43959bb1cf37b9d284a81d17bcaee9cf233a773f3da0ce60b2351c3b29b07eb78229e6a84731d36065506f6ad972ed3203c5d18bef313@\[127.0.0.1\]:30301" --port=30310 console
+
+  
+
+
+  
+
+
+geth --ipcdisable --rpc --rpcport 8107 --datadir "./privatechain/02" --networkid 123 --rpcapi="db,eth,net,web3,personal" --bootnodes "enode://92d7f28e8ca3bd1e1fa43959bb1cf37b9d284a81d17bcaee9cf233a773f3da0ce60b2351c3b29b07eb78229e6a84731d36065506f6ad972ed3203c5d18bef313@\[127.0.0.1\]:30301" --port=30311 console
+
+  
+
+
+\`\`\`
+
+  
+
+
+之後在其中一個terminal輸入\`admin.peers\`
+
+即可看到如下
+
+![](/assets/螢幕快照 2017-10-12 下午9.24.16.png)
 
