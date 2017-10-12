@@ -89,7 +89,7 @@ geth --datadir "./privatechain" --networkid 123 init custom_genesis.json
         "eip155Block": 0,
         "eip158Block": 0
     },
-    "difficulty": "200000000",
+    "difficulty": "0x400",
     "gasLimit": "2100000",
     "alloc": {
     }
