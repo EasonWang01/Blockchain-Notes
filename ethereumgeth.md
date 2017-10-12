@@ -1,3 +1,5 @@
+# Ethereum  Geth \(go-ethereum\) 教學
+
 # 簡介
 
 [https://geth.ethereum.org/](https://geth.ethereum.org/)  
@@ -369,9 +371,7 @@ or
 
 # 開放Remote 連線
 
-[https://ethereum.stackexchange.com/questions/3163/how-can-i-expose-geths-rpc-server-to-external-connections](https://ethereum.stackexchange.com/questions/3163/how-can-i-expose-geths-rpc-server-to-external-connections) 
-
-
+[https://ethereum.stackexchange.com/questions/3163/how-can-i-expose-geths-rpc-server-to-external-connections](https://ethereum.stackexchange.com/questions/3163/how-can-i-expose-geths-rpc-server-to-external-connections)
 
 # 設定Bootnode
 
@@ -433,5 +433,5 @@ geth --ipcdisable --rpc --rpcport 8107 --datadir "./privatechain/02" --networkid
 
 即可看到如下
 
-![](/assets/螢幕快照 2017-10-12 下午9.24.16.png) 
+![](/assets/螢幕快照 2017-10-12 下午9.24.16.png)
 
