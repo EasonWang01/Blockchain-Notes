@@ -371,16 +371,7 @@ or
 
 [https://ethereum.stackexchange.com/questions/3163/how-can-i-expose-geths-rpc-server-to-external-connections](https://ethereum.stackexchange.com/questions/3163/how-can-i-expose-geths-rpc-server-to-external-connections)
 
-
-
-  
-   
-
-
 \# 設定Bootnode
-
-  
-
 
 \`\`\`
 
@@ -392,17 +383,29 @@ or
 
 以為步驟
 
- 
-
 \`\`\`
 
 git clone [https://github.com/ethereum/go-ethereum.git](https://github.com/ethereum/go-ethereum.git)
 
 make all
 
-cd ./build/bin
+cd ./build/bin 
 
-./bootnode 
+./bootnode -genkey bootnode.key
 
 \`\`\`
+
+之後資料夾下會產一個bootnode.key檔案
+
+然後輸入
+
+ \`\`\`
+
+./bootnode -nodekey bootnode.key
+
+\`\`\`
+
+會產生如下
+
+![](/assets/螢幕快照 2017-10-12 下午9.17.19.png)
 
