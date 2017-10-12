@@ -54,35 +54,6 @@ custom\_genesis.json
 
 ```
 {
-    "nonce": "0x0000000000000042",
-    "timestamp": "0x0",
-    "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "extraData": "0x0",
-    "gasLimit": "0x8000000",
-    "difficulty": "0x400",
-    "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-    "coinbase": "0x3333333333333333333333333333333333333333",
-    "alloc": {
-    }
-}
-```
-
-> 如果出現Fatal: invalid genesis file: json: cannot unmarshal hex string of odd length into Go struct field Genesis.extraData of type hexutil.Bytes 為版本&gt;1.6 請參考下面
-
-然後輸入
-
-```
-geth --datadir "./privatechain" --networkid 123 init custom_genesis.json
-```
-
-> 上面將會創建一個privatechain資料夾，裡面存放我們private chain的資訊，genesis blcok會放在/privatechain資料夾/geth/chaindata/...ldb，而account會放在keystore裡面
-
-\(如果是1.6之後版本要改為如下\)
-
-[https://ethereum.stackexchange.com/questions/15283/getting-error-on-max-invalid-genesis-file-hex-string-has-odd-length](https://ethereum.stackexchange.com/questions/15283/getting-error-on-max-invalid-genesis-file-hex-string-has-odd-length)
-
-```
-{
     "config": {
         "chainId": 123,
         "homesteadBlock": 0,
@@ -94,6 +65,38 @@ geth --datadir "./privatechain" --networkid 123 init custom_genesis.json
     "alloc": {
     }
 }
+```
+
+
+
+然後輸入
+
+```
+geth --datadir "./privatechain" --networkid 123 init custom_genesis.json
+```
+
+> 上面將會創建一個privatechain資料夾，裡面存放我們private chain的資訊，genesis blcok會放在/privatechain資料夾/geth/chaindata/...ldb，而account會放在keystore裡面
+
+\(如果是1.6之前版本要改為如下\)
+
+> 如果出現Fatal: invalid genesis file: json: cannot unmarshal hex string of odd length into Go struct field Genesis.extraData of type hexutil.Bytes 為版本&gt;1.6 請參考上面
+
+[https://ethereum.stackexchange.com/questions/15283/getting-error-on-max-invalid-genesis-file-hex-string-has-odd-length](https://ethereum.stackexchange.com/questions/15283/getting-error-on-max-invalid-genesis-file-hex-string-has-odd-length)
+
+```
+{
+    "nonce": "0x0000000000000042",
+    "timestamp": "0x0",
+    "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "extraData": "0x0",
+    "gasLimit": "0x8000000",
+    "difficulty": "0x400",
+    "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
+    "coinbase": "0x3333333333333333333333333333333333333333",
+    "alloc": {
+    }
+}
+
 ```
 
 然後輸入以下，之後開啟Mist wallet就會進入private network
