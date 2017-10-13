@@ -8,7 +8,7 @@
 
 1.前往 AWS Lambda
 
-2.選左上的`Create a Lambda function`，之後選擇右上的 Author from scratch，再來先點選Next
+2.選左上的`Create a Lambda function`，之後選擇右上的 Author from scratch 
 
 3.填寫function名稱，runtime選擇Node.js
 
