@@ -68,7 +68,13 @@ web3.miner.setEtherbase(web3.eth.accounts[0])
 personal.unlockAccount(web3.eth.accounts[0], "password")
 ```
 
-點選網頁右側的Details 把下圖右下方web3 deploy 的code到剛才執行terminal的web3 console中
+然後先挖礦產生一些ether才能部署合約
+
+```
+miner.start(1)
+```
+
+之後點選網頁右側的Details 把下圖右下方web3 deploy 的code到剛才執行terminal的web3 console中
 
 ![](/assets/螢幕快照 2017-06-11 上午9.44.22.png)
 
