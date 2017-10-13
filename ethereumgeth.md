@@ -63,7 +63,7 @@ custom\_genesis.json
         "eip158Block": 0
     },
     "difficulty": "0x400",
-    "gasLimit": "2100000",
+    "gasLimit": "4712388",
     "alloc": {
     }
 }
