@@ -495,7 +495,7 @@ contract bSimpleStorage {
 }
 ```
 
-# 可能錯誤 
+# 可能錯誤
 
 # 1.Exceeds block gas limit
 
@@ -503,7 +503,13 @@ contract bSimpleStorage {
 把genesis_block.json的gasLimit調整即可
 ```
 
+可參考:[https://github.com/trufflesuite/truffle/issues/271](https://github.com/trufflesuite/truffle/issues/271)
+
+# 2.Error: insufficient funds for gas \* price + value undefined
+
+```
+原因為address內的ether不足
+```
 
 
-可參考:https://github.com/trufflesuite/truffle/issues/271
 
