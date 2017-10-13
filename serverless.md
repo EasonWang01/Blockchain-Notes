@@ -8,7 +8,7 @@
 
 1.前往 AWS Lambda
 
-2.選左上的`Create a Lambda function`，之後選擇右上的 Author from scratch 
+2.選左上的`Create a Lambda function`，之後選擇右上的 Author from scratch
 
 3.填寫function名稱，runtime選擇Node.js
 
@@ -191,7 +191,11 @@ serverless create -t aws-nodejs
 
 之後資料夾內新增了兩個檔案`handler.js`與`serverless.yml`
 
-之後回到aws 然後點選`service`中的`IAM`，左側點選`Users`，之後選`Add user`然後往下拉，之後按下`Create Access Key`按鈕
+之後回到aws 然後點選`service`中的`IAM`，左側點選`Users`，之後選`Add user`然後往下拉兩個打勾，之後下一步
+
+選Attach existing policies 然後下方勾選\`A[dministratorAccess](https://console.aws.amazon.com/iam/home?region=ap-northeast-1#/policies/arn%3Aaws%3Aiam%3A%3Aaws%3Apolicy%2FAdministratorAccess)\`
+
+按下`Create Access Key`按鈕
 
 這邊記得把`Access key ID`跟`Secret access key`記下來
 
