@@ -54,7 +54,11 @@ contract SimpleStorage {
 }
 ```
 
-    把下圖右下方web3 deploy 的code到剛才執行terminal的web3 console中![](/assets/螢幕快照 2017-06-11 上午9.44.22.png)
+```
+把下圖右下方web3 deploy 的code到剛才執行terminal的web3 console中
+```
+
+![](/assets/螢幕快照 2017-06-11 上午9.44.22.png)
 
 如果還沒有帳號先輸入personal.newAccount\(\) 新增
 
