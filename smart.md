@@ -96,6 +96,8 @@ browser_ballot_sol_simplestorage.set('123')
 
 ```
 web3.eth.defaultAccount = web3.eth.accounts[0]
+然後記得解鎖
+personal.unlockAccount(web3.eth.accounts[0], "password")
 ```
 
 # 然後輸入
