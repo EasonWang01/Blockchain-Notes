@@ -37,8 +37,6 @@ var greeterSource = 'contract mortal { address owner; function mortal() { owner 
 
 [https://ethereum.github.io/browser-solidity/\#version=soljson-v0.4.11+commit.68ef5810.js](https://ethereum.github.io/browser-solidity/#version=soljson-v0.4.11+commit.68ef5810.js)
 
-然後直接貼上下圖右下方web3 deploy 的code到剛才執行terminal的web3 console中
-
 ```
 pragma solidity ^0.4.0;
 contract SimpleStorage {
@@ -54,7 +52,7 @@ contract SimpleStorage {
 }
 ```
 
-![](/assets/螢幕快照 2017-06-11 上午9.44.22.png)
+然後直接貼上     下圖右下方web3 deploy 的code到剛才執行terminal的web3 console中![](/assets/螢幕快照 2017-06-11 上午9.44.22.png)
 
 如果還沒有帳號先輸入personal.newAccount\(\) 新增
 

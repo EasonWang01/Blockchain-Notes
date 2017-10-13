@@ -2,7 +2,7 @@
 
 # 安裝:
 
-這邊我們會使用`Docker`，並使用ethereum相關的container來進行   
+這邊我們會使用`Docker`，並使用ethereum相關的container來進行  
 [https://hub.docker.com/r/ethereum/client-go/](https://hub.docker.com/r/ethereum/client-go/)
 
 所以須先安裝好`Docker`[https://docs.docker.com/engine/installation/](https://docs.docker.com/engine/installation/)  
@@ -30,7 +30,7 @@ docker exec -ti ethereum-PublicNode geth attach
 ```
 docker run -d --name ethereum-TestNode \
     -v $HOME/.ethereum:/root \
-    -p 8545:8545 -p 30303:30303 \
+    -p 8544:8544 -p 30304:30304 \
     ethereum/client-go --testnet --fast --cache=512
 ```
 
@@ -221,8 +221,7 @@ D:\Ethereum-Wallet\Ethereum-Wallet.exe --help
 
 ## 6.使用Mist讀取private network
 
-1.  
-開啟RPC server
+1. 開啟RPC server
 
 ```
 RPC_PORT=8545 ./runminer.sh wallet
