@@ -495,5 +495,15 @@ contract bSimpleStorage {
 }
 ```
 
+# 可能錯誤 
 
+# 1.Exceeds block gas limit
+
+```
+把genesis_block.json的gasLimit調整即可
+```
+
+
+
+可參考:https://github.com/trufflesuite/truffle/issues/271
 
