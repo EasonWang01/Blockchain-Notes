@@ -52,10 +52,7 @@ contract SimpleStorage {
       return storedData;
   }
 }
-
 ```
-
-
 
 如果還沒有帳號先輸入personal.newAccount\(\) 新增    否則直接貼上部署的code會出現   &gt; Error: authentication needed: password or unlock undefined
 
@@ -71,15 +68,9 @@ web3.miner.setEtherbase(web3.eth.accounts[0])
 personal.unlockAccount(web3.eth.accounts[0], "password")
 ```
 
-把下圖右下方web3 deploy 的code到剛才執行terminal的web3 console中
+點選網頁右側的Details 把下圖右下方web3 deploy 的code到剛才執行terminal的web3 console中
 
 ![](/assets/螢幕快照 2017-06-11 上午9.44.22.png)
-
-
-
-
-
-
 
 接著回到網頁點選右側最下方的 \(contract detail\) 把interface的部分複製到我們的geth console 中
 
