@@ -29,13 +29,15 @@ geth  --ipcdisable --rpc --rpcport 8104 --datadir "./privatechain/01" --networki
 var greeterSource = 'contract mortal { address owner; function mortal() { owner = msg.sender; } function kill() { if (msg.sender == owner) selfdestruct(owner); } } contract greeter is mortal { string greeting; function greeter(string _greeting) public { greeting = _greeting; } function greet() constant returns (string) { return greeting; } }'
 ```
 
-# 如果版本大於1.6建議直接使用online compiler
+# 如果版本大於1.6建議直接使用online compiler\(Remix Editor\)
 
 \(因為如果版本大於1.6之後web3.eth.compile.solidity會出現The method eth\_compileSolidity does not exist/is not available錯誤\)
 
 > 官方本身的tutorial還沒更新
 
-[https://ethereum.github.io/browser-solidity/\#version=soljson-v0.4.11+commit.68ef5810.js](https://ethereum.github.io/browser-solidity/#version=soljson-v0.4.11+commit.68ef5810.js)
+online compiler網址:  [https://ethereum.github.io/browser-solidity/\#version=soljson-v0.4.11+commit.68ef5810.js](https://ethereum.github.io/browser-solidity/#version=soljson-v0.4.11+commit.68ef5810.js)
+
+然後直接貼上 以下
 
 ```
 pragma solidity ^0.4.0;
@@ -52,7 +54,7 @@ contract SimpleStorage {
 }
 ```
 
-然後直接貼上     下圖右下方web3 deploy 的code到剛才執行terminal的web3 console中![](/assets/螢幕快照 2017-06-11 上午9.44.22.png)
+    把下圖右下方web3 deploy 的code到剛才執行terminal的web3 console中![](/assets/螢幕快照 2017-06-11 上午9.44.22.png)
 
 如果還沒有帳號先輸入personal.newAccount\(\) 新增
 
