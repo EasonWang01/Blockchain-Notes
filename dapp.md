@@ -283,6 +283,10 @@ browser_ballot_sol_token.coinBalanceOf(web3.eth.accounts[1])
 
 我們可以使用如下獲得其ABI和智能合約地址:
 
+> 如solidity版本 &gt; 1.6 一樣使用Remix進行合約ABI查看
+>
+> 點選Details 然後選 interface
+
 ```
 tokenCompiled["<stdin>:token"].info.abiDefinition
 ```
