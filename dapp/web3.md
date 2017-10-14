@@ -212,7 +212,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import contract01 from '../contract/contract01.js' //引入contract
+import contract01 from './contract/contract01.js' //引入contract
 var Web3 = require('web3');
 var web3 = new Web3();
 
