@@ -325,6 +325,10 @@ token.coinBalanceOf("0x7d92564bf8e41e093f265da1532ef4143f398461")
 
 ```
 miner.start(1)
+
+記得先解鎖
+web3.miner.setEtherbase("輸入地址");
+personal.unlockAccount(web3.eth.accounts[0], "輸入此帳號的password");
 ```
 
 此時第二個節點也會出現相同金額了!
