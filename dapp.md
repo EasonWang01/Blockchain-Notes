@@ -7,7 +7,7 @@
 我們一樣先執行剛才的節點
 
 ```
-geth  --ipcdisable --rpc --rpcport 8104 --datadir "./privatechain/01" --networkid 123 --rpcapi="db,eth,net,web3,personal" --nodiscover --port=30310 console
+geth  --ipcdisable --rpc --rpcport 8104 --datadir "./privatechain/01" --networkid 123 --rpccorsdomain="*" --rpcapi="db,eth,net,web3,personal" --nodiscover --port=30310 console
 ```
 
 下面是我們這次要加入的token合約
@@ -294,7 +294,7 @@ browser_ballot_sol_token.coinBalanceOf(web3.eth.accounts[1])
 執行另一個節點
 
 ```
-geth  --ipcdisable --rpc --rpcport 8105 --datadir "./privatechain/02" --networkid 123 --rpcapi="db,eth,net,web3,personal" --nodiscover --port=30311 console
+geth  --ipcdisable --rpc --rpcport 8105 --datadir "./privatechain/02" --networkid 123 --rpccorsdomain="*" --rpcapi="db,eth,net,web3,personal" --nodiscover --port=30311 console
 ```
 
 接著我們到另一個節點的console輸入如下，把ABI與Address更改為剛讀取出來的值\(建議開一個檔案修改，之後再貼到console，因為code多console不好修改\)
