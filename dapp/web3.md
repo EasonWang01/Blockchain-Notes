@@ -73,50 +73,9 @@ export default App;
 > 主要是大部份web3 function 回傳值都改為要從callback第二個參數取出
 
 ```javascript
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-var Web3 = require('web3');
-var web3 = new Web3();
-
-class App extends Component {
-
-  constructor() {
-    super();
-    this.state = {
-      accounts: ''
-    }
-  }
-
-  componentWillMount() {
-    const context = this;
-    console.log(web3);
-    window.web3 = web3;
-    web3.setProvider(new web3.providers.HttpProvider('http://localhost:8104')); //指定為RPC server的位置
-    web3.eth.getAccounts(function(err, result){
-      context.setState({accounts: result});
-    });
-
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to My Dapp</h2>
-        </div>
-        <div className="App-intro">
-             {this.state.accounts ? this.state.accounts.map((i, idx) => (
-            <p key={idx}>帳號{idx}: {i} </p>
-          )) : ''}   
-        </div>
-      </div>
-    );
-  }
-}
-
-export default App;
+  web3.eth.getAccounts(function(err, result){
+    context.setState({accounts: result});
+  }); 
 ```
 
 即可看到列出我們的帳號
