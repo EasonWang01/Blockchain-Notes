@@ -13,7 +13,7 @@ npm install -g yarn
 create-react-app my-dapp
 cd my-dapp
 
-yarn add web3 
+yarn add web3@0.18.0 
 yarn start
 ```
 
@@ -24,6 +24,53 @@ geth  --ipcdisable --rpc --rpcport 8114 --datadir "./privatechain/03" --networki
 ```
 
 把src/App.js改為如下
+
+```js
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+var Web3 = require('web3');
+var web3 = new Web3();
+
+class App extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      accounts: ''
+    }
+  }
+
+  componentWillMount() {
+    console.log(web3);
+    web3.setProvider(new web3.providers.HttpProvider('http://localhost:8104')); //指定為RPC server的位置
+    this.setState({ accounts: web3.eth.accounts });
+    console.log(web3.eth.accounts)
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <div className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h2>Welcome to My Dapp</h2>
+        </div>
+        <p className="App-intro">
+          {this.state.accounts.map((i, idx) => (
+            <p>帳號{idx}: {i} </p>
+          ))}
+        </p>
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
+> web3版本如果大於1.0.0 要改為如下
+>
+> 主要是大部份web3 function 回傳值都改為要從callback第二個參數取出
 
 ```javascript
 import React, { Component } from 'react';
@@ -49,7 +96,7 @@ class App extends Component {
     web3.eth.getAccounts(function(err, result){
       context.setState({accounts: result});
     });
-    
+
   }
 
   render() {
