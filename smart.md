@@ -92,7 +92,7 @@ miner.start(1)
 browser_ballot_sol_simplestorage.set('123')
 ```
 
-## PS:如果出現\`invalid address\`要先輸入以下
+##  PS:如果出現\`invalid address\`要先輸入以下
 
 ```
 web3.eth.defaultAccount = web3.eth.accounts[0]

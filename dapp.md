@@ -47,7 +47,7 @@ var tokenCompiled= web3.eth.compile.solidity(tokenSource)
 
 > 如出現 Error: The method eth\_compileSolidity does not exist/is not available
 >
-> 代表solidity版本 &gt; 1.6 需要用線上編譯 [https://remix.ethereum.org/](https://remix.ethereum.org/)
+> 代表solidity版本 &gt; 1.6 需要用線上編譯 [https://remix.ethereum.org/](https://remix.ethereum.org/#version=soljson-v0.4.17+commit.bdeb9e52.js)
 >
 > 然後把網頁上Deploy部分貼上  之後直接跳到本章節的步驟三
 
@@ -327,7 +327,7 @@ token.coinBalanceOf("0x7d92564bf8e41e093f265da1532ef4143f398461")
 miner.start(1)
 
 記得先解鎖
-web3.miner.setEtherbase("輸入地址");
+web3.miner.setEtherbase(web3.eth.accounts[0]);
 personal.unlockAccount(web3.eth.accounts[0], "輸入此帳號的password");
 ```
 
