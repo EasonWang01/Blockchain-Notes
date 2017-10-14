@@ -8,12 +8,13 @@
 
 ```
 npm install -g create-react-app
-
+npm install -g yarn
+ 
 create-react-app my-dapp
 cd my-dapp
 
-npm install web3 --save
-yarnpkg start
+yarn add web3 
+yarn start
 ```
 
 這裡記得因為我們要用瀏覽器存取RPC server，所以geth啟動時RPC server要加上CORS`--rpccorsdomain="*"`
