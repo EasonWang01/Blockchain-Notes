@@ -75,7 +75,7 @@ export default App;
 ```javascript
   web3.eth.getAccounts(function(err, result){
     context.setState({accounts: result});
-  }); 
+  });
 ```
 
 即可看到列出我們的帳號
@@ -155,7 +155,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import contract01 from '../contract/contract01.js' //引入contract
+import contract01 from './contract/contract01.js' //引入contract
 var Web3 = require('web3');
 var web3 = new Web3();
 
@@ -173,7 +173,7 @@ class App extends Component {
     console.log(web3);
     window.tokenContract = web3.eth.contract(contract01.ABI).at(contract01.address);
     window.web3 = web3;
-    web3.setProvider(new web3.providers.HttpProvider('http://localhost:8103')); //指定為RPC server的位置
+    web3.setProvider(new web3.providers.HttpProvider('http://localhost:8104')); //指定為RPC server的位置
     this.setState({ accounts: web3.eth.accounts });
 
   }
