@@ -158,6 +158,10 @@ personal.unlockAccount(web3.eth.accounts[0], "輸入此帳號的password")
 
 接著把我們剛才的合約實例化，並部署
 
+> 如果是solidity版本大於1.6用剛才的線上編譯器 然後點選deploy之後複製
+>
+> 然後先在terminal輸入 supply = 10000;  然後貼上剛才複製的部分
+
 ```
 var supply = 10000;
 var tokenContract = web3.eth.contract(tokenCompiled["<stdin>:token"].info.abiDefinition);
