@@ -286,6 +286,10 @@ browser_ballot_sol_token.coinBalanceOf(web3.eth.accounts[1])
 > 如solidity版本 &gt; 1.6 一樣使用Remix進行合約ABI查看
 >
 > 點選Details 然後選 interface
+>
+> 查看地址 : 輸入browser\_ballot\_sol\_token.address
+>
+> browser\_ballot\_sol\_token .  address
 
 執行另一個節點
 
