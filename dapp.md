@@ -47,21 +47,15 @@ var tokenCompiled= web3.eth.compile.solidity(tokenSource)
 
 > 如出現 Error: The method eth\_compileSolidity does not exist/is not available
 >
-> 代表solidity版本 &gt; 1.6 需要用線上編譯 https://remix.ethereum.org/
+> 代表solidity版本 &gt; 1.6 需要用線上編譯 [https://remix.ethereum.org/](https://remix.ethereum.org/)
 >
 > 然後把網頁上Deploy部分貼上  之後直接跳到本章節的步驟三
-
-
-
-
 
 之後試著輸入以下，即可看到剛才compile後的部分
 
 ```
 tokenCompiled["<stdin>:token"].info.abiDefinition //查看我們合約的API
 ```
-
- 
 
 ```
 [{
@@ -128,7 +122,7 @@ tokenCompiled["<stdin>:token"].info.abiDefinition //查看我們合約的API
 web3.eth.accounts
 ```
 
-如果沒有可打開Mist新增
+如果沒有可打開Mist新增或輸入`personal.newAccount()`
 
 \#Mac
 
@@ -187,8 +181,6 @@ var token = tokenContract.new(
     }
 })
 ```
-
-
 
 正常的話會出現如下
 
