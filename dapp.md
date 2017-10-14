@@ -287,14 +287,6 @@ browser_ballot_sol_token.coinBalanceOf(web3.eth.accounts[1])
 >
 > 點選Details 然後選 interface
 
-```
-tokenCompiled["<stdin>:token"].info.abiDefinition
-```
-
-```
-token.address
-```
-
 執行另一個節點
 
 ```
