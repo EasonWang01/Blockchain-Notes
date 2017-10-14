@@ -270,7 +270,7 @@ miner.start(1)
 然後輸入如下
 
 ```
-token.coinBalanceOf(web3.eth.accounts[1])
+browser_ballot_sol_token.coinBalanceOf(web3.eth.accounts[1])
 ```
 
 即可看到1000，即為剛才轉過去的
