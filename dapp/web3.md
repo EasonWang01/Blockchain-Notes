@@ -9,7 +9,7 @@
 ```
 npm install -g create-react-app
 npm install -g yarn
- 
+
 create-react-app my-dapp
 cd my-dapp
 
@@ -37,15 +37,19 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      accounts : ''
+      accounts: ''
     }
   }
 
   componentWillMount() {
+    const context = this;
     console.log(web3);
-    web3.setProvider(new web3.providers.HttpProvider('http://localhost:8114')); //指定為RPC server的位置
-    this.setState({ accounts: web3.eth.accounts });
-    console.log(web3.eth.accounts)
+    window.web3 = web3;
+    web3.setProvider(new web3.providers.HttpProvider('http://localhost:8104')); //指定為RPC server的位置
+    web3.eth.getAccounts(function(err, result){
+      context.setState({accounts: result});
+    });
+    
   }
 
   render() {
@@ -55,11 +59,11 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to My Dapp</h2>
         </div>
-        <p className="App-intro">
-          {this.state.accounts.map((i,idx) => (
-              <p>帳號{idx}:  {i} </p>
-          ))}
-        </p>
+        <div className="App-intro">
+             {this.state.accounts ? this.state.accounts.map((i, idx) => (
+            <p key={idx}>帳號{idx}: {i} </p>
+          )) : ''}   
+        </div>
       </div>
     );
   }
