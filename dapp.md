@@ -222,7 +222,7 @@ browser_ballot_sol_token.coinBalanceOf(web3.eth.accounts[0])
 在console貼上如下，因為我們剛contract有寫event
 
 ```
-var event = token.CoinTransfer({}, '', function(error, result){
+var event = browser_ballot_sol_token.CoinTransfer({}, '', function(error, result){
   if (!error)
     console.log("Coin transfer: " + result.args.amount + " tokens were sent. Balances now are as following: \n Sender:\t" + result.args.sender + " \t" + token.coinBalanceOf.call(result.args.sender) + " tokens \n Receiver:\t" + result.args.receiver + " \t" + token.coinBalanceOf.call(result.args.receiver) + " tokens" )
 });
