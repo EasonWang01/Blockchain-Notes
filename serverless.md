@@ -207,6 +207,8 @@ export AWS_ACCESS_KEY_ID=填入你的key
 export AWS_SECRET_ACCESS_KEY=填入你的access key
 ```
 
+\(windows須把export改為set\)
+
 如果忘記可在建立一個
 
 ![](/assets/螢幕快照 2017-03-21 上午11.17.50.png)
