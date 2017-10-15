@@ -4,11 +4,9 @@
 錢包裡面含有多個Bitcoin Address以及公私鑰
 ```
 
-錢包加密SourceCode: https://github.com/bitcoin/bitcoin/blob/af563971fcbece3659f501329afa9dc84ed733b2/src/wallet/crypter.cpp
+錢包加密SourceCode: [https://github.com/bitcoin/bitcoin/blob/af563971fcbece3659f501329afa9dc84ed733b2/src/wallet/crypter.cpp](https://github.com/bitcoin/bitcoin/blob/af563971fcbece3659f501329afa9dc84ed733b2/src/wallet/crypter.cpp)
 
-
-
-https://en.bitcoin.it/wiki/Wallet\_encryption
+[https://en.bitcoin.it/wiki/Wallet\_encryption](https://en.bitcoin.it/wiki/Wallet_encryption)
 
 # \#產生公鑰和私鑰與比特幣地址
 
@@ -137,7 +135,7 @@ console.log(hash1);
 console.log(hash2);
 
 var root = hash1 + hash2;
-
+ =cryto256(crypto256(root))
 console.log('ROOT為:' + root);
 ```
 
