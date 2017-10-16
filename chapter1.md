@@ -134,8 +134,7 @@ var hash2 = crypto256(crypto256(tx2));
 console.log(hash1);
 console.log(hash2);
 
-var root = hash1 + hash2;
- = cryto256(crypto256(root))
+var root = cryto256(crypto256( hash1 + hash2 ));
 console.log('ROOT為:' + root);
 ```
 
