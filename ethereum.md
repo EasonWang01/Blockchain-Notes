@@ -86,24 +86,20 @@ Gas:
 
 # Testnet
 
-取得免費的ether   
+取得免費的ether  
 [https://ropsten.ether.camp/transactions](https://ropsten.ether.camp/transactions)  
 [http://faucet.ropsten.be:3001/](http://faucet.ropsten.be:3001/)  
 查看區塊情況  [https://testnet.etherscan.io/](https://testnet.etherscan.io/)
 
-
-
 # METAMASK
 
-https://metamask.io/
+[https://metamask.io/](https://metamask.io/)
 
 chrome的plugin，可以操作ethereum
 
+# 線上錢包\(類似線上版的MIST\)
 
-
-# 線上錢包
-
-https://wallet.ethereum.org/
+[https://wallet.ethereum.org/](https://wallet.ethereum.org/)
 
 安裝metamask後可以打開此網站，之後即可讀取本地錢包資料
 
