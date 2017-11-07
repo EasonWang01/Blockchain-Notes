@@ -108,9 +108,9 @@ HAB~=SHA256(SHA256(HA + HB))
 
 > Finding a nonce input to the algorithm so that the result is below a certain threshold
 
-區塊鏈用難度來控制下一個區塊的產生速度，並且礦工利用當前的區塊頭加上一個隨機數nonce並做hash產生一個低於設定難度的直即可成功挖到礦
+區塊鏈用難度來控制下一個區塊的產生速度，而礦工利用當前的區塊頭加上一個隨機數nonce，並做hash，如果產生一個低於設定難度的值即可成功挖到礦
 
-並藉由改變nonce來產生不同hash，想辦法讓此hash小於目前所設定難度的數值
+藉由改變nonce來產生不同hash，想辦法讓此hash小於目前所設定難度的數值
 
 [https://www.youtube.com/watch?v=lik9aaFIsl4&t=1s](https://www.youtube.com/watch?v=lik9aaFIsl4&t=1s)
 
