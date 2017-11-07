@@ -104,6 +104,20 @@ HAB~=SHA256(SHA256(HA + HB))
 
 [http://coinish.com/bitcoin-mining-calculator/\#calc-information](http://coinish.com/bitcoin-mining-calculator/#calc-information)
 
+
+
+#### 我們可以使用以下網頁進行挖礦模擬
+
+https://anders.com/blockchain/block.html
+
+> ![](/assets/02.png)Nonce為一個隨機值讓我們更改   實際挖礦時即為更改Nonce並想辦法算出結果 因為相同字串經過sha後的數值都一樣
+>
+> 但無法預料哪個字串經過sha可以得到我們想要的數值
+>
+> Data為模擬納入區塊的訊息
+
+
+
 # 看到目前市面上的幣種以及價格
 
 [https://coinmarketcap.com/](https://coinmarketcap.com/)
