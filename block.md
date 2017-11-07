@@ -106,6 +106,12 @@ HAB~=SHA256(SHA256(HA + HB))
 
 在挖礦過程中成功“挖出”新區塊的礦工可以得到該區塊中包含的所有交易“小費”。目前，這筆費用佔礦工收入的0.5%或更少，大部分收益仍來自挖礦所得的比特幣獎勵
 
+> Finding a nonce input to the algorithm so that the result is below a certain threshold
+
+區塊鏈用難度來控制下一個區塊的產生速度，並且礦工利用當前的區塊頭加上一個隨機數nonce並做hash產生一個低於設定難度的直即可成功挖到礦
+
+並藉由改變nonce來產生不同hash，想辦法讓此hash小於目前所設定難度的數值
+
 [https://www.youtube.com/watch?v=lik9aaFIsl4&t=1s](https://www.youtube.com/watch?v=lik9aaFIsl4&t=1s)
 
 挖礦困難度解釋
