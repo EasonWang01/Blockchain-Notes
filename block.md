@@ -104,11 +104,9 @@ HAB~=SHA256(SHA256(HA + HB))
 
 [http://coinish.com/bitcoin-mining-calculator/\#calc-information](http://coinish.com/bitcoin-mining-calculator/#calc-information)
 
-
-
 #### 我們可以使用以下網頁進行挖礦模擬
 
-https://anders.com/blockchain/block.html
+[https://anders.com/blockchain/block.html](https://anders.com/blockchain/block.html)
 
 > ![](/assets/02.png)Nonce為一個隨機值讓我們更改   實際挖礦時即為更改Nonce並想辦法算出結果 因為相同字串經過sha後的數值都一樣
 >
@@ -116,17 +114,25 @@ https://anders.com/blockchain/block.html
 >
 > Data為模擬納入區塊的訊息
 
-
-
 # 看到目前市面上的幣種以及價格
+
+當我們想要對目前市面上的加密貨幣進行投資時，我們必須先到市場上了解其價值
+
+以下網站列出了一些市面上的加密貨幣可供我們參考
 
 [https://coinmarketcap.com/](https://coinmarketcap.com/)
 
-\# 其他相關schema介紹
+# 其他相關Bitcoin schema介紹
+
+以下網站列出了比特幣相關
 
 [https://webbtc.com/api/schema](https://webbtc.com/api/schema)
 
-\# 圖表
+![](/assets/04.png)
+
+# 加密貨幣Market State圖表
 
 [http://cryptomaps.org/](http://cryptomaps.org/)
+
+![](/assets/03.png)
 
