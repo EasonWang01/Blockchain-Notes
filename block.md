@@ -2,6 +2,12 @@
 
 ## 簡介
 
+區塊鏈是一個概念，而比特幣與乙太幣等其他加密貨幣均為區塊鏈的應用之一
+
+以下簡單一句話理解區塊鏈
+
+> 許多交易組成區塊，許多區塊前後互相鏈結，組成區塊鏈
+
 可先看這個簡單介紹影片  
 [https://www.youtube.com/watch?v=sYduOfRLHq0](https://www.youtube.com/watch?v=sYduOfRLHq0)
 
