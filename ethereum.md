@@ -40,7 +40,11 @@ Ethash:
 > 以太幣\(ether\)的挖礦算法叫做Ethash, 又名Dashimoto \(Dagger-Hashimoto\)，是Hashimoto算法結合Dagger之後產成的一個變種
 
 Dag:  
-[https://github.com/ethereum/wiki/blob/master/Dagger-Hashimoto.md](https://github.com/ethereum/wiki/blob/master/Dagger-Hashimoto.md)
+
+
+> [https://github.com/ethereum/wiki/blob/master/Dagger-Hashimoto.md](https://github.com/ethereum/wiki/blob/master/Dagger-Hashimoto.md)
+>
+> https://github.com/ethereum/wiki/wiki/Ethash-DAG
 
 EVM:
 
