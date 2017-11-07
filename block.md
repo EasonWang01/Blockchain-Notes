@@ -134,7 +134,7 @@ HAB~=SHA256(SHA256(HA + HB))
 
 # 其他相關Bitcoin schema介紹
 
-以下網站列出了比特幣相關
+以下網站列出了比特幣相關schema
 
 [https://webbtc.com/api/schema](https://webbtc.com/api/schema)
 
