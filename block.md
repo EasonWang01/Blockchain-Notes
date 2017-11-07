@@ -142,6 +142,8 @@ HAB~=SHA256(SHA256(HA + HB))
 
 # 加密貨幣Market State圖表
 
+一樣列了許多市面上可見的加密貨幣，但採用了另一種方式將之呈現
+
 [http://cryptomaps.org/](http://cryptomaps.org/)
 
 ![](/assets/03.png)
