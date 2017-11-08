@@ -28,5 +28,13 @@ Ethereum開發團隊『 ETH DEV 』組織了DEVCON-0活動，世界各地的以�
 
 DEVgrants項目發表，這個項目將對所有在以太坊平台和基於以太坊的項目所做的貢獻提供資金。這一項目旨在獎勵和扶持開發者們所做的努力。
 
-https://blog.ethereum.org/2015/04/07/devgrants-help/
+[https://blog.ethereum.org/2015/04/07/devgrants-help/](https://blog.ethereum.org/2015/04/07/devgrants-help/)
+
+#### 2015年5月
+
+Ethereum辦了一個名為Olympic的活動，也是第九屆在testnet的POC（Proof-of-Concept）測試，目的是測試以太坊的強度，希望測試者能用盡各種方法測試以太坊，獎勵高達25,000 ether
+
+https://blog.ethereum.org/2015/05/09/olympic-frontier-pre-release/
+
+
 
