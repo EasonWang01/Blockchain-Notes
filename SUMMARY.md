@@ -8,6 +8,7 @@
 * [Serverless 架構實作](serverless.md)
 * [Docker常用指令](docker.md)
 * [ethereum初探](ethereum.md)
+  * [ethereum歷史](ethereum/ethereumli-shi.md)
 * [ethereum\(Docker\)](ether.md)
 * [ethereum\(Geth\)](ethereumgeth.md)
   * [Parity](ethereumgeth/parity.md)
