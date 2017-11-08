@@ -9,11 +9,9 @@
 查看交易資訊:  
 [https://etherchain.org/](https://etherchain.org/)
 
-
-
 產生乙太幣地址
 
-https://ethereum.stackexchange.com/questions/3542/how-are-ethereum-addresses-generated
+[https://ethereum.stackexchange.com/questions/3542/how-are-ethereum-addresses-generated](https://ethereum.stackexchange.com/questions/3542/how-are-ethereum-addresses-generated)
 
 ```js
 var crypto = require('crypto');
@@ -42,8 +40,9 @@ var address = sha3_256Key.substring(24, sha3_256Key.length);
 var address = "0x" + address;
 
 console.log(address)
-
 ```
+
+之後到https://etherscan.io/ 右上輸入剛產生的地址確認是正確的格式
 
 # 常見名詞:
 
