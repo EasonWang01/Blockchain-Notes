@@ -35,14 +35,14 @@ console.log('--------')
 var sha3_256Key = sha3.keccak256(publickey);
 console.log(sha3_256Key)
 
-var address = sha3_256Key.substring(24, sha3_256Key.length);
+var address = sha3_256Key.substring(24, sha3_256Key.length); // 取後40字
 
-var address = "0x" + address;
+var address = "0x" + address;  // 
 
 console.log(address)
 ```
 
-之後到https://etherscan.io/ 右上輸入剛產生的地址確認是正確的格式
+之後到[https://etherscan.io/](https://etherscan.io/) 右上輸入剛產生的地址確認是正確的格式
 
 # 常見名詞:
 
