@@ -6,7 +6,7 @@ Vitalik Buterin 公開介紹了以太坊 並發表了白皮書
 
 Ethereum正式發表，並稱此為"Cryptocurrency 2.0"
 
-https://www.youtube.com/watch?v=lNMvIzexLQc
+[https://www.youtube.com/watch?v=lNMvIzexLQc](https://www.youtube.com/watch?v=lNMvIzexLQc)
 
 #### 2014年4月
 
@@ -28,7 +28,5 @@ Ethereum開發團隊『 ETH DEV 』組織了DEVCON-0活動，世界各地的以�
 
 DEVgrants項目發表，這個項目將對所有在以太坊平台和基於以太坊的項目所做的貢獻提供資金。這一項目旨在獎勵和扶持開發者們所做的努力。
 
-
-
-
+https://blog.ethereum.org/2015/04/07/devgrants-help/
 
