@@ -9,6 +9,42 @@
 查看交易資訊:  
 [https://etherchain.org/](https://etherchain.org/)
 
+
+
+產生乙太幣地址
+
+https://ethereum.stackexchange.com/questions/3542/how-are-ethereum-addresses-generated
+
+```js
+var crypto = require('crypto');
+var ecdh = crypto.createECDH('secp256k1');
+var sha3 = require('js-sha3')
+
+
+var hash2 = crypto.randomBytes(32)
+console.log('--------')
+console.log('私鑰')
+console.log(hash2); //私鑰，64位十六進制數 //使用hash2.toString('hex')即可看到16進位字串
+console.log('--------')
+
+
+// ECDH和ECDSA產生公私鑰的方式都相同
+var publickey = ecdh.setPrivateKey(hash2,'hex').getPublicKey('hex')
+console.log('公鑰')
+console.log(publickey); //公鑰(通過橢圓曲線算法可以從私鑰計算得到公鑰)
+console.log('--------')
+
+var sha3_256Key = sha3.keccak256(publickey);
+console.log(sha3_256Key)
+
+var address = sha3_256Key.substring(24, sha3_256Key.length);
+
+var address = "0x" + address;
+
+console.log(address)
+
+```
+
 # 常見名詞:
 
 Dapp:
@@ -39,12 +75,11 @@ Ethash:
 
 > 以太幣\(ether\)的挖礦算法叫做Ethash, 又名Dashimoto \(Dagger-Hashimoto\)，是Hashimoto算法結合Dagger之後產成的一個變種
 
-Dag:  
-
+Dag:
 
 > [https://github.com/ethereum/wiki/blob/master/Dagger-Hashimoto.md](https://github.com/ethereum/wiki/blob/master/Dagger-Hashimoto.md)
 >
-> https://github.com/ethereum/wiki/wiki/Ethash-DAG
+> [https://github.com/ethereum/wiki/wiki/Ethash-DAG](https://github.com/ethereum/wiki/wiki/Ethash-DAG)
 
 EVM:
 
