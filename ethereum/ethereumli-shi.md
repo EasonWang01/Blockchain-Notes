@@ -58,11 +58,13 @@ Microsoft Azure也宣布他們雲端平台將與Ethereum合作
 
 [https://www.youtube.com/playlist?list=PLJqWcTqh\_zKHQUFX4IaVjWjfT2tbS4NVk](https://www.youtube.com/playlist?list=PLJqWcTqh_zKHQUFX4IaVjWjfT2tbS4NVk)
 
-
-
 #### 2016年5月
 
 一個使用Ethereum合約並主張概念為『 完全由電腦程式碼控制運作之類似公司的實體 』並名為The DAO的專案募資了約一億六千八百萬美金，為史上最大的群眾募資項目
+
+之後同年六月，將近3.6 百萬個 Ether \(約 五千萬美金\)遭駭，隨後以太坊投票後宣布執行hard fork出ETH，並將原本的命名為ETC\(Ethereum Classic\)而新的Fork名為ETH
+
+> https://www.coindesk.com/understanding-dao-hack-journalists/
 
 
 
