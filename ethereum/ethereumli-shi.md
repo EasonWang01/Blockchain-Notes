@@ -54,5 +54,5 @@ Ethereum Frontier啟動
 
 第二次的開發者大會『 DEVCON-1 』 在倫敦舉辦，這五天的會議包含了超過一百名的演講者與400名的與會者
 
-
+Microsoft Azure也宣布他們雲端平台將與Ethereum合作
 
