@@ -48,5 +48,5 @@ Ethereum Frontier啟動
 
 開發者們開始編寫智能合約和去中心化應用以部署在以太坊網路上。此外，礦工們也開始加入以太坊網路進行挖礦與驗證交易。
 
-
+https://blog.ethereum.org/2015/07/30/ethereum-launches/
 
