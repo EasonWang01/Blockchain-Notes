@@ -64,7 +64,13 @@ Microsoft Azure也宣布他們雲端平台將與Ethereum合作
 
 之後同年六月，將近3.6 百萬個 Ether \(約 五千萬美金\)遭駭，隨後以太坊投票後宣布執行hard fork出ETH，並將原本的命名為ETC\(Ethereum Classic\)而新的Fork名為ETH
 
-> https://www.coindesk.com/understanding-dao-hack-journalists/
+> [https://www.coindesk.com/understanding-dao-hack-journalists/](https://www.coindesk.com/understanding-dao-hack-journalists/)
+
+
+
+以下為版本圖
+
+![](/assets/螢幕快照 2017-11-09 上午8.52.34.png)
 
 
 
