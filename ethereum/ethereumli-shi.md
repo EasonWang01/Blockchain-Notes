@@ -56,3 +56,5 @@ Ethereum Frontier啟動
 
 Microsoft Azure也宣布他們雲端平台將與Ethereum合作
 
+https://www.youtube.com/playlist?list=PLJqWcTqh\_zKHQUFX4IaVjWjfT2tbS4NVk
+
