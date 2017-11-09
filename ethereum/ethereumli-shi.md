@@ -66,11 +66,15 @@ Microsoft Azure也宣布他們雲端平台將與Ethereum合作
 
 > [https://www.coindesk.com/understanding-dao-hack-journalists/](https://www.coindesk.com/understanding-dao-hack-journalists/)
 
+#### 2017年
 
+許多公司開始架設網站並寫白皮書然後發行以太坊合約，進行ICO募資
+
+
+
+-----------------------
 
 以下為版本圖
 
 ![](/assets/螢幕快照 2017-11-09 上午8.52.34.png)
-
-
 
