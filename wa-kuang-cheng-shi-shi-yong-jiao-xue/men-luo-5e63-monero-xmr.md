@@ -30,3 +30,9 @@
 
 [https://coinhive.com/dashboard](https://coinhive.com/dashboard)
 
+
+
+其他可參考此
+
+https://lafudoci.gitbooks.io/monero-xmr/content/mining-tool.html
+
