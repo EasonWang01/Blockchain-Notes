@@ -26,13 +26,19 @@
 
 進行挖礦
 
+或是使用
+
+```
+https://authedmine.com/media/miner.html?key={填入你的key}
+```
+
+
+
 3.之後可到dashboard網頁查看
 
 [https://coinhive.com/dashboard](https://coinhive.com/dashboard)
 
-
-
 其他可參考此
 
-https://lafudoci.gitbooks.io/monero-xmr/content/mining-tool.html
+[https://lafudoci.gitbooks.io/monero-xmr/content/mining-tool.html](https://lafudoci.gitbooks.io/monero-xmr/content/mining-tool.html)
 
