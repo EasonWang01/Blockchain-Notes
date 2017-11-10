@@ -21,5 +21,7 @@
     * [solidity筆記](dapp/web3/soliditybi-ji.md)
 * [Hyperledger Fabric](hyperledger-fabric.md)
 * [blockchainDB](blockchaindb.md)
+* [挖礦程式使用教學](wa-kuang-cheng-shi-shi-yong-jiao-xue.md)
+  * [門羅幣/Monero \(XMR\)](wa-kuang-cheng-shi-shi-yong-jiao-xue/men-luo-5e63-monero-xmr.md)
 * [本書簡介](ben-shu-jian-jie.md)
 
