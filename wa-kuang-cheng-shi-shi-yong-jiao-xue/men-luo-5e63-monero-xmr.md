@@ -2,7 +2,11 @@
 
 ### 官方挖礦程式
 
-https://getmonero.org/downloads/
+[https://getmonero.org/downloads/](https://getmonero.org/downloads/)
+
+下載後解壓縮並點擊`monero-wallet-gui.exe`
+
+### ![](/assets/sd.png)
 
 ### CoinHive
 
