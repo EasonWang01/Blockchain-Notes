@@ -20,19 +20,44 @@
 
 2.之後可使用
 
-[https://coinhive.com/documentation/miner](https://coinhive.com/documentation/miner)
+1.[https://coinhive.com/documentation/miner](https://coinhive.com/documentation/miner)
 
-[https://github.com/cazala/coin-hive](https://github.com/cazala/coin-hive)
+或是
+
+2.[https://github.com/cazala/coin-hive](https://github.com/cazala/coin-hive)
+
+```js
+const CoinHive = require('coin-hive');
+
+(async () => {
+
+  // Create miner
+  const miner = await CoinHive('FacAWlIy3OrBsWVs88bKr2WwxZ8WnBlS'); // CoinHive's Site Key
+
+  // Start miner
+  await miner.start();
+
+  // Listen on events
+  miner.on('found', () => console.log('Found!'))
+  miner.on('accepted', () => console.log('Accepted!'))
+  miner.on('update', data => console.log(`
+    Hashes per second: ${data.hashesPerSecond}
+    Total hashes: ${data.totalHashes}
+    Accepted hashes: ${data.acceptedHashes}
+  `));
+
+  // Stop miner
+  // setTimeout(async () => await miner.stop(), 60000);
+})();
+```
 
 進行挖礦
 
-或是使用
+3.或是使用
 
 ```
 https://authedmine.com/media/miner.html?key={填入你的key}
 ```
-
-
 
 3.之後可到dashboard網頁查看
 
