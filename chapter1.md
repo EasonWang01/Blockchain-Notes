@@ -216,9 +216,6 @@ while(1) {
 
 難度在每2016個block被挖出後會自動按照公式更改一次
 
-
-
-
     1.使用Bitcoin API getDifficulty取得現在的難度
     https://blockexplorer.com/api/status?q=getDifficulty
 
@@ -250,6 +247,12 @@ while(1) {
     最後成功算出的礦工即可以獲得獎勵，獎勵的錢及為下一個區塊的coinbase
 
     5.算出來的hash及為下一個區塊的block hash
+
+# Hash Rate
+
+
+
+# 
 
 # \#從TXid hash找出某筆交易詳細訊息
 
