@@ -216,6 +216,41 @@ while(1) {
 
 難度在每2016個block被挖出後會自動按照公式更改一次
 
+
+
+
+    1.使用Bitcoin API getDifficulty取得現在的難度
+    https://blockexplorer.com/api/status?q=getDifficulty
+
+    2.
+    從難度去反推(利用公式)現在要計算的Target
+    https://en.bitcoin.it/wiki/Difficulty
+    ```
+    0x00000000FFFF0000000000000000000000000000000000000000000000000000 /
+    0x00000000000404CB000000000000000000000000000000000000000000000000  
+    = 16307.420938523983 (bdiff)
+    ```
+
+    3.難度調整的公式為
+
+    ```
+    old_difficulty*(2 weeks)/(time the past 2015 blocks took)
+
+    ```
+    https://bitcoin.stackexchange.com/questions/855/what-keeps-the-average-block-time-at-10-minutes
+
+    寫在原始碼中main.cpp的GetNextWorkRequired
+    https://dev.visucore.com/bitcoin/doxygen/pow_8cpp.html#a444323ddc75c2b90f484fa9b9da31dc8
+
+    https://bitcoin.stackexchange.com/questions/1212/how-do-the-clients-agree-on-the-target-to-hash-for
+
+    4.之後經過block hash(挖礦)
+    https://en.bitcoin.it/wiki/Block_hashing_algorithm
+
+    最後成功算出的礦工即可以獲得獎勵，獎勵的錢及為下一個區塊的coinbase
+
+    5.算出來的hash及為下一個區塊的block hash
+
 # \#從TXid hash找出某筆交易詳細訊息
 
 會有一個HASH表，所以用很短的時間複雜度即可從hash對應到直接的資訊，也因為這些txid的hash之後會在兩兩家密為merkel tree 並將merkel root 存在block中，所以就算可以看到資訊也不怕被修改，具有hash通常都有hash table可以查到它裡面對應的值
