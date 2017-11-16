@@ -12,17 +12,13 @@
 
 [https://chainquery.com/bitcoin-api/getinfo](https://chainquery.com/bitcoin-api/getinfo)
 
-[https://github.com/bitcoinj/bitcoinj](https://github.com/bitcoinj/bitcoinj) \(Java的核心   也可執行javascript\)
-
-
+[https://github.com/bitcoinj/bitcoinj](https://github.com/bitcoinj/bitcoinj) \(Java寫的Bitcoin核心   也可使用Nashore來執行javascript\)
 
 \#直接與本地的Bitcoind 啟動的JSON-RPC溝通
 
 ```
 https://en.bitcoin.it/wiki/API_reference_(JSON-RPC)
 ```
-
-
 
 # 使用BitcoinJS
 
