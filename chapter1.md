@@ -256,9 +256,13 @@ while(1) {
  1 GHash/s = 1000 MHash/s
  1 THash/s = 1000 GHash/s
  1 PHash/s = 1000 THash/s
- 
+
  所以 1 PHash/s = 1000000000000000 Hash/s
 ```
+
+也可以用以下網站來估計
+
+http://bitcoin.web-share.nl/
 
 # \#從TXid hash找出某筆交易詳細訊息
 
