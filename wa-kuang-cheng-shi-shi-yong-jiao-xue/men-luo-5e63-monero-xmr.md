@@ -8,7 +8,7 @@
 
 ### ![](/assets/sd.png)
 
-### CoinHive
+### CoinHive教學
 
 一個可以使用瀏覽器挖礦的服務
 
