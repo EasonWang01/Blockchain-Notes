@@ -264,7 +264,11 @@ while(1) {
 
 [http://bitcoin.web-share.nl/](http://bitcoin.web-share.nl/)
 
-先到https://blockchain.info/charts/hash-rate 查看現在平均的算力
+先到[https://blockchain.info/charts/hash-rate](https://blockchain.info/charts/hash-rate) 查看現在平均的算力
+
+然後填入，他就會幫你計算相關數據
+
+![](/assets/螢幕快照 2017-11-16 上午8.58.12.png)
 
 # \#從TXid hash找出某筆交易詳細訊息
 
