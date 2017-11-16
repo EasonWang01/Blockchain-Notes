@@ -2,6 +2,12 @@
 
 用來執行我們想要的客製化操作，目前多數使用`Solidity`語言撰寫，每個合約compile後都有一個地址，並且有一個schema，之後每個節點必須主動放入該份擁有合約地址與schema的文件，才能呼叫該合約
 
+
+
+讓合約呼叫外部資料
+
+http://docs.oraclize.it/\#ethereum-quick-start
+
 ---
 
 # Solidity
@@ -92,7 +98,7 @@ miner.start(1)
 browser_ballot_sol_simplestorage.set('123')
 ```
 
-##  PS:如果出現\`invalid address\`要先輸入以下
+## PS:如果出現\`invalid address\`要先輸入以下
 
 ```
 web3.eth.defaultAccount = web3.eth.accounts[0]
