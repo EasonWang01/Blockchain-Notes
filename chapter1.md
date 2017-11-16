@@ -216,6 +216,10 @@ while(1) {
 
 \(即為ECDSA的verify過程\)
 
+
+
+> 發出的交易經過六個確認\(納入六個區塊後\)金額才可繼續被交易
+
 # \#難度difficulty的更改
 
 [https://en.bitcoin.it/wiki/Difficulty](https://en.bitcoin.it/wiki/Difficulty)
@@ -287,8 +291,6 @@ while(1) {
 > The [DNS seeds](https://bitcoin.org/en/glossary/dns-seed)are maintained by Bitcoin community members
 >
 > [Nodes](https://bitcoin.org/en/glossary/node)are added to the [DNS seed](https://bitcoin.org/en/glossary/dns-seed)if they run on the default Bitcoin ports of 8333 for [mainnet](https://bitcoin.org/en/glossary/mainnet)or 18333 for [testnet](https://bitcoin.org/en/glossary/testnet).
-
-
 
 [https://github.com/bitcoin/bitcoin/blob/aab1e55860dea1e40fc02bc0e535c1d1474a5ae3/src/chainparams.cpp](https://github.com/bitcoin/bitcoin/blob/aab1e55860dea1e40fc02bc0e535c1d1474a5ae3/src/chainparams.cpp)  124行
 
