@@ -10,6 +10,8 @@
 
 [https://blockchain.info/api/blockchain\_api](https://blockchain.info/api/blockchain_api)
 
+https://chainquery.com/bitcoin-api/getinfo
+
 # 使用BitcoinJS
 
 範例:
