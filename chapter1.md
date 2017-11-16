@@ -262,7 +262,9 @@ while(1) {
 
 也可以用以下網站來估計
 
-http://bitcoin.web-share.nl/
+[http://bitcoin.web-share.nl/](http://bitcoin.web-share.nl/)
+
+先到https://blockchain.info/charts/hash-rate 查看現在平均的算力
 
 # \#從TXid hash找出某筆交易詳細訊息
 
