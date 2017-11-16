@@ -288,3 +288,11 @@ while(1) {
 
 其他回答可參考[http://bitcoin.stackexchange.com/questions/3536/how-do-bitcoin-clients-find-each-other](http://bitcoin.stackexchange.com/questions/3536/how-do-bitcoin-clients-find-each-other)
 
+
+
+使用`nslookup`來查看提供的url會回覆一串IP address
+
+![](/assets/xa.png)
+
+
+
