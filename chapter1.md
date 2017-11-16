@@ -123,8 +123,8 @@ var tx1 = '51b78168d94ec307e2855697209275d477e05d8647caf29cb9e38fb6a4661145';
 var tx2 = 'dasd94ec307e2855697209275d477e05d8647caf29cb9e38fb6a4661145ddddd';
 
 function crypto256(input) {
-  var final = crypto.createHmac('sha256', input)
-                .update('test')
+  var final = crypto.createHash('sha256')
+                .update(input)
                 .digest('hex');
   return final
 } 
