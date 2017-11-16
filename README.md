@@ -10,7 +10,9 @@
 
 [https://blockchain.info/api/blockchain\_api](https://blockchain.info/api/blockchain_api)
 
-https://chainquery.com/bitcoin-api/getinfo
+[https://chainquery.com/bitcoin-api/getinfo](https://chainquery.com/bitcoin-api/getinfo)
+
+https://github.com/bitcoinj/bitcoinj \(Java的核心   也可執行javascript\)
 
 # 使用BitcoinJS
 
