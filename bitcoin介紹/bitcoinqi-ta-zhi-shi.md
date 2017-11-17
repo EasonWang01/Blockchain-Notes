@@ -32,11 +32,13 @@ BTC則是使用SegWit2X解決問題
 
 [https://en.bitcoin.it/wiki/Bitcoin\_Improvement\_Proposals](https://en.bitcoin.it/wiki/Bitcoin_Improvement_Proposals)
 
-
-
 # OPCODE
 
-https://en.bitcoin.it/wiki/Script
+[https://en.bitcoin.it/wiki/Script](https://en.bitcoin.it/wiki/Script)
 
-Source: https://github.com/bitcoin/bitcoin/blob/master/src/script/interpreter.cpp
+Source: [https://github.com/bitcoin/bitcoin/blob/master/src/script/interpreter.cpp](https://github.com/bitcoin/bitcoin/blob/master/src/script/interpreter.cpp)
+
+
+
+
 
