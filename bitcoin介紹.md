@@ -126,7 +126,7 @@ getrawtransaction把交易哈希值（txid）當做一個參數，並且把整�
 輸出（outputs）小於0.01BTC（包括你錢包內部的資金變動）的話，你必須要支付0.0001的手續費，即使是你自己轉給你自己
 ```
 
-https://bitcoinfees.earn.com/  \(此網站可看到目前推薦的手續費與尚未確認的交易所含的手續費\)
+[https://bitcoinfees.earn.com/](https://bitcoinfees.earn.com/)  \(此網站可看到目前推薦的手續費與尚未確認的交易所含的手續費\)
 
 # \#交易
 
@@ -141,4 +141,12 @@ https://bitcoinfees.earn.com/  \(此網站可看到目前推薦的手續費與�
 # \#區塊高度
 
 區塊在區塊鏈裡的位置，區塊高度也可作為元數據存儲在一個索引數據庫表中以便快速檢索
+
+
+
+# \#第一次commit
+
+https://github.com/bitcoin/bitcoin/commit/4405b78d6059e536c36974088a8ed4d9f0f29898
+
+
 
