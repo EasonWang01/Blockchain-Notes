@@ -2,11 +2,9 @@
 
 用來執行我們想要的客製化操作，目前多數使用`Solidity`語言撰寫，每個合約compile後都有一個地址，並且有一個schema，之後每個節點必須主動放入該份擁有合約地址與schema的文件，才能呼叫該合約
 
-
-
 讓合約呼叫外部資料
 
-http://docs.oraclize.it/\#ethereum-quick-start
+[http://docs.oraclize.it/\#ethereum-quick-start](http://docs.oraclize.it/#ethereum-quick-start)
 
 ---
 
@@ -38,8 +36,6 @@ var greeterSource = 'contract mortal { address owner; function mortal() { owner 
 # 如果版本大於1.6建議直接使用online compiler\(Remix Editor\)
 
 \(因為如果版本大於1.6之後web3.eth.compile.solidity會出現The method eth\_compileSolidity does not exist/is not available錯誤\)
-
-> 官方本身的tutorial還沒更新
 
 online compiler網址:  [https://ethereum.github.io/browser-solidity/\#version=soljson-v0.4.11+commit.68ef5810.js](https://ethereum.github.io/browser-solidity/#version=soljson-v0.4.11+commit.68ef5810.js)
 
