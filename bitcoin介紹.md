@@ -20,6 +20,10 @@
 
 [https://blockchain.info/charts](https://blockchain.info/charts)
 
+比特幣相關狀態
+
+http://statoshi.info/
+
 # \#安裝比特幣節點
 
 你可以下載 [https://bitcoin.org/en/full-node](https://bitcoin.org/en/full-node) ，讓你電腦執行程式後成為一個full node
@@ -142,11 +146,7 @@ getrawtransaction把交易哈希值（txid）當做一個參數，並且把整�
 
 區塊在區塊鏈裡的位置，區塊高度也可作為元數據存儲在一個索引數據庫表中以便快速檢索
 
-
-
 # \#第一次commit
 
-https://github.com/bitcoin/bitcoin/commit/4405b78d6059e536c36974088a8ed4d9f0f29898
-
-
+[https://github.com/bitcoin/bitcoin/commit/4405b78d6059e536c36974088a8ed4d9f0f29898](https://github.com/bitcoin/bitcoin/commit/4405b78d6059e536c36974088a8ed4d9f0f29898)
 
