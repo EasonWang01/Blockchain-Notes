@@ -91,16 +91,17 @@ var pubKeys = [
 
 產生交易
 
+```js
+var bitcoin = require("bitcoinjs-lib");
+var key = bitcoin.ECPair.fromWIF("L1Kzcyy88LyckShYdvoLFg1FYpB5ce1JmTYtieHrhkN65GhVoq73");
+var tx = new bitcoin.TransactionBuilder();
+tx.addInput("d18e7106e5492baf8f3929d2d573d27d89277f3825d3836aa86ea1d843b5158b", 1);
+tx.addOutput("12idKQBikRgRuZEbtxXQ4WFYB7Wa3hZzhT", 149000);
+tx.sign(0, key);
+console.log(tx.build().toHex());
 ```
-    var bitcoin = require('bitcoinjs-lib')
-    var keyPair = bitcoin.ECPair.fromWIF('L1uyy5qTuGrVXrmrsvHWHgVzW9kKdrp27wBC7Vs6nZDTF2BRUVwy')
-    var tx = new bitcoin.TransactionBuilder()
 
-    tx.addInput('aa94ab02c182214f090e99a0d57021caffd0f195a81c24602b1028b130b63e31', 0)
-    tx.addOutput('1Gokm82v6DmtwKEB8AiVhm82hyFSsEvBDK', 15000)
-    tx.sign(0, keyPair)
-    console.log(tx);
-```
+
 
 產生較複雜的交易，並廣播到Bitcoin Test Network
 
