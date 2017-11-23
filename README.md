@@ -106,8 +106,9 @@ var pubKeys = [
 
 ```
 git clone https://github.com/bitcoinjs/bitcoinjs-lib.git
-cd bitcoinjs-lib/test/integration
+cd bitcoinjs-lib
 npm install
+cd /test/integration
 ```
 
 ```
