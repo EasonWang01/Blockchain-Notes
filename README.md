@@ -101,8 +101,6 @@ tx.sign(0, key);
 console.log(tx.build().toHex());
 ```
 
-
-
 產生較複雜的交易，並廣播到Bitcoin Test Network
 
 ```
@@ -193,9 +191,9 @@ funding mvvrViCXRZD1czZduc4xCixmfG7DpZ7Lkb w/ 70000
 
 先到
 
-[https://blockchain.info/pushtx](https://blockchain.info/pushtx)
+https://live.blockcypher.com/btc/pushtx/
 
-貼上如下  
+1.貼上如下  
 \(此為確實發生的以前交易\)
 
 ```
@@ -204,7 +202,13 @@ funding mvvrViCXRZD1czZduc4xCixmfG7DpZ7Lkb w/ 70000
 
 接著
 
-試著把一些字改掉上按送出看看
+2.試看看如下
+
+```
+01000000018b15b543d8a16ea86a83d325387f27897dd273d5d229398faf2b49e506718ed1010000006b483045022100936c08bb158f0769c5af3c15d97be2695fce235ba0377a56476adc91072c871d02206ffb9a57cdbc5462a7eaaeb9bb734214db2c4038e01f3178ae48fea0375a49100121025f1290847ee12913ea1e41b2a36e346001321bac436a3e47c3e7cd133b379b3bffffffff0108460200000000001976a91412d77f0ecfef452efa491af02c995441d25b4fdb88ac00000000
+```
+
+3.然後試著把一些字改掉上按送出看看
 
 ### \#加密方法:
 
