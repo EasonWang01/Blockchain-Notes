@@ -191,10 +191,12 @@ funding mvvrViCXRZD1czZduc4xCixmfG7DpZ7Lkb w/ 70000
 
 先到
 
-https://live.blockcypher.com/btc/pushtx/
+[https://live.blockcypher.com/btc/pushtx/](https://live.blockcypher.com/btc/pushtx/)
+
+\(另外一個廣播交易的blockchain.info其廣播後的訊息較不明確，只會產生例如code=-25,-26等訊息，[blockcypher](https://live.blockcypher.com/btc/pushtx/)會明確顯示原因\)
 
 1.貼上如下  
-\(此為確實發生的以前交易\)
+\(此為確實發生的以前交易，但unspend已經被花掉了\)
 
 ```
 0100000001313eb630b128102b60241ca895f1d0ffca2170d5a0990e094f2182c102ab94aa000000006b483045022100aefbcf847900b01dd3e3debe054d3b6d03d715d50aea8525f5ea3396f168a1fb022013d181d05b15b90111808b22ef4f9ebe701caf2ab48db269691fdf4e9048f4f60121029f50f51d63b345039a290c94bffd3180c99ed659ff6ea6b1242bca47eb93b59fffffffff01983a0000000000001976a914ad618cf4333b3b248f9744e8e81db2964d0ae39788ac00000000
@@ -204,11 +206,15 @@ https://live.blockcypher.com/btc/pushtx/
 
 2.試看看如下
 
+\(此為確實發生的以前交易，已經發生過此交易，但unspend尚存在\)
+
 ```
 01000000018b15b543d8a16ea86a83d325387f27897dd273d5d229398faf2b49e506718ed1010000006b483045022100936c08bb158f0769c5af3c15d97be2695fce235ba0377a56476adc91072c871d02206ffb9a57cdbc5462a7eaaeb9bb734214db2c4038e01f3178ae48fea0375a49100121025f1290847ee12913ea1e41b2a36e346001321bac436a3e47c3e7cd133b379b3bffffffff0108460200000000001976a91412d77f0ecfef452efa491af02c995441d25b4fdb88ac00000000
 ```
 
-3.然後試著把一些字改掉上按送出看看
+3.然後試著把一些字隨便改掉上按送出看看
+
+
 
 ### \#加密方法:
 
