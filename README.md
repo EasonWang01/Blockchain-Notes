@@ -143,7 +143,6 @@ testnetUtils.faucetMany([
     value: 7e4
   }
 ], function (err, unspents) {
-  if (err) return done(err)
 
   var tx = new bitcoin.TransactionBuilder(testnet)
   tx.addInput(unspents[0].txId, unspents[0].vout) // alice1 unspent
@@ -176,7 +175,7 @@ funding mvvrViCXRZD1czZduc4xCixmfG7DpZ7Lkb w/ 70000
 
 進入到此網站[https://live.blockcypher.com/btc-testnet](https://live.blockcypher.com/btc-testnet)
 
-然後在右上角輸入地址 即可查看剛才的交易紀錄
+然後在右上角輸入地址 即可查看剛才的交易紀錄\(需要稍等一段時間\)
 
 > 一篇不錯的教學:  
 > [https://medium.com/@orweinberger/how-to-create-a-raw-transaction-using-bitcoinjs-lib-1347a502a3a\#.gbnwu2863](https://medium.com/@orweinberger/how-to-create-a-raw-transaction-using-bitcoinjs-lib-1347a502a3a#.gbnwu2863)
@@ -213,8 +212,6 @@ funding mvvrViCXRZD1czZduc4xCixmfG7DpZ7Lkb w/ 70000
 ```
 
 3.然後試著把一些字隨便改掉上按送出看看
-
-
 
 ### \#加密方法:
 
