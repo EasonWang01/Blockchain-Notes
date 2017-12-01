@@ -95,7 +95,7 @@ console.log('--------')
 bitcoin genesis 創建的原始碼  
 [https://github.com/bitcoin/bitcoin/blob/3955c3940eff83518c186facfec6f50545b5aab5/src/chainparams.cpp\#L123](https://github.com/bitcoin/bitcoin/blob/3955c3940eff83518c186facfec6f50545b5aab5/src/chainparams.cpp#L123)
 
-# \#Merkel tree
+# \#Merkle tree
 
 區塊鏈中的每個區塊都包含了產生於該區塊的所有交易，且以Merkle樹表示
 
@@ -143,7 +143,7 @@ var hash3_hash4 = crypto256(crypto256(hash3 + hash4));
 
 var root = crypto256(crypto256(hash1_hash2 + hash3_hash4));
 
-console.log('Merkel Root為:' + root);
+console.log('Merkle Root為:' + root);
 ```
 
 # \#挖礦
