@@ -93,13 +93,28 @@ function transferOwnership(address newOwner) onlyOwner {
     }
 ```
 
-
-
 # \#Require\(\) , assert\(\)
 
 > 用來確認這個行code正常執行  如果不正常就會拋出錯誤  直接中斷並取消整個function
 
-http://solidity.readthedocs.io/en/develop/control-structures.html?highlight=require\#error-handling-assert-require-revert-and-exceptions
+[http://solidity.readthedocs.io/en/develop/control-structures.html?highlight=require\#error-handling-assert-require-revert-and-exceptions](http://solidity.readthedocs.io/en/develop/control-structures.html?highlight=require#error-handling-assert-require-revert-and-exceptions)
+
+
+
+# \#Mapping
+
+mapping 可以想像是一個hashTable，即 key 對應 value
+
+```c
+struct Person {
+	bytes32 name;
+	uint age;
+}
+
+mapping (address => Person) person;
+```
+
+ `person` 為mapping類型，它的 key 是address 類型， value是Person 之struct類型
 
 
 
