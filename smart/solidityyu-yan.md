@@ -50,7 +50,7 @@ function kill() { if (msg.sender == owner) selfdestruct(owner);}
 
 # \# external 與 public  與 internal 與private
 
-http://solidity.readthedocs.io/en/develop/contracts.html\#visibility-and-getters
+[http://solidity.readthedocs.io/en/develop/contracts.html\#visibility-and-getters](http://solidity.readthedocs.io/en/develop/contracts.html#visibility-and-getters)
 
 [https://ethereum.stackexchange.com/questions/19380/external-vs-public-best-practices](https://ethereum.stackexchange.com/questions/19380/external-vs-public-best-practices)
 
@@ -70,6 +70,14 @@ private:
 Private functions and state variables are only visible for the contract they are defined in and not in derived contracts.
 ```
 
+# \#View, Pure, Const
+
+View: 可讀取，但不可修改
+
+Pure: 不可讀取，不可修改
+
+const: 可讀取，但不可修改，不可加在function上
+
 # \#**return **or **throw**
 
 > The former will cost less gas but it can be more headache as any changes you did to the contract so far will be kept. In the other hand, 'throw' will cancel all contract execution, revert any changes that transaction could have made and the sender will lose all ether he sent for gas. But since the Wallet can detect that a contract will throw, it always shows an alert, therefore preventing any ether to be spent at all.
@@ -78,7 +86,7 @@ return可以花費較少gas 但在return前的code會執行 ，而throw則會把
 
 # \#Modifier
 
-> _ \_;的意思為繼承這個modifier的function會先跑完寫在_modifier_ \_; 之前的東西才繼續該function\_
+> _ \_;_的意思為繼承這個modifier的function會先跑完寫在_modifier_ \_; 之前的東西才繼續該function\_
 
 ```
 modifier onlyOwner {
@@ -116,13 +124,7 @@ mapping (address => Person) person;
 
 `person` 為mapping類型，它的 key 是address 類型， value是Person 之struct類型
 
-
-
-# \#View, Pure, Const
-
-VIew: 可讀取，但不可修改
-
-Pure: 不可讀取，不可修改
+# 
 
 
 
