@@ -92,7 +92,7 @@ Gas:
 >
 > Gas Limit: 多少單位個Gas
 >
-> **Ether = Tx Fees = Gas Limit \* Gas Price**
+> 交易手續費** Tx Fees = Gas Limit \* Gas Price**
 
 # 相關實用網站
 
