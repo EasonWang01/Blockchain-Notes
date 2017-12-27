@@ -94,6 +94,10 @@ Gas:
 >
 > 交易手續費** Tx Fees = Gas Limit \* Gas Price**
 
+Ether單位
+
+可參考:http://ethdocs.org/en/latest/ether.html
+
 # 相關實用網站
 
 1、以太坊官方網站：[https://ethereum.org/](https://ethereum.org/)
