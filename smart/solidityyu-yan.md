@@ -57,16 +57,16 @@ function kill() { if (msg.sender == owner) selfdestruct(owner);}
 ```
 Functions can be specified as being external, public, internal or private, where the default is public. For state variables, external is not possible and the default is internal.
 
-external:
+external:  只可以給外面的contract呼叫，不可內部呼叫
 External functions are part of the contract interface, which means they can be called from other contracts and via transactions. An external function f cannot be called internally (i.e. f() does not work, but this.f() works). External functions are sometimes more efficient when they receive large arrays of data.
 
-public:
+public:   都可呼叫
 Public functions are part of the contract interface and can be either called internally or via messages. For public state variables, an automatic getter function (see below) is generated.
 
-internal:
+internal: 跟private類似，但如果是繼承該contract的contract也可以呼叫
 Those functions and state variables can only be accessed internally (i.e. from within the current contract or contracts deriving from it), without using this.
 
-private:
+private:  只有同contract才可呼叫
 Private functions and state variables are only visible for the contract they are defined in and not in derived contracts.
 ```
 
@@ -86,7 +86,7 @@ return可以花費較少gas 但在return前的code會執行 ，而throw則會把
 
 # \#Modifier
 
-> _ \_;_的意思為繼承這個modifier的function會先跑完寫在_modifier_ \_; 之前的東西才繼續該function\_
+> _ \_;_的意思為繼承這個modifier的function會先跑完寫在\_modifier_ \_; 之前的東西才繼續該function\_
 
 ```
 modifier onlyOwner {
