@@ -50,6 +50,8 @@ function kill() { if (msg.sender == owner) selfdestruct(owner);}
 
 # \# external 與 public  與 internal 與private
 
+http://solidity.readthedocs.io/en/develop/contracts.html\#visibility-and-getters
+
 [https://ethereum.stackexchange.com/questions/19380/external-vs-public-best-practices](https://ethereum.stackexchange.com/questions/19380/external-vs-public-best-practices)
 
 ```
@@ -99,22 +101,28 @@ function transferOwnership(address newOwner) onlyOwner {
 
 [http://solidity.readthedocs.io/en/develop/control-structures.html?highlight=require\#error-handling-assert-require-revert-and-exceptions](http://solidity.readthedocs.io/en/develop/control-structures.html?highlight=require#error-handling-assert-require-revert-and-exceptions)
 
-
-
 # \#Mapping
 
 mapping 可以想像是一個hashTable，即 key 對應 value
 
 ```c
 struct Person {
-	bytes32 name;
-	uint age;
+    bytes32 name;
+    uint age;
 }
 
 mapping (address => Person) person;
 ```
 
- `person` 為mapping類型，它的 key 是address 類型， value是Person 之struct類型
+`person` 為mapping類型，它的 key 是address 類型， value是Person 之struct類型
+
+
+
+# \#View, Pure, Const
+
+VIew: 可讀取，但不可修改
+
+Pure: 不可讀取，不可修改
 
 
 
