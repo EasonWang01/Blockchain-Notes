@@ -96,7 +96,7 @@ Gas:
 
 Ether單位
 
-可參考:http://ethdocs.org/en/latest/ether.html
+> 可參考: [http://ethdocs.org/en/latest/ether.html](http://ethdocs.org/en/latest/ether.html)
 
 # 相關實用網站
 
