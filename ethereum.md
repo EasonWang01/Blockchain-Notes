@@ -88,9 +88,9 @@ Gas:
 
 > 燃料，每執行一條合約指令會消耗一定的燃料，當某個交易還未執行結束，而燃料消耗完時，合約執行終止並回滾\(rollback\)狀態，可與ether進行換算，但不可交易。
 >
-> Gas Price: 每單位Gas多少錢
+> Gas Price: 每單位Gas多少錢\( 會變動 \)
 >
-> Gas Limit: 多少單位個Gas
+> Gas Limit: 多少單位個Gas\( 通常不會變動 \)
 >
 > 交易手續費** Tx Fees = Gas Limit \* Gas Price**
 
