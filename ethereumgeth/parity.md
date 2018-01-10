@@ -15,7 +15,13 @@
 ![](/assets/asd3.png)
 
 安裝好後執行程式，會自動啟動本地Server並開啟網頁  
-![](/assets/asd.png)
+![](/assets/4234.png)
+
+接著輸入錢包的帳號與密碼
+
+![](/assets/9455.png)
+
+
 
 windows 把以下路徑加入環境變數
 
