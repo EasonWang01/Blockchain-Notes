@@ -197,5 +197,15 @@ contract superman is swim {
 }
 ```
 
+# Contract轉帳Ether
+
+```
+msg.sender.transfer(100) 
+
+msg.sender.send(100)
+
+// msg.sender 可換為其他address
+```
+
 
 
