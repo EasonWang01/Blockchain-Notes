@@ -1,4 +1,4 @@
-# Ethereum  Geth \(go-ethereum\) 教學
+# Ethereum Geth \(go-ethereum\) 教學
 
 # 簡介
 
@@ -380,8 +380,6 @@ or
 所以要build from source
 ```
 
- 
-
 以為步驟
 
 ```
@@ -393,8 +391,6 @@ cd ./build/bin
 ./bootnode -genkey bootnode.key
 ```
 
- 
-
 之後資料夾下會產一個bootnode.key檔案
 
 然後輸入
@@ -402,8 +398,6 @@ cd ./build/bin
 ```
 ./bootnode -nodekey bootnode.key
 ```
-
- 
 
 會產生如下
 
@@ -422,11 +416,23 @@ geth --ipcdisable --rpc --rpcport 8106 --datadir "./privatechain/01" --networkid
 geth --ipcdisable --rpc --rpcport 8107 --datadir "./privatechain/02" --networkid 123 --rpcapi="db,eth,net,web3,personal" --bootnodes "enode://92d7f28e8ca3bd1e1fa43959bb1cf37b9d284a81d17bcaee9cf233a773f3da0ce60b2351c3b29b07eb78229e6a84731d36065506f6ad972ed3203c5d18bef313@[127.0.0.1]:30301" --port=30311 console
 ```
 
- 
-
 之後在其中一個terminal輸入\`admin.peers\`
 
 即可看到如下
 
 ![](/assets/螢幕快照 2017-10-12 下午9.24.16.png)
+
+
+
+---
+
+# Geth版本升級
+
+```
+where geth
+```
+
+之後會顯示geth安裝路徑
+
+然後下載https://geth.ethereum.org/downloads/ 最新版本後在安裝時覆蓋原本路徑即可。
 
