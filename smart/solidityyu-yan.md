@@ -155,8 +155,6 @@ function() {
 
 [https://github.com/ConsenSys/Ethereum-Development-Best-Practices/wiki/Fallback-functions-and-the-fundamental-limitations-of-using-send\(\)-in-Ethereum-&-Solidity](https://github.com/ConsenSys/Ethereum-Development-Best-Practices/wiki/Fallback-functions-and-the-fundamental-limitations-of-using-send%28%29-in-Ethereum-&-Solidity)
 
-
-
 # \#inheritance繼承
 
 ```
@@ -166,6 +164,22 @@ contract man {
 
 contract superman is man {
  .... 
+}
+```
+
+# \#interface介面
+
+> 如果有寫interface，繼承的contract必須要實作，否則無法編譯
+
+```
+contract man {
+  function run() returns (strings); 
+}
+
+contract superman is man {
+  function run() returns (strings) {
+    return "I'm running"
+  }
 }
 ```
 
