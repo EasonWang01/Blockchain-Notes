@@ -76,5 +76,19 @@ Microsoft Azure也宣布他們雲端平台將與Ethereum合作
 
 以下為版本圖
 
-![](/assets/螢幕快照 2017-11-09 上午8.52.34.png)
+# ![](/assets/螢幕快照 2017-11-09 上午8.52.34.png)Version 0: Olympic
+
+為Ethereum的一開始的prototype版本，總共提供25000Ether給發現Bug的人。
+
+# Version 1: Frontier
+
+算是乙太坊的正式發布第一個版本，由於Frontier階段的以太坊客戶端只有命令行界面，沒有圖形界面，所以該階段主要開發者。
+
+# Version 2: Homestead
+
+Homestead版本開始提供了圖形化的乙太坊錢包，並且也表示乙太坊目前以更穩定的運行。
+
+# Version 3: Metropolis\(Byzantium\)
+
+加入了 zkSnarks 演算法，以及Proof of Stake實作。
 
