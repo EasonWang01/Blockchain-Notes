@@ -178,7 +178,21 @@ contract man {
 
 contract superman is man {
   function run() returns (strings) {
-    return "I'm running"
+    return "I'm running";
+  }
+}
+```
+
+另一種寫法
+
+```
+interface runningMan {
+  function swim() returns (string);
+}
+
+contract superman is swim {
+  function swim() returns (string) {
+    return "I'm swimming";
   }
 }
 ```
