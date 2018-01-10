@@ -155,3 +155,19 @@ function() {
 
 [https://github.com/ConsenSys/Ethereum-Development-Best-Practices/wiki/Fallback-functions-and-the-fundamental-limitations-of-using-send\(\)-in-Ethereum-&-Solidity](https://github.com/ConsenSys/Ethereum-Development-Best-Practices/wiki/Fallback-functions-and-the-fundamental-limitations-of-using-send%28%29-in-Ethereum-&-Solidity)
 
+
+
+# \#inheritance繼承
+
+```
+contract man {
+ .... 
+}
+
+contract superman is man {
+ .... 
+}
+```
+
+
+
