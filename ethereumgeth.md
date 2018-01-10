@@ -351,6 +351,12 @@ clique指令只有POA才有
 
 > 節點互相找不到的原因通常為你沒有輸入init genesis.json，所以兩個節點間的genesis.json不相同以及沒有輸入--nodiscover 所以他會加上網路上其他相同genesis和networkid的陌生人
 
+6.
+
+> 32位元版本的geth無法挖礦，需下載64位元
+>
+> https://github.com/ethereum/go-ethereum/issues/14633
+
 1. 兩節點加入後新加入節點不用挖礦就會自動同步，但如果有產生合約或是廣播交易網路上的其中一個節點必須挖礦
 
 ![](/assets/螢幕快照 2017-03-25 下午9.16.18.png)
@@ -422,8 +428,6 @@ geth --ipcdisable --rpc --rpcport 8107 --datadir "./privatechain/02" --networkid
 
 ![](/assets/螢幕快照 2017-10-12 下午9.24.16.png)
 
-
-
 ---
 
 # Geth版本升級
@@ -434,5 +438,5 @@ where geth
 
 之後會顯示geth安裝路徑
 
-然後下載https://geth.ethereum.org/downloads/ 最新版本後在安裝時覆蓋原本路徑即可。
+然後下載[https://geth.ethereum.org/downloads/](https://geth.ethereum.org/downloads/) 最新版本後在安裝時覆蓋原本路徑即可。
 
