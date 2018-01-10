@@ -124,7 +124,22 @@ mapping (address => Person) person;
 
 `person` 為mapping類型，它的 key 是address 類型， value是Person 之struct類型
 
-# 
+# \#payable
+
+```
+function buyTicket(uint amount) payable {
+}
+```
+
+包含payable的function才可以接受Ether
+
+# \#selfdestruct
+
+將智能合約永久從區塊鏈上移除，並且將接到的Ether傳給selfdestruct之參數
+
+```
+selfdestruct(address)
+```
 
 
 
