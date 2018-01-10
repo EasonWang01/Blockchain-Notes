@@ -207,5 +207,5 @@ msg.sender.send(100)
 // msg.sender 可換為其他address
 ```
 
-
+https://github.com/ethereum/solidity/issues/610
 
