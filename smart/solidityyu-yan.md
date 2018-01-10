@@ -86,7 +86,7 @@ return可以花費較少gas 但在return前的code會執行 ，而throw則會把
 
 # \#Modifier
 
-> _ \_;_的意思為繼承這個modifier的function會先跑完寫在\_modifier_ \_; 之前的東西才繼續該function\_
+> _ \_的意思為繼承這個modifier的function會先跑完寫在\_modifier_ \_; 之前的東西才繼續該function\_
 
 ```
 modifier onlyOwner {
@@ -153,5 +153,5 @@ function() {
 }
 ```
 
-https://github.com/ConsenSys/Ethereum-Development-Best-Practices/wiki/Fallback-functions-and-the-fundamental-limitations-of-using-send\(\)-in-Ethereum-&-Solidity
+[https://github.com/ConsenSys/Ethereum-Development-Best-Practices/wiki/Fallback-functions-and-the-fundamental-limitations-of-using-send\(\)-in-Ethereum-&-Solidity](https://github.com/ConsenSys/Ethereum-Development-Best-Practices/wiki/Fallback-functions-and-the-fundamental-limitations-of-using-send%28%29-in-Ethereum-&-Solidity)
 
