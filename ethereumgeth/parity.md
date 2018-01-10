@@ -4,13 +4,17 @@
 
 > Fast, light, robust Ethereum implementation
 
-# 下載:
+# 安裝:
+
+先到以下網站，然後往下拉
 
 [https://github.com/paritytech/parity/releases](https://github.com/paritytech/parity/releases)
 
+選擇對應的作業系統版本安裝。
 
+![](/assets/asd3.png)
 
-安裝好後會自動打開server並開啟網頁  
+安裝好後執行程式，會自動啟動本地Server並開啟網頁  
 ![](/assets/asd.png)
 
 windows 把以下路徑加入環境變數
