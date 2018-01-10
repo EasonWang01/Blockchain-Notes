@@ -21,11 +21,9 @@
 
 ![](/assets/9455.png)下一步，記得把恢復錢包的字串記下，I have written down the phrase 之後即可按下一步。
 
+> 以下recovery phrase僅為範例
+
 ![](/assets/8877.png)
-
-
-
-
 
 windows 把以下路徑加入環境變數
 
