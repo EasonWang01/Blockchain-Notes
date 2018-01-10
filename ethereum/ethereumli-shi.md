@@ -90,5 +90,5 @@ Homestead版本開始提供了圖形化的乙太坊錢包，並且也表示乙�
 
 # Version 3: Metropolis
 
-加入了 zkSnarks 演算法，以及Proof of Stake實作，Account abstraction。
+加入了 zkSnarks 演算法，以及Proof of Stake實作，與Account abstraction\(意思為一般人也可以使用Etheruem利用Dapp而不必知道其他技術層面\)
 
