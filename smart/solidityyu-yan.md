@@ -141,5 +141,17 @@ function buyTicket(uint amount) payable {
 selfdestruct(address)
 ```
 
+# \#Fallback functions
 
+如果呼叫的function不存在於智能合約上，則ＥＶＭ會自動去執行fallback function
+
+> 類似於匿名函數的寫法
+
+```
+function() {
+     ....
+}
+```
+
+https://github.com/ConsenSys/Ethereum-Development-Best-Practices/wiki/Fallback-functions-and-the-fundamental-limitations-of-using-send\(\)-in-Ethereum-&-Solidity
 
