@@ -88,7 +88,7 @@ Microsoft Azure也宣布他們雲端平台將與Ethereum合作
 
 Homestead版本開始提供了圖形化的乙太坊錢包，並且也表示乙太坊目前以更穩定的運行。
 
-# Version 3: Metropolis\(Byzantium\)
+# Version 3: Metropolis
 
 加入了 zkSnarks 演算法，以及Proof of Stake實作。
 
