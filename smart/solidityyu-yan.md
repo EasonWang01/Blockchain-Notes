@@ -197,7 +197,7 @@ contract superman is swim {
 }
 ```
 
-# Contract轉帳Ether
+# \#Contract轉帳Ether
 
 ```
 msg.sender.transfer(100) 
@@ -207,5 +207,32 @@ msg.sender.send(100)
 // msg.sender 可換為其他address
 ```
 
-https://github.com/ethereum/solidity/issues/610
+[https://github.com/ethereum/solidity/issues/610](https://github.com/ethereum/solidity/issues/610)
+
+# \#呼叫其他Contract
+
+先部署Calculate contract 到鏈上
+
+```
+contract calculate {
+  function add (int a, int b) returns (int) {
+    return a + b
+  }
+}
+```
+
+假設其地址為0xfEDDF8DB160Dcb85f793bfEe734352760C4AB96a
+
+之後呼叫其contract
+
+```
+contract computer {
+  calculate calc = new calculate(0xfEDDF8DB160Dcb85f793bfEe734352760C4AB96a);
+  function 2Add3() constant returns (int) {} {
+    calc.add(2, 3);
+  }
+}
+```
+
+
 
