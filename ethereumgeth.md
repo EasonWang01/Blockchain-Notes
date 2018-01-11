@@ -355,7 +355,7 @@ clique指令只有POA才有
 
 > 32位元版本的geth無法挖礦，需下載64位元
 >
-> https://github.com/ethereum/go-ethereum/issues/14633
+> [https://github.com/ethereum/go-ethereum/issues/14633](https://github.com/ethereum/go-ethereum/issues/14633)
 
 1. 兩節點加入後新加入節點不用挖礦就會自動同步，但如果有產生合約或是廣播交易網路上的其中一個節點必須挖礦
 
@@ -366,14 +366,10 @@ clique指令只有POA才有
 > 不用自己init genesis block 和指定datadir 以及自動幫你配好一些參數 可直接啟動私有鏈
 
 ```
-geth --dev --rpc --rpcport 8104 --rpccorsdomain="*"  console
+geth --dev --rpc --rpcport 8104 --datadir ./Ethtest --rpccorsdomain="*"  console
 ```
 
-or
 
-```
-可加上 --datadir ./test
-```
 
 # 開放Remote 連線
 
