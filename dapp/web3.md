@@ -23,6 +23,10 @@ yarn start
 geth  --ipcdisable --rpc --rpcport 8114 --datadir "./privatechain/03" --networkid 123 --rpcapi="db,eth,net,web3,personal" --nodiscover  --port=30319 --rpccorsdomain="*"   console
 ```
 
+> web3 之API文件
+>
+> https://github.com/ethereum/wiki/wiki/JavaScript-API
+
 把src/App.js改為如下
 
 ```js
