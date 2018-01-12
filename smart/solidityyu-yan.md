@@ -234,5 +234,23 @@ contract computer {
 }
 ```
 
+# \#memory/storage
+
+類似pass by value 與 pass by reference
+
+預設均為memory，使用storage如下用法
+
+```
+uint[] abc = [1, 2, 3];
+
+function test(uint[] storage _abc) internal {
+    _abc[0] = 0;
+}
+
+// abc變為[0, 2, 3]
+```
+
+> function只能為internal或private
+
 
 
