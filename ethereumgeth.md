@@ -62,7 +62,7 @@ custom\_genesis.json
         "eip155Block": 0,
         "eip158Block": 0
     },
-    "difficulty": "0x400",
+    "difficulty": "0x40",
     "gasLimit": "4712388",
     "alloc": {
     }
@@ -368,8 +368,6 @@ clique指令只有POA才有
 ```
 geth --dev --rpc --rpcport 8104 --datadir ./Ethtest --rpccorsdomain="*"  console
 ```
-
-
 
 # 開放Remote 連線
 
