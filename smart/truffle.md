@@ -137,8 +137,6 @@ HelloWorld.deployed().then(a => {a.deposit(200)})
 > 如果想更改已部署到RPC上的contract要輸入  
 > `truffle migrate --reset`
 
-
-
 ## 使用truffle box
 
 官方有內建幾個box，算是模板，可供下載
@@ -148,6 +146,10 @@ truffle unbox <package>
 ```
 
 但如果搭配testrpc，記得更改設定的port以及寫gasLimit，不然可能會出錯
+
+
+
+truffle.js
 
 ```json
 module.exports = {
