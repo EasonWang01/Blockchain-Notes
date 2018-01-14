@@ -139,3 +139,30 @@ HelloWorld.deployed().then(a => {a.deposit(200)})
 
 
 
+## 使用truffle box
+
+官方有內建幾個box，算是模板，可供下載
+
+```
+truffle unbox <package>
+```
+
+但如果搭配testrpc，記得更改設定的port以及寫gasLimit，不然可能會出錯
+
+```json
+module.exports = {
+  // See <http://truffleframework.com/docs/advanced/configuration>
+  // for more about customizing your Truffle configuration!
+  networks: {
+    development: {
+      host: "127.0.0.1",
+      port: 8545,
+      network_id: "*", // Match any network id
+      gas: 4712388
+    }
+  }
+};
+```
+
+
+
