@@ -147,8 +147,6 @@ truffle unbox <package>
 
 但如果搭配testrpc，記得更改設定的port以及寫gasLimit，不然可能會出錯
 
-
-
 truffle.js
 
 ```json
@@ -165,6 +163,10 @@ module.exports = {
   }
 };
 ```
+
+> 另外也可用http://truffleframework.com/ganache/
+>
+> 類似圖形化的testrpc
 
 
 
