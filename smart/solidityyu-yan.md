@@ -254,3 +254,11 @@ function test(uint[] storage _abc) internal {
 
 
 
+# \#參數傳入struct或是返回struct
+
+可參考：https://github.com/ethereum/web3.js/issues/1148
+
+> 目前會出現：error: Failed to decode output: Error: Unsupported or invalid type: tuple 錯誤
+
+
+
