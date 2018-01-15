@@ -145,7 +145,7 @@ HelloWorld.deployed().then(a => {a.deposit(200)})
 truffle unbox <package>
 ```
 
-但如果搭配testrpc，記得更改設定的port以及寫gasLimit，不然可能會出錯
+但如果搭配ethereumjs-testrpc，記得更改設定的port以及寫gasLimit，不然可能會出錯
 
 truffle.js
 
@@ -164,9 +164,11 @@ module.exports = {
 };
 ```
 
-> 另外也可用http://truffleframework.com/ganache/
+> 另外也可用[http://truffleframework.com/ganache/](http://truffleframework.com/ganache/)
 >
 > 類似圖形化的testrpc
+
+> 但上面的gas 配置又會造成[ganache](http://truffleframework.com/ganache/)-cli 產生out of gas，之後移除gas欄位即可成功
 
 
 
