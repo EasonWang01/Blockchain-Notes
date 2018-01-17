@@ -167,7 +167,13 @@ module.exports = {
 > 另外也可用[http://truffleframework.com/ganache/](http://truffleframework.com/ganache/)
 >
 > 類似圖形化的testrpc
-
+>
+> 或是僅安裝指令列
+>
+> ```
+> npm install ganache-cli -g
+> ```
+>
 > 但上面的gas 配置又會造成[ganache](http://truffleframework.com/ganache/)-cli 產生out of gas，之後移除gas欄位即可成功
 
 
