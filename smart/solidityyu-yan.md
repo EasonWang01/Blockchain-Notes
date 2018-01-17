@@ -238,7 +238,7 @@ contract computer {
 
 類似pass by value 與 pass by reference
 
-預設均為memory，使用storage如下用法
+function之參數預設均為memory，使用storage如下用法
 
 ```
 uint[] abc = [1, 2, 3];
@@ -252,11 +252,9 @@ function test(uint[] storage _abc) internal {
 
 > function只能為internal或private
 
-
-
 # \#參數傳入struct或是返回struct
 
-可參考：https://github.com/ethereum/web3.js/issues/1148
+可參考：[https://github.com/ethereum/web3.js/issues/1148](https://github.com/ethereum/web3.js/issues/1148)
 
 > 目前會出現：error: Failed to decode output: Error: Unsupported or invalid type: tuple 錯誤
 
