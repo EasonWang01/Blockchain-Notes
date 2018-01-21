@@ -54,7 +54,7 @@ docker stop 01f51f8c9f7b
 docker stop $(docker ps -a -q)
 ```
 
-## 5.移除所有使用名稱的container
+## 5.移除所有使用過的container名稱
 
 在kill或stop container後要再把名稱移除才可再次重新使用
 
