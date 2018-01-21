@@ -213,19 +213,9 @@ funding mvvrViCXRZD1czZduc4xCixmfG7DpZ7Lkb w/ 70000
 
 3.然後試著把一些字隨便改掉上按送出看看
 
-### \#加密方法:
+### 
 
-```
-Mnemonic code for generating deterministic keys (BIP 39), credits to Thasshiznets
 
-Hierarchical Deterministic Wallets (BIP 32)
-
-Payment Protocol (BIP 70)
-
-Payment URLs (BIP 21,BIP 72)
-
-Two-Factor keys (BIP 38)
-```
 
 
 
