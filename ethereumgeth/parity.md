@@ -41,6 +41,12 @@ sudo apt install gdebi-core
 sudo gdebi parity_1.6.8_amd64.deb
 ```
 
+# 存放資料夾
+
+```
+MAC  $HOME/Library/Application\ Support/io.parity.ethereum/
+```
+
 # 文件
 
 [https://github.com/paritytech/parity/wiki](https://github.com/paritytech/parity/wiki)
