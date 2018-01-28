@@ -31,6 +31,12 @@ windows 把以下路徑加入環境變數
 C:\Program Files\Ethcore\Parity
 ```
 
+mac  把以下路徑加入環境變數
+
+```
+export PATH=/Applications/Parity\ Ethereum.app/Contents/MacOS:$PATH
+```
+
 # Ubuntu install from command line
 
 ```
