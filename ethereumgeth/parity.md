@@ -45,6 +45,8 @@ sudo gdebi parity_1.6.8_amd64.deb
 
 ```
 MAC  $HOME/Library/Application\ Support/io.parity.ethereum/
+Windows %UserProfile%\AppData\Roaming\Parity
+Linux ~/.local/share/io.parity.ethereum/
 ```
 
 # 文件
