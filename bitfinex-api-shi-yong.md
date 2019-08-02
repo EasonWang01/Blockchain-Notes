@@ -53,6 +53,7 @@ w.on('open', () => {
 
 1. API 每分鐘不可超過請求次數 [https://docs.bitfinex.com/v2/docs/getting-started\#section-rate-limits](https://docs.bitfinex.com/v2/docs/getting-started#section-rate-limits)
 2. 不可讓多個 server 使用同一個API KEY呼叫 [https://docs.bitfinex.com/v2/docs/getting-started\#section-multiple-clients](https://docs.bitfinex.com/v2/docs/getting-started#section-multiple-clients)
+3. Symbol 是什麼？ [https://docs.bitfinex.com/v2/docs/getting-started\#section-what-is-a-symbol-](https://docs.bitfinex.com/v2/docs/getting-started#section-what-is-a-symbol-)
 
 
 
