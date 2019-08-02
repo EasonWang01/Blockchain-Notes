@@ -4,6 +4,10 @@
 
 ![](/assets/螢幕快照 2019-08-02 上午11.56.17.png)
 
+# API 文件
+
+[https://docs.bitfinex.com/v2/docs/getting-started](https://docs.bitfinex.com/v2/docs/getting-started)
+
 # 監聽 BTC/USD 掛單
 
 ```js
@@ -42,7 +46,7 @@ let msg = JSON.stringify({
 w.on('open', () => {
   w.send(JSON.stringify(payload))
   w.send(msg)
-})  
+})
 ```
 
 
