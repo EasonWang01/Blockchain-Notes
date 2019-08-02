@@ -8,7 +8,7 @@
 
 [https://docs.bitfinex.com/v2/docs/getting-started](https://docs.bitfinex.com/v2/docs/getting-started)
 
-# 監聽 BTC/USD 掛單
+# Websocket 監聽 BTC/USD 掛單
 
 ```js
 const ws = require('ws')
