@@ -26,4 +26,5 @@
 * [本書簡介](ben-shu-jian-jie.md)
 * [Bitfinex API 使用](bitfinex-api-shi-yong.md)
 * [FTX API](ftx-api.md)
+* [CCXT 通用交易所 API](ccxt-tong-yong-jiao-yi-suo-api.md)
 

@@ -6,7 +6,9 @@
 
 只要是需要認證的API，都必須要帶有以下Header: `FTX-KEY, FTX-SIGN, FTX-TS`
 
-/account
+#### GET /account
+
+[https://docs.ftx.com/?javascript\#account](https://docs.ftx.com/?javascript#account)
 
 ```js
 const crypto = require("crypto");
@@ -44,6 +46,8 @@ var req = https.request(options, function(res) {
 
 req.end();
 ```
+
+#### POST /orders
 
 
 
