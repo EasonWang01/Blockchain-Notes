@@ -4,6 +4,10 @@
 
 ## Authentication {#authentication}
 
+只要是需要認證的API，都必須要帶有以下Header: `FTX-KEY, FTX-SIGN, FTX-TS`
+
+/account
+
 ```js
 const crypto = require("crypto");
 const https = require("https");
