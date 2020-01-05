@@ -23,5 +23,19 @@ const FTX_API_SECRET = process.env.ftx_api_secret;
 })();
 ```
 
+## 取得歷史價格
+
+推薦使用[https://min-api.cryptocompare.com/documentation](https://min-api.cryptocompare.com/documentation)
+
+如果要取得歷史資料可以用toTs，會返回其timestamp之前的limit參數筆資料，然後用batch方式去不斷抓資料。
+
+e.g.
+
+```
+https://min-api.cryptocompare.com/data/v2/histominute?fsym=BTC&tsym=USD&limit=2000&toTs=1578217560
+```
+
+> ![](/assets/螢幕快照 2020-01-05 下午6.11.53.png)然後將TimeFrom 在放入下一筆的toTs繼續往更早之前的資料抓取
+
 
 
