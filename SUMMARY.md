@@ -25,4 +25,5 @@
   * [門羅幣/Monero \(XMR\)](wa-kuang-cheng-shi-shi-yong-jiao-xue/men-luo-5e63-monero-xmr.md)
 * [本書簡介](ben-shu-jian-jie.md)
 * [Bitfinex API 使用](bitfinex-api-shi-yong.md)
+* [FTX API](ftx-api.md)
 
