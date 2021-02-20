@@ -1,14 +1,14 @@
+# blockchainDB
+
 此為python寫的資料庫，需使用python3來安裝
 
-
-#  #安裝
-
+## \#安裝
 
 安裝相關套件
 
-https://docs.bigchaindb.com/projects/py-driver/en/latest/quickstart.html
+[https://docs.bigchaindb.com/projects/py-driver/en/latest/quickstart.html](https://docs.bigchaindb.com/projects/py-driver/en/latest/quickstart.html)
 
-```
+```text
 brew install python3
 
 pip3 install bigchaindb_driver
@@ -16,16 +16,15 @@ pip3 install bigchaindb_driver
 安裝 libffi/ffi.h  (各平台不同，所以google安裝方法)
 
 pip install --upgrade setuptools
-
 ```
-
 
 使用docker啟動DB
 
-https://docs.bigchaindb.com/projects/py-driver/en/latest/contributing.html
-```
+[https://docs.bigchaindb.com/projects/py-driver/en/latest/contributing.html](https://docs.bigchaindb.com/projects/py-driver/en/latest/contributing.html)
+
+```text
 git clone https://github.com/bigchaindb/bigchaindb-driver.git
- 
+
 cd bigchaindb-driver
 
 $ docker-compose up -d rdb
@@ -34,18 +33,19 @@ $ docker-compose up -d bdb-server
 
 把port給出
 
-https://docs.bigchaindb.com/projects/py-driver/en/latest/connect.html
+[https://docs.bigchaindb.com/projects/py-driver/en/latest/connect.html](https://docs.bigchaindb.com/projects/py-driver/en/latest/connect.html)
 
 執行完以下她會給你一個url記得把他填入以下範例程式的連線url
-```
+
+```text
 docker-compose port bdb-server 9984
 ```
-
 
 之後試試看如下範例程式，然後使用`python test.py`執行
 
 test.py
-```
+
+```text
 from bigchaindb_driver import BigchainDB
 from bigchaindb_driver.crypto import generate_keypair
 bdb = BigchainDB('http://0.0.0.0:32773')
@@ -81,3 +81,4 @@ print(fulfilled_creation_tx)
 
 sent_creation_tx = bdb.transactions.send(fulfilled_creation_tx)
 ```
+

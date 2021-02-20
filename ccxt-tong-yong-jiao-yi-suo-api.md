@@ -1,4 +1,4 @@
-# CCXT
+# CCXT 通用交易所 API
 
 其為一套可在任何交易所進行交易的API
 
@@ -6,7 +6,7 @@
 
 ## 創造訂單
 
-```js
+```javascript
 const ccxt = require("ccxt");
 const FTX_API_KEY = process.env.ftx_api_key;
 const FTX_API_SECRET = process.env.ftx_api_secret;
@@ -31,11 +31,9 @@ const FTX_API_SECRET = process.env.ftx_api_secret;
 
 e.g.
 
-```
+```text
 https://min-api.cryptocompare.com/data/v2/histominute?fsym=BTC&tsym=USD&limit=2000&toTs=1578217560
 ```
 
-> ![](/assets/螢幕快照 2020-01-05 下午6.11.53.png)然後將TimeFrom 在放入下一筆的toTs繼續往更早之前的資料抓取
-
-
+> ![](.gitbook/assets/螢幕快照%202020-01-05%20下午6.11.53.png)然後將TimeFrom 在放入下一筆的toTs繼續往更早之前的資料抓取
 

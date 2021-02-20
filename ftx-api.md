@@ -2,15 +2,15 @@
 
 [https://docs.ftx.com/?csharp\#rest-api](https://docs.ftx.com/?csharp#rest-api)
 
-## Authentication {#authentication}
+## Authentication <a id="authentication"></a>
 
 只要是需要認證的API，都必須要帶有以下Header: `FTX-KEY, FTX-SIGN, FTX-TS`
 
-#### GET /account
+### GET /account
 
 [https://docs.ftx.com/?javascript\#account](https://docs.ftx.com/?javascript#account)
 
-```js
+```javascript
 const crypto = require("crypto");
 const https = require("https");
 const FTX_API_KEY = process.env.ftx_api_key;
@@ -47,7 +47,5 @@ var req = https.request(options, function(res) {
 req.end();
 ```
 
-#### POST /orders
-
-
+### POST /orders
 

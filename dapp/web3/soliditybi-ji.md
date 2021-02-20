@@ -1,10 +1,12 @@
+# solidity筆記
+
 1.`===會出現 Expected primary expression錯誤，需要改為`\`==\`
 
 2.public的array沒辦法被function return需寫為internal
 
 \(但internal function 不會顯示，需要另外寫一個function去call他\)
 
-```
+```text
     Patient[] internal patients;
     function allPatients() internal constant returns(Patient[]) {
         return patients;
@@ -17,7 +19,7 @@
 
 ex:
 
-```
+```text
     function allPatients(uint16 i) constant returns(string) {
         return testss[i].name;
     }
@@ -29,7 +31,7 @@ ex:
 
 ex:
 
-```
+```text
  if (sha3(patients[p].name) == sha3(name))
 ```
 
@@ -39,7 +41,7 @@ ex:
 
 ex:
 
-```
+```text
     function allPatients(uint16 i) constant returns(string, uint, uint, uint) {
         return (patients[i].name, patients[i].weight ,patients[i].height, patients[i].NHSNum);
     }
@@ -47,7 +49,7 @@ ex:
 
 6.範例
 
-```
+```text
  pragma solidity ^0.4.16;
 
 
@@ -78,6 +80,4 @@ contract SalaryInfo {
     }
 }
 ```
-
-
 

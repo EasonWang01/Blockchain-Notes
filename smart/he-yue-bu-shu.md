@@ -1,10 +1,12 @@
-# \#智能合約部屬\(Testnet\)
+# 合約部屬
+
+## \#智能合約部屬\(Testnet\)
 
 這裡示範使用Testnet\(Ropsten\)
 
 1.下載chrome plugin\(Metamask\)
 
-![](/assets/453.png)
+![](../.gitbook/assets/453.png)
 
 2.之後建立帳號並到以下網址取得免費的幣
 
@@ -16,21 +18,15 @@
 
 \(點選右方create\)
 
-![](/assets/343.png)
+![](../.gitbook/assets/343.png)
 
 4.使用myetherwallet執行合約
 
 [https://www.myetherwallet.com/\#contracts](https://www.myetherwallet.com/#contracts)
 
-![](/assets/213.png)
+![](../.gitbook/assets/213.png)
 
+## ＃發行
 
-
-
-
-# ＃發行
-
-https://ethereum.stackexchange.com/questions/23178/how-to-get-an-erc20-token-listed-in-etherscan-io
-
-
+[https://ethereum.stackexchange.com/questions/23178/how-to-get-an-erc20-token-listed-in-etherscan-io](https://ethereum.stackexchange.com/questions/23178/how-to-get-an-erc20-token-listed-in-etherscan-io)
 

@@ -1,6 +1,8 @@
+# ethereum\(Docker\)
+
 [https://github.com/ethereum/go-ethereum/wiki/Running-in-Docker](https://github.com/ethereum/go-ethereum/wiki/Running-in-Docker)
 
-# 安裝:
+## 安裝:
 
 這邊我們會使用`Docker`，並使用ethereum相關的container來進行  
 [https://hub.docker.com/r/ethereum/client-go/](https://hub.docker.com/r/ethereum/client-go/)
@@ -12,7 +14,7 @@
 
 1.加入以太坊的public network
 
-```
+```text
 docker run -d --name ethereum-PublicNode \
     -v $HOME/.ethereum:/root \
     -p 8545:8545 -p 30303:30303 \
@@ -21,13 +23,13 @@ docker run -d --name ethereum-PublicNode \
 
 執行attach
 
-```
+```text
 docker exec -ti ethereum-PublicNode geth attach
 ```
 
 2.加入以太坊的test network
 
-```
+```text
 docker run -d --name ethereum-TestNode \
     -v $HOME/.ethereum:/root \
     -p 8544:8544 -p 30304:30304 \
@@ -36,14 +38,14 @@ docker run -d --name ethereum-TestNode \
 
 執行attach
 
-```
+```text
 docker exec -ti ethereum-TestNode \
     geth attach ipc:/root/.ethereum/testnet/geth.ipc
 ```
 
 查看LOG
 
-```
+```text
 docker logs ethereum-Testnode
 ```
 
@@ -55,7 +57,7 @@ docker logs ethereum-Testnode
 
 使用
 
-```
+```text
 git clone https://github.com/vertigobr/ethereum.git
 
 cd ethereum
@@ -65,7 +67,7 @@ cd ethereum
 
 看到
 
-```
+```text
 ENV GEN_NONCE="0xeddeadbabeeddead" \
 
     NET_ID=1981
@@ -75,13 +77,13 @@ ENV GEN_NONCE="0xeddeadbabeeddead" \
 
 我們也可以用`-e`來指定執行docker時的環境變數
 
-```
+```text
 docker run .... -e GEN_NONCE='stag0x2222ing'
 ```
 
 講解其中的一些.sh程式
 
-```
+```text
 bootnode.sh: 執行Ethereum bootnode 啟動節點;
 
 runnode.sh: 執行Ethereum 非挖礦節點;
@@ -97,9 +99,9 @@ wipeall.sh: 將會執行"docker stop" 與 "docker rm" 並且清空 volume folder
 
 進入到資料夾後使用
 
-## 1.啟動起始節點
+### 1.啟動起始節點
 
-```
+```text
 ./bootnode.sh
 ```
 
@@ -107,80 +109,80 @@ wipeall.sh: 將會執行"docker stop" 與 "docker rm" 並且清空 volume folder
 
 查看剛才的boot節點
 
-```
+```text
 ./getbootnodeurl.sh
 ```
 
 查看log
 
-```
+```text
 docker logs ethereum-bootnode
 ```
 
-## 2.再來啟動另一個非mining的節點
+### 2.再來啟動另一個非mining的節點
 
-```
+```text
 ./runnode.sh node1
 ```
 
 查看logs
 
-```
+```text
 docker logs ethereum-node1
 ```
 
 這時發現這個node沒找到任何其他節點，只出現以下，像bootnode不停查詢是否有其他節點，所以他覺得滿孤單
 
-```
+```text
 dial tcp 172.17.0.2:30301
 與
 seed node
 ```
 
-## 3.新增第二個非mining的節點
+### 3.新增第二個非mining的節點
 
-```
+```text
 ./runnode.sh node2
 ```
 
 這時我們回去察看node1的log，可看到類似如下
 
-```
+```text
 Peer e4a6e56cf9096420 [eth/63]: peer connected [Geth/v1.4.11-stable/linux/go1.5.1/node2]
 ```
 
 這時2與1兩節點就發現彼此了
 
-## 4.查看節點所連結的節點
+### 4.查看節點所連結的節點
 
 \(bootnode\)不包含在內
 
-```
+```text
 ./showpeers.sh ethereum-node1
 ```
 
-## 5.啟動一個mining節點\(挖礦節點\)
+### 5.啟動一個mining節點\(挖礦節點\)
 
-```
+```text
 ./runminer.sh miner1
 ```
 
 查看logs
 
-```
+```text
 docker logs ethereum-miner1
 ```
 
 挖礦前他會花一些時間準備，所以一開始只會看到如下
 
-```
+```text
 I0208 08:18:46.744549 ethash.go:291] Generating DAG: 33%
 I0208 08:18:53.107984 ethash.go:291] Generating DAG: 34%
 ```
 
 等到他跑到100%，準備完成後他會開始挖礦，可看如下logs
 
-```
+```text
 I0208 08:26:48.411384 miner/worker.go:435] 🔨 🔗  Mined 5 blocks back: block #3
 I0208 08:26:48.411470 core/database_util.go:353] stored block receipts [989a7a59…]
 ```
@@ -189,7 +191,7 @@ I0208 08:26:48.411470 core/database_util.go:353] stored block receipts [989a7a59
 
 `docker logs ethereum-node1`
 
-```
+```text
 I0208 08:27:35.038805 core/database_util.go:303] stored block body [2f9292d4…]
 I0208 08:27:35.039183 core/database_util.go:288] stored header #22 [2f9292d4…]
 I0208 08:27:35.040653 core/blockchain.go:931] [1486542455040638728] inserted block #22 (0 TXs 0 G 0 UNCs) (2f9292d4...). Took 16.003523ms
@@ -207,55 +209,55 @@ I0208 08:27:35.041222 core/blockchain.go:962] imported 1 block(s) (0 queued 0 ig
 ex:  
 OSX
 
-```
+```text
 /Applications/Ethereum\ Wallet.app/Contents/MacOS/Ethereum\ Wallet --help
 ```
 
 windows
 
-```
+```text
 D:\Ethereum-Wallet\Ethereum-Wallet.exe --help
 ```
 
 > ps:有時直接cd 到他的目錄下下指令會無法執行
 
-## 6.使用Mist讀取private network
+### 6.使用Mist讀取private network
 
 1. 開啟RPC server
 
-```
+```text
 RPC_PORT=8545 ./runminer.sh wallet
 ```
 
 2.使用錢包讀取該RPC server
 
-```
+```text
 /Applications/Ethereum\ Wallet.app/Contents/MacOS/Ethereum\ Wallet --rpc http://localhost:8545
 ```
 
-## 7.從Mist新建一個account，並且綁定帳號，之後開始挖礦
+### 7.從Mist新建一個account，並且綁定帳號，之後開始挖礦
 
 從錢包複製新建帳號好把他與礦工節點綁定
 
 ETHERBASE後面為你剛才複製的帳號
 
-```
+```text
 ETHERBASE=0xC21026c0026D47B76B5e3249b981b73E6f734212 RPC_PORT=8545 ./runminer.sh wallet
 ```
 
 查看log
 
-```
+```text
 docker logs ethereum-wallet
 ```
 
 然後等待DAG完成後會開始挖礦
 
-![](/assets/螢幕快照 2017-02-10 下午4.52.15.png)
+![](.gitbook/assets/螢幕快照%202017-02-10%20下午4.52.15.png)
 
 之後重新啟動錢包，即可看到ether增加
 
-## 8.轉帳
+### 8.轉帳
 
 我們再從Mist中新增一個帳號，然後點選該新帳號，點選右側的`Transfer Ether`
 

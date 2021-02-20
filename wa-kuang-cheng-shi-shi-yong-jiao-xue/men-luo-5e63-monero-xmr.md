@@ -1,14 +1,14 @@
 # 門羅幣/Monero \(XMR\)
 
-### 官方挖礦程式
+## 官方挖礦程式
 
 [https://getmonero.org/downloads/](https://getmonero.org/downloads/)
 
 下載後解壓縮並點擊`monero-wallet-gui.exe`
 
-### ![](/assets/sd.png)
+## ![](../.gitbook/assets/sd.png)
 
-### CoinHive教學
+## CoinHive教學
 
 一個可以使用瀏覽器挖礦的服務
 
@@ -26,7 +26,7 @@
 
 2.[https://github.com/cazala/coin-hive](https://github.com/cazala/coin-hive)
 
-```js
+```javascript
 const CoinHive = require('coin-hive');
 
 (async () => {
@@ -55,7 +55,7 @@ const CoinHive = require('coin-hive');
 
 3.或是使用
 
-```
+```text
 https://authedmine.com/media/miner.html?key={填入你的key}
 ```
 

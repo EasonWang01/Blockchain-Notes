@@ -1,6 +1,8 @@
+# 區塊鏈運作原理
+
 > 作者:yichengww@gmail.com
 
-## 簡介
+### 簡介
 
 區塊鏈是一個概念，而比特幣與乙太幣等其他加密貨幣均為區塊鏈的應用之一
 
@@ -17,7 +19,7 @@
 
 比特幣可以說是目前家喻戶曉的一項使用區塊鏈技術的應用。我們先來說明比特幣是如何運作，說明過程中會將會一步一步講解區塊鏈的相關概念
 
-> Bitcoin is an innovative payment network and a new kind of money.   源自比特幣官網
+> Bitcoin is an innovative payment network and a new kind of money. 源自比特幣官網
 
 我們最常聽到比特幣是在新聞報導或朋友閒聊時，談到今天比特幣價格又飆漲到了多少，某位玩家又在中國又投資了新的礦機或礦場本書將會在後續章節介紹如何申請一個自己的比特幣地址與錢包，並且進行購買比特幣與轉帳等動作
 
@@ -39,9 +41,9 @@
 
 在加密完成時會產生一個電子簽名，它會被節點們用來確認交易訊息的發送來源和真偽。電子簽名內容是一串文字，它是由私鑰對交易訊息所簽發出的一段hash。如果你更改交易訊息中任何一個字元，電子簽名也會跟著改變，所以駭客很難更改你的交易訊息或是得知交易金額。
 
-![](/assets/s.png)
+![](.gitbook/assets/s.png)
 
-##### 查詢餘額
+**查詢餘額**
 
 我們轉帳後比特幣是如何知道我們現在帳戶餘額是多少呢?
 
@@ -51,13 +53,13 @@
 
 > _持有比特幣代表的是，於區塊鏈帳本上查詢你的地址還存在著尚未變成輸入交易之紀錄。_
 
-![](/assets/SAA.png)看到上圖
+![](.gitbook/assets/SAA.png)看到上圖
 
 如果在out沒有連接著其他in的話則其即變為目前帳戶的餘額
 
 #### 區塊中的交易
 
-![](/assets/SA.png)看到上圖,每個產生的交易會先在交易池中等待被節點納入區塊中
+![](.gitbook/assets/SA.png)看到上圖,每個產生的交易會先在交易池中等待被節點納入區塊中
 
 每個節點都可以將若干個交易訊息從交易池中選取並打包成區塊發送到網絡上，並建議其為鏈上的最新區塊。
 
@@ -65,9 +67,9 @@
 
 每個節點都有一份區塊鏈副本，當節點拿到其他節點丟出來的候選區塊\(已有正確答案的\)，就會把區塊放到副本鏈上，同時系統會要求節點搜尋網路裡有沒有比它的副本鏈更長的鏈，如果有，捨棄原有的鏈，取用更長的鏈。
 
-![](/assets/螢幕快照 2017-02-07 下午3.09.29.png)
+![](.gitbook/assets/螢幕快照%202017-02-07%20下午3.09.29.png)
 
-在上圖中，我們可以看到每個方塊中都包含一些數值  這些值即為存放在區塊鏈中的區塊資料
+在上圖中，我們可以看到每個方塊中都包含一些數值 這些值即為存放在區塊鏈中的區塊資料
 
 1.區塊鏈是由包含交易訊息的區塊，從後向前有序接起來的數據結構，區塊被從後向前有序地鏈接在這個鏈條裡，每個區塊都指向前一個區塊
 
@@ -80,25 +82,25 @@
 另一個相關介紹影片  
 [https://www.youtube.com/watch?v=r43LhSUUGTQ](https://www.youtube.com/watch?v=r43LhSUUGTQ)
 
-# Merkle Tree
+## Merkle Tree
 
 如果今天在區塊中的某一筆交易本文被竄改，則計算出來之Merkel Root也一定不同
 
 利用這個特性可避免區塊中所含的歷史交易遭任意竄改
 
-![](/assets/螢幕快照 2017-02-07 下午5.03.21.png)
+![](.gitbook/assets/螢幕快照%202017-02-07%20下午5.03.21.png)
 
 Merkle樹被用來歸納一個區塊中的所有交易，同時生成整個交易集合的數字指紋，且提供了一種校驗區塊是否存在某交易的高效途徑
 
 為了創建父節點HAB，子節點A和子節點B的兩個32字節的哈希值將被串聯成64字節的字符串。隨後將字符串進行兩次哈希來產生父節點的哈希值:
 
-```
+```text
 HAB~=SHA256(SHA256(HA + HB))
 ```
 
-# 挖礦
+## 挖礦
 
-> Mining   = Securing the network = verify computation
+> Mining = Securing the network = verify computation
 
 一個新的區塊被“挖掘”出來，每個區塊裡包含著從上一個區塊產生到目前這段時間內發生的所有交易，這些交易被依次添加到區塊鏈中。我們把包含在區塊內且被添加到區塊鏈上的交易稱為“確認”交易，交易經過“確認”之後，新的擁有者才能夠花費他在交易中得到的比特幣
 
@@ -126,13 +128,13 @@ HAB~=SHA256(SHA256(HA + HB))
 
 [https://anders.com/blockchain/block.html](https://anders.com/blockchain/block.html)
 
-> ![](/assets/02.png)Nonce為一個隨機值讓我們更改   實際挖礦時即為更改Nonce並想辦法算出結果 因為相同字串經過sha後的數值都一樣
+> ![](.gitbook/assets/02.png)Nonce為一個隨機值讓我們更改 實際挖礦時即為更改Nonce並想辦法算出結果 因為相同字串經過sha後的數值都一樣
 >
 > 但無法預料哪個字串經過sha可以得到我們想要的數值
 >
 > Data為模擬納入區塊的訊息
 
-# 看到目前市面上的幣種以及價格
+## 看到目前市面上的幣種以及價格
 
 當我們想要對目前市面上的加密貨幣進行投資時，我們必須先到市場上了解其價值
 
@@ -140,19 +142,19 @@ HAB~=SHA256(SHA256(HA + HB))
 
 [https://coinmarketcap.com/](https://coinmarketcap.com/)
 
-# 其他相關Bitcoin schema介紹
+## 其他相關Bitcoin schema介紹
 
 以下網站列出了比特幣相關schema
 
 [https://webbtc.com/api/schema](https://webbtc.com/api/schema)
 
-![](/assets/04.png)
+![](.gitbook/assets/04.png)
 
-# 加密貨幣Market State圖表
+## 加密貨幣Market State圖表
 
 一樣列了許多市面上可見的加密貨幣，但採用了另一種方式將之呈現
 
 [http://cryptomaps.org/](http://cryptomaps.org/)
 
-![](/assets/03.png)
+![](.gitbook/assets/03.png)
 
