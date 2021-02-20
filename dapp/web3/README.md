@@ -6,6 +6,8 @@
 
 ## 2021 更新： Metamask connect to web3
 
+> web3 v1.3.4
+
 ```javascript
 const Web3 = require("web3");
 const ethEnabled = () => {
@@ -17,6 +19,12 @@ const ethEnabled = () => {
   return false;
 }
 ethEnabled();
+```
+
+sign eth
+
+```javascript
+web3.eth.sign(address, dataToSign, callback])
 ```
 
 ## 安裝React
