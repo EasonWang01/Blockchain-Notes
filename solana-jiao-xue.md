@@ -70,7 +70,9 @@ spl-token create-account F5Qdz2HqHUmFVmSMmkWAHxGoF4mrZtDxLCsGjAfDJBGR
 spl-token mint F5Qdz2HqHUmFVmSMmkWAHxGoF4mrZtDxLCsGjAfDJBGR 120
 ```
 
-> 一個 mint token 下只能有一個 account
+> 要先有 associate account 才能 mint token
+
+> 一個 mint token account 下只能有一個  associate token account
 
 這時查看 mint token 跟 mint token account 的餘額都是 120
 
