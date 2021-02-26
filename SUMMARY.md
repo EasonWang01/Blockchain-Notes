@@ -29,4 +29,5 @@
 * [Bitfinex API 使用](bitfinex-api-shi-yong.md)
 * [FTX API](ftx-api.md)
 * [CCXT 通用交易所 API](ccxt-tong-yong-jiao-yi-suo-api.md)
+* [Solana 教學](solana-jiao-xue.md)
 
