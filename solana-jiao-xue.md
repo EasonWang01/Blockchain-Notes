@@ -38,6 +38,14 @@ cargo install spl-token-cli
 solana config set --url https://testnet.solana.com
 ```
 
+#### 創建新的 account keypair
+
+```text
+solana-keygen new
+```
+
+之後會產生 /Users/easonwang/.config/solana/id.json 即為你的 private key，可以引入 sollet 網頁錢包。
+
 
 
 
