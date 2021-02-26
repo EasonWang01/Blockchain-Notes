@@ -46,6 +46,32 @@ solana-keygen new
 
 之後會產生 /Users/easonwang/.config/solana/id.json 即為你的 private key，可以引入 sollet 網頁錢包。
 
+#### 創建一個 mint token
+
+```text
+spl-token create-token
+
+// 出現如下
+// Creating token F5Qdz2HqHUmFVmSMmkWAHxGoF4mrZtDxLCsGjAfDJBGR
+```
+
+創建這個 mint token 下的 account
+
+```text
+spl-token create-account F5Qdz2HqHUmFVmSMmkWAHxGoF4mrZtDxLCsGjAfDJBGR
+
+// 出現如下
+// Creating account 8Joq4X2ckiWrsnnKbKW5q14k2KLt6wATKEkiYZYPXXZS
+```
+
+然後產生 120 個 mint token
+
+```text
+spl-token mint F5Qdz2HqHUmFVmSMmkWAHxGoF4mrZtDxLCsGjAfDJBGR 120
+```
+
+> 一個 mint token 下只能有一個 account
+
 
 
 
