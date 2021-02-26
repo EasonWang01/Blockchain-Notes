@@ -72,7 +72,14 @@ spl-token mint F5Qdz2HqHUmFVmSMmkWAHxGoF4mrZtDxLCsGjAfDJBGR 120
 
 > 一個 mint token 下只能有一個 account
 
+這時查看 mint token 跟 mint token account 的餘額都是 120
 
+```text
+spl-token supply 8Joq4X2ckiWrsnnKbKW5q14k2KLt6wATKEkiYZYPXXZS
+spl-token balance 8Joq4X2ckiWrsnnKbKW5q14k2KLt6wATKEkiYZYPXXZS
+```
+
+![](.gitbook/assets/jie-tu-20210226-shang-wu-10.14.43.png)
 
 
 
