@@ -86,6 +86,6 @@ spl-token balance 8Joq4X2ckiWrsnnKbKW5q14k2KLt6wATKEkiYZYPXXZS
 ## 將 custom mint token 轉給其他 wallet account
 
 ```text
-spl-token transfer --fund-recipient <mint token address> <數量> <other wallet address>
+spl-token transfer --fund-recipient <mint token account address> <數量> <other wallet address>
 ```
 
