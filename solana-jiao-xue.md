@@ -55,8 +55,6 @@ spl-token create-token
 // Creating token F5Qdz2HqHUmFVmSMmkWAHxGoF4mrZtDxLCsGjAfDJBGR
 ```
 
-> 記得裡面要有 sol 餘額
-
 創建這個 mint token 下的 account
 
 ```text
