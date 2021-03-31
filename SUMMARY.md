@@ -20,6 +20,7 @@
   * [合約部屬](smart/he-yue-bu-shu.md)
   * [solidity語言](smart/solidityyu-yan.md)
 * [ethereum\(Dapp\)](dapp/README.md)
+  * [web3 使用](dapp/web3-shi-yong.md)
   * [在網頁上使用web3並操作區塊鏈](dapp/web3/README.md)
     * [solidity筆記](dapp/web3/soliditybi-ji.md)
 * [Hyperledger Fabric](hyperledger-fabric.md)

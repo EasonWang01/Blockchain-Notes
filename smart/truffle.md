@@ -174,3 +174,33 @@ module.exports = {
 >
 > 但上面的gas 配置又會造成[ganache](http://truffleframework.com/ganache/)-cli 產生out of gas，之後移除gas欄位即可成功
 
+## truffle-config.js 範例
+
+1.到 Infura 註冊 APP : [https://infura.io/login](https://infura.io/login)
+
+2.隨機產生 mnemonic: [https://iancoleman.io/bip39/\#english](https://iancoleman.io/bip39/#english)
+
+3.給予測試用 Ether: [https://faucet.ropsten.be/](https://faucet.ropsten.be/)
+
+```javascript
+const HDWalletProvider = require("truffle-hdwallet-provider");
+
+const mnemonic = "...12 words";
+
+module.exports = {
+  networks: {
+    development: {
+      host: "localhost",
+      port: 8545,
+      network_id: "*" // Match any network id
+    },
+    ropsten: {
+      // must be a thunk, otherwise truffle commands may hang in CI
+      provider: () =>
+        new HDWalletProvider(mnemonic, "https://ropsten.infura.io/v3/..."),
+      network_id: '3',
+    }
+  }
+};
+```
+
