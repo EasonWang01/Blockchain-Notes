@@ -1,6 +1,6 @@
 # solidity語言
 
-## \#Event
+## Event
 
 通常當作log使用
 
@@ -26,7 +26,7 @@ function c() returns(address){
 event FrozenFunds(address target, bool frozen);
 ```
 
-## \#有關從區塊鏈上移除contract
+## 有關從區塊鏈上移除contract
 
 > 合約只能disable 之後所有變數都會歸0，但合約本身不可完全從區塊鏈上刪除
 >
@@ -82,13 +82,13 @@ Pure: 不可讀取，不可修改
 
 const: 可讀取，但不可修改，不可加在function上
 
-## \#**return** or **throw**
+## **return** or **throw**
 
 > The former will cost less gas but it can be more headache as any changes you did to the contract so far will be kept. In the other hand, 'throw' will cancel all contract execution, revert any changes that transaction could have made and the sender will lose all ether he sent for gas. But since the Wallet can detect that a contract will throw, it always shows an alert, therefore preventing any ether to be spent at all.
 
 return可以花費較少gas 但在return前的code會執行 ，而throw則會把之前的也取消
 
-## \#Modifier
+## Modifier
 
 > \_的意思為繼承這個modifier的function會先跑完寫在\_modifier __; 之前的東西才繼續該function
 
@@ -107,13 +107,13 @@ function transferOwnership(address newOwner) onlyOwner {
     }
 ```
 
-## \#Require\(\) , assert\(\)
+## Require\(\) , assert\(\)
 
 > 用來確認這個行code正常執行 如果不正常就會拋出錯誤 直接中斷並取消整個function
 
 [http://solidity.readthedocs.io/en/develop/control-structures.html?highlight=require\#error-handling-assert-require-revert-and-exceptions](http://solidity.readthedocs.io/en/develop/control-structures.html?highlight=require#error-handling-assert-require-revert-and-exceptions)
 
-## \#Mapping
+## Mapping
 
 mapping 可以想像是一個hashTable，即 key 對應 value
 
@@ -128,7 +128,7 @@ mapping (address => Person) person;
 
 `person` 為mapping類型，它的 key 是address 類型， value是Person 之struct類型
 
-## \#payable
+## payable
 
 ```text
 function buyTicket(uint amount) payable {
@@ -137,7 +137,7 @@ function buyTicket(uint amount) payable {
 
 包含payable的function才可以接受Ether
 
-## \#selfdestruct
+## selfdestruct
 
 將智能合約永久從區塊鏈上移除，並且將接到的Ether傳給selfdestruct之參數
 
@@ -145,9 +145,9 @@ function buyTicket(uint amount) payable {
 selfdestruct(address)
 ```
 
-## \#Fallback functions
+## Fallback functions
 
-如果呼叫的function不存在於智能合約上，則ＥＶＭ會自動去執行fallback function
+如果呼叫的function不存在於智能合約上，則 EVM 會自動去執行fallback function
 
 > 類似於匿名函數的寫法
 
@@ -159,7 +159,7 @@ function() {
 
 [https://github.com/ConsenSys/Ethereum-Development-Best-Practices/wiki/Fallback-functions-and-the-fundamental-limitations-of-using-send\(\)-in-Ethereum-&-Solidity](https://github.com/ConsenSys/Ethereum-Development-Best-Practices/wiki/Fallback-functions-and-the-fundamental-limitations-of-using-send%28%29-in-Ethereum-&-Solidity)
 
-## \#inheritance繼承
+## inheritance繼承
 
 ```text
 contract man {
@@ -171,7 +171,7 @@ contract superman is man {
 }
 ```
 
-## \#interface介面
+## interface介面
 
 > 如果有寫interface，繼承的contract必須要實作，否則無法編譯
 
@@ -201,7 +201,7 @@ contract superman is swim {
 }
 ```
 
-## \#Contract轉帳Ether
+## Contract轉帳Ether
 
 ```text
 msg.sender.transfer(100) 
@@ -213,7 +213,7 @@ msg.sender.send(100)
 
 [https://github.com/ethereum/solidity/issues/610](https://github.com/ethereum/solidity/issues/610)
 
-## \#呼叫其他Contract
+## 呼叫其他Contract
 
 先部署Calculate contract 到鏈上
 
@@ -238,7 +238,7 @@ contract computer {
 }
 ```
 
-## \#memory/storage
+## memory/storage
 
 類似pass by value 與 pass by reference
 
@@ -256,7 +256,7 @@ function test(uint[] storage _abc) internal {
 
 > function只能為internal或private
 
-## \#參數傳入struct或是返回struct
+## 參數傳入struct或是返回struct
 
 可參考：[https://github.com/ethereum/web3.js/issues/1148](https://github.com/ethereum/web3.js/issues/1148)
 
