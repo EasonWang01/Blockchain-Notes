@@ -48,7 +48,9 @@ function kill() { if (msg.sender == owner) selfdestruct(owner);}
 
 [http://solidity.readthedocs.io/en/develop/miscellaneous.html?highlight=destroy](http://solidity.readthedocs.io/en/develop/miscellaneous.html?highlight=destroy)
 
-## \# external 與 public  與 internal 與private
+## external 與 public  與 internal 與private
+
+[https://ethereum.stackexchange.com/a/19391/30691](https://ethereum.stackexchange.com/a/19391/30691)
 
 [http://solidity.readthedocs.io/en/develop/contracts.html\#visibility-and-getters](http://solidity.readthedocs.io/en/develop/contracts.html#visibility-and-getters)
 
@@ -70,7 +72,9 @@ private:  只有同contract才可呼叫
 Private functions and state variables are only visible for the contract they are defined in and not in derived contracts.
 ```
 
-## \#View, Pure, Const
+## View, Pure, Const
+
+> 修改的意思代表會去更改合約中其他變數的值。
 
 View: 可讀取，但不可修改
 
