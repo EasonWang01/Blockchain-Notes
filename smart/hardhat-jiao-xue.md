@@ -16,6 +16,8 @@
 
 1. 啟動本地節點
 
+> 如果沒有啟動節點與指定節點，預設都會使用 in-memory instance of Hardhat Network
+
 ```text
 npx hardhat node
 ```
