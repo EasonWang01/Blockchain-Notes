@@ -38,3 +38,40 @@ const greeter = await Greeter.attach(<剛才部署本地的合約地址>);
 await greeter.greet()
 ```
 
+### 寫測試檔案
+
+test/test.js
+
+```javascript
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+
+describe("Greeter12", function () {
+  it("Should return the new greeting once it's changed", async function () {
+    
+    const Greeter = await ethers.getContractFactory("Greeter");
+    // const greeter = await Greeter.deploy("Hello, world!");
+    // await greeter.deployed();
+
+    //expect(await greeter.greet()).to.equal("Hello, world!");
+    const greeter = await Greeter.attach("0x5FbDB2315678afecb367f032d93F642f64180aa3");
+
+    const setGreetingTx = await greeter.setGreeting("Hola, mundo!");
+
+    // wait until the transaction is mined
+    await setGreetingTx.wait();
+    const a = await greeter.greet()
+    //console.log(a)
+
+    expect(await greeter.greet()).to.equal("Hola, mundo!");
+  });
+});
+
+```
+
+之後輸入
+
+```text
+npx hardhat test --network localhost
+```
+
