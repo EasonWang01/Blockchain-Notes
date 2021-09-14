@@ -75,3 +75,9 @@ describe("Greeter12", function () {
 npx hardhat test --network localhost
 ```
 
+## Artifacts
+
+部署合約或 compile 後會產生此資料夾，裡面包含一些 json 檔案，為合約的 ABI
+
+[https://hardhat.org/guides/compile-contracts.html\#compiling-your-contracts](https://hardhat.org/guides/compile-contracts.html#compiling-your-contracts)
+
