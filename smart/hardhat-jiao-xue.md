@@ -93,7 +93,13 @@ npx hardhat test --network localhost
 
 ## Etherscan 驗證合約
 
-[https://hardhat.org/plugins/nomiclabs-hardhat-etherscan.html](https://hardhat.org/plugins/nomiclabs-hardhat-etherscan.html)
+{% embed url="https://hardhat.org/plugins/nomiclabs-hardhat-etherscan.html" %}
+
+## 測試單一檔案
+
+可使用：[https://hardhat.org/plugins/hardhat-watcher.html](https://hardhat.org/plugins/hardhat-watcher.html)
+
+會監聽檔案改變，自動跑測試，並且可在 config 寫要執行哪個檔案
 
 ## 常見問題
 
