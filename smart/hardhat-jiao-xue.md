@@ -4,6 +4,14 @@
 
 {% embed url="https://hardhat.org/getting-started/" %}
 
+### 專案結構
+
+![](../.gitbook/assets/jie-tu-20210914-xia-wu-12.09.39.png)
+
+必須照著官方規定取名資料夾，分別為放合約以及部署script，與測試檔案，以及網路等 config。
+
+[https://hardhat.org/guides/project-setup.html\#sample-hardhat-project](https://hardhat.org/guides/project-setup.html#sample-hardhat-project)
+
 ### 在本地測試與部屬
 
 1. 啟動本地節點
