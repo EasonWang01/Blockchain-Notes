@@ -14,6 +14,7 @@
 * [ethereum\(Geth\)](ethereumgeth/README.md)
   * [Parity](ethereumgeth/parity.md)
 * [ethereum\(智能合約\)](smart/README.md)
+  * [Hardhat 教學](smart/hardhat-jiao-xue.md)
   * [ERC-721 範例](smart/erc721-fan-li.md)
   * [OpenZeppelin 合約 library](smart/openzeppelin-he-yao-library.md)
   * [Truffle](smart/truffle.md)
