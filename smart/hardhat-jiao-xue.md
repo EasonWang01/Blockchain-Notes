@@ -91,6 +91,10 @@ npx hardhat test --network localhost
 
 {% embed url="https://hardhat.org/guides/compile-contracts.html\#compiling-your-contracts" %}
 
+## Etherscan 驗證合約
+
+[https://hardhat.org/plugins/nomiclabs-hardhat-etherscan.html](https://hardhat.org/plugins/nomiclabs-hardhat-etherscan.html)
+
 ## 常見問題
 
 1.Error: call revert exception
