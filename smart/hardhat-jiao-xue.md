@@ -89,5 +89,13 @@ npx hardhat test --network localhost
 
 部署合約或 compile 後會產生此資料夾，裡面包含一些 json 檔案，為合約的 ABI
 
-[https://hardhat.org/guides/compile-contracts.html\#compiling-your-contracts](https://hardhat.org/guides/compile-contracts.html#compiling-your-contracts)
+{% embed url="https://hardhat.org/guides/compile-contracts.html\#compiling-your-contracts" %}
+
+## 常見問題
+
+1.Error: call revert exception
+
+```text
+通常是直接使用 hardhat vm 部署與測試合約所產生，可改用 hardhat localhost node 試試
+```
 
