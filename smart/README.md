@@ -497,6 +497,10 @@ contract bSimpleStorage {
 }
 ```
 
+## 安全性相關：
+
+[https://ethernaut.openzeppelin.com/](https://ethernaut.openzeppelin.com/)
+
 ## 可能錯誤
 
 ## 1.Exceeds block gas limit
