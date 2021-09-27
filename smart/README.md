@@ -497,14 +497,6 @@ contract bSimpleStorage {
 }
 ```
 
-## 安全性相關：
-
-1. 互動式教學
-
-{% embed url="https://ethernaut.openzeppelin.com/" %}
-
-> 解答：[https://forum.openzeppelin.com/t/ethernaut-community-solutions/561](https://forum.openzeppelin.com/t/ethernaut-community-solutions/561)
-
 ## 可能錯誤
 
 ## 1.Exceeds block gas limit
