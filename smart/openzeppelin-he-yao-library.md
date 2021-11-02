@@ -25,9 +25,8 @@ contract Test is ERC721Enumerable, ReentrancyGuard, Ownable {
 
 ## 使用 Remix
 
-![](../.gitbook/assets/jie-tu-20210505-shang-wu-9.53.16.png)
+![](<../.gitbook/assets/截圖 2021-05-05 上午9.53.16.png>)
 
 或是
 
-![](../.gitbook/assets/jie-tu-20210505-shang-wu-9.53.38.png)
-
+![](<../.gitbook/assets/截圖 2021-05-05 上午9.53.38.png>)

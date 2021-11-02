@@ -6,11 +6,11 @@
 
 ### 專案結構
 
-![](../.gitbook/assets/jie-tu-20210914-xia-wu-12.09.39.png)
+![](<../.gitbook/assets/截圖 2021-09-14 下午12.09.39.png>)
 
 必須照著官方規定取名資料夾，分別為放合約以及部署script，與測試檔案，以及網路等 config。
 
-[https://hardhat.org/guides/project-setup.html\#sample-hardhat-project](https://hardhat.org/guides/project-setup.html#sample-hardhat-project)
+[https://hardhat.org/guides/project-setup.html#sample-hardhat-project](https://hardhat.org/guides/project-setup.html#sample-hardhat-project)
 
 ### 在本地測試與部屬
 
@@ -18,33 +18,33 @@
 
 > 如果沒有啟動節點與指定節點，預設都會使用 in-memory instance of Hardhat Network
 
-```text
+```
 npx hardhat node
 ```
 
 2.部署合約
 
-```text
+```
 npx hardhat run --network localhost scripts/deploy.js
 ```
 
 3.使用 console 測試功能
 
-```text
+```
 npx hardhat console --network localhost
 ```
 
 之後輸入
 
-```text
+```
 const Greeter = await ethers.getContractFactory("Greeter");
 ```
 
-```text
+```
 const greeter = await Greeter.attach(<剛才部署本地的合約地址>);
 ```
 
-```text
+```
 await greeter.greet()
 ```
 
@@ -81,7 +81,7 @@ describe("Greeter12", function () {
 
 之後輸入
 
-```text
+```
 npx hardhat test --network localhost
 ```
 
@@ -89,7 +89,7 @@ npx hardhat test --network localhost
 
 部署合約或 compile 後會產生此資料夾，裡面包含一些 json 檔案，為合約的 ABI
 
-{% embed url="https://hardhat.org/guides/compile-contracts.html\#compiling-your-contracts" %}
+{% embed url="https://hardhat.org/guides/compile-contracts.html#compiling-your-contracts" %}
 
 ## Etherscan 驗證合約
 
@@ -105,7 +105,6 @@ npx hardhat test --network localhost
 
 1.Error: call revert exception
 
-```text
+```
 通常是直接使用 hardhat vm 部署與測試合約所產生，可改用 hardhat localhost node 試試
 ```
-
