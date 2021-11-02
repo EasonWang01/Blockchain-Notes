@@ -6,7 +6,7 @@
 
 Ex:
 
-```text
+```
 event log_string(bytes32 log); // Event
 
 function c() returns(address){
@@ -14,15 +14,15 @@ function c() returns(address){
 }
 ```
 
-之後執行c\(\) 後到etherscan可看到如下
+之後執行c() 後到etherscan可看到如下
 
-![](../.gitbook/assets/螢幕快照%202017-09-19%20下午10.41.36.png)
+![](<../.gitbook/assets/螢幕快照 2017-09-19 下午10.41.36.png>)
 
 [https://karl.tech/learning-solidity-part-1-deploy-a-contract/](https://karl.tech/learning-solidity-part-1-deploy-a-contract/)
 
 ### 通常用大寫命名
 
-```text
+```
 event FrozenFunds(address target, bool frozen);
 ```
 
@@ -34,7 +34,7 @@ event FrozenFunds(address target, bool frozen);
 
 Ex:
 
-```text
+```
 function kill() { if (msg.sender == owner) selfdestruct(owner);}
 ```
 
@@ -44,7 +44,7 @@ function kill() { if (msg.sender == owner) selfdestruct(owner);}
 
 [https://ethereum.stackexchange.com/questions/315/why-are-suicides-used-in-contract-programming](https://ethereum.stackexchange.com/questions/315/why-are-suicides-used-in-contract-programming)
 
-[https://www.reddit.com/r/ethereum/comments/3ilpvb/what\_happens\_when\_you\_send\_ether\_to\_a\_postsuicide/](https://www.reddit.com/r/ethereum/comments/3ilpvb/what_happens_when_you_send_ether_to_a_postsuicide/)
+[https://www.reddit.com/r/ethereum/comments/3ilpvb/what\_happens\_when\_you\_send\_ether\_to\_a\_postsuicide/](https://www.reddit.com/r/ethereum/comments/3ilpvb/what\_happens\_when\_you\_send\_ether\_to\_a\_postsuicide/)
 
 [http://solidity.readthedocs.io/en/develop/miscellaneous.html?highlight=destroy](http://solidity.readthedocs.io/en/develop/miscellaneous.html?highlight=destroy)
 
@@ -52,11 +52,11 @@ function kill() { if (msg.sender == owner) selfdestruct(owner);}
 
 [https://ethereum.stackexchange.com/a/19391/30691](https://ethereum.stackexchange.com/a/19391/30691)
 
-[http://solidity.readthedocs.io/en/develop/contracts.html\#visibility-and-getters](http://solidity.readthedocs.io/en/develop/contracts.html#visibility-and-getters)
+[http://solidity.readthedocs.io/en/develop/contracts.html#visibility-and-getters](http://solidity.readthedocs.io/en/develop/contracts.html#visibility-and-getters)
 
 [https://ethereum.stackexchange.com/questions/19380/external-vs-public-best-practices](https://ethereum.stackexchange.com/questions/19380/external-vs-public-best-practices)
 
-```text
+```
 Functions can be specified as being external, public, internal or private, where the default is public. For state variables, external is not possible and the default is internal.
 
 external:  只可以給外面的contract呼叫，不可內部呼叫
@@ -82,7 +82,7 @@ Pure: 不可讀取，不可修改
 
 const: 可讀取，但不可修改，不可加在function上
 
-## **return** or **throw**
+## **return **or **throw**
 
 > The former will cost less gas but it can be more headache as any changes you did to the contract so far will be kept. In the other hand, 'throw' will cancel all contract execution, revert any changes that transaction could have made and the sender will lose all ether he sent for gas. But since the Wallet can detect that a contract will throw, it always shows an alert, therefore preventing any ether to be spent at all.
 
@@ -90,9 +90,9 @@ return可以花費較少gas 但在return前的code會執行 ，而throw則會把
 
 ## Modifier
 
-> \_的意思為繼承這個modifier的function會先跑完寫在\_modifier __; 之前的東西才繼續該function
+> \_的意思為繼承這個modifier的function會先跑完寫在\_modifier_ _; 之前的東西才繼續該function
 
-```text
+```
 modifier onlyOwner {
         require(msg.sender == owner);
         _;
@@ -101,17 +101,17 @@ modifier onlyOwner {
 
 用法
 
-```text
+```
 function transferOwnership(address newOwner) onlyOwner {
         owner = newOwner;
     }
 ```
 
-## Require\(\) , assert\(\)
+## Require() , assert()
 
 > 用來確認這個行code正常執行 如果不正常就會拋出錯誤 直接中斷並取消整個function
 
-[http://solidity.readthedocs.io/en/develop/control-structures.html?highlight=require\#error-handling-assert-require-revert-and-exceptions](http://solidity.readthedocs.io/en/develop/control-structures.html?highlight=require#error-handling-assert-require-revert-and-exceptions)
+[http://solidity.readthedocs.io/en/develop/control-structures.html?highlight=require#error-handling-assert-require-revert-and-exceptions](http://solidity.readthedocs.io/en/develop/control-structures.html?highlight=require#error-handling-assert-require-revert-and-exceptions)
 
 ## Mapping
 
@@ -130,7 +130,7 @@ mapping (address => Person) person;
 
 ## payable
 
-```text
+```
 function buyTicket(uint amount) payable {
 }
 ```
@@ -141,7 +141,7 @@ function buyTicket(uint amount) payable {
 
 將智能合約永久從區塊鏈上移除，並且將接到的Ether傳給selfdestruct之參數
 
-```text
+```
 selfdestruct(address)
 ```
 
@@ -151,17 +151,17 @@ selfdestruct(address)
 
 > 類似於匿名函數的寫法
 
-```text
+```
 function() {
      ....
 }
 ```
 
-[https://github.com/ConsenSys/Ethereum-Development-Best-Practices/wiki/Fallback-functions-and-the-fundamental-limitations-of-using-send\(\)-in-Ethereum-&-Solidity](https://github.com/ConsenSys/Ethereum-Development-Best-Practices/wiki/Fallback-functions-and-the-fundamental-limitations-of-using-send%28%29-in-Ethereum-&-Solidity)
+[https://github.com/ConsenSys/Ethereum-Development-Best-Practices/wiki/Fallback-functions-and-the-fundamental-limitations-of-using-send()-in-Ethereum-&-Solidity](https://github.com/ConsenSys/Ethereum-Development-Best-Practices/wiki/Fallback-functions-and-the-fundamental-limitations-of-using-send\(\)-in-Ethereum-&-Solidity)
 
 ## inheritance繼承
 
-```text
+```
 contract man {
  .... 
 }
@@ -175,7 +175,7 @@ contract superman is man {
 
 > 如果有寫interface，繼承的contract必須要實作，否則無法編譯
 
-```text
+```
 contract man {
   function run() returns (strings); 
 }
@@ -189,7 +189,7 @@ contract superman is man {
 
 另一種寫法
 
-```text
+```
 interface runningMan {
   function swim() returns (string);
 }
@@ -203,7 +203,7 @@ contract superman is swim {
 
 ## Contract轉帳Ether
 
-```text
+```
 msg.sender.transfer(100) 
 
 msg.sender.send(100)
@@ -217,7 +217,7 @@ msg.sender.send(100)
 
 先部署Calculate contract 到鏈上
 
-```text
+```
 contract calculate {
   function add (int a, int b) returns (int) {
     return a + b
@@ -229,7 +229,7 @@ contract calculate {
 
 之後呼叫其contract
 
-```text
+```
 contract computer {
   calculate calc = new calculate(0xfEDDF8DB160Dcb85f793bfEe734352760C4AB96a);
   function 2Add3() constant returns (int) {} {
@@ -244,7 +244,7 @@ contract computer {
 
 function之參數預設均為memory，使用storage如下用法
 
-```text
+```
 uint[] abc = [1, 2, 3];
 
 function test(uint[] storage _abc) internal {
@@ -261,4 +261,3 @@ function test(uint[] storage _abc) internal {
 可參考：[https://github.com/ethereum/web3.js/issues/1148](https://github.com/ethereum/web3.js/issues/1148)
 
 > 目前會出現：error: Failed to decode output: Error: Unsupported or invalid type: tuple 錯誤
-

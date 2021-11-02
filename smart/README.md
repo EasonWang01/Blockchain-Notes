@@ -1,4 +1,4 @@
-# ethereum\(智能合約\)
+# ethereum(智能合約)
 
 ## 智能合約
 
@@ -6,7 +6,7 @@
 
 讓合約呼叫外部資料
 
-[http://docs.oraclize.it/\#ethereum-quick-start](http://docs.oraclize.it/#ethereum-quick-start)
+[http://docs.oraclize.it/#ethereum-quick-start](http://docs.oraclize.it/#ethereum-quick-start)
 
 ## Solidity
 
@@ -14,7 +14,7 @@
 
 此方法速度較快，其他需花比較長時間
 
-```text
+```
 git clone --recursive https://github.com/ethereum/solidity.git
 cd solidity
 ```
@@ -23,25 +23,25 @@ cd solidity
 
 之後我們一樣先執行剛才的節點
 
-```text
+```
 geth  --ipcdisable --rpc --rpcport 8104 --datadir "./privatechain/01" --networkid 123 --rpcapi="db,eth,net,web3,personal" --port=30310 console
 ```
 
 然後加入我們的第一個合約
 
-```text
+```
 var greeterSource = 'contract mortal { address owner; function mortal() { owner = msg.sender; } function kill() { if (msg.sender == owner) selfdestruct(owner); } } contract greeter is mortal { string greeting; function greeter(string _greeting) public { greeting = _greeting; } function greet() constant returns (string) { return greeting; } }'
 ```
 
-## 如果版本大於1.6建議直接使用online compiler\(Remix Editor\)
+## 如果版本大於1.6建議直接使用online compiler(Remix Editor)
 
-\(因為如果版本大於1.6之後web3.eth.compile.solidity會出現The method eth\_compileSolidity does not exist/is not available錯誤\)
+(因為如果版本大於1.6之後web3.eth.compile.solidity會出現The method eth\_compileSolidity does not exist/is not available錯誤)
 
-online compiler網址: [https://ethereum.github.io/browser-solidity/\#version=soljson-v0.4.11+commit.68ef5810.js](https://ethereum.github.io/browser-solidity/#version=soljson-v0.4.11+commit.68ef5810.js)
+online compiler網址: [https://ethereum.github.io/browser-solidity/#version=soljson-v0.4.11+commit.68ef5810.js](https://ethereum.github.io/browser-solidity/#version=soljson-v0.4.11+commit.68ef5810.js)
 
 然後直接貼上 以下
 
-```text
+```
 pragma solidity ^0.4.0;
 contract SimpleStorage {
   uint storedData;
@@ -56,47 +56,47 @@ contract SimpleStorage {
 }
 ```
 
-如果還沒有帳號先輸入personal.newAccount\(\) 新增 否則直接貼上部署的code會出現 &gt; Error: authentication needed: password or unlock undefined
+如果還沒有帳號先輸入personal.newAccount() 新增 否則直接貼上部署的code會出現 > Error: authentication needed: password or unlock undefined
 
 之後輸入以下綁定帳號到節點
 
-```text
+```
 web3.miner.setEtherbase(web3.eth.accounts[0])
 ```
 
-然後輸入以下來解鎖帳號\(讓帳號可以交易\)
+然後輸入以下來解鎖帳號(讓帳號可以交易)
 
-```text
+```
 personal.unlockAccount(web3.eth.accounts[0], "password")
 ```
 
 然後先挖礦產生一些ether才能部署合約
 
-```text
+```
 miner.start(1)
 ```
 
 之後點選網頁右側的Details 把下圖右下方web3 deploy 的code到剛才執行terminal的web3 console中
 
-![](../.gitbook/assets/螢幕快照%202017-06-11%20上午9.44.22.png)
+![](<../.gitbook/assets/螢幕快照 2017-06-11 上午9.44.22.png>)
 
-接著回到網頁點選右側最下方的 \(contract detail\) 把interface的部分複製到我們的geth console 中
+接著回到網頁點選右側最下方的 (contract detail) 把interface的部分複製到我們的geth console 中
 
-然後挖出contract\(第一次要先等他跑Dag\)
+然後挖出contract(第一次要先等他跑Dag)
 
-```text
+```
 miner.start(1)
 ```
 
 試著輸入
 
-```text
+```
 browser_ballot_sol_simplestorage.set('123')
 ```
 
 ### PS:如果出現\`invalid address\`要先輸入以下
 
-```text
+```
 web3.eth.defaultAccount = web3.eth.accounts[0]
 然後記得解鎖
 personal.unlockAccount(web3.eth.accounts[0], "password")
@@ -104,31 +104,31 @@ personal.unlockAccount(web3.eth.accounts[0], "password")
 
 ## 然後輸入
 
-```text
+```
  browser_ballot_sol_simplestorage.set('123')
 ```
 
 ## 之後挖礦
 
-```text
+```
 miner.start(1)
 ```
 
 ## 然後即可看到剛才新設定的值
 
-```text
+```
 browser_ballot_sol_simplestorage.get()
 ```
 
 ## 1.5.8版本之前適用以下
 
-```text
+```
 var greeterCompiled = web3.eth.compile.solidity(greeterSource)
 ```
 
 之後試著輸入以下，即可看到剛才compile後的部分
 
-```text
+```
 greeterCompiled["<stdin>:greeter"]
 
 greeterCompiled["<stdin>:greeter"].code   //編譯好的機器碼
@@ -138,7 +138,7 @@ greeterCompiled["<stdin>:greeter"].info.abiDefinition //查看我們合約的API
 
 以下為編譯好的合約內容
 
-```text
+```
 [{
     constant: false,
     inputs: [],
@@ -168,45 +168,45 @@ greeterCompiled["<stdin>:greeter"].info.abiDefinition //查看我們合約的API
 
 我們剛才程式碼中的`_greeting`還沒定義所以輸入以下
 
-```text
+```
 var _greeting = "Hello World!"
 ```
 
 接著把我們剛才的合約實例化
 
-```text
+```
 var greeterContract = web3.eth.contract(greeterCompiled["<stdin>:greeter"].info.abiDefinition);
 ```
 
-然後我們先用以下指令，確定我們鏈上有帳號\(也可查看keystore資料夾\)
+然後我們先用以下指令，確定我們鏈上有帳號(也可查看keystore資料夾)
 
-```text
+```
 web3.eth.accounts
 ```
 
 如果沒有可打開Mist新增
 
-```text
+```
 /Applications/Ethereum\ Wallet.app/Contents/MacOS/Ethereum\ Wallet --rpc http://localhost:8104
 ```
 
 之後輸入以下綁定帳號到節點
 
-```text
+```
 web3.miner.setEtherbase("輸入地址")
 ```
 
-然後輸入以下來解鎖帳號\(讓帳號可以交易\)
+然後輸入以下來解鎖帳號(讓帳號可以交易)
 
-```text
+```
 personal.unlockAccount("address", "password")
 ```
 
 接著是部署
 
-> 如果說餘額不夠可先`miner.start(1)`，確認餘額eth.getBalance\(eth.coinbase\)
+> 如果說餘額不夠可先`miner.start(1)`，確認餘額eth.getBalance(eth.coinbase)
 
-```text
+```
 var greeter = greeterContract.new(_greeting,{from:web3.eth.accounts[0], data: greeterCompiled["<stdin>:greeter"].code, gas: 300000}, function(e, contract){
 if(e) { console.log(e) };
     if(!e) {
@@ -222,7 +222,7 @@ if(e) { console.log(e) };
 
 正常的話會出現如下
 
-```text
+```
 Contract transaction send: TransactionHash: 0xd913a9fef18e0464b99c2db1d4e847d92647a6dc1054aef310e3104914a6440a waiting to be mined...
 ```
 
@@ -232,41 +232,41 @@ Contract transaction send: TransactionHash: 0xd913a9fef18e0464b99c2db1d4e847d926
 
 因為在私鏈所以我們要自己挖
 
-```text
+```
 miner.start(1)
 ```
 
 產生完Dag後接著挖到contract後可以stop
 
-![](../.gitbook/assets/螢幕快照%202017-02-13%20下午4.01.53.png)
+![](<../.gitbook/assets/螢幕快照 2017-02-13 下午4.01.53.png>)
 
-```text
+```
 miner.stop()
 ```
 
 然後就可以輸入以下，如果出現`Hello world`就成功了
 
-```text
+```
 greeter.greet();
 ```
 
 ### 2.把剛才的合約部署到其他節點
 
-為了使得其他人可以運行你的智能合約，你需要兩個資訊：  
-1.智能合約地址Address  
+為了使得其他人可以運行你的智能合約，你需要兩個資訊：\
+1.智能合約地址Address\
 2.智能合約ABI（Application Binary Interface），ABI其實就是一個有序的用戶手冊，描述了所有方法的名字和如何調用它們。
 
 我們可以使用如下獲得其ABI和智能合約地址:
 
-```text
+```
 greeterCompiled["<stdin>:greeter"].info.abiDefinition
 ```
 
-```text
+```
 greeter.address
 ```
 
-接著我們到另一個節點的console輸入如下，把ABI與Address更改為剛讀取出來的值\(建議開一個檔案修改，之後再貼到console，因為code多console不好修改\)
+接著我們到另一個節點的console輸入如下，把ABI與Address更改為剛讀取出來的值(建議開一個檔案修改，之後再貼到console，因為code多console不好修改)
 
 ```javascript
 var greeter = eth.contract(ABI).at(Address);
@@ -274,7 +274,7 @@ var greeter = eth.contract(ABI).at(Address);
 
 > ex:
 >
-> ```text
+> ```
 > var greeter = eth.contract([{
 >     constant: false,
 >     inputs: [],
@@ -304,38 +304,38 @@ var greeter = eth.contract(ABI).at(Address);
 
 再來於另外一個terminal輸入
 
-```text
+```
 greeter.greet()
 ```
 
 如果出現下圖錯誤，我們可以跟另一個節點做區塊鏈同步即可解決
 
-![](../.gitbook/assets/螢幕快照%202017-02-13%20下午4.23.53.png)
+![](<../.gitbook/assets/螢幕快照 2017-02-13 下午4.23.53.png>)
 
 所以先把第一個節點加入，步驟如下
 
-於第一個節點輸入`admin.nodeInfo` =&gt; 複製enode url=&gt; 第二個節點輸入`admin.addPeer("剛才複製的enode url")`
+於第一個節點輸入`admin.nodeInfo` => 複製enode url=> 第二個節點輸入`admin.addPeer("剛才複製的enode url")`
 
 之後再到第二個節點輸入以下，即可同步區塊
 
-```text
+```
 miner.start(1)
 ```
 
 此時第二個節點也會出現Hello World了!
 
-線上編譯合約：[https://ethereum.github.io/browser-solidity/\#version=soljson-v0.4.9+commit.364da425.js](https://ethereum.github.io/browser-solidity/#version=soljson-v0.4.9+commit.364da425.js)
+線上編譯合約：[https://ethereum.github.io/browser-solidity/#version=soljson-v0.4.9+commit.364da425.js](https://ethereum.github.io/browser-solidity/#version=soljson-v0.4.9+commit.364da425.js)
 
 > 如果出現錯誤如下，記得指定solidity版本
 >
-> ```text
+> ```
 > Untitled:2:1: Warning: Source file does not specify required compiler version!Consider adding "pragma solidity ^0.4.9
 > contract HelloWorld {
 > ^
 > Spanning multiple lines.
 > ```
 
-```text
+```
    pragma solidity ^0.4.8;
 
 contract HelloWorld {
@@ -348,7 +348,7 @@ contract HelloWorld {
 }
 ```
 
-```text
+```
 pragma solidity ^0.4.0;
 
 contract bSimpleStorage {
@@ -497,11 +497,19 @@ contract bSimpleStorage {
 }
 ```
 
+## 安全性相關：
+
+1. 互動式教學
+
+{% embed url="https://ethernaut.openzeppelin.com/" %}
+
+> 解答：[https://forum.openzeppelin.com/t/ethernaut-community-solutions/561](https://forum.openzeppelin.com/t/ethernaut-community-solutions/561)
+
 ## 可能錯誤
 
 ## 1.Exceeds block gas limit
 
-```text
+```
 把genesis_block.json的gasLimit調整即可
 ```
 
@@ -509,7 +517,6 @@ contract bSimpleStorage {
 
 ## 2.Error: insufficient funds for gas \* price + value undefined
 
-```text
+```
 原因為address內的ether不足
 ```
-

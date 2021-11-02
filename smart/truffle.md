@@ -1,5 +1,5 @@
 ---
-description: 'https://github.com/trufflesuite/truffle/'
+description: https://github.com/trufflesuite/truffle/
 ---
 
 # Truffle
@@ -8,13 +8,13 @@ description: 'https://github.com/trufflesuite/truffle/'
 
 記得先安裝
 
-```text
+```
 npm install -g truffle ethereumjs-testrpc
 ```
 
 我們這邊選擇一個叫做webpack的模板
 
-```text
+```
 mkdir truffleTest
 cd truffleTest
 truffle init webpack //使用名稱為webpack的範例模板
@@ -30,7 +30,7 @@ truffle init webpack //使用名稱為webpack的範例模板
 
 然後部署到testrpc跑的測試鏈上`truffle migrate`
 
-```text
+```
 之後可以試著用頁面轉token
 然後更改地40行account = accounts[0]; 的數字查看
 ```
@@ -39,7 +39,7 @@ truffle init webpack //使用名稱為webpack的範例模板
 
 [https://github.com/ConsenSys/truffle](https://github.com/ConsenSys/truffle)
 
-```text
+```
 npm install -g truffle
 ```
 
@@ -47,13 +47,13 @@ npm install -g truffle
 
 新增一個資料夾cd進去，之後執行
 
-```text
+```
 truffle init
 ```
 
 開啟testRPC
 
-```text
+```
 npm install -g ethereumjs-testrpc
 ```
 
@@ -61,7 +61,7 @@ npm install -g ethereumjs-testrpc
 
 3.在contract下新增一個HelloWorld.sol
 
-```text
+```
 pragma solidity ^0.4.8;
 
 contract HelloWorld {
@@ -81,7 +81,7 @@ contract HelloWorld {
 
 把migrate資料夾下的\_deploy\_contracts.js改為如下
 
-```text
+```
 var HelloWorld = artifacts.require("./HelloWorld.sol");
 
 module.exports = function(deployer) {
@@ -91,7 +91,7 @@ module.exports = function(deployer) {
 
 之後
 
-```text
+```
 truffle compile  => truffle migrate  => truffle console
 ```
 
@@ -99,51 +99,51 @@ truffle compile  => truffle migrate  => truffle console
 
 查看餘額
 
-```text
+```
 HelloWorld.deployed().then(ins => ins.balance().then(a => console.log(a)))
 ```
 
 存錢
 
-```text
+```
 HelloWorld.deployed().then(a => {a.deposit(200)})
 ```
 
-注意事項:  
-1.
+注意事項:\
+1\.
 
 > Truffle更改了API
 >
-> ```text
+> ```
 > ...deployed()後面要用then來接
 > ```
 >
 > ex:
 >
-> ```text
+> ```
 > HelloWorld.deployed().then(a => console.log(a.address))
 > ```
 >
-> ```text
+> ```
 > HelloWorld.deployed().then(a => console.log(a.balance().then(console.log)))
 > ```
 >
 > [http://ethereum.stackexchange.com/questions/11935/problem-with-truffle-console-cannot-read-property-call-of-undefined](http://ethereum.stackexchange.com/questions/11935/problem-with-truffle-console-cannot-read-property-call-of-undefined)
 
-2.
+2\.
 
 > 檔案sol的名稱要跟contract名稱相同
 
-3.
+3\.
 
-> 如果想更改已部署到RPC上的contract要輸入  
+> 如果想更改已部署到RPC上的contract要輸入\
 > `truffle migrate --reset`
 
 ## 使用truffle box
 
 官方有內建幾個box，算是模板，可供下載
 
-```text
+```
 truffle unbox <package>
 ```
 
@@ -172,7 +172,7 @@ module.exports = {
 >
 > 或是僅安裝指令列
 >
-> ```text
+> ```
 > npm install ganache-cli -g
 > ```
 >
@@ -182,9 +182,9 @@ module.exports = {
 
 1.到 Infura 註冊 APP : [https://infura.io/login](https://infura.io/login)
 
-2.隨機產生 mnemonic: [https://iancoleman.io/bip39/\#english](https://iancoleman.io/bip39/#english)
+2.隨機產生 mnemonic: [https://iancoleman.io/bip39/#english](https://iancoleman.io/bip39/#english)
 
-3.給予測試用 Ether: [https://faucet.ropsten.be/](https://faucet.ropsten.be/)
+3.給予測試用 Ether: [https://faucet.ropsten.be/](https://faucet.ropsten.be)
 
 ```javascript
 const HDWalletProvider = require("truffle-hdwallet-provider");
@@ -207,4 +207,3 @@ module.exports = {
   }
 };
 ```
-

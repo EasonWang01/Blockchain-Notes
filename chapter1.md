@@ -1,29 +1,29 @@
 # Bitcoin原理與實作
 
-## \#錢包
+## #錢包
 
-```text
+```
 錢包裡面含有多個Bitcoin Address以及公私鑰
 ```
 
 錢包加密SourceCode: [https://github.com/bitcoin/bitcoin/blob/af563971fcbece3659f501329afa9dc84ed733b2/src/wallet/crypter.cpp](https://github.com/bitcoin/bitcoin/blob/af563971fcbece3659f501329afa9dc84ed733b2/src/wallet/crypter.cpp)
 
-[https://en.bitcoin.it/wiki/Wallet\_encryption](https://en.bitcoin.it/wiki/Wallet_encryption)
+[https://en.bitcoin.it/wiki/Wallet\_encryption](https://en.bitcoin.it/wiki/Wallet\_encryption)
 
-## \#產生公鑰和私鑰與比特幣地址
+## #產生公鑰和私鑰與比特幣地址
 
 ![](.gitbook/assets/地址生成圖.png)
 
-```text
+```
 十六進制hex每個字為4 bits也就是0.5bytes
 ```
 
-以下使用node.js實作  
+以下使用node.js實作\
 先安裝`npm install bs58`
 
 base58說明:[https://zh.wikipedia.org/wiki/Base58](https://zh.wikipedia.org/wiki/Base58)
 
-```text
+```
 var crypto = require('crypto');
 var ecdh = crypto.createECDH('secp256k1');
 
@@ -76,16 +76,16 @@ console.log(address);
 console.log('--------')
 ```
 
-## \#genesis block
+## #genesis block
 
 也稱為創世區塊，為區塊鏈在一開始產生時的區塊
 
-比特幣的：  
+比特幣的：\
 [https://blockchain.info/block/000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f](https://blockchain.info/block/000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f)
 
 其擁有以下結構
 
-```text
+```
 4字節    版本    版本號，用於跟踪軟件/協議的更新
 32字節   父區塊哈希值    引用區塊鏈中父區塊的哈希值
 32字節   Merkle根    該區塊中交易的merkle樹根的哈希值
@@ -94,22 +94,22 @@ console.log('--------')
 4字節    Nonce    用於工作量證明算法的計數器
 ```
 
-bitcoin genesis 創建的原始碼  
-[https://github.com/bitcoin/bitcoin/blob/3955c3940eff83518c186facfec6f50545b5aab5/src/chainparams.cpp\#L123](https://github.com/bitcoin/bitcoin/blob/3955c3940eff83518c186facfec6f50545b5aab5/src/chainparams.cpp#L123)
+bitcoin genesis 創建的原始碼\
+[https://github.com/bitcoin/bitcoin/blob/3955c3940eff83518c186facfec6f50545b5aab5/src/chainparams.cpp#L123](https://github.com/bitcoin/bitcoin/blob/3955c3940eff83518c186facfec6f50545b5aab5/src/chainparams.cpp#L123)
 
-## \#Merkle tree
+## #Merkle tree
 
 區塊鏈中的每個區塊都包含了產生於該區塊的所有交易，且以Merkle樹表示
 
-![](.gitbook/assets/螢幕快照%202017-02-16%20下午4.00.56.png)
+![](<.gitbook/assets/螢幕快照 2017-02-16 下午4.00.56.png>)
 
 他是把每一筆資料的txid用兩次sha256做加密
 
-```text
+```
 HA =  SHA256(SHA256(交易A))
 ```
 
-```text
+```
 HB =  SHA256(SHA256(交易B))
 ```
 
@@ -148,16 +148,16 @@ var root = crypto256(crypto256(hash1_hash2 + hash3_hash4));
 console.log('Merkle Root為:' + root);
 ```
 
-## \#挖礦
+## #挖礦
 
 在挖礦過程中成功“挖出”新區塊的礦工可以得到該區塊中包含的所有交易手續費。目前，這筆費用占礦工收入的0.5%或更少，大部分收益仍來自挖礦所得的比特幣獎勵
 
-可以先參考此網站  
-[http://www.yogh.io/\#mine:last](http://www.yogh.io/#mine:last)
+可以先參考此網站\
+[http://www.yogh.io/#mine:last](http://www.yogh.io/#mine:last)
 
 他會用區塊頭
 
-```text
+```
 Version: 536870912
 Prev block: 0000000000000000008D8AF3B55F92BFFEBF286D9C87C54F80C780224F8DD06C
 Merkle root: AA5FB4AFB0154D2BDD3315E074F219351FDF13908F1C515E07BE12124A3D3760
@@ -168,7 +168,7 @@ Nonce: 一個隨機數
 
 來做兩次sha256加密，只要比一個target數小，及為挖到新的區塊
 
-```text
+```
 var crypto = require('crypto');
 
 
@@ -204,7 +204,7 @@ while(1) {
 
 礦工挖礦的獎勵為區塊第一筆交易，通常被稱為coinbase，它沒有輸入，所以TxIn的Hash總是被標記為00000000...0000
 
-![](.gitbook/assets/螢幕快照%202017-02-17%20上午12.00.21.png)
+![](<.gitbook/assets/螢幕快照 2017-02-17 上午12.00.21.png>)
 
 你可能會想說為什麼不直接給小於某一個數字就好了為何還要慢慢算呢，因為算出來後要給別人驗證你已經算出來的話你必須給別人本文，也就是加密前的東西，讓別人用你的本文加密，來確認真的可以用這個本文算出特定hash
 
@@ -212,27 +212,27 @@ while(1) {
 >
 > [https://en.bitcoin.it/wiki/Confirmation](https://en.bitcoin.it/wiki/Confirmation)
 
-## \#廣播與驗證交易
+## #廣播與驗證交易
 
-[https://en.bitcoin.it/wiki/Protocol\_rules\#.22tx.22\_messages](https://en.bitcoin.it/wiki/Protocol_rules#.22tx.22_messages)
+[https://en.bitcoin.it/wiki/Protocol\_rules#.22tx.22\_messages](https://en.bitcoin.it/wiki/Protocol\_rules#.22tx.22\_messages)
 
 發出交易後發出者會帶上用私鑰與相關交易訊息hash過的值，而發出的script包含公鑰，之後其他節點要驗證交易時就用這個公鑰看能不能解開即可
 
 意思為用發出者的公鑰解開他用私鑰加密後的東西即為交易本文
 
-\(即為ECDSA的verify過程\)
+(即為ECDSA的verify過程)
 
-> 發出的交易經過六個確認\(納入六個區塊後\)金額才可繼續被交易
+> 發出的交易經過六個確認(納入六個區塊後)金額才可繼續被交易
 >
-> 主要是避免Double spend\(發出同樣的交易兩次\)
+> 主要是避免Double spend(發出同樣的交易兩次)
 
-## \#難度difficulty的更改
+## #難度difficulty的更改
 
 [https://en.bitcoin.it/wiki/Difficulty](https://en.bitcoin.it/wiki/Difficulty)
 
 難度在每2016個block被挖出後會自動按照公式更改一次
 
-```text
+````
 1.使用Bitcoin API getDifficulty取得現在的難度
 https://blockexplorer.com/api/status?q=getDifficulty
 
@@ -264,9 +264,9 @@ https://en.bitcoin.it/wiki/Block_hashing_algorithm
 最後成功算出的礦工即可以獲得獎勵，獎勵的錢及為下一個區塊的coinbase
 
 5.算出來的hash及為下一個區塊的block hash
-```
+````
 
-```text
+```
 假設在區塊277,316中，它的值為 0x1903a30c。分為前兩位十六進位數字，與後面的六位。在這個區塊裡，0x19為前兩位，而 0x03a30c 為後六位。
 
 計算難度目標的公式為：
@@ -287,7 +287,7 @@ target = 0x03a30c * 2^(0x08 * (0x19 - 0x03))
 
 ## Hash Rate
 
-```text
+```
  1 KHash/s = 1000 Hash/s
  1 MHash/s = 1000 KHash/s
  1 GHash/s = 1000 MHash/s
@@ -299,19 +299,19 @@ target = 0x03a30c * 2^(0x08 * (0x19 - 0x03))
 
 也可以用以下網站來估計
 
-[http://bitcoin.web-share.nl/](http://bitcoin.web-share.nl/)
+[http://bitcoin.web-share.nl/](http://bitcoin.web-share.nl)
 
 先到[https://blockchain.info/charts/hash-rate](https://blockchain.info/charts/hash-rate) 查看現在平均的算力
 
 然後填入，他就會幫你計算相關數據
 
-![](.gitbook/assets/螢幕快照%202017-11-16%20上午8.58.12.png)
+![](<.gitbook/assets/螢幕快照 2017-11-16 上午8.58.12.png>)
 
-## \#從TXid hash找出某筆交易詳細訊息
+## #從TXid hash找出某筆交易詳細訊息
 
 會有一個HASH表，所以用很短的時間複雜度即可從hash對應到直接的資訊，也因為這些txid的hash之後會在兩兩加密為merkel tree 並將merkel root 存在block中，所以就算可以看到資訊也不怕被修改，具有hash通常都有hash table可以查到它裡面對應的值
 
-## \#新加入節點如何找到其他節點
+## #新加入節點如何找到其他節點
 
 利用寫在原始碼的DNS seed
 
@@ -326,4 +326,3 @@ target = 0x03a30c * 2^(0x08 * (0x19 - 0x03))
 使用`nslookup`來查看提供的url會回覆一串IP address
 
 ![](.gitbook/assets/xa.png)
-

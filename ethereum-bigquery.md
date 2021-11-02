@@ -1,4 +1,5 @@
 # Ethereum BigQuery
 
-[https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=crypto\_ethereum&page=table&\_ga=2.60595817.-559581631.1620981525&project=encoded-alpha-180610&ws=!1m14!1m3!3m2!1sbigquery-public-data!2scrypto\_ethereum!1m4!4m3!1sbigquery-public-data!2scrypto\_ethereum!3sbalances!1m4!4m3!1sbigquery-public-data!2scrypto\_ethereum!3sblocks&t=blocks](https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=crypto_ethereum&page=table&_ga=2.60595817.-559581631.1620981525&project=encoded-alpha-180610&ws=!1m14!1m3!3m2!1sbigquery-public-data!2scrypto_ethereum!1m4!4m3!1sbigquery-public-data!2scrypto_ethereum!3sbalances!1m4!4m3!1sbigquery-public-data!2scrypto_ethereum!3sblocks&t=blocks)
+{% embed url="https://console.cloud.google.com/bigquery?_ga=2.60595817.-559581631.1620981525&d=crypto_ethereum&p=bigquery-public-data&page=table&project=encoded-alpha-180610&t=blocks&ws=%211m14%211m3%213m2%211sbigquery-public-data%212scrypto_ethereum%211m4%214m3%211sbigquery-public-data%212scrypto_ethereum%213sbalances%211m4%214m3%211sbigquery-public-data%212scrypto_ethereum%213sblocks" %}
 
+![](<.gitbook/assets/截圖 2021-11-02 下午3.54.20.png>)
