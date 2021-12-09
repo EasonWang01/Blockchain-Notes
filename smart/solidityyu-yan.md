@@ -1,5 +1,11 @@
 # solidity語言
 
+## Global variable
+
+內建在 solidity 可使用的
+
+[https://docs.soliditylang.org/en/v0.4.24/units-and-global-variables.html](https://docs.soliditylang.org/en/v0.4.24/units-and-global-variables.html)
+
 ## Event
 
 通常當作log使用
@@ -82,7 +88,7 @@ Pure: 不可讀取，不可修改
 
 const: 可讀取，但不可修改，不可加在function上
 
-## **return **or **throw**
+## **return** or **throw**
 
 > The former will cost less gas but it can be more headache as any changes you did to the contract so far will be kept. In the other hand, 'throw' will cancel all contract execution, revert any changes that transaction could have made and the sender will lose all ether he sent for gas. But since the Wallet can detect that a contract will throw, it always shows an alert, therefore preventing any ether to be spent at all.
 
@@ -90,7 +96,7 @@ return可以花費較少gas 但在return前的code會執行 ，而throw則會把
 
 ## Modifier
 
-> \_的意思為繼承這個modifier的function會先跑完寫在\_modifier_ _; 之前的東西才繼續該function
+> \_的意思為繼承這個modifier的function會先跑完寫在\_modifier __ ; 之前的東西才繼續該function
 
 ```
 modifier onlyOwner {
