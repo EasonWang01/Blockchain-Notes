@@ -1,10 +1,14 @@
-# solidity語言
+# solidity 語言
 
 ## Global variable
 
 內建在 solidity 可使用的
 
-[https://docs.soliditylang.org/en/v0.4.24/units-and-global-variables.html](https://docs.soliditylang.org/en/v0.4.24/units-and-global-variables.html)
+{% embed url="https://docs.soliditylang.org/en/v0.4.24/units-and-global-variables.html" %}
+
+## Cheatsheet 對照表
+
+[https://reference.auditless.com/cheatsheet/](https://reference.auditless.com/cheatsheet/)
 
 ## Event
 

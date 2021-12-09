@@ -20,7 +20,7 @@
   * [OpenZeppelin 合約 library](smart/openzeppelin-he-yao-library.md)
   * [Truffle](smart/truffle.md)
   * [合約部屬](smart/he-yue-bu-shu.md)
-  * [solidity語言](smart/solidityyu-yan.md)
+  * [solidity 語言](smart/solidityyu-yan.md)
 * [ethereum(Dapp)](dapp/README.md)
   * [Remix](dapp/remix.md)
   * [web3 使用](dapp/web3-shi-yong.md)

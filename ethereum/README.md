@@ -94,7 +94,7 @@ Gas:
 >
 > Gas Limit: 多少單位個Gas( 通常不會變動 )
 >
-> 交易手續費** Tx Fees = Gas Limit \* Gas Price**
+> 交易手續費 **Tx Fees = Gas Limit \* Gas Price**
 
 Ether單位
 
@@ -172,3 +172,10 @@ POS（Proof of Stake，股權證明）根據你持有貨幣的量和時間進行
 PoA ( Proof of Authority)\
 有別於PoW (Proof-of-Work)需要解數學難題來產生block，PoA是依靠預設好的Authority nodes，負責產生block。\
 可設定Authority node數量。可指定產生block的時間等
+
+## Block difficulty
+
+礦工挖礦的難度，當礦工增加時難度會根據算法而增加。
+
+[https://2miners.com/eth-network-difficulty](https://2miners.com/eth-network-difficulty)
+
