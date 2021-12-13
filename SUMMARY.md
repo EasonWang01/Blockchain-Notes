@@ -1,9 +1,9 @@
 # Table of contents
 
-* [Introduction](README.md)
-* [本書簡介](ben-shu-jian-jie.md)
+* [本書簡介](README.md)
 * [區塊鏈運作原理](block.md)
 * [Bitcoin介紹](bitcoin-jie-shao/README.md)
+  * [簡介](bitcoin-jie-shao/master.md)
   * [Bitcoin其他知識](bitcoin-jie-shao/bitcoinqi-ta-zhi-shi.md)
 * [Bitcoin原理與實作](chapter1.md)
 * [BitcoinJS](readme.md)
