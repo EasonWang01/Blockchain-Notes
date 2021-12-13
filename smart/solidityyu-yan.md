@@ -271,3 +271,7 @@ function test(uint[] storage _abc) internal {
 可參考：[https://github.com/ethereum/web3.js/issues/1148](https://github.com/ethereum/web3.js/issues/1148)
 
 > 目前會出現：error: Failed to decode output: Error: Unsupported or invalid type: tuple 錯誤
+
+## Call v.s Delegatecall
+
+[https://ethereum.stackexchange.com/questions/3667/difference-between-call-callcode-and-delegatecall](https://ethereum.stackexchange.com/questions/3667/difference-between-call-callcode-and-delegatecall)
