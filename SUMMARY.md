@@ -11,6 +11,7 @@
 * [Docker常用指令](docker.md)
 * [ethereum初探](ethereum/README.md)
   * [ethereum歷史](ethereum/ethereumli-shi.md)
+  * [EVM](ethereum/evm.md)
 * [ethereum(Docker)](ether.md)
 * [ethereum(Geth)](ethereumgeth/README.md)
   * [Parity](ethereumgeth/parity.md)
