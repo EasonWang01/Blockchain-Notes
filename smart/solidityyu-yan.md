@@ -272,6 +272,16 @@ function test(uint[] storage _abc) internal {
 
 > 目前會出現：error: Failed to decode output: Error: Unsupported or invalid type: tuple 錯誤
 
+## abi.encodePacked
+
+把參數的 array 串接起來為 bytes，如果參數有 string 會轉為 16進位 hex
+
+```javascript
+abi.encodePacked(msg.sender, "t");
+// 0x5b38da6a701c568545dcfcb03fcb875f56beddc474
+// msg sender: 0x5b38da6a701c568545dcfcb03fcb875f56beddc4
+```
+
 ## Call v.s Delegatecall
 
 [https://ethereum.stackexchange.com/questions/3667/difference-between-call-callcode-and-delegatecall](https://ethereum.stackexchange.com/questions/3667/difference-between-call-callcode-and-delegatecall)
