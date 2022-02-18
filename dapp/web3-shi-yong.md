@@ -27,9 +27,16 @@ const totalSupply = await ContractERC721.methods.totalSupply().call();
 console.log(totalSupply.toNumber())
 ```
 
-呼叫需要交易的 function \(runtime\)
+## 注意事項
 
-```javascript
+使用 CRA 5 版本以上引入 web3 會出現 error
 
+[https://stackoverflow.com/questions/70472965/web3-issue-react-application-not-compiling/70512623#70512623](https://stackoverflow.com/questions/70472965/web3-issue-react-application-not-compiling/70512623#70512623)
+
+解決方法:
+
+```
+npm uninstall react-scripts
+npm i react-scripts@4.0.3
 ```
 

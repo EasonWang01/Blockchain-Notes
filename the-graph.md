@@ -22,6 +22,8 @@ description: 一個用來查詢區塊鏈數據的工具
 
 [https://github.com/OpenZeppelin/openzeppelin-subgraphs](https://github.com/OpenZeppelin/openzeppelin-subgraphs)
 
+[https://docs.openzeppelin.com/subgraphs/0.1.x/](https://docs.openzeppelin.com/subgraphs/0.1.x/)
+
 將以上 clone 到你的專案或是 `npm install @openzeppelin/subgraphs`，之後 copy node\_module 裡面 config file，然後放到你的專案內
 
 之後輸入以下（要把 --config 後的路徑改成剛的 config file）
