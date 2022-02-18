@@ -27,6 +27,46 @@ const totalSupply = await ContractERC721.methods.totalSupply().call();
 console.log(totalSupply.toNumber())
 ```
 
+## 監聽合約 Event&#x20;
+
+> 記得 infura 的測試網路 url 要填對，例如 rinkeby 不要寫成 ropsten
+
+```javascript
+const Web3 = require("web3");
+
+const provider = new Web3.providers.WebsocketProvider(
+  "wss://rinkeby.infura.io/ws/v3/<API KEY>"
+  );
+const CONTRACT_ADDRESS = "0x00129c695b5c3d95b1e9511c4d454dc6ab276936";
+const ABI = require("./abi/t.js");
+provider.on("connect", () => {
+  console.log("Websocket connected.");
+});
+
+provider.on("close", (event) => {
+  console.log(event);
+  console.log("Websocket closed.");
+});
+
+provider.on("error", (error) => {
+  console.error(error);
+});
+
+const web3 = new Web3(provider);
+const testContract = new web3.eth.Contract(ABI, CONTRACT_ADDRESS);
+testContract.events
+  .TDeposit()
+  .on("connected", (id) => {
+    console.log(`TDeposit subscription connected (${id})`);
+  })
+  .on("data", (event) => {
+    console.log('ondata', event);
+  })
+  .on("error", (error) => {
+    console.log(error);
+  });
+```
+
 ## 注意事項
 
 使用 CRA 5 版本以上引入 web3 會出現 error
