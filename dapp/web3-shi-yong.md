@@ -67,6 +67,36 @@ testContract.events
   });
 ```
 
+## ECDSA 簽名與驗證
+
+使用 createIdentity 產生私鑰與公鑰，並且公鑰產生地址，之後用私鑰簽名(sign)然後用 recovery 還原出簽名的地址。
+
+```javascript
+const EthCrypto = require("eth-crypto");
+
+const identity = EthCrypto.createIdentity();
+
+console.log(identity);
+
+const message = "foobar";
+const messageHash = EthCrypto.hash.keccak256(message);
+const signature = EthCrypto.sign(
+  identity.privateKey, // privateKey
+  messageHash // hash of message
+);
+
+const signer = EthCrypto.recover(
+  signature,
+  EthCrypto.hash.keccak256("foobar") // signed message hash
+);
+
+const address = EthCrypto.publicKey.toAddress(identity.publicKey);
+
+console.log("address", address);
+
+console.log("signer", signer);
+```
+
 ## 注意事項
 
 使用 CRA 5 版本以上引入 web3 會出現 error
