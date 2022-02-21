@@ -40,3 +40,5 @@
 * [Solana 教學](solana-jiao-xue.md)
 * [Ethereum BigQuery](ethereum-bigquery.md)
 * [The Graph](the-graph.md)
+* [DeFi 筆記](defi-bi-ji/README.md)
+  * [AAVE、Compound](defi-bi-ji/aave-compound.md)
