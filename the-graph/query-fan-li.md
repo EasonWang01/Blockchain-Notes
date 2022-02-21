@@ -31,3 +31,24 @@ description: 範例
 ```
 
 > liquidity 即為 deposit rate 而 stableBorrowRate, variableBorrowRate 為 borrow rate
+
+## Compound APY
+
+```
+{
+  markets {
+    borrowRate
+    supplyRate
+    symbol
+    id
+    totalBorrows
+    totalSupply
+    underlyingAddress
+    underlyingName
+    underlyingPrice
+    underlyingSymbol
+    reserveFactor
+    underlyingPriceUSD
+  }
+}
+```
