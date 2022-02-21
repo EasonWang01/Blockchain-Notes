@@ -36,7 +36,7 @@ npx graph-compiler \
   --export-subgraph
 ```
 
-![](<.gitbook/assets/截圖 2022-02-07 下午3.09.07.png>)
+![](<../.gitbook/assets/截圖 2022-02-07 下午3.09.07.png>)
 
 之後要去把 編譯出來的 yaml 改名為 subgraph.yaml，然後增加 network 與 contract address 等 config field
 

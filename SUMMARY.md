@@ -39,6 +39,7 @@
 * [CCXT 通用交易所 API](ccxt-tong-yong-jiao-yi-suo-api.md)
 * [Solana 教學](solana-jiao-xue.md)
 * [Ethereum BigQuery](ethereum-bigquery.md)
-* [The Graph](the-graph.md)
+* [The Graph](the-graph/README.md)
+  * [Query 範例](the-graph/query-fan-li.md)
 * [DeFi 筆記](defi-bi-ji/README.md)
   * [AAVE、Compound](defi-bi-ji/aave-compound.md)
