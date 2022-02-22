@@ -126,6 +126,28 @@ console.log(checkSignature(
 ))
 ```
 
+或是使用 eth-crypto 模組
+
+```javascript
+const EthCrypto = require("eth-crypto");
+const Web3 = require("web3");
+const provider = new Web3.providers.WebsocketProvider(
+  "wss://rinkeby.infura.io/ws/v3/..."
+);
+const web3 = new Web3(provider);
+
+ const messageHash1 =  web3.utils.soliditySha3(
+    { type: "string", value: "\x19Ethereum Signed Message:\n5"}, // 記得 :\n 後面數字要改成你的訊息長度
+    { type: "string", value: "Hello" }
+  );
+const signer1 = EthCrypto.recover(
+  "0x20e9a2d5e47b09160b2cf5a88d83f00f519cfcf759eec463f77b8b718340506b46aa6796e59df64e146e25cb6d89c21aeae3bce84619a24897cc8820c434bd2f1c",
+  messageHash1
+);
+
+console.log('signer1', signer1)
+```
+
 ## 注意事項
 
 使用 CRA 5 版本以上引入 web3 會出現 error
