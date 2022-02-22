@@ -67,7 +67,7 @@ testContract.events
   });
 ```
 
-## ECDSA 簽名與驗證
+## 後端使用ECDSA 簽名與驗證
 
 使用 createIdentity 產生私鑰與公鑰，並且公鑰產生地址，之後用私鑰簽名(sign)然後用 recovery 還原出簽名的地址。
 
@@ -95,6 +95,35 @@ const address = EthCrypto.publicKey.toAddress(identity.publicKey);
 console.log("address", address);
 
 console.log("signer", signer);
+```
+
+## 前端使用簽名與驗證
+
+只有前端能用 eth.personal
+
+```javascript
+  var signature = await web3.eth.personal.sign("Hello", accounts[0])
+  console.log(signature)
+
+  const signer = await web3.eth.personal.ecRecover("Hello", signature)
+  console.log(signer) // account[0]
+```
+
+使用後端驗證前端的簽名
+
+```javascript
+const ethSigUtil = require("eth-sig-util");
+function checkSignature(nonce, signature) {
+    const msgParams = {
+        data: nonce,
+        sig: signature
+    };
+    return ethSigUtil.recoverPersonalSignature(msgParams);
+}
+console.log(checkSignature(
+  "Hello", //貼上 metamask 簽名的內容，不用 hash
+  <貼上 metamask sign 出的簽名>,
+))
 ```
 
 ## 注意事項
