@@ -52,6 +52,6 @@ health factor 合約計算方式
 
 {% embed url="https://github.com/aave/protocol-v2/blob/baeb455fad42d3160d571bd8d3a795948b72dd85/contracts/protocol/libraries/logic/GenericLogic.sol#L242" %}
 
-function call 順序
+flashLoan 的 liquidate function call 順序
 
 flashLoan -> executeOperation -> \_liquidateAndSwap -> liquidationCall -> calculateHealthFactorFromBalances
