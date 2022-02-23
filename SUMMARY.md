@@ -16,6 +16,7 @@
 * [ethereum(Geth)](ethereumgeth/README.md)
   * [Parity](ethereumgeth/parity.md)
 * [ethereum(智能合約)](smart/README.md)
+  * [DAO](smart/dao.md)
   * [可升級合約](smart/ke-sheng-ji-he-yue.md)
   * [使用合約進行 multiswap](smart/shi-yong-he-yue-jin-hang-multiswap.md)
   * [合約安全](smart/he-yue-an-quan.md)
