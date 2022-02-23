@@ -47,4 +47,5 @@
   * [Yearn](defi-bi-ji/yearn.md)
   * [Curve](defi-bi-ji/curve.md)
   * [Uniswap](defi-bi-ji/uniswap.md)
-  * [AAVE、Compound](defi-bi-ji/aave-compound.md)
+  * [AAVE、Compound](defi-bi-ji/aave-compound/README.md)
+    * [AAVE local dev](defi-bi-ji/aave-compound/aave-local-dev.md)

@@ -20,4 +20,8 @@ Gauge
 
 Each pool has an individual liquidity gauge. Curve incentivizes liquidity providers with the CRV. All of the inflation is distributed to Curve liquidity providers, according to measurements taken by the gauges.
 
-[https://curve.readthedocs.io/dao-gauges.html](https://curve.readthedocs.io/dao-gauges.html)
+{% embed url="https://curve.readthedocs.io/dao-gauges.html" %}
+
+獲得 CRV
+
+於 curve 的任意池子提供流動性均會獲得。在 Ypool 可同時獲得 CRV 與 YFI

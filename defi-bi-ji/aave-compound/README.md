@@ -6,7 +6,7 @@ AAVE 存款後會給你 aToken， Compound 存款後會給你 cToken。
 
 > 存入不同代幣會給你對應不同的 cToken，如下圖
 
-![](<../.gitbook/assets/截圖 2022-02-21 下午12.09.14.png>)
+![](<../../.gitbook/assets/截圖 2022-02-21 下午12.09.14.png>)
 
 {% embed url="https://etherscan.io/tokens/label/compound" %}
 
