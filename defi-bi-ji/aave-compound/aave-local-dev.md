@@ -36,6 +36,22 @@
 
 [https://github.com/aave/aave-protocol/blob/master/contracts/configuration/LendingPoolAddressesProvider.sol](https://github.com/aave/aave-protocol/blob/master/contracts/configuration/LendingPoolAddressesProvider.sol)
 
-有關 liquidation&#x20;
+#### 有關 liquidation&#x20;
 
-[https://github.com/aave/protocol-v2/blob/baeb455fad42d3160d571bd8d3a795948b72dd85/contracts/adapters/FlashLiquidationAdapter.sol#L50](https://github.com/aave/protocol-v2/blob/baeb455fad42d3160d571bd8d3a795948b72dd85/contracts/adapters/FlashLiquidationAdapter.sol#L50)
+liquidation 的觸發可以是任何人，只要你有發現其他人帳戶的某個資產的 health factor < 1 即可觸發，所以通常會是有個機器人程式定期去掃描每個人的借貸資產的 health factor
+
+[https://docs.aave.com/developers/v/1.0/tutorials/liquidations](https://docs.aave.com/developers/v/1.0/tutorials/liquidations)
+
+{% embed url="https://github.com/aave/protocol-v2/blob/baeb455fad42d3160d571bd8d3a795948b72dd85/contracts/adapters/FlashLiquidationAdapter.sol#L50" %}
+
+health factor < 1 執行 liquidation&#x20;
+
+{% embed url="https://github.com/aave/protocol-v2/blob/baeb455fad42d3160d571bd8d3a795948b72dd85/test-suites/test-amm/uniswapAdapters.flashLiquidation.spec.ts#L27" %}
+
+health factor 合約計算方式
+
+{% embed url="https://github.com/aave/protocol-v2/blob/baeb455fad42d3160d571bd8d3a795948b72dd85/contracts/protocol/libraries/logic/GenericLogic.sol#L242" %}
+
+function call 順序
+
+flashLoan -> executeOperation -> \_liquidateAndSwap -> liquidationCall -> calculateHealthFactorFromBalances
