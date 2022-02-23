@@ -36,3 +36,6 @@
 
 [https://github.com/aave/aave-protocol/blob/master/contracts/configuration/LendingPoolAddressesProvider.sol](https://github.com/aave/aave-protocol/blob/master/contracts/configuration/LendingPoolAddressesProvider.sol)
 
+有關 liquidation&#x20;
+
+[https://github.com/aave/protocol-v2/blob/baeb455fad42d3160d571bd8d3a795948b72dd85/contracts/adapters/FlashLiquidationAdapter.sol#L50](https://github.com/aave/protocol-v2/blob/baeb455fad42d3160d571bd8d3a795948b72dd85/contracts/adapters/FlashLiquidationAdapter.sol#L50)
