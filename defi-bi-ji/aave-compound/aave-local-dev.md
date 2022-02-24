@@ -36,6 +36,22 @@
 
 [https://github.com/aave/aave-protocol/blob/master/contracts/configuration/LendingPoolAddressesProvider.sol](https://github.com/aave/aave-protocol/blob/master/contracts/configuration/LendingPoolAddressesProvider.sol)
 
+#### Reward 計算方式
+
+每次借款與貸款的總數有變動時都會影響 APY，但實際計算要給地址多少獎勵時並不是乘以 APY，而是合約在每次池子兩邊數量變動的時候記錄當下時間與
+
+觸發更新 reward
+
+{% embed url="https://github.com/aave/aave-stake-v2/blob/aa4c9cbf4d05762ed33f2d6da2e955b2d27459cb/contracts/stake/AaveIncentivesController.sol#L67" %}
+
+算法
+
+{% embed url="https://github.com/aave/aave-stake-v2/blob/b9e40fb1c14df7e3874e4def53860d0f53c1d958/contracts/proposals/extend-stkaave-distribution/StakedTokenV2Rev3.sol#L1063" %}
+
+#### [https://github.com/aave/aave-stake-v2/blob/b9e40fb1c14df7e3874e4def53860d0f53c1d958/contracts/proposals/extend-stkaave-distribution/StakedTokenV2Rev3.sol#L1063](https://github.com/aave/aave-stake-v2/blob/b9e40fb1c14df7e3874e4def53860d0f53c1d958/contracts/proposals/extend-stkaave-distribution/StakedTokenV2Rev3.sol#L1063)
+
+
+
 #### 有關 liquidation&#x20;
 
 liquidation 的觸發可以是任何人，只要你有發現其他人帳戶的某個資產的 health factor < 1 即可觸發，所以通常會是有個機器人程式定期去掃描每個人的借貸資產的 health factor

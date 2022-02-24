@@ -21,17 +21,11 @@ const ethEnabled = () => {
 ethEnabled();
 ```
 
-sign eth
-
-```javascript
-web3.eth.sign(address, dataToSign, callback])
-```
-
 ## 安裝React
 
 因為官方有出一個快速環境包，所以我們使用這個不用在自己架設環境
 
-```text
+```
 npm install -g create-react-app
 npm install -g yarn
 
@@ -44,7 +38,7 @@ yarn start
 
 這裡記得因為我們要用瀏覽器存取RPC server，所以geth啟動時RPC server要加上CORS`--rpccorsdomain="*"`
 
-```text
+```
 geth  --ipcdisable --rpc --rpcport 8114 --datadir "./privatechain/03" --networkid 123 --rpcapi="db,eth,net,web3,personal" --nodiscover  --port=30319 --rpccorsdomain="*"   console
 ```
 
@@ -109,7 +103,7 @@ export default App;
 
 即可看到列出我們的帳號
 
-接著新增一個資料夾`contract`裡面放入`contract01.js`把我們剛才的contract的地址以及內容放入\(記得要先去掉at\)
+接著新增一個資料夾`contract`裡面放入`contract01.js`把我們剛才的contract的地址以及內容放入(記得要先去掉at)
 
 ```javascript
 module.exports = {
@@ -173,7 +167,7 @@ module.exports = {
 
 上面的Address 可在geth console輸入以下查看
 
-```text
+```
 token.address
 ```
 
@@ -230,7 +224,7 @@ export default App;
 
 即可看到
 
-![](../../.gitbook/assets/螢幕快照%202017-02-16%20上午12.22.48.png)
+![](<../../.gitbook/assets/螢幕快照 2017-02-16 上午12.22.48.png>)
 
 記得把程式碼 改為剛才有餘額的地址
 
@@ -292,5 +286,4 @@ class App extends Component {
 export default App;
 ```
 
-![](../../.gitbook/assets/螢幕快照%202017-03-25%20下午8.42.42.png)
-
+![](<../../.gitbook/assets/螢幕快照 2017-03-25 下午8.42.42.png>)
