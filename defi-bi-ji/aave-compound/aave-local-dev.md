@@ -36,6 +36,14 @@
 
 [https://github.com/aave/aave-protocol/blob/master/contracts/configuration/LendingPoolAddressesProvider.sol](https://github.com/aave/aave-protocol/blob/master/contracts/configuration/LendingPoolAddressesProvider.sol)
 
+#### User balance
+
+[https://github.com/aave/protocol-v2/blob/d5899dd524525e0fc31d74c12ebb497626f823b9/contracts/protocol/tokenization/AToken.sol#L208](https://github.com/aave/protocol-v2/blob/d5899dd524525e0fc31d74c12ebb497626f823b9/contracts/protocol/tokenization/AToken.sol#L208)
+
+{% embed url="https://github.com/aave/protocol-v2/blob/baeb455fad42d3160d571bd8d3a795948b72dd85/contracts/protocol/libraries/logic/ReserveLogic.sol#L57" %}
+
+#### [https://github.com/aave/protocol-v2/blob/baeb455fad42d3160d571bd8d3a795948b72dd85/contracts/protocol/libraries/math/MathUtils.sol#L21](https://github.com/aave/protocol-v2/blob/baeb455fad42d3160d571bd8d3a795948b72dd85/contracts/protocol/libraries/math/MathUtils.sol#L21)
+
 #### Reward 計算方式
 
 每次借款與貸款的總數有變動時都會影響 APY，但實際計算要給地址多少獎勵時並不是乘以 APY，而是合約在每次池子兩邊數量變動的時候記錄當下時間與
