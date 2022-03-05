@@ -1,4 +1,6 @@
-# solidity 語言
+# solidity 教學
+
+Solidity 語言為撰寫 Ethereum smart contract 智能合約的程式語言，之後會跑在 EVM 上面。
 
 ## Global variable
 
