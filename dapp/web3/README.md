@@ -2,7 +2,7 @@
 
 ## 前言
 
-我們這邊使用React.js前端框架來建構UI並使用web3.js來與剛才建立的RPC server溝通，達到一個網頁控制區塊鏈的Dapp
+我們這邊使用 React.js 前端框架來建構 UI 並使用 web3.js 來與剛才建立的 RPC server 溝通，達到一個網頁控制區塊鏈的Dapp
 
 ## 2021 更新： Metamask connect to web3
 
@@ -23,7 +23,7 @@ ethEnabled();
 
 ## 安裝React
 
-因為官方有出一個快速環境包，所以我們使用這個不用在自己架設環境
+使用 create-react-app 建構前端環境
 
 ```
 npm install -g create-react-app
