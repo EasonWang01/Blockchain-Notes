@@ -1,16 +1,14 @@
 # Bitcoin原理與實作
 
-## #錢包
+## 錢包
 
-```
-錢包裡面含有多個Bitcoin Address以及公私鑰
-```
+> 錢包裡面含有多個Bitcoin Address以及公私鑰
 
-錢包加密SourceCode: [https://github.com/bitcoin/bitcoin/blob/af563971fcbece3659f501329afa9dc84ed733b2/src/wallet/crypter.cpp](https://github.com/bitcoin/bitcoin/blob/af563971fcbece3659f501329afa9dc84ed733b2/src/wallet/crypter.cpp)
+錢包加密 source code: [https://github.com/bitcoin/bitcoin/blob/af563971fcbece3659f501329afa9dc84ed733b2/src/wallet/crypter.cpp](https://github.com/bitcoin/bitcoin/blob/af563971fcbece3659f501329afa9dc84ed733b2/src/wallet/crypter.cpp)
 
 [https://en.bitcoin.it/wiki/Wallet\_encryption](https://en.bitcoin.it/wiki/Wallet\_encryption)
 
-## #產生公鑰和私鑰與比特幣地址
+## 產生公鑰和私鑰與比特幣地址
 
 ![](.gitbook/assets/地址生成圖.png)
 
@@ -76,7 +74,7 @@ console.log(address);
 console.log('--------')
 ```
 
-## #genesis block
+## Genesis block
 
 也稱為創世區塊，為區塊鏈在一開始產生時的區塊
 
@@ -97,7 +95,7 @@ console.log('--------')
 bitcoin genesis 創建的原始碼\
 [https://github.com/bitcoin/bitcoin/blob/3955c3940eff83518c186facfec6f50545b5aab5/src/chainparams.cpp#L123](https://github.com/bitcoin/bitcoin/blob/3955c3940eff83518c186facfec6f50545b5aab5/src/chainparams.cpp#L123)
 
-## #Merkle tree
+## Merkle tree
 
 區塊鏈中的每個區塊都包含了產生於該區塊的所有交易，且以Merkle樹表示
 
@@ -148,7 +146,7 @@ var root = crypto256(crypto256(hash1_hash2 + hash3_hash4));
 console.log('Merkle Root為:' + root);
 ```
 
-## #挖礦
+## 挖礦
 
 在挖礦過程中成功“挖出”新區塊的礦工可以得到該區塊中包含的所有交易手續費。目前，這筆費用占礦工收入的0.5%或更少，大部分收益仍來自挖礦所得的比特幣獎勵
 
@@ -212,7 +210,7 @@ while(1) {
 >
 > [https://en.bitcoin.it/wiki/Confirmation](https://en.bitcoin.it/wiki/Confirmation)
 
-## #廣播與驗證交易
+## 廣播與驗證交易
 
 [https://en.bitcoin.it/wiki/Protocol\_rules#.22tx.22\_messages](https://en.bitcoin.it/wiki/Protocol\_rules#.22tx.22\_messages)
 
@@ -226,7 +224,7 @@ while(1) {
 >
 > 主要是避免Double spend(發出同樣的交易兩次)
 
-## #難度difficulty的更改
+## 難度difficulty的更改
 
 [https://en.bitcoin.it/wiki/Difficulty](https://en.bitcoin.it/wiki/Difficulty)
 
@@ -307,11 +305,11 @@ target = 0x03a30c * 2^(0x08 * (0x19 - 0x03))
 
 ![](<.gitbook/assets/螢幕快照 2017-11-16 上午8.58.12.png>)
 
-## #從TXid hash找出某筆交易詳細訊息
+## 從TXid hash找出某筆交易詳細訊息
 
 會有一個HASH表，所以用很短的時間複雜度即可從hash對應到直接的資訊，也因為這些txid的hash之後會在兩兩加密為merkel tree 並將merkel root 存在block中，所以就算可以看到資訊也不怕被修改，具有hash通常都有hash table可以查到它裡面對應的值
 
-## #新加入節點如何找到其他節點
+## 新加入節點如何找到其他節點
 
 利用寫在原始碼的DNS seed
 
