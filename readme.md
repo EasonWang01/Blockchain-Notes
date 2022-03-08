@@ -1,26 +1,26 @@
 # BitcoinJS
 
-## \#簡介:
+## 簡介:
 
 操作相關bitcoin的API提供者
 
 [https://blockexplorer.com/api-ref](https://blockexplorer.com/api-ref)
 
-[https://github.com/blockchain/service-my-wallet-v3](https://github.com/blockchain/service-my-wallet-v3) \(此為跑在自己local端的server\)
+[https://github.com/blockchain/service-my-wallet-v3](https://github.com/blockchain/service-my-wallet-v3) (此為跑在自己local端的server)
 
 [https://www.block.io/docs](https://www.block.io/docs)
 
-[https://blockchain.info/api/blockchain\_api](https://blockchain.info/api/blockchain_api)
+[https://blockchain.info/api/blockchain\_api](https://blockchain.info/api/blockchain\_api)
 
 [https://chainquery.com/bitcoin-api/getinfo](https://chainquery.com/bitcoin-api/getinfo)
 
-[https://github.com/bitcoinj/bitcoinj](https://github.com/bitcoinj/bitcoinj) \(Java寫的Bitcoin核心 也可使用Nashore來執行javascript\)
+[https://github.com/bitcoinj/bitcoinj](https://github.com/bitcoinj/bitcoinj) (Java寫的Bitcoin核心 也可使用Nashore來執行javascript)
 
 [https://www.smartbit.com.au/api](https://www.smartbit.com.au/api)
 
-\#直接與本地的Bitcoind 啟動的JSON-RPC溝通
+直接與本地的Bitcoind 啟動的JSON-RPC溝通
 
-```text
+```
 https://en.bitcoin.it/wiki/API_reference_(JSON-RPC)
 ```
 
@@ -30,13 +30,13 @@ https://en.bitcoin.it/wiki/API_reference_(JSON-RPC)
 
 [https://github.com/bitcoinjs/bitcoinjs-lib/blob/9bae30d1121a9d382f2f461fad0194a0e97dfd1e/test/integration/addresses.js](https://github.com/bitcoinjs/bitcoinjs-lib/tree/9bae30d1121a9d382f2f461fad0194a0e97dfd1e/test/integration)
 
-```text
+```
 npm install bitcoinjs-lib
 ```
 
 產生隨機地址
 
-```text
+```
 var bitcoin = require('bitcoinjs-lib');
 var keyPair = bitcoin.ECPair.makeRandom()
 
@@ -66,7 +66,7 @@ console.log(address)
 
 把WIF格式的私鑰轉換為地址
 
-```text
+```
     var bitcoin = require('bitcoinjs-lib');
     var keyPair = bitcoin.ECPair.fromWIF('Kxr9tQED9H44gCmp6HAdmemAzU3n84H3dGkuWTKvE23JgHMW8gct');
     var address = keyPair.getAddress();
@@ -105,14 +105,14 @@ console.log(tx.build().toHex());
 
 產生較複雜的交易，並廣播到Bitcoin Test Network
 
-```text
+```
 git clone https://github.com/bitcoinjs/bitcoinjs-lib.git
 cd bitcoinjs-lib
 npm install
 cd /test/integration
 ```
 
-```text
+```
 點選transaction.js 然後把code整個刪掉改為如下
 ```
 
@@ -170,36 +170,36 @@ testnetUtils.faucetMany([
 
 之後會看到如下輸出
 
-```text
+```
 funding n2n3vHe6BHUwKybSsSSUXK1CtFTafzmR62 w/ 50000
 funding mvvrViCXRZD1czZduc4xCixmfG7DpZ7Lkb w/ 70000
 ```
 
 進入到此網站[https://live.blockcypher.com/btc-testnet](https://live.blockcypher.com/btc-testnet)
 
-然後在右上角輸入地址 即可查看剛才的交易紀錄\(需要稍等一段時間\)
+然後在右上角輸入地址 即可查看剛才的交易紀錄(需要稍等一段時間)
 
-> 一篇不錯的教學:  
-> [https://medium.com/@orweinberger/how-to-create-a-raw-transaction-using-bitcoinjs-lib-1347a502a3a\#.gbnwu2863](https://medium.com/@orweinberger/how-to-create-a-raw-transaction-using-bitcoinjs-lib-1347a502a3a#.gbnwu2863)
+> 一篇不錯的教學:\
+> [https://medium.com/@orweinberger/how-to-create-a-raw-transaction-using-bitcoinjs-lib-1347a502a3a#.gbnwu2863](https://medium.com/@orweinberger/how-to-create-a-raw-transaction-using-bitcoinjs-lib-1347a502a3a#.gbnwu2863)
 
-### \#查看上次交易的Txid:
+### 查看上次交易的Txid:
 
-[https://blockchain.info/](https://blockchain.info/)
+[https://blockchain.info/](https://blockchain.info)
 
 到上面網站的輸入框輸入你的比特幣地址即可看到
 
-### \#把產生的交易hex廣播到bitcoin network
+### 把產生的交易hex廣播到bitcoin network
 
 先到
 
 [https://live.blockcypher.com/btc/pushtx/](https://live.blockcypher.com/btc/pushtx/)
 
-\(另外一個廣播交易的blockchain.info其廣播後的訊息較不明確，只會產生例如code=-25,-26等訊息，[blockcypher](https://live.blockcypher.com/btc/pushtx/)會明確顯示原因\)
+(另外一個廣播交易的blockchain.info其廣播後的訊息較不明確，只會產生例如code=-25,-26等訊息，[blockcypher](https://live.blockcypher.com/btc/pushtx/)會明確顯示原因)
 
-1.貼上如下  
-\(此為確實發生的以前交易，但unspend已經被花掉了\)
+1.貼上如下\
+(此為確實發生的以前交易，但unspend已經被花掉了)
 
-```text
+```
 0100000001313eb630b128102b60241ca895f1d0ffca2170d5a0990e094f2182c102ab94aa000000006b483045022100aefbcf847900b01dd3e3debe054d3b6d03d715d50aea8525f5ea3396f168a1fb022013d181d05b15b90111808b22ef4f9ebe701caf2ab48db269691fdf4e9048f4f60121029f50f51d63b345039a290c94bffd3180c99ed659ff6ea6b1242bca47eb93b59fffffffff01983a0000000000001976a914ad618cf4333b3b248f9744e8e81db2964d0ae39788ac00000000
 ```
 
@@ -207,11 +207,10 @@ funding mvvrViCXRZD1czZduc4xCixmfG7DpZ7Lkb w/ 70000
 
 2.試看看如下
 
-\(此為確實發生的以前交易，已經發生過此交易，但unspend尚存在\)
+(此為確實發生的以前交易，已經發生過此交易，但unspend尚存在)
 
-```text
+```
 01000000018b15b543d8a16ea86a83d325387f27897dd273d5d229398faf2b49e506718ed1010000006b483045022100936c08bb158f0769c5af3c15d97be2695fce235ba0377a56476adc91072c871d02206ffb9a57cdbc5462a7eaaeb9bb734214db2c4038e01f3178ae48fea0375a49100121025f1290847ee12913ea1e41b2a36e346001321bac436a3e47c3e7cd133b379b3bffffffff0108460200000000001976a91412d77f0ecfef452efa491af02c995441d25b4fdb88ac00000000
 ```
 
 3.然後試著把一些字隨便改掉上按送出看看
-
