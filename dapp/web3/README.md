@@ -1,8 +1,8 @@
-# 在網頁上使用web3並操作區塊鏈
+# 在網頁上使用 web3 並操作區塊鏈
 
 ## 前言
 
-我們這邊使用 React.js 前端框架來建構 UI 並使用 web3.js 來與剛才建立的 RPC server 溝通，達到一個網頁控制區塊鏈的Dapp
+我們這邊使用 React.js 前端框架來建構 UI 並使用 web3.js 來與剛才建立的 RPC server 溝通，達到一個網頁控制區塊鏈的 DApp。
 
 ## 2021 更新： Metamask connect to web3
 

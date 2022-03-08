@@ -30,7 +30,7 @@
 * [ethereum(Dapp)](dapp/README.md)
   * [Remix](dapp/remix.md)
   * [web3 使用](dapp/web3-shi-yong.md)
-  * [在網頁上使用web3並操作區塊鏈](dapp/web3/README.md)
+  * [在網頁上使用 web3 並操作區塊鏈](dapp/web3/README.md)
     * [solidity筆記](dapp/web3/soliditybi-ji.md)
 * [Hyperledger Fabric](hyperledger-fabric.md)
 * [blockchainDB](blockchaindb.md)
