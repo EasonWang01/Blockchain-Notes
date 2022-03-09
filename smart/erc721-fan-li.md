@@ -28,5 +28,12 @@ contract NftExample is ERC721, Ownable {
 }
 ```
 
-[https://soliditydeveloper.com/erc-721](https://soliditydeveloper.com/erc-721)
+{% embed url="https://soliditydeveloper.com/erc-721" %}
 
+## Contract level data
+
+在合約使用public view 設置 opensea 上 collection 的基本資訊。
+
+> 如果沒設置之後 mint 後再到 opensea 設置也可以
+
+[https://docs.opensea.io/docs/contract-level-metadata](https://docs.opensea.io/docs/contract-level-metadata)
