@@ -200,6 +200,8 @@ gas 為以太坊上交易的手續費，會轉換成 eth 計算費用。
 
 gas price 一般用 Gwei 為單位，所以計算後交易手續費為（TX Fee) = 1050000 \*0.000000001 ETH = 0.0010500 ETH
 
+(小提醒：每天不同時段的 Gas price 會不同，依照網路上交易擁堵程度而定，通常白天時段的下午費用會比較低)
+
 > 當前網路上之 Gas price 可到此查詢
 >
 > [https://ethgasstation.info/](https://ethgasstation.info)
