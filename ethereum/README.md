@@ -177,5 +177,29 @@ PoA ( Proof of Authority)\
 
 礦工挖礦的難度，當礦工增加時難度會根據算法而增加。
 
-[https://2miners.com/eth-network-difficulty](https://2miners.com/eth-network-difficulty)
+{% embed url="https://2miners.com/eth-network-difficulty" %}
 
+## **Ethereum** Gas 計算
+
+gas 為以太坊上交易的手續費，會轉換成 eth 計算費用。
+
+分為 **Transaction costs 與 Execution costs**
+
+**Transaction costs** 總共有以下四種情況需要支付：
+
+1. (一般交易) the base cost of a transaction (21000 gas)
+2. (合約部署) the cost of a contract deployment (32000 gas)
+3. the cost for every **zero byte** of data or code for a transaction.
+4. the cost of every non-zero byte of data or code for a transaction.
+
+**Execution costs 則為執行合約時運算所需要消耗的資源而定，可參考下表**
+
+![](../.gitbook/assets/Ethereum-Yellow-Paper.png)
+
+以上表來說 value 指的是 gas unit 或 gas limit（多少單位的 gas），所以以太坊交易手續費計算方式則類似如下： 21000 (Gas Limit) x 50 Gwei (Gas Price)= 1050000 Gwei
+
+gas price 一般用 Gwei 為單位，所以計算後交易手續費為（TX Fee) = 1050000 \*0.000000001 ETH = 0.0010500 ETH
+
+> 當前網路上之 Gas price 可到此查詢
+>
+> [https://ethgasstation.info/](https://ethgasstation.info)
