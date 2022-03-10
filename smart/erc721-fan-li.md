@@ -38,7 +38,25 @@ contract NftExample is ERC721, Ownable {
 
 ![](<../.gitbook/assets/截圖 2022-03-10 上午10.13.02.png>)
 
-[https://www.azuki.com/erc721a](https://www.azuki.com/erc721a)
+{% embed url="https://www.azuki.com/erc721a" %}
+
+#### 使用方式
+
+```javascript
+contract test is Ownable, ERC721A {
+	constructor(
+	  ...
+	) ERC721A(
+		name, 
+		symbol, 
+		maxBatchMint, 
+		collectionSize) {}
+        function testmint(uint amount) external nonReentrant payable{
+		require(msg.value == price, "Price is not correct");
+		_safeMint(msg.sender, amount);
+	}
+}
+```
 
 ## Contract level data
 
