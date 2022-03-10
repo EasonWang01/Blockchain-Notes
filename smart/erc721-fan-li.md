@@ -30,6 +30,16 @@ contract NftExample is ERC721, Ownable {
 
 {% embed url="https://soliditydeveloper.com/erc-721" %}
 
+## ERC721A 教學
+
+為 ERC721 的改良版 (多了個 A) 主要用意是讓玩家如果一次 mint 多個 NFT 時可以減少 gas fee， 發明者為 azuki 專案。
+
+可以看到如下表格，當一次 mint 五個的時候，在以前 ERC721 標準下要執行五次 mint function，但 ERC721A 可以在 mint function 內加上第二個參數 (mint 的數量)，讓你一次 mint 多個，減少了不少 gas 花費。
+
+![](<../.gitbook/assets/截圖 2022-03-10 上午10.13.02.png>)
+
+[https://www.azuki.com/erc721a](https://www.azuki.com/erc721a)
+
 ## Contract level data
 
 在合約使用public view 設置 opensea 上 collection 的基本資訊。
