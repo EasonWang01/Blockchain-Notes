@@ -49,7 +49,6 @@ contract test is Ownable, ERC721A {
 	) ERC721A(
 		name, 
 		symbol, 
-		maxBatchMint, 
 		collectionSize) {}
         function testmint(uint amount) external nonReentrant payable{
 		require(msg.value == price, "Price is not correct");
