@@ -108,3 +108,7 @@ npx hardhat test --network localhost
 ```
 通常是直接使用 hardhat vm 部署與測試合約所產生，可改用 hardhat localhost node 試試
 ```
+
+2.Error HH12: Trying to use a non-local installation of Hardhat
+
+[https://stackoverflow.com/a/69973620/4622645](https://stackoverflow.com/a/69973620/4622645)
