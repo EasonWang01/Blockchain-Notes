@@ -188,7 +188,7 @@ console.log('signer1', signer1)
         localStorage.removeItem(accountSigLocalStorageKey);
       }
     };
-
+    checkActive();
     setInterval(checkActive, 1500);
   };
 ```
