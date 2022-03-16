@@ -148,6 +148,41 @@ const signer1 = EthCrypto.recover(
 console.log('signer1', signer1)
 ```
 
+## 處理重新整理頁面時的 web3 地址顯示
+
+```javascript
+useEffect(() => {
+    if(localStorage.getItem("account")){
+      initWeb3();
+    }
+  }, []);
+
+  const initWeb3 = async () => {
+    if (window.ethereum) {
+      window.web3 = new Web3(window.ethereum);
+      window.ethereum.enable();
+    }
+    try {
+      var web3 = window.web3;
+      var web3 = new Web3(web3.currentProvider);
+    } catch (err) {
+      alert("Please install Metamask first");
+    }
+    const accounts = await web3.eth.getAccounts();
+    localStorage.setItem("account", accounts[0]);
+    const checkActive = async () => {
+      const accounts = await web3.eth.getAccounts();
+      setCurrentAccount(accounts[0]);
+      if(!accounts[0]) {
+        localStorage.removeItem("account");
+      }
+    };
+
+    setInterval(checkActive, 1500);
+  };
+
+```
+
 ## 注意事項
 
 使用 CRA 5 版本以上引入 web3 會出現 error
