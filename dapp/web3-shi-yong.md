@@ -148,11 +148,11 @@ const signer1 = EthCrypto.recover(
 console.log('signer1', signer1)
 ```
 
-## 處理重新整理頁面時的 web3 地址顯示
+## 重新整理與初始化頁面時的 web3 地址顯示與簽名
 
 ```javascript
-useEffect(() => {
-    if(localStorage.getItem("account")){
+  useEffect(() => {
+    if (localStorage.getItem(accountLocalStorageKey)) {
       initWeb3();
     }
   }, []);
@@ -168,19 +168,29 @@ useEffect(() => {
     } catch (err) {
       alert("Please install Metamask first");
     }
-    const accounts = await web3.eth.getAccounts();
-    localStorage.setItem("account", accounts[0]);
+
     const checkActive = async () => {
       const accounts = await web3.eth.getAccounts();
+      if (accounts[0] && !localStorage.getItem(accountLocalStorageKey)) {
+        // Init
+        localStorage.setItem(accountLocalStorageKey, accounts[0]);
+        setCurrentAccount(accounts[0]);
+        var signature = await web3.eth.personal.sign(
+          signMsg,
+          accounts[0]
+        );
+        localStorage.setItem(accountSigLocalStorageKey, signature);
+        console.log(signature);
+      }
       setCurrentAccount(accounts[0]);
-      if(!accounts[0]) {
-        localStorage.removeItem("account");
+      if (!accounts[0]) {
+        localStorage.removeItem(accountLocalStorageKey);
+        localStorage.removeItem(accountSigLocalStorageKey);
       }
     };
 
     setInterval(checkActive, 1500);
   };
-
 ```
 
 ## 注意事項
