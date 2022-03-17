@@ -8,13 +8,13 @@ EVM 教學:
 
 [https://www.ideals.illinois.edu/bitstream/handle/2142/97207/hildenbrandt-saxena-zhu-rodrigues-guth-daian-rosu-2017-tr.pdf](https://www.ideals.illinois.edu/bitstream/handle/2142/97207/hildenbrandt-saxena-zhu-rodrigues-guth-daian-rosu-2017-tr.pdf)
 
+Calldata 原理：
 
+[https://hackernoon.com/getting-deep-into-evm-how-ethereum-works-backstage-ac7efa1f0015](https://hackernoon.com/getting-deep-into-evm-how-ethereum-works-backstage-ac7efa1f0015)
 
 有關 OPCODE:
 
 &#x20;[https://www.ethervm.io](https://www.ethervm.io/#PUSH1)
-
-
 
 OPCODE 反組譯：
 

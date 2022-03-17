@@ -318,3 +318,5 @@ const name = "f(uint256,uint32[],bytes10,bytes)";
 console.log(keccak256(name).slice(0, 8));
 //0x8be65246
 ```
+
+> 線上計算工具：[http://emn178.github.io/online-tools/keccak\_256.html](http://emn178.github.io/online-tools/keccak\_256.html)
