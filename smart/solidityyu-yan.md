@@ -296,4 +296,25 @@ abi.encodePacked(msg.sender, "t");
 
 產生方式可參考文件：
 
-[https://docs.soliditylang.org/en/develop/abi-spec.html#examples](https://docs.soliditylang.org/en/develop/abi-spec.html#examples)
+{% embed url="https://docs.soliditylang.org/en/develop/abi-spec.html#examples" %}
+
+## Method Id 產生方式
+
+使用 Keccak hash 後擷取前 4個 bytes
+
+![](<../.gitbook/assets/截圖 2022-03-17 上午10.02.38.png>)
+
+> Solidity 指的 sha3 跟 node.js sha3 因為算法關係與 NIST 標準制定關係，使用的計算方式不同，在&#x20;
+>
+> Node.js 中需要使用 Keccak256 才能計算出相同結果。
+
+使用 Node.js 之以下模組&#x20;
+
+{% embed url="https://github.com/emn178/js-sha3" %}
+
+```javascript
+const { keccak256 } = require("js-sha3");
+const name = "f(uint256,uint32[],bytes10,bytes)";
+console.log(keccak256(name).slice(0, 8));
+//0x8be65246
+```
