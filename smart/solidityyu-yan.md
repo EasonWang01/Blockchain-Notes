@@ -286,4 +286,14 @@ abi.encodePacked(msg.sender, "t");
 
 ## Call v.s Delegatecall
 
-[https://ethereum.stackexchange.com/questions/3667/difference-between-call-callcode-and-delegatecall](https://ethereum.stackexchange.com/questions/3667/difference-between-call-callcode-and-delegatecall)
+{% embed url="https://ethereum.stackexchange.com/questions/3667/difference-between-call-callcode-and-delegatecall" %}
+
+## Transaction Input Data 產生方式
+
+原先的 function 名稱與參數會用特定方式 encode 後串接產生 Input data 如下圖
+
+![](<../.gitbook/assets/截圖 2022-03-17 上午9.41.59.png>)
+
+產生方式可參考文件：
+
+[https://docs.soliditylang.org/en/develop/abi-spec.html#examples](https://docs.soliditylang.org/en/develop/abi-spec.html#examples)
