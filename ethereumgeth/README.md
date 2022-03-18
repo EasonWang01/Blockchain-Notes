@@ -4,8 +4,9 @@
 
 ## 簡介
 
-[https://geth.ethereum.org/](https://geth.ethereum.org)\
-ethereum的Go語言實現
+Geth 為 ethereum的Go語言實現
+
+[https://geth.ethereum.org/](https://geth.ethereum.org)
 
 ## 安裝
 
