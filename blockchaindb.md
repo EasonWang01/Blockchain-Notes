@@ -2,13 +2,13 @@
 
 此為python寫的資料庫，需使用python3來安裝
 
-## \#安裝
+## 安裝
 
 安裝相關套件
 
 [https://docs.bigchaindb.com/projects/py-driver/en/latest/quickstart.html](https://docs.bigchaindb.com/projects/py-driver/en/latest/quickstart.html)
 
-```text
+```
 brew install python3
 
 pip3 install bigchaindb_driver
@@ -22,7 +22,7 @@ pip install --upgrade setuptools
 
 [https://docs.bigchaindb.com/projects/py-driver/en/latest/contributing.html](https://docs.bigchaindb.com/projects/py-driver/en/latest/contributing.html)
 
-```text
+```
 git clone https://github.com/bigchaindb/bigchaindb-driver.git
 
 cd bigchaindb-driver
@@ -37,7 +37,7 @@ $ docker-compose up -d bdb-server
 
 執行完以下她會給你一個url記得把他填入以下範例程式的連線url
 
-```text
+```
 docker-compose port bdb-server 9984
 ```
 
@@ -45,7 +45,7 @@ docker-compose port bdb-server 9984
 
 test.py
 
-```text
+```
 from bigchaindb_driver import BigchainDB
 from bigchaindb_driver.crypto import generate_keypair
 bdb = BigchainDB('http://0.0.0.0:32773')
@@ -81,4 +81,3 @@ print(fulfilled_creation_tx)
 
 sent_creation_tx = bdb.transactions.send(fulfilled_creation_tx)
 ```
-
