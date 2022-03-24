@@ -181,6 +181,16 @@ PoA ( Proof of Authority)\
 
 ## **Ethereum** Gas 計算
 
+簡單來說：
+
+> Gas used \*  gas price \* (gwei to eth)
+
+`117159 * 52 * 0.000000001 =`0.006092268
+
+> 上面的 52 可以從下圖去查看 med gas price
+
+![](<../.gitbook/assets/截圖 2022-03-24 上午10.43.58.png>)
+
 gas 為以太坊上交易的手續費，會轉換成 eth 計算費用。
 
 分為 **Transaction costs 與 Execution costs**
