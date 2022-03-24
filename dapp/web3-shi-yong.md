@@ -27,7 +27,7 @@ const totalSupply = await ContractERC721.methods.totalSupply().call();
 console.log(totalSupply.toNumber())
 ```
 
-## Call tic
+## Call static
 
 https://ethereum.stackexchange.com/a/109992
 
@@ -35,7 +35,7 @@ https://ethereum.stackexchange.com/a/109992
 
 ## 監聽合約 Event&#x20;
 
-> 記得 infura 的測試網路 url 要填對，例如 nkeby 不要寫成 ropsten
+> 記得 infura 的測試網路 url 要填對，例如 Rinkeby 不要寫成 ropsten
 
 ```javascript
 const Web3 = require("web3");
