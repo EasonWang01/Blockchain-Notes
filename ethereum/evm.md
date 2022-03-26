@@ -18,6 +18,8 @@ Calldata 原理：
 
 OPCODE 反組譯：
 
+[https://ethereum.org/en/developers/tutorials/reverse-engineering-a-contract/](https://ethereum.org/en/developers/tutorials/reverse-engineering-a-contract/)
+
 [https://etherscan.io/opcode-tool](https://etherscan.io/opcode-tool)
 
 
