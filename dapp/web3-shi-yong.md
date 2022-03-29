@@ -199,6 +199,22 @@ console.log('signer1', signer1)
   };
 ```
 
+## 建立 raw transaction
+
+建立交易但不廣播：
+
+web3.js 版本
+
+```
+myContract.methods.myMethod(123).encodeABI();
+```
+
+&#x20;ether.js 版本
+
+```javascript
+myContract.populateTransaction.myMethod(123);
+```
+
 ## 注意事項
 
 使用 CRA 5 版本以上引入 web3 會出現 error
