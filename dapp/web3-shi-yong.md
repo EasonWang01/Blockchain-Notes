@@ -215,6 +215,29 @@ myContract.methods.myMethod(123).encodeABI();
 myContract.populateTransaction.myMethod(123);
 ```
 
+## 單位換算
+
+不同 ERC-20 合約 token 有不同的 decimals，例如 USDC 為 6，大部分為 18 等等。
+
+#### 讀取合約餘額然後到網頁顯示
+
+今天讀取到合約的 balanceOf 後會需要除以 decimals，例如 `balance / 1e18`
+
+#### 換算回原本的精度然後寫回合約
+
+如果今天合約是要 deposit ，並且用原本 token 的精度的話，已經除以 1e18 的數字可以如下返回原本的精度，然後寫回合約，記得要用 bigNumber，不然 js 會有問題。
+
+```javascript
+  const toBN18 = (value) => {
+    const web3Utils = window.web3.utils;
+    return new web3Utils.BN(
+      web3Utils.toWei(String(value)) // toWei 剛好為 * 1e18
+    );
+  }
+```
+
+&#x20;![](<../.gitbook/assets/截圖 2022-04-01 下午12.00.21.png>)
+
 ## 注意事項
 
 使用 CRA 5 版本以上引入 web3 會出現 error
