@@ -2,7 +2,11 @@
 
 ## 前言
 
-我們這邊使用 React.js 前端框架來建構 UI 並使用 web3.js 來與剛才建立的 RPC server 溝通，達到一個網頁控制區塊鏈的 DApp。
+Web3 與 Web2 的不同之處在於 "去中心化"，由分散且不同人運營的 Server 來進行交易的驗證與維護帳本。而在乙太坊上因為借力於智能合約，可以讓我們執行更多樣化的邏輯與交易，而為了讓用戶可以輕易地與這些智能合約互動，我們需要一個前端頁面，這時就是 Web3.js 發揮功能的時候。
+
+我們這邊使用 React.js 前端框架來建構 UI 並使用 web3.js (也可選擇使用 ether.js) 來與剛才建立的 RPC server 溝通，達到一個網頁控制區塊鏈的 DApp。
+
+用戶在與 Dapp 網頁互動的時候會於瀏覽器安裝 Metamask 擴充工具，其為一個區塊鏈錢包，用來存放代幣，並且於執行網頁互動時支付交易手續費。
 
 ## 2021 更新： Metamask connect to web3
 
@@ -21,7 +25,17 @@ const ethEnabled = () => {
 ethEnabled();
 ```
 
-## 安裝React
+### 其他連線 web3 方式
+
+Wallet Connect: [https://github.com/WalletConnect/web-examples](https://github.com/WalletConnect/web-examples)
+
+Ether.js: [https://docs.ethers.io/v4/api-providers.html](https://docs.ethers.io/v4/api-providers.html)
+
+Web3Modal: [https://github.com/Web3Modal/web3modal](https://github.com/Web3Modal/web3modal)
+
+## Dapp 範例
+
+#### 安裝 React
 
 使用 create-react-app 建構前端環境
 
