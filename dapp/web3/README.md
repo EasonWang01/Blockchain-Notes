@@ -37,7 +37,7 @@ Web3Modal: [https://github.com/Web3Modal/web3modal](https://github.com/Web3Modal
 
 #### 安裝 React
 
-使用 create-react-app 建構前端環境
+使用 create-react-app 建構前端環境，這邊我們選擇連線到自行架設的乙太坊測試節點 Geth。
 
 ```
 npm install -g create-react-app
@@ -264,7 +264,6 @@ class App extends Component {
   }
 
   componentWillMount() {
-    console.log(web3);
     window.tokenContract = web3.eth.contract(contract01.ABI).at(contract01.address); //初始化合約
     window.web3 = web3;
     web3.setProvider(new web3.providers.HttpProvider('http://localhost:8104')); //指定為RPC server的位置
@@ -278,7 +277,7 @@ class App extends Component {
   }
   render() {
     console.log(window.tokenContract);
-    //console.log(window.tokenContract.coinBalanceOf("0x66a2e289b35147188876c2007f9a810dd20e480d"))
+   
     return (
       <div className="App">
         <div className="App-header">
