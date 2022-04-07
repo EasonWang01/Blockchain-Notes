@@ -298,7 +298,7 @@ abi.encodePacked(msg.sender, "t");
 
 {% embed url="https://docs.soliditylang.org/en/develop/abi-spec.html#examples" %}
 
-## Method Id 產生方式
+## Method Id 產生方式 (function ID)
 
 使用 Keccak hash 後擷取前 4個 bytes
 
