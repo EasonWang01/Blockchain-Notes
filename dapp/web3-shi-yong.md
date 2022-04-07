@@ -1,4 +1,4 @@
-# web3 使用
+# web3.js 使用
 
 v1.0 有 API更改，以下以 v1.0 為主
 
@@ -237,6 +237,16 @@ myContract.populateTransaction.myMethod(123);
 ```
 
 &#x20;![](<../.gitbook/assets/截圖 2022-04-01 下午12.00.21.png>)
+
+## 轉換 blockNumber 為 timestamp
+
+> 轉為 UTC +8
+
+```javascript
+  const blockInfo = await web3.eth.getBlock(blockNumber);
+  const timestamp = (blockInfo.timestamp) * 1000 + (60 * 60 * 8 * 1000)
+  console.log(timestamp);
+```
 
 ## 注意事項
 
