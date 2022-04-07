@@ -320,3 +320,13 @@ console.log(keccak256(name).slice(0, 8));
 ```
 
 > 線上計算工具：[http://emn178.github.io/online-tools/keccak\_256.html](http://emn178.github.io/online-tools/keccak\_256.html)
+
+所以以這個 function 來說 `_setPriceOracle(address)`
+
+![](<../.gitbook/assets/截圖 2022-04-07 上午11.56.25.png>)
+
+method id 為 `55ee1fe1`，中間加上 24 個 0，後面 address 參數值為
+
+`d0c1ad7651c26c79bbca5920ccf5b1dde59f18b4`
+
+![](<../.gitbook/assets/截圖 2022-04-07 上午11.58.05.png>)
