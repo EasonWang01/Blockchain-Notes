@@ -80,6 +80,33 @@ graph deploy --studio <yaml 內 dataSources 的 name>
 
 部署到 local 節點就參考：https://thegraph.academy/developers/local-development/
 
+## 查看目前 subgraph 健康度
+
+hosted service 可用此 endpoint `https://api.thegraph.com/index-node/graphq`
+
+```
+indexingStatusForCurrentVersion(subgraphName: "org/subgraph") {
+  synced
+  health
+  fatalError {
+    message
+    block {
+      number
+      hash
+    }
+    handler
+  }
+  chains {
+    chainHeadBlock {
+      number
+    }
+    latestBlock {
+      number
+    }
+  }
+}
+```
+
 ## 相關事項
 
 graph-cli 版本 0.16 後有改變指令，如果要用舊版 cli 部署到 studio 或 host-service 可以如下使用 --node 參數
