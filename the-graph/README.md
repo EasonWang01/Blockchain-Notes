@@ -79,3 +79,15 @@ graph deploy --studio <yaml 內 dataSources 的 name>
 ```
 
 部署到 local 節點就參考：https://thegraph.academy/developers/local-development/
+
+## 相關事項
+
+graph-cli 版本 0.16 後有改變指令，如果要用舊版 cli 部署到 studio 或 host-service 可以如下使用 --node 參數
+
+> const HOSTED\_SERVICE\_URL = 'https://api.thegraph.com/deploy/'
+>
+> const SUBGRAPH\_STUDIO\_URL = 'https://api.studio.thegraph.com/deploy/'
+
+```
+npx graph deploy --access-token=<...> --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs <github username>/<subgraph name>
+```
