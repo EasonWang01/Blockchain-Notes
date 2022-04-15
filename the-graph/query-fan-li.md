@@ -10,7 +10,7 @@ description: 範例
 
 {% embed url="https://api.thegraph.com/subgraphs/name/aave/protocol-v2" %}
 
-## Market Data
+Market Data
 
 ```graphql
 {
@@ -54,6 +54,46 @@ description: 範例
     underlyingPriceUSD
   }
 }
+```
+
+## Uniswap
+
+[https://github.com/Uniswap/v2-subgraph/](https://github.com/Uniswap/v2-subgraph/)
+
+[https://thegraph.com/hosted-service/subgraph/easonwang01/uniswap?selected=playground](https://thegraph.com/hosted-service/subgraph/easonwang01/uniswap?selected=playground)
+
+user swap history
+
+```javascript
+{
+  swaps(where: { from: "0x0Baf7b79F9174c0840aa93a93a2c2A81044A09a2" }) {
+    transaction {
+      id
+      blockNumber
+      timestamp
+      swaps {
+        from
+        to
+        amountUSD
+        amount0In
+        amount1In
+        amount0Out
+        amount1Out
+        pair {
+          token0 {
+            symbol
+            name
+          }
+          token1 {
+            symbol
+            name
+          }
+        }
+      }
+    }
+  }
+}
+
 ```
 
 ## 其他範例
