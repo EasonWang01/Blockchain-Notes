@@ -4,6 +4,17 @@ description: 語法
 
 # mapping 語法
 
+## 判斷是否存過資料
+
+> 避免覆蓋原資料
+
+```javascript
+  let user = User.load(userId)
+  if (user === null) {
+    user = new User(userId)
+  }
+```
+
 ## 獲取區塊時間
 
 ```javascript
