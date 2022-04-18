@@ -42,6 +42,7 @@
 * [Solana 教學](solana-jiao-xue.md)
 * [Ethereum BigQuery](ethereum-bigquery.md)
 * [The Graph](the-graph/README.md)
+  * [mapping 語法](the-graph/mapping-yu-fa.md)
   * [Schema 定義](the-graph/schema-ding-yi.md)
   * [Query 範例](the-graph/query-fan-li.md)
   * [Unit test](the-graph/unit-test.md)
