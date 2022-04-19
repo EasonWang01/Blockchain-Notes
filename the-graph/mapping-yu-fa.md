@@ -61,3 +61,43 @@ type Pair @entity {
  ...
 }
 ```
+
+## 要用 null 判斷 entity 是否存過，不能用 or
+
+以下會出現錯誤：
+
+> 設定屬性不能用 or 要直接寫在 === null 判斷內。
+>
+> 另外如果變數沒用到還是要註解，不然仍會編譯進去產生錯誤
+
+```javascript
+ let userPairBalance = UserPairBalance.load(userPairBalanceId)
+ let userPairBalanceCurrent = userPairBalance.balance || BigDecimal.fromString('0')
+ if (userPairBalance !== null) {
+    userPairBalance = new UserPairBalance(userPairBalanceId)
+    if(type === "fromUser") {
+      userPairBalance.balance = userPairBalanceCurrent.minus(value)
+    }
+    if(type === "toUser") {
+      userPairBalance.balance = userPairBalanceCurrent.plus(value)
+    }
+ }   
+```
+
+正確用法：
+
+```javascript
+ let userPairBalance = UserPairBalance.load(userPairBalanceId)
+ if (userPairBalance !== null) {
+    if(type === "fromUser") {
+      userPairBalance.balance = userPairBalance.balance.minus(value)
+    }
+    if(type === "toUser") {
+      userPairBalance.balance = userPairBalance.balance.plus(value)
+    }
+  }
+if (userPairBalance === null) {
+  userPairBalance = new UserPairBalance(userPairBalanceId)
+  userPairBalance.balance = value
+}
+```
