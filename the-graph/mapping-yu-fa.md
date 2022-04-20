@@ -42,7 +42,14 @@ balance: BigDecimal!
 
 {% embed url="https://thegraph.com/docs/en/developer/assemblyscript-api#big-decimal" %}
 
-## Schema 內含 scheam
+## 呼叫其他 schema 的 function
+
+```javascript
+let tokenContract = TokenContract.bind(event.address);
+token.contentURI = tokenContract.tokenURI(event.params.tokenId);
+```
+
+## Schema 內含 schema
 
 ```javascript
 let pair = Pair.load(pairAddress.toHexString())
