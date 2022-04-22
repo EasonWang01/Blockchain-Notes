@@ -118,3 +118,23 @@ graph-cli 版本 0.16 後有改變指令，如果要用舊版 cli 部署到 stud
 ```
 npx graph deploy --access-token=<...> --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs <github username>/<subgraph name>
 ```
+
+## 相關範例
+
+#### OpenZeppelin:
+
+[https://github.com/OpenZeppelin/openzeppelin-subgraphs](https://github.com/OpenZeppelin/openzeppelin-subgraphs)
+
+#### NFT:
+
+[https://github.com/dabit3/custom-nft-subgraph-workshop](https://github.com/dabit3/custom-nft-subgraph-workshop)
+
+[https://github.com/dabit3/bored-ape-yacht-club-api-and-subgraph](https://github.com/dabit3/bored-ape-yacht-club-api-and-subgraph)
+
+&#x20;[https://github.com/dabit3/building-a-subgraph-workshop](https://github.com/dabit3/building-a-subgraph-workshop)
+
+#### DeFi:
+
+[https://github.com/token-terminal/tt-subgraphs](https://github.com/token-terminal/tt-subgraphs)
+
+&#x20;[https://github.com/messari/subgraphs](https://github.com/messari/subgraphs)
