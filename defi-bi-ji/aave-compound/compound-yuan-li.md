@@ -32,4 +32,6 @@ const cbusd = await ethers.getContractAt('CErc20Delegate', cBUSDDelegator.addres
 
 ## 相關利息參數
 
-[https://ian.pw/posts/2020-12-20-understanding-compound-protocols-interest-rates](https://ian.pw/posts/2020-12-20-understanding-compound-protocols-interest-rates)
+{% embed url="https://ian.pw/posts/2020-12-20-understanding-compound-protocols-interest-rates" %}
+
+[https://www.gushiciku.cn/pl/gXE6/zh-tw](https://www.gushiciku.cn/pl/gXE6/zh-tw)
