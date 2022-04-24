@@ -34,4 +34,10 @@ const cbusd = await ethers.getContractAt('CErc20Delegate', cBUSDDelegator.addres
 
 {% embed url="https://ian.pw/posts/2020-12-20-understanding-compound-protocols-interest-rates" %}
 
-[https://www.gushiciku.cn/pl/gXE6/zh-tw](https://www.gushiciku.cn/pl/gXE6/zh-tw)
+{% embed url="https://www.gushiciku.cn/pl/gXE6/zh-tw" %}
+
+## 相關事項
+
+1.新建 cToken 市場幣種之後必須要兩個人以上去 cToken supply 後才能去執行 redeem 或 borrow，不然 utilizationRate function 計算時 reserve 變 0 會產生 Error，整個市場變成不能用。
+
+> 解決方法為轉一些 underlyingAsset 到 cToken address
