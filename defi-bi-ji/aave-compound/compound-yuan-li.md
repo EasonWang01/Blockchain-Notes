@@ -41,3 +41,7 @@ const cbusd = await ethers.getContractAt('CErc20Delegate', cBUSDDelegator.addres
 1.新建 cToken 市場幣種之後必須要兩個人以上去 cToken supply 後才能去執行 redeem 或 borrow，不然 utilizationRate function 計算時 reserve 變 0 會產生 Error，整個市場變成不能用。
 
 > 解決方法為轉一些 underlyingAsset 到 cToken address
+
+2.部署新幣時記得要先讓 oracle 設置價格後才能設置 collateral factor ，不然執行 `_setCollateralFactor` 會有 error
+
+![](<../../.gitbook/assets/截圖 2022-04-25 上午11.17.37.png>)
