@@ -45,3 +45,7 @@ const cbusd = await ethers.getContractAt('CErc20Delegate', cBUSDDelegator.addres
 2.部署新幣時記得要先讓 oracle 設置價格後才能設置 collateral factor ，不然執行 `_setCollateralFactor` 會有 error
 
 ![](<../../.gitbook/assets/截圖 2022-04-25 上午11.17.37.png>)
+
+3.可以使用 cToken.isDeprecated 來判斷某個 cToken 是否已沒在作用，
+
+![](<../../.gitbook/assets/截圖 2022-04-25 上午11.21.55.png>)
