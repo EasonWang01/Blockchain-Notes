@@ -107,6 +107,10 @@ npx hardhat test --network localhost
 
 [https://github.com/wighawag/hardhat-deploy#hardhat-deploy-in-a-nutshell](https://github.com/wighawag/hardhat-deploy#hardhat-deploy-in-a-nutshell)
 
+## 相關連結
+
+範例專案：[https://github.com/symfoni/hardhat-react-boilerplate](https://github.com/symfoni/hardhat-react-boilerplate)
+
 ## 常見問題
 
 1.Error: call revert exception
