@@ -101,6 +101,12 @@ npx hardhat test --network localhost
 
 會監聽檔案改變，自動跑測試，並且可在 config 寫要執行哪個檔案
 
+## Hardhat 部署到正式網或測試網
+
+可使用 hardhat deploy plugin
+
+[https://github.com/wighawag/hardhat-deploy#hardhat-deploy-in-a-nutshell](https://github.com/wighawag/hardhat-deploy#hardhat-deploy-in-a-nutshell)
+
 ## 常見問題
 
 1.Error: call revert exception

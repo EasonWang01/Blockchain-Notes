@@ -46,6 +46,6 @@ const cbusd = await ethers.getContractAt('CErc20Delegate', cBUSDDelegator.addres
 
 ![](<../../.gitbook/assets/截圖 2022-04-25 上午11.17.37.png>)
 
-3.可以使用 cToken.isDeprecated 來判斷某個 cToken 是否已沒在作用，
+3.可以使用 cToken.isDeprecated 來判斷某個 cToken 是否已沒在作用，\_setCollateralFactor 與\_setReserveFactor 為 0 以及 \_setBorrowPaused 為 true 即可。
 
 ![](<../../.gitbook/assets/截圖 2022-04-25 上午11.21.55.png>)
