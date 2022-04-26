@@ -36,6 +36,31 @@ const cbusd = await ethers.getContractAt('CErc20Delegate', cBUSDDelegator.addres
 
 {% embed url="https://www.gushiciku.cn/pl/gXE6/zh-tw" %}
 
+## 部署後可呼叫方法
+
+提款：
+
+cToken -> `_reduceReserves`
+
+利息參數：
+
+https://observablehq.com/@jflatow/compound-interest-rates
+
+後續設置:
+
+&#x20;interestRateModel: cToken -> `_setInterestRateModel`
+
+升級 cToken:
+
+&#x20;`cTokenDelegator._setImplementation(address(cTokenDelegate), false, 0x)`
+
+升級 comptrolller:&#x20;
+
+```
+unitroller._setPendingImplementation(<new comproller address>); 
+unitroller._become();
+```
+
 ## 相關事項
 
 1.新建 cToken 市場幣種之後必須要兩個人以上去 cToken supply 後才能去執行 redeem 或 borrow，不然 utilizationRate function 計算時 reserve 變 0 會產生 Error，整個市場變成不能用。
