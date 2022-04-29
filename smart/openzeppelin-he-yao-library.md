@@ -30,3 +30,27 @@ contract Test is ERC721Enumerable, ReentrancyGuard, Ownable {
 或是
 
 ![](<../.gitbook/assets/截圖 2021-05-05 上午9.53.38.png>)
+
+## Access control
+
+可用來賦予不同的地址執行函數的權限。
+
+{% embed url="https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/AccessControl.sol" %}
+
+```javascript
+contract token is ERC20, AccessControl {
+
+
+    grantRole(DEFAULT_ADMIN_ROLE, msg.sender); // 讓 msg.sender 為 DEFAULT_ADMIN_ROLE 
+    // _grantRole 的角色為 32byte sha3 算出來的，使用字串來產生 sha3 
+    
+    hasRole(bytes32 role, address account) // 確認地址擁有權限
+  
+    bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
+    // 使用 onlyRole 來限制某權限角色才可執行
+f   function mint(address to, uint256 amount) public onlyRole(MINTER_ROLE) { 
+
+    }
+  }
+}
+```
