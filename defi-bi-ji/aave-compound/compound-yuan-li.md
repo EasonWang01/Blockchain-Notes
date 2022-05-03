@@ -61,6 +61,14 @@ unitroller._setPendingImplementation(<new comproller address>);
 unitroller._become();
 ```
 
+獲取 user 餘額
+
+```javascript
+uint balanceOf = cToken.balanceOf(account); // cToken 餘額
+uint borrowBalanceCurrent = cToken.borrowBalanceCurrent(account); // borrow 餘額
+uint balanceOfUnderlying = cToken.balanceOfUnderlying(account); // supply 餘額
+```
+
 ## 相關事項
 
 1.新建 cToken 市場幣種之後必須要兩個人以上去 cToken supply 後才能去執行 redeem 或 borrow，不然 utilizationRate function 計算時 reserve 變 0 會產生 Error，整個市場變成不能用。
