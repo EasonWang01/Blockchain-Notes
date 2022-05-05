@@ -36,9 +36,6 @@ const cbusd = await ethers.getContractAt('CErc20Delegate', cBUSDDelegator.addres
 
 {% embed url="https://www.gushiciku.cn/pl/gXE6/zh-tw" %}
 
-[https://reurl.cc/zZZ4ma](https://reurl.cc/zZZ4ma)\
-[https://reurl.cc/n11A66](https://reurl.cc/n11A66)
-
 ## 部署後可呼叫方法
 
 提款：
