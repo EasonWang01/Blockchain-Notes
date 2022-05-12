@@ -42,9 +42,7 @@ balance: BigDecimal!
 
 {% embed url="https://thegraph.com/docs/en/developer/assemblyscript-api#big-decimal" %}
 
-## 呼叫合約的 function
-
-[https://thegraph.com/docs/en/developer/assemblyscript-api/#access-to-smart-contract-state](https://thegraph.com/docs/en/developer/assemblyscript-api/#access-to-smart-contract-state)
+## 呼叫其他 schema 的 function
 
 ```javascript
 let tokenContract = TokenContract.bind(event.address);

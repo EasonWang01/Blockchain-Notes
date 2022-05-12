@@ -36,6 +36,9 @@ const cbusd = await ethers.getContractAt('CErc20Delegate', cBUSDDelegator.addres
 
 {% embed url="https://www.gushiciku.cn/pl/gXE6/zh-tw" %}
 
+[https://reurl.cc/zZZ4ma](https://reurl.cc/zZZ4ma)\
+[https://reurl.cc/n11A66](https://reurl.cc/n11A66)
+
 ## 部署後可呼叫方法
 
 提款：
@@ -67,6 +70,26 @@ unitroller._become();
 uint balanceOf = cToken.balanceOf(account); // cToken 餘額
 uint borrowBalanceCurrent = cToken.borrowBalanceCurrent(account); // borrow 餘額
 uint balanceOfUnderlying = cToken.balanceOfUnderlying(account); // supply 餘額
+```
+
+## Compound subgraph
+
+[https://thegraph.com/hosted-service/subgraph/graphprotocol/compound-v2](https://thegraph.com/hosted-service/subgraph/graphprotocol/compound-v2)
+
+#### 1. 獲得 user cToken balance
+
+```
+{
+  account(id: "0x81080a7e991bcdddba8c2302a70f45d6bd369ab5") {
+    tokens {
+      symbol
+      cTokenBalance
+      market {
+        exchangeRate
+      }
+    }
+  }
+}
 ```
 
 ## 相關事項
