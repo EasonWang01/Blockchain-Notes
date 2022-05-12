@@ -78,6 +78,10 @@ uint balanceOfUnderlying = cToken.balanceOfUnderlying(account); // supply 餘額
 
 #### 1. 獲得 user cToken balance
 
+> ```
+> cTokenBalance * exchangeRate = undeerlying token balance
+> ```
+
 ```
 {
   account(id: "0x81080a7e991bcdddba8c2302a70f45d6bd369ab5") {
