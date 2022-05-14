@@ -79,7 +79,7 @@ uint balanceOfUnderlying = cToken.balanceOfUnderlying(account); // supply 餘額
 #### 1. 獲得 user cToken balance
 
 > ```
-> cTokenBalance * exchangeRate = undeerlying token balance
+> cTokenBalance * exchangeRate = underlying token balance
 > ```
 
 ```

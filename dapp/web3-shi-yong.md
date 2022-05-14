@@ -154,6 +154,10 @@ const signer1 = EthCrypto.recover(
 console.log('signer1', signer1)
 ```
 
+> 有時看到前端簽名的內容是比較格式化的，可以參考：sign-typed-data-v4
+>
+> [https://docs.metamask.io/guide/signing-data.html#sign-typed-data-v4](https://docs.metamask.io/guide/signing-data.html#sign-typed-data-v4)
+
 ## 重新整理與初始化頁面時的 web3 地址顯示與簽名
 
 ```javascript
