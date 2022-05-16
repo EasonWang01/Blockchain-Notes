@@ -76,18 +76,21 @@ uint balanceOfUnderlying = cToken.balanceOfUnderlying(account); // supply 餘額
 
 [https://thegraph.com/hosted-service/subgraph/graphprotocol/compound-v2](https://thegraph.com/hosted-service/subgraph/graphprotocol/compound-v2)
 
-#### 1. 獲得 user cToken balance
+#### 1. 獲得 user cToken balance 與當前 underlying borrow, supply 餘額
 
 > ```
-> cTokenBalance * exchangeRate = underlying token balance
+> cTokenBalance * exchangeRate = underlying token balanc 
 > ```
 
 ```
 {
-  account(id: "0x81080a7e991bcdddba8c2302a70f45d6bd369ab5") {
+  account(id: "0x785b9940eaf44be2b832c61816ff873b97a8ad63") {
+    hasBorrowed
     tokens {
       symbol
       cTokenBalance
+      supplyBalanceUnderlying
+      borrowBalanceUnderlying
       market {
         exchangeRate
       }
