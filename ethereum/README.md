@@ -9,7 +9,7 @@
 > 合約是一個活在以太坊系統內的自動代理人，他有一個自己的乙太幣地址，當用戶向合約的地址發送一筆交易後，該合約就被激活，然後根據交易中的額外信息，合約會運行自身的代碼，最後返回一個結果，這個結果可能是從合約的地址發出另外一筆交易
 
 查看交易資訊:\
-[https://etherchain.org/](https://etherchain.org)
+[https://etherchain.org/](https://etherchain.org/)
 
 產生乙太幣地址
 
@@ -44,7 +44,7 @@ var address = "0x" + address;  //
 console.log(address)
 ```
 
-之後到[https://etherscan.io/](https://etherscan.io) 右上輸入剛產生的地址確認是正確的格式
+之後到[https://etherscan.io/](https://etherscan.io/) 右上輸入剛產生的地址確認是正確的格式
 
 ## 常見名詞:
 
@@ -102,7 +102,7 @@ Ether單位
 
 ## 相關實用網站
 
-1、以太坊官方網站：[https://ethereum.org/](https://ethereum.org)
+1、以太坊官方網站：[https://ethereum.org/](https://ethereum.org/)
 
 2、以太坊原始碼（官方）：[https://github.com/ethereum/](https://github.com/ethereum/)
 
@@ -110,23 +110,23 @@ Ether單位
 
 4、以太坊網路狀態（官方）：[https://ethstats.Net](https://ethstats.net) /
 
-5、以太坊相關工具與資源網站（官方）：[http://ether.fund/](http://ether.fund)
+5、以太坊相關工具與資源網站（官方）：[http://ether.fund/](http://ether.fund/)
 
 6、Solidity說明文件（官方）：[http://solidity.readthedocs.io/en/latest/](http://solidity.readthedocs.io/en/latest/)
 
-7、以太坊網路掃描（官方）：[http://etherscan.io/](http://etherscan.io)
+7、以太坊網路掃描（官方）：[http://etherscan.io/](http://etherscan.io/)
 
-8、以太坊官方部落格：[https://blog.ethereum.org/](https://blog.ethereum.org)
+8、以太坊官方部落格：[https://blog.ethereum.org/](https://blog.ethereum.org/)
 
 9、以太坊wiki百科：[https://github.com/ethereum/wiki/wiki](https://github.com/ethereum/wiki/wiki)
 
-10、以太坊中文愛好者網站：[http://ethfa​​ns.org/](http://ethfans.org)
+10、以太坊中文愛好者網站：[http://ethfa​​ns.org/](http://ethfans.org/)
 
 11、以太坊的gitter的實時交流網站：[https://gitter.im/orgs/ethereum/rooms](https://gitter.im/orgs/ethereum/rooms)
 
-12、以太坊的官方論壇：[https://forum.ethereum.org/](https://forum.ethereum.org)
+12、以太坊的官方論壇：[https://forum.ethereum.org/](https://forum.ethereum.org/)
 
-13、以太坊第三方強大的IDE（Solidity IDE）：[https://live.ether.camp/](https://live.ether.camp)
+13、以太坊第三方強大的IDE（Solidity IDE）：[https://live.ether.camp/](https://live.ether.camp/)
 
 14、以太坊開發框架Truffle說明書：[http://truffle.readthedocs.io/en/latest/](http://truffle.readthedocs.io/en/latest/)
 
@@ -138,8 +138,8 @@ Ether單位
 
 取得免費的ether\
 [https://ropsten.ether.camp/transactions](https://ropsten.ether.camp/transactions)\
-[http://faucet.ropsten.be:3001/](http://faucet.ropsten.be:3001)\
-查看區塊情況 [https://testnet.etherscan.io/](https://testnet.etherscan.io)
+[http://faucet.ropsten.be:3001/](http://faucet.ropsten.be:3001/)\
+查看區塊情況 [https://testnet.etherscan.io/](https://testnet.etherscan.io/)
 
 Aave testnet: [https://staging.aave.com/#/markets](https://staging.aave.com/#/markets)
 
@@ -147,7 +147,7 @@ Aave testnet: [https://staging.aave.com/#/markets](https://staging.aave.com/#/ma
 
 ## METAMASK
 
-[https://metamask.io/](https://metamask.io)
+[https://metamask.io/](https://metamask.io/)
 
 chrome的plugin，可以操作ethereum
 
@@ -157,7 +157,7 @@ chrome的plugin，可以操作ethereum
 
 ## 線上錢包(類似線上版的MIST)
 
-[https://wallet.ethereum.org/](https://wallet.ethereum.org)
+[https://wallet.ethereum.org/](https://wallet.ethereum.org/)
 
 安裝metamask後可以打開此網站，之後即可讀取本地錢包資料
 
@@ -214,4 +214,8 @@ gas price 一般用 Gwei 為單位，所以計算後交易手續費為（TX Fee)
 
 > 當前網路上之 Gas price 可到此查詢
 >
-> [https://ethgasstation.info/](https://ethgasstation.info)
+> [https://ethgasstation.info/](https://ethgasstation.info/)
+
+## 獲取地址在特定時間的 Token 餘額
+
+[https://etherscan.io/tokencheck-tool](https://etherscan.io/tokencheck-tool)
