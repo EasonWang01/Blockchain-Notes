@@ -42,11 +42,28 @@ balance: BigDecimal!
 
 {% embed url="https://thegraph.com/docs/en/developer/assemblyscript-api#big-decimal" %}
 
-## 呼叫其他 schema 的 function
+## 呼叫合約的 function
+
+[https://thegraph.com/docs/en/developer/assemblyscript-api/#access-to-smart-contract-state](https://thegraph.com/docs/en/developer/assemblyscript-api/#access-to-smart-contract-state)
 
 ```javascript
 let tokenContract = TokenContract.bind(event.address);
 token.contentURI = tokenContract.tokenURI(event.params.tokenId);
+```
+
+處理相關 revert 情況
+
+> 使用 try\_ : [https://thegraph.com/docs/en/developer/assemblyscript-api/#handling-reverted-calls](https://thegraph.com/docs/en/developer/assemblyscript-api/#handling-reverted-calls)
+
+```javascript
+  let craftmanAddress = '0x0000000';
+  let craftmanContract = Craftman.bind(Address.fromString(craftmanAddress));
+  let poolInfo = craftmanContract.try_poolInfo(event.params.pid);
+  if (poolInfo.reverted) {
+    log.info('poolInfo reverted', [])
+  } else {
+    log.info('callResult lptoken {}', [poolInfo.value.value0.toHexString()])
+  }
 ```
 
 ## Schema 內含 schema
