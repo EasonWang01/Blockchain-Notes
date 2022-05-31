@@ -297,7 +297,7 @@ target = 0x03a30c * 2^(0x08 * (0x19 - 0x03))
 
 也可以用以下網站來估計
 
-[http://bitcoin.web-share.nl/](http://bitcoin.web-share.nl)
+[http://bitcoin.web-share.nl/](http://bitcoin.web-share.nl/)
 
 先到[https://blockchain.info/charts/hash-rate](https://blockchain.info/charts/hash-rate) 查看現在平均的算力
 

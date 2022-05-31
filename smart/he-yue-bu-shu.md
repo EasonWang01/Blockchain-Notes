@@ -10,7 +10,7 @@
 
 2.之後建立帳號並到以下網址取得免費的幣
 
-[https://faucet.metamask.io/](https://faucet.metamask.io)
+[https://faucet.metamask.io/](https://faucet.metamask.io/)
 
 3.使用Remix部屬合約
 

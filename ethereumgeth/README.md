@@ -6,7 +6,7 @@
 
 Geth 為 ethereum的Go語言實現
 
-[https://geth.ethereum.org/](https://geth.ethereum.org)
+[https://geth.ethereum.org/](https://geth.ethereum.org/)
 
 ## 安裝
 

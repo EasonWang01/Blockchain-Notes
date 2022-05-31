@@ -184,7 +184,7 @@ module.exports = {
 
 2.隨機產生 mnemonic: [https://iancoleman.io/bip39/#english](https://iancoleman.io/bip39/#english)
 
-3.給予測試用 Ether: [https://faucet.ropsten.be/](https://faucet.ropsten.be)
+3.給予測試用 Ether: [https://faucet.ropsten.be/](https://faucet.ropsten.be/)
 
 ```javascript
 const HDWalletProvider = require("truffle-hdwallet-provider");

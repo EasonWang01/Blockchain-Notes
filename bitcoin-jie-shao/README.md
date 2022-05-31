@@ -24,7 +24,7 @@
 
 比特幣相關狀態
 
-[http://statoshi.info/](http://statoshi.info)
+[http://statoshi.info/](http://statoshi.info/)
 
 ## 安裝比特幣節點
 
@@ -32,7 +32,7 @@
 
 full node 意思是讓你電腦成為一個節點，擁有比特幣的開始到現在的所有交易訊息，並且你會需要幫忙認證區塊的正確性
 
-全世界的full node [https://bitnodes.21.co/](https://bitnodes.21.co)
+全世界的full node [https://bitnodes.21.co/](https://bitnodes.21.co/)
 
 上面的安裝需要至少90GB
 
@@ -128,7 +128,7 @@ getrawtransaction把交易哈希值（txid）當做一個參數，並且把整�
 
 ## 有關手續費
 
-[https://bitcoinfees.earn.com/](https://bitcoinfees.earn.com) (此網站可看到目前推薦的手續費與尚未確認的交易所含的手續費)
+[https://bitcoinfees.earn.com/](https://bitcoinfees.earn.com/) (此網站可看到目前推薦的手續費與尚未確認的交易所含的手續費)
 
 > 注意:他是以bytes為單位
 

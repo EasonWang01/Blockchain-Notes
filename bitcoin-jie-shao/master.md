@@ -188,7 +188,7 @@ funding mvvrViCXRZD1czZduc4xCixmfG7DpZ7Lkb w/ 70000
 
 ### 查看上次交易的Txid:
 
-[https://blockchain.info/](https://blockchain.info)
+[https://blockchain.info/](https://blockchain.info/)
 
 到上面網站的輸入框輸入你的比特幣地址即可看到
 

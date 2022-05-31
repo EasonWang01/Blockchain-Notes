@@ -32,6 +32,12 @@ function 名稱會用 sha3 轉為 hash:
 
 
 
+計算 TxID
+
+[https://ethereum.stackexchange.com/a/46526/30691](https://ethereum.stackexchange.com/a/46526/30691)
+
+[https://mp.weixin.qq.com/s/wtX7NVom9yJcYBw6s700Dg](https://mp.weixin.qq.com/s/wtX7NVom9yJcYBw6s700Dg)
+
 簡體版本的 go-ethereum 源碼分析：
 
 [https://github.com/ZtesoftCS/go-ethereum-code-analysis](https://github.com/ZtesoftCS/go-ethereum-code-analysis)
