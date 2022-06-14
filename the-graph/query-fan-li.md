@@ -108,6 +108,8 @@ user swap history
 
 ## Filter 欄位返回
 
+[https://thegraph.com/docs/en/developer/graphql-api/#filtering](https://thegraph.com/docs/en/developer/graphql-api/#filtering)
+
 query 時 filter 返回欄位用： `<欄位名稱>_in`
 
 ```javascript
