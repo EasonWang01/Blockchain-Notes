@@ -28,6 +28,7 @@
   * [合約部屬](smart/he-yue-bu-shu.md)
   * [solidity 教學](smart/solidityyu-yan.md)
 * [ethereum(Dapp)](dapp/README.md)
+  * [Ethers.js 使用](dapp/ethers.js-shi-yong.md)
   * [Remix](dapp/remix.md)
   * [web3.js 使用](dapp/web3-shi-yong.md)
   * [在網頁上使用 web3 並操作區塊鏈](dapp/web3/README.md)
