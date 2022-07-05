@@ -31,3 +31,26 @@ let contract = new ethers.Contract(contractAddress, abi, provider);
   console.log(currentValue);
 })()
 ```
+
+呼叫需要 msg.sender 的 function
+
+```javascript
+const { ethers } = require("ethers");
+const { abi } = require("./abi/...");
+
+let provider = new ethers.providers.InfuraProvider('rinkeby');
+
+let contractAddress = "0x...";
+
+let contract = new ethers.Contract(contractAddress, abi, provider);
+
+ let privateKey = '...';
+ let wallet = new ethers.Wallet(privateKey, provider);
+
+ let contractWithSigner = contract.connect(wallet);
+
+(async () => {
+  let currentValue = await contractWithSigner.getUserRefundList();
+  console.log(currentValue);
+})()
+```
