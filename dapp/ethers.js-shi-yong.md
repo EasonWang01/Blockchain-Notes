@@ -4,7 +4,6 @@
 
 ```javascript
 const { ethers } = require("ethers");
-const { abi } = require("./abi/..");
 
 let provider = new ethers.providers.InfuraProvider('rinkeby');
 
@@ -14,4 +13,21 @@ let provider = new ethers.providers.InfuraProvider('rinkeby');
      let etherString = ethers.utils.formatEther(balance);
      console.log("Balance: " + etherString);
  });
+```
+
+呼叫合約：
+
+```javascript
+const { ethers } = require("ethers");
+const { abi } = require("./abi/...");
+
+let provider = new ethers.providers.InfuraProvider('rinkeby');
+
+let contractAddress = "0x...";
+let contract = new ethers.Contract(contractAddress, abi, provider);
+
+(async () => {
+  let currentValue = await contract.symbol();
+  console.log(currentValue);
+})()
 ```
