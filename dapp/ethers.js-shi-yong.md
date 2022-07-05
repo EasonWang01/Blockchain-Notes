@@ -1,6 +1,6 @@
 # Ethers.js 使用
 
-讀取地址餘額：
+### 讀取地址餘額：
 
 ```javascript
 const { ethers } = require("ethers");
@@ -15,7 +15,7 @@ let provider = new ethers.providers.InfuraProvider('rinkeby');
  });
 ```
 
-呼叫合約：
+### 呼叫合約：
 
 ```javascript
 const { ethers } = require("ethers");
@@ -32,7 +32,19 @@ let contract = new ethers.Contract(contractAddress, abi, provider);
 })()
 ```
 
-呼叫需要 msg.sender 的 function
+### 前端使用 sendTransaction 與 signMessage
+
+```javascript
+const provider = new ethers.providers.Web3Provider(web3.currentProvider);
+const signer = provider.getSigner();
+
+const tx = await signer.sendTransaction(tx);
+const signature = await signer.signMessage("Hello world");
+```
+
+### 從後端呼叫 function
+
+> 後端所以需要直接填入私鑰
 
 ```javascript
 const { ethers } = require("ethers");
