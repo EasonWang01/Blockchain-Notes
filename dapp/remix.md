@@ -1,4 +1,4 @@
-# Remix
+# Remix IDE
 
 ### 1.Remix 為一個網頁的智能合約撰寫工具
 
