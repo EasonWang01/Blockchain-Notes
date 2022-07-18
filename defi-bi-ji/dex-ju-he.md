@@ -10,6 +10,8 @@ Quote 相關 API，搜尋最佳報價：
 
 #### [https://gist.github.com/miguelmota/e1d3fd0daf493913072a4c09fa6ab203](https://gist.github.com/miguelmota/e1d3fd0daf493913072a4c09fa6ab203)
 
+使用 /swap 獲得到 tx 後，使用 ether.js 發送 sendTransaction
+
 #### 0x:
 
 [https://docs.0x.org/0x-api-swap/api-references/get-swap-v1-quote](https://docs.0x.org/0x-api-swap/api-references/get-swap-v1-quote)
