@@ -219,6 +219,46 @@ myContract.methods.myMethod(123).encodeABI();
 myContract.populateTransaction.myMethod(123);
 ```
 
+## 後端使用私鑰發送交易
+
+```javascript
+const EthereumTx = require("ethereumjs-tx").Transaction;
+const Web3 = require("web3");
+const web3 = new Web3(
+  new Web3.providers.HttpProvider(
+    "https://ropsten.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
+  )
+);
+
+function signTx(tra) {
+  return new Promise(async (resolve, reject) => {
+    const prvKey = Buffer.from(process.env.prvkey, "hex");
+    const accountNonce = await web3.eth.getTransactionCount(process.env.ethereumAccount)
+    var tx = new EthereumTx(
+      {
+        nonce: accountNonce,
+        gasPrice: 100,
+        gasLimit: 100000,
+        value: 100000,
+      },
+      { chain: "ropsten" }
+    );
+    tx.sign(prvKey);
+    var stx = tx.serialize();
+    web3.eth.sendSignedTransaction("0x" + stx.toString("hex"), (err, hash) => {
+      if (err) {
+        console.log(err);
+        reject(err);
+        return;
+      }
+      resolve(hash);
+      console.log("tx creation: " + hash);
+    });
+  });
+}
+
+```
+
 ## 單位換算
 
 不同 ERC-20 合約 token 有不同的 decimals，例如 USDC 為 6，大部分為 18 等等。
