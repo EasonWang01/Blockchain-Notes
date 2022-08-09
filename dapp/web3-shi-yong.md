@@ -256,7 +256,17 @@ function signTx(tra) {
     });
   });
 }
+```
 
+轉帳交易的話 tx 內容改如下即可
+
+```javascript
+{
+      gasPrice: 12, // (gwei)
+      gasLimit: 21000, 
+      to: "to address",
+      value: Number(web3.utils.toWei("0.0001", "ether")),
+}
 ```
 
 ## 單位換算
