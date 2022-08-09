@@ -269,9 +269,18 @@ function signTx(tra) {
 }
 ```
 
+#### 如果出現 Invalid sender 的話記得檢查下 web3 rpc url 跟 chainid 有沒有對應：
+
+```javascript
+const web3 = new Web3(
+  new Web3.providers.HttpProvider("https://bsc-dataseed1.binance.org/")
+);
+const common = Common.custom({ chainId: 56 });
+```
+
 ## 單位換算
 
-不同 ERC-20 合約 token 有不同的 decimals，例如 USDC 為 6，大部分為 18 等等。
+不同 ERC-20 合約 token 有不同的 decimals，例如 USDC 為 6，大部分為  18 等等。
 
 #### 讀取合約餘額然後到網頁顯示
 
