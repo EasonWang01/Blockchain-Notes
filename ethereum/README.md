@@ -11,14 +11,14 @@
 查看交易資訊:\
 [https://etherchain.org/](https://etherchain.org/)
 
-產生乙太幣地址
+## 產生乙太幣地址
 
 [https://ethereum.stackexchange.com/questions/3542/how-are-ethereum-addresses-generated](https://ethereum.stackexchange.com/questions/3542/how-are-ethereum-addresses-generated)
 
 ```javascript
-var crypto = require('crypto');
-var ecdh = crypto.createECDH('secp256k1');
-var sha3 = require('js-sha3')
+const crypto = require('crypto');
+const ecdh = crypto.createECDH('secp256k1');
+const sha3 = require('js-sha3')
 
 
 var hash2 = crypto.randomBytes(32)
