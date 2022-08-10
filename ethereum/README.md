@@ -17,7 +17,6 @@
 
 ```javascript
 const crypto = require("crypto");
-const { publicKeyConvert } = require("secp256k1");
 const ecdh = crypto.createECDH("secp256k1");
 const sha3 = require("js-sha3");
 
@@ -33,17 +32,12 @@ console.log("公鑰");
 console.log(publickey); //公鑰(通過橢圓曲線算法可以從私鑰計算得到公鑰)
 console.log("--------");
 
-let publicKey1 = Buffer.from(
-  publicKeyConvert(Buffer.from(publickey, "hex"), false) // Reserialize public key to another format.
-).slice(1);
-
-var sha3_256Key = sha3.keccak256(publicKey1);
+var sha3_256Key = sha3.keccak256(Buffer.from(publickey, "hex").slice(1)); // pubkey 轉為 buffer 後移除第一位
 
 var address = sha3_256Key.substring(24, sha3_256Key.length); // 取後40字
 
 var address = "0x" + address; //
 console.log(address);
-// https://github.com/miguelmota/ethereum-public-key-to-address/blob/master/index.js
 ```
 
 之後到[https://etherscan.io/](https://etherscan.io/) 右上輸入剛產生的地址確認是正確的格式
