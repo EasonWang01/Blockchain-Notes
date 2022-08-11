@@ -301,6 +301,19 @@ const common = Common.custom({ chainId: 56 });
 
 &#x20;![](<../.gitbook/assets/截圖 2022-04-01 下午12.00.21.png>)
 
+## Approve max
+
+```javascript
+        const result1 = await tokenContract.methods
+          .approve(
+            VaultRelayerAddress,
+            String(new web3Utils.BN(String('100000000000' + 1 * `1e${token.decimal}`)))
+          )
+          .send({
+            from: accounts[0],
+          });
+```
+
 ## 轉換 blockNumber 為 timestamp
 
 > 轉為 UTC +8
