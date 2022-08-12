@@ -4,7 +4,9 @@
 
 有相關智能合約與前後端程式開發歡迎聯繫以下 Email。
 
-> 如果有圖片或文字之作者未標記的請來信到 yichengww@gmail.com 將會補上
+<mark style="background-color:yellow;">yichengww@gmail.com</mark>
+
+> 如果有使用到之圖片或文字之作者未標記的請來信
 >
 > 如需轉載本書之文字與程式碼請附上本書連結
 
