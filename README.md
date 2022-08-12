@@ -8,6 +8,10 @@
 >
 > 如需轉載本書之文字與程式碼請附上本書連結
 
+### 推薦閱讀：
+
+[https://www.books.com.tw/products/E050031639](https://www.books.com.tw/products/E050031639)
+
 ### 作者：
 
 {% embed url="https://www.facebook.com/chen.wang.12327" %}
