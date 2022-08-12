@@ -314,6 +314,54 @@ const common = Common.custom({ chainId: 56 });
           });
 ```
 
+## 從後端私鑰發送合約交易
+
+```javascript
+const Web3 = require("web3");
+const BigNumber = require("bignumber.js");
+const { ABI } = require("../abi/megaswapper");
+const web3 = new Web3(
+  new Web3.providers.HttpProvider("https://bsc-dataseed1.binance.org/")
+);
+const account = web3.eth.accounts.privateKeyToAccount(
+  "0x" + process.env.prvkey
+);
+web3.eth.accounts.wallet.add(account);
+web3.eth.defaultAccount = account.address;
+
+const decimalStr = (value, decimal) => {
+  return new BigNumber(value)
+    .multipliedBy(10 ** decimal)
+    .toFixed(0, BigNumber.ROUND_DOWN);
+};
+const megaSwapperAddress = ".....";
+function swap(tra) {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const tokenContract = new web3.eth.Contract(ABI, megaSwapperAddress);
+      const result = await tokenContract.methods
+        .swap(
+          tra.fromToken,
+          tra.toToken,
+          decimalStr(String(tra.amountIn), tra.fromTokenDecimal),
+          tra.from,
+          tra.to,
+          tra.data
+        )
+        .send({
+          gas: 500000,
+          from: web3.eth.defaultAccount,
+        });
+      console.log(result);
+      resolve(result);
+    } catch (err) {
+      console.log(err);
+      reject(err);
+    }
+  });
+}
+```
+
 ## 轉換 blockNumber 為 timestamp
 
 > 轉為 UTC +8
