@@ -66,9 +66,3 @@ let contract = new ethers.Contract(contractAddress, abi, provider);
   console.log(currentValue);
 })()
 ```
-
-## Call static
-
-> 這個需要看一下，呼叫 contract 的方式
-
-https://ethereum.stackexchange.com/a/109992

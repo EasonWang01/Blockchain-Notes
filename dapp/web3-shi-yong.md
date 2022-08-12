@@ -282,6 +282,8 @@ const common = Common.custom({ chainId: 56 });
 
 ## 單位換算
 
+> 建議可以用 bignumber.js
+
 不同 ERC-20 合約 token 有不同的 decimals，例如 USDC 為 6，大部分為  18 等等。
 
 #### 讀取合約餘額然後到網頁顯示
