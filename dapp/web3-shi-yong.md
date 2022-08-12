@@ -27,11 +27,19 @@ const totalSupply = await ContractERC721.methods.totalSupply().call();
 console.log(totalSupply.toNumber())
 ```
 
+## Big Number
+
+```
+web3Utils.BN
+```
+
+> 建議改用 npm: bignumber.js，多了很多處理，挺不錯的。
+
 ## Call static
 
+
+
 https://ethereum.stackexchange.com/a/109992
-
-
 
 ## 監聽合約 Event&#x20;
 
@@ -219,7 +227,7 @@ myContract.methods.myMethod(123).encodeABI();
 myContract.populateTransaction.myMethod(123);
 ```
 
-## 後端使用私鑰發送交易
+## 後端使用私鑰發送轉帳交易
 
 ```javascript
 const EthereumTx = require("ethereumjs-tx").Transaction;
@@ -301,17 +309,21 @@ const common = Common.custom({ chainId: 56 });
 
 &#x20;![](<../.gitbook/assets/截圖 2022-04-01 下午12.00.21.png>)
 
-## Approve max
+## Approve max allowance
+
+> address spend other address's ERC20 token
 
 ```javascript
-        const result1 = await tokenContract.methods
-          .approve(
-            VaultRelayerAddress,
-            String(new web3Utils.BN(String('100000000000' + 1 * `1e${token.decimal}`)))
-          )
-          .send({
-            from: accounts[0],
-          });
+const ethers = require("ethers");
+const MAX = ethers.BigNumber.from('0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff')       
+const result = await tokenContract.methods
+    .approve(
+        VaultRelayerAddress,
+        MAX
+    )
+    .send({
+      from: accounts[0],
+    });
 ```
 
 ## 從後端私鑰發送合約交易
