@@ -35,12 +35,6 @@ web3Utils.BN
 
 > 建議改用 npm: bignumber.js，多了很多處理，挺不錯的。
 
-## Call static
-
-
-
-https://ethereum.stackexchange.com/a/109992
-
 ## 監聽合約 Event&#x20;
 
 > 記得 infura 的測試網路 url 要填對，例如 Rinkeby 不要寫成 ropsten
