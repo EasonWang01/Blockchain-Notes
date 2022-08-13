@@ -4,6 +4,10 @@
 
 {% embed url="https://docs.openzeppelin.com/learn/upgrading-smart-contracts" %}
 
+### HardHat 範例：
+
+[https://blog.logrocket.com/using-uups-proxy-pattern-upgrade-smart-contracts/](https://blog.logrocket.com/using-uups-proxy-pattern-upgrade-smart-contracts/)
+
 ### 原理
 
 {% embed url="https://medium.com/coinmonks/upgradeable-proxy-contract-from-scratch-3e5f7ad0b741" %}
