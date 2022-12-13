@@ -380,6 +380,35 @@ function swap(tra) {
   console.log(timestamp);
 ```
 
+## 獲取合約 event 歷史
+
+````javascript
+```javascript
+
+const getUSDTTransfers = async () => {
+  const Web3 = require("web3");
+  const erc20ABI = require("./abis/USDT")
+  const provider = new Web3.providers.HttpProvider(
+    "https://eth-mainnet.alchemyapi.io/v2/AHXIwmw0CEMg6qMSHSQCtVqe8mdKuYx5"
+  );
+
+  const web3 = new Web3(provider);
+
+  const currentBlock = await web3.eth.getBlockNumber();
+  const contract = new web3.eth.Contract(erc20ABI, USDT_ADDRESS);
+  contract
+    .getPastEvents("Transfer",{
+      fromBlock: currentBlock - 1000,
+      toBlock: "latest",
+      filter: {to: "0x28C6c06298d514Db089934071355E5743bf21d60"},
+    })
+    .then(async (events) => {
+      console.log(events)
+    });
+};
+```
+````
+
 ## 注意事項
 
 使用 CRA 5 版本以上引入 web3 會出現 error
