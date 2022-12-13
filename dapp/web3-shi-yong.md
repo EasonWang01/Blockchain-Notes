@@ -382,14 +382,12 @@ function swap(tra) {
 
 ## 獲取合約 event 歷史
 
-````javascript
 ```javascript
-
 const getUSDTTransfers = async () => {
   const Web3 = require("web3");
   const erc20ABI = require("./abis/USDT")
   const provider = new Web3.providers.HttpProvider(
-    "https://eth-mainnet.alchemyapi.io/v2/AHXIwmw0CEMg6qMSHSQCtVqe8mdKuYx5"
+    "https://eth-mainnet.alchemyapi.io/v2/<api key>"
   );
 
   const web3 = new Web3(provider);
@@ -407,7 +405,6 @@ const getUSDTTransfers = async () => {
     });
 };
 ```
-````
 
 ## 注意事項
 
