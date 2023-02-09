@@ -46,7 +46,7 @@ const ccxt = require ('ccxt');
 }) ();
 ```
 
-## 創造訂單
+## 建立市價訂單
 
 ```javascript
 const ccxt = require("ccxt");
@@ -59,11 +59,34 @@ const FTX_API_SECRET = process.env.ftx_api_secret;
   });
   const symbol = 'BTC/USD'
   const amount = 0.0001 // BTC
-  const order = await ftx.createOrder (symbol, 'market', 'buy', amount);
+  const order = await ftx.createOrder(symbol, 'market', 'buy', amount);
 
   console.log (order)
 })();
 ```
+
+## 建立限價訂單
+
+````javascript
+const ccxt = require ('ccxt');
+
+const bitgetKey = "";
+const bitgetSecret = "";
+
+(async function () {
+    const exchange = new ccxt.bitget ({
+        apiKey: bitgetKey,
+        secret: bitgetSecret,
+        password: ""
+    })
+    const symbol = "ETH/USDT";
+    const amount = 0.0065;
+    const triggerPrice = 1000;
+    const order = await exchange.createOrder(symbol, 'limit', 'buy', amount, triggerPrice);
+    console.log('order', order);
+}) ();
+```
+````
 
 ## 取得歷史價格
 
