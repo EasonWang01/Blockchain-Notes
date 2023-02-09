@@ -4,6 +4,8 @@
 
 [https://github.com/ccxt/ccxt/wiki/Manual#market-orders](https://github.com/ccxt/ccxt/wiki/Manual#market-orders)
 
+[https://docs.ccxt.com/en/latest/manual.html](https://docs.ccxt.com/en/latest/manual.html)
+
 ## 獲取初始化需要放入參數的 Credentials
 
 > 從 requiredCredentials 可以知道在上方交易所內的 object 參數放入哪些欄位
