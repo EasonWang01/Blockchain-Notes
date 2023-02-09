@@ -1,8 +1,50 @@
 # CCXT 通用交易所 API
 
-其為一套可在任何交易所進行交易的API
+其為一套可在任何交易所進行交易的 API
 
-[https://github.com/ccxt/ccxt/wiki/Manual\#market-orders](https://github.com/ccxt/ccxt/wiki/Manual#market-orders)
+[https://github.com/ccxt/ccxt/wiki/Manual#market-orders](https://github.com/ccxt/ccxt/wiki/Manual#market-orders)
+
+## 獲取初始化需要放入參數的 Credentials
+
+> 從 requiredCredentials 可以知道在上方交易所內的 object 參數放入哪些欄位
+
+```javascript
+const ccxt = require ('ccxt');
+
+(async function () {
+    const exchange = new ccxt.binance ({...})
+    console.log(exchange.requiredCredentials)
+  },
+}) ();
+```
+
+## ![](<.gitbook/assets/截圖 2023-02-09 上午11.30.07.png>)
+
+## 獲取可呼叫方法
+
+```javascript
+const ccxt = require ('ccxt');
+
+(async function () {
+    const exchange = new ccxt.binance ({...})
+    console.log(exchange.has)
+  },
+}) ();
+```
+
+## ![](<.gitbook/assets/截圖 2023-02-09 上午11.29.37.png>)
+
+## 獲取所有可用交易對
+
+```javascript
+const ccxt = require ('ccxt');
+
+(async function () {
+    const exchange = new ccxt.binance ({...})
+    console.log(await exchange.loadMarkets ())
+  },
+}) ();
+```
 
 ## 創造訂單
 
@@ -31,9 +73,8 @@ const FTX_API_SECRET = process.env.ftx_api_secret;
 
 e.g.
 
-```text
+```
 https://min-api.cryptocompare.com/data/v2/histominute?fsym=BTC&tsym=USD&limit=2000&toTs=1578217560
 ```
 
-> ![](.gitbook/assets/螢幕快照%202020-01-05%20下午6.11.53.png)然後將TimeFrom 在放入下一筆的toTs繼續往更早之前的資料抓取
-
+> ![](<.gitbook/assets/螢幕快照 2020-01-05 下午6.11.53.png>)然後將TimeFrom 在放入下一筆的toTs繼續往更早之前的資料抓取
