@@ -48,6 +48,11 @@ const ccxt = require ('ccxt');
 
 > 最小下單金額可以從 `['TOKEN/TOKEN']['limits']['cost']['min']` 獲取
 >
+> ```javascript
+> const markets = await exchange.loadMarkets ();
+> console.log(markets["ETH/USDT"]?.limits?.cost?.min)
+> ```
+>
 > [https://github.com/ccxt/ccxt/issues/1972#issuecomment-366834844](https://github.com/ccxt/ccxt/issues/1972#issuecomment-366834844)
 
 ## 建立市價訂單
