@@ -78,7 +78,7 @@ const FTX_API_SECRET = process.env.ftx_api_secret;
 
 ## 建立限價訂單
 
-````javascript
+```javascript
 const ccxt = require ('ccxt');
 
 const bitgetKey = "";
@@ -97,7 +97,22 @@ const bitgetSecret = "";
     console.log('order', order);
 }) ();
 ```
-````
+
+## 獲取交易所資金費率 Funding Rate
+
+```javascript
+(async function () {
+  const exchange = new ccxt.binance({
+  });
+
+  const trades = await exchange.fetchFundingRateHistory(
+    "BTCUSD_PERP",
+    Date.now() - 24 * 1000 * 60 * 60, // 24 小時內
+    20
+  );
+  console.log(trades);
+})();
+```
 
 ## 取得歷史價格
 
