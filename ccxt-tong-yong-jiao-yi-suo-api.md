@@ -105,12 +105,28 @@ const bitgetSecret = "";
   const exchange = new ccxt.binance({
   });
 
-  const trades = await exchange.fetchFundingRateHistory(
+  const fr = await exchange.fetchFundingRateHistory(
     "BTCUSD_PERP",
     Date.now() - 24 * 1000 * 60 * 60, // 24 小時內
     20
   );
-  console.log(trades);
+  console.log(fr);
+})();
+```
+
+## 獲取交易所 Open Interest (OI)
+
+```javascript
+(async function () {
+  const exchange = new ccxt.binance({
+  });
+  const oi = await exchange.fetchOpenInterestHistory(
+    "BTC/USDT:USDT",
+    "15m", // timeframe
+    Date.now() - 1000 * 24 * 60 * 60, // since
+    10 // limit
+  );
+  console.log(oi);
 })();
 ```
 
