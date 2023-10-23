@@ -55,6 +55,15 @@ contract NftExample is ERC721, Ownable {
 
 {% embed url="https://soliditydeveloper.com/erc-721" %}
 
+## ERC-20 與 ERC-721 Total Supply 意思差別
+
+1. **ERC20**：
+   * **定義**：代表**可替代**代幣的標準，意味著每個代幣都是相同的，並且可以互換。例如，所有的USDT或ETH都是一樣的，並且具有相同的價值。
+   * **totalSupply**：在ERC20標準中，`totalSupply` 函數返回**該代幣的總供應量。這是一個固定的數字**，表示該代幣的總數量。
+2. **ERC721**：
+   * **定義**：代表**不可替代**代幣（NFT，Non-Fungible Token）的標準，意味著每個代幣都是獨特的，並且不能互換。例如，數字藝術品、收藏品或其他獨特的項目。
+   * **totalSupply**：在ERC721標準中，`totalSupply` 函數返回**當前已經發行的代幣總數**。不同於ERC20，每個ERC721代幣都是獨特的，所以`totalSupply` 更多地表示已發行的獨特項目的數量。
+
 ## ERC721A 教學
 
 為 ERC721 的改良版 (多了個 A) 主要用意是讓玩家如果一次 mint 多個 NFT 時可以減少 gas fee， 發明者為 azuki 專案。
