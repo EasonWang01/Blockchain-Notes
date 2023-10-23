@@ -1,5 +1,30 @@
 # ERC-721 範例
 
+## ERC-721 常用於 NFT 相關合約
+
+其擁有以下標準：
+
+1. **擁有權**
+   * `ownerOf(uint256 tokenId) public view returns (address)`: 返回某個指定 `tokenId` 的擁有者。
+2. **代幣轉移**
+   * `transferFrom(address from, address to, uint256 tokenId) public`: 從一個地址轉移到另一個地址。
+   * `safeTransferFrom(address from, address to, uint256 tokenId) public`: 安全地從一個地址轉移到另一個地址，檢查接受方是否可以接收代幣。
+   * `safeTransferFrom(address from, address to, uint256 tokenId, bytes data) public`: 帶有額外數據的安全轉移。
+3. **授權操作**
+   * `approve(address to, uint256 tokenId) public`: 授予某個地址權限移動特定的代幣。
+   * `getApproved(uint256 tokenId) public view returns (address)`: 返回某個特定代幣的已批准地址。
+   * `setApprovalForAll(address operator, bool approved) public`: 授權或撤銷某個地址轉移某個擁有者的所有代幣的權限。
+   * `isApprovedForAll(address owner, address operator) public view returns (bool)`: 查看某個地址是否被授予了轉移另一個地址的所有代幣的權限。
+4. **供應和創建**
+   * `totalSupply() public view returns (uint256)`: 返回已發行的代幣總數。
+   * `mint(address to, uint256 tokenId) public`: 創建並發行一個新的代幣。
+5. **事件**
+   * `Transfer(address from, address to, uint256 tokenId)`: 當代幣被轉移時觸發。
+   * `Approval(address owner, address approved, uint256 tokenId)`: 當某個代幣的授權被更改時觸發。
+   * `ApprovalForAll(address owner, address operator, bool approved)`: 當某個地址被授予或撤銷轉移所有代幣的權限時觸發。
+
+## &#x20;自己部署一個 ERC-721 NFT 合約
+
 可以直接用 Remix 部署
 
 ```javascript
