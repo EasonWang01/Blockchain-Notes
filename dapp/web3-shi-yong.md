@@ -1,6 +1,10 @@
 # web3.js 使用
 
+> 目前主流的 ETH 測試網路為 Sepolia
+
 v1.0 有 API更改，以下以 v1.0 為主
+
+## 初始化合約
 
 ```javascript
 if (window.ethereum) {
@@ -20,7 +24,7 @@ const ContractERC721 = new web3.eth.Contract(ERC721.ABI, ERC721.address);
 window.ContractERC721 = ContractERC721;
 ```
 
-執行不需要交易的 function
+## 執行不需要交易的 function
 
 ```javascript
 const totalSupply = await ContractERC721.methods.totalSupply().call();
@@ -33,7 +37,64 @@ console.log(totalSupply.toNumber())
 web3Utils.BN
 ```
 
-> 建議改用 npm: bignumber.js，多了很多處理，挺不錯的。
+> 建議改用 npm: bignumber.js，多了很多錯誤處理。
+
+## 監聽帳戶轉帳交易
+
+> 這邊使用 Alchemy API
+>
+> 免費幣水龍頭：[https://sepoliafaucet.com/](https://sepoliafaucet.com/)
+>
+> 新增 Alchemy APP: [https://dashboard.alchemy.com/apps](https://dashboard.alchemy.com/apps)
+
+#### Pending Transaction
+
+[https://docs.alchemy.com/reference/alchemy-pendingtransactions](https://docs.alchemy.com/reference/alchemy-pendingtransactions)
+
+```javascript
+const { Network, Alchemy } = require("alchemy-sdk");
+
+// Optional Config object, but defaults to demo api-key and eth-mainnet.
+const settings = {
+  apiKey: "", // Replace with your Alchemy API Key.
+  network: Network.ETH_SEPOLIA, // Replace with your network.
+};
+
+const alchemy = new Alchemy(settings);
+
+/// Subscription for Alchemy's pendingTransactions API
+alchemy.ws.on(
+  {
+    method: "alchemy_pendingTransactions",
+    toAddress: "0x220356c76414A3a12843560352ADb69443956196", // Replace with the address you're monitoring.
+    fromAddress: "sender_address", // Optionally, replace with the sender's address.
+  },
+  (tx) => console.log(tx)
+);
+```
+
+#### Mined Transaction (confirmed transaction)
+
+```javascript
+const { Network, Alchemy } = require("alchemy-sdk");
+
+// Optional Config object, but defaults to demo api-key and eth-mainnet.
+const settings = {
+  apiKey: "", // Replace with your Alchemy API Key.
+  network: Network.ETH_SEPOLIA, // Replace with your network.
+};
+
+const alchemy = new Alchemy(settings);
+
+/// Subscription for Alchemy's minedTransactions API
+alchemy.ws.on(
+  {
+    method: "alchemy_minedTransactions",
+    addresses: [{ to: "0x220356c76414A3a12843560352ADb69443956196" }],
+  },
+  (tx) => console.log(tx)
+);
+```
 
 ## 監聽合約 Event&#x20;
 
