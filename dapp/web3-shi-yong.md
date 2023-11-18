@@ -96,6 +96,30 @@ alchemy.ws.on(
 );
 ```
 
+## 獲取帳戶歷史交易
+
+> Alchemy SDK 的 rate limit 用 CUP 計算，免費帳戶的 CUP 為 330 / sec，而 getAssetTransfers 耗費 150 CUP，所以每秒只能發送兩個請求
+>
+> [https://docs.alchemy.com/reference/pricing-plans](https://docs.alchemy.com/reference/pricing-plans)
+
+```javascript
+const fetchTx = async (toAddress) => {
+  //The response fetches the transactions the specified addresses.
+  try {
+    let response = await alchemy.core.getAssetTransfers({
+      fromBlock: "0x47c66d",
+      toAddress,
+      excludeZeroValue: true,
+      category: ["external"],
+    });
+
+    return response;
+  } catch (error) {
+    console.log(error);
+  }
+};
+```
+
 ## 監聽合約 Event&#x20;
 
 > 記得 infura 的測試網路 url 要填對，例如 Rinkeby 不要寫成 ropsten
