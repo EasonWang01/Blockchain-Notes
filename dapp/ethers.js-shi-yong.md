@@ -1,5 +1,20 @@
 # Ethers.js 使用
 
+### 單位  Ether 轉 Wei
+
+> return bigint (e.g. 12000000n)
+
+<pre class="language-typescript"><code class="lang-typescript"><strong>ethers.utils.parseUnits("0.11", "ether")
+</strong></code></pre>
+
+### 單位  Wei 轉 Ether
+
+> return string (ether string)
+
+```javascript
+ethers.utils.formatEther(balance);
+```
+
 ### 讀取地址餘額：
 
 ```javascript
