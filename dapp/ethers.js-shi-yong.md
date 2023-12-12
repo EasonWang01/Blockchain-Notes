@@ -30,7 +30,49 @@ let provider = new ethers.providers.InfuraProvider('rinkeby');
  });
 ```
 
-### 呼叫合約：
+### 執行合約
+
+```javascript
+const { Contract, providers, utils: Utils, Wallet, ethers } = require("ethers");
+
+const {
+  abi,
+} = require("./artifacts/contracts/<contract>.sol/<contract>.json");
+
+async function createMarket(
+  privateKey,
+  title
+) {
+  const provider = new ethers.JsonRpcProvider(url);
+
+  // Create a wallet using the private key
+  const wallet = new ethers.Wallet(privateKey, provider);
+
+  // Connect the wallet to the contract
+  const contract = new ethers.Contract(contractAddress, abi, wallet);
+  return new Promise(async (resolve, reject) => {
+    try {
+      // Sign and send the transaction using the wallet
+      const tx = await wallet.sendTransaction({
+        to: contractAddress,
+        data: contract.interface.encodeFunctionData("createMarket", [
+          title
+          ]),
+      });
+
+      // Wait for the transaction to be mined
+      await tx.wait();
+      resolve(tx);
+      console.log("Market created successfully!");
+    } catch (error) {
+      reject();
+      console.error("Error creating market:", error);
+    }
+  });
+}
+```
+
+### 讀取合約：
 
 ```javascript
 const { ethers } = require("ethers");
@@ -84,6 +126,22 @@ let contract = new ethers.Contract(contractAddress, abi, provider);
 
 ## Call static
 
-> 這個需要看一下，呼叫 contract 的方式
+> 通常會用在於獲取執行 function 的回傳值
 
-https://ethereum.stackexchange.com/a/109992
+{% embed url="https://ethereum.stackexchange.com/a/109992" %}
+
+## JSON 內有 Bigint 結構轉換
+
+例如出現：TypeError: Do not know how to serialize a BigInt
+
+可以使用以下方式
+
+```javascript
+const toObject = (obj) => {
+  return JSON.parse(JSON.stringify(obj, (key, value) =>
+      typeof value === 'bigint'
+          ? value.toString()
+          : value // return everything else unchanged
+  ));
+}
+```
