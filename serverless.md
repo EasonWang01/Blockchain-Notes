@@ -1,10 +1,14 @@
 # Serverless 架構實作
 
-我們會使用到AWS Lambda 與API Gateway
+使用 Bitcoin 節點 API 時，我們可以使用 serverless 架構，來省去維護 server 的部分。
+
+我們會使用到 AWS Lambda 與 API Gateway。
+
+> 以下內容為 2017 年寫的，部分可能需修正。
 
 ### 前言
 
-兩個的用途分別為，Lambda可以讓我們寫function，API Gateway用來寫path與http method讓別人發出某個對應request時去執行Lambda function
+兩個的用途分別為，Lambda 可以讓我們寫 function，API Gateway 用來寫 path 與 http method讓別人發出某個對應request時去執行Lambda function
 
 ### 實作
 
@@ -16,13 +20,13 @@
 
 將code部分改為
 
-```text
+```
 exports.handler = function(event, context) {
   context.succeed("你好!");
 };
 ```
 
-有關handler function的說明  
+有關handler function的說明\
 [http://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html](http://docs.aws.amazon.com/lambda/latest/dg/nodejs-prog-model-handler.html)
 
 > 如還沒建立IAM須先建立
@@ -45,7 +49,7 @@ exports.handler = function(event, context) {
 
 回到aws 的 Lambda 點選剛才創建的function兩下，進入修改code的地方
 
-```text
+```
 exports.handler = function(event, context) {
 
 
@@ -72,7 +76,7 @@ var http = require('http');
 
 這時先開啟terminal
 
-```text
+```
 mkdir lambda_test
 
 cd lambdaTest
@@ -84,7 +88,7 @@ npm init(記得先安裝好Node.js)
 
 index.js
 
-```text
+```
 var mongo = require('mongodb');
 var Server = mongo.Server;
 var Db = mongo.Db;
@@ -118,23 +122,23 @@ db.open(function(err, client) {
 
 然後輸入
 
-```text
+```
 npm install mongodb
 ```
 
-> 記得把上面new Server的URL與 改為自己的  
+> 記得把上面new Server的URL與 改為自己的\
 > client.authenticate 改為mLab上的user密碼
 >
-> 如果還沒申請mLab帳戶可以先去[https://mlab.com/home，然後註冊帳號並且新增使用者帳號以及資料庫，然後點擊進去新增一個collection插入一個document為以下資料](https://mlab.com/home，然後註冊帳號並且新增使用者帳號以及資料庫，然後點擊進去新增一個collection插入一個document為以下資料)
+> 如果還沒申請mLab帳戶可以先去[https://mlab.com/home，然後註冊帳號並且新增使用者帳號以及資料庫，然後點擊進去新增一個collection插入一個document為以下資料](https://mlab.com/home%EF%BC%8C%E7%84%B6%E5%BE%8C%E8%A8%BB%E5%86%8A%E5%B8%B3%E8%99%9F%E4%B8%A6%E4%B8%94%E6%96%B0%E5%A2%9E%E4%BD%BF%E7%94%A8%E8%80%85%E5%B8%B3%E8%99%9F%E4%BB%A5%E5%8F%8A%E8%B3%87%E6%96%99%E5%BA%AB%EF%BC%8C%E7%84%B6%E5%BE%8C%E9%BB%9E%E6%93%8A%E9%80%B2%E5%8E%BB%E6%96%B0%E5%A2%9E%E4%B8%80%E5%80%8Bcollection%E6%8F%92%E5%85%A5%E4%B8%80%E5%80%8Bdocument%E7%82%BA%E4%BB%A5%E4%B8%8B%E8%B3%87%E6%96%99)
 
-```text
+```
 {
     "hi": 123,
     "Hello": 456
 }
 ```
 
-可以先本地端測試，把exports.handler與context.succeed\(doc\);  
+可以先本地端測試，把exports.handler與context.succeed(doc);\
 註解掉即可
 
 之後輸入`open .` 把資料夾的內容index.js和node\_modules壓縮成zip
@@ -143,14 +147,14 @@ npm install mongodb
 
 回到AWS Lambda上的function，將`Code entry type`旁的選單選擇為`Upload a ZIP file` 然後把剛才的ZIP檔案拉上去
 
-![](.gitbook/assets/螢幕快照%202017-03-21%20上午10.50.01.png)
+![](<.gitbook/assets/螢幕快照 2017-03-21 上午10.50.01.png>)
 
 之後點選TEST即可下拉看結果
 
-> 如果下方出現Timeout 3s 可把程式碼中的console拿掉  
+> 如果下方出現Timeout 3s 可把程式碼中的console拿掉\
 > 或是修改configure的Advance的 setting 中 timeout時間
 
-![](.gitbook/assets/螢幕快照%202017-03-21%20上午10.58.44.png)
+![](<.gitbook/assets/螢幕快照 2017-03-21 上午10.58.44.png>)
 
 再來前往API Gateway
 
@@ -160,13 +164,13 @@ npm install mongodb
 
 然後選單選擇`GET`，右方選擇Lambda Function，選擇地區，輸入function名稱，然後點選`save`
 
-![](.gitbook/assets/螢幕快照%202017-03-21%20上午11.04.08.png)
+![](<.gitbook/assets/螢幕快照 2017-03-21 上午11.04.08.png>)
 
 選擇`Deploy API`，選擇new stage然後輸入名稱
 
 過幾秒他會跳出`invoke url`，如下圖
 
-![](.gitbook/assets/螢幕快照%202017-02-12%20下午6.24.39.png)  
+![](<.gitbook/assets/螢幕快照 2017-02-12 下午6.24.39.png>)\
 點選左側Resource在點選Action即可修改API gateway
 
 記得之後如果修改要重新再`deploy`
@@ -179,11 +183,11 @@ npm install mongodb
 
 [https://serverless.com/framework/docs/](https://serverless.com/framework/docs/)
 
-```text
+```
 npm install serverless -g
 ```
 
-```text
+```
 mkdir aws-nodejs
 
 cd aws-nodejs
@@ -203,17 +207,17 @@ serverless create -t aws-nodejs
 
 然後到terminal將這兩個加入電腦環境變數
 
-```text
+```
 export AWS_ACCESS_KEY_ID=填入你的key
 
 export AWS_SECRET_ACCESS_KEY=填入你的access key
 ```
 
-\(windows須把export改為set\)
+(windows須把export改為set)
 
 如果忘記可在建立一個
 
-![](.gitbook/assets/螢幕快照%202017-03-21%20上午11.17.50.png)
+![](<.gitbook/assets/螢幕快照 2017-03-21 上午11.17.50.png>)
 
 然後點選左側選單`Users`點擊剛創建的user，然後選擇`Permissios` Tab 點選`Add permissions` 然後選擇`Attach existing policies directly`
 
@@ -221,15 +225,15 @@ export AWS_SECRET_ACCESS_KEY=填入你的access key
 
 然後修改`serverless.yml` 把region的`#`拿掉，後面改為
 
-```text
+```
 region: ap-northeast-1
 ```
 
 並且把function下面的event註解拿掉
 
-> \(yml等描述檔很注重對齊與空格，如果看到indent相關錯誤可以先去查範例然後來檢查\)
+> (yml等描述檔很注重對齊與空格，如果看到indent相關錯誤可以先去查範例然後來檢查)
 
-```text
+```
     events:
       - http:
           path: users/create
@@ -238,7 +242,7 @@ region: ap-northeast-1
 
 完整版
 
-```text
+```
 service: aws-nodejs # NOTE: update this with your service name
 
 # You can pin your service to only deploy with a specific Serverless version
@@ -264,12 +268,12 @@ functions:
 
 最後
 
-```text
+```
 serverless deploy
 ```
 
-成功後會給你一個可以去request的連結  
-![](.gitbook/assets/螢幕快照%202017-02-12%20下午6.25.00.png)
+成功後會給你一個可以去request的連結\
+![](<.gitbook/assets/螢幕快照 2017-02-12 下午6.25.00.png>)
 
 回到AWS lambda上看到多出一個function
 
@@ -281,7 +285,6 @@ API gateway也會多出一個
 
 測試本地
 
-```text
+```
 serverless invoke local --function hello
 ```
-
