@@ -102,7 +102,7 @@ return可以花費較少gas 但在return前的code會執行 ，而throw則會把
 
 ## Modifier
 
-> \_的意思為繼承這個modifier的function會先跑完寫在\_modifier __ ; 之前的東西才繼續該function
+> \_的意思為繼承這個modifier的function會先跑完寫在\_modifier ; 之前的東西才繼續該function
 
 ```
 modifier onlyOwner {
