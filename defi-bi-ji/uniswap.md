@@ -20,6 +20,8 @@
 impermanent_loss = 2 * sqrt(price_ratio) / (1 + price_ratio) — 1
 ```
 
+公式推導：[https://www.youtube.com/watch?v=jIB4ne9jU04](https://www.youtube.com/watch?v=jIB4ne9jU04)
+
 例如下圖：ETH 上漲兩倍後 impermanent\_loss 為 5.7%
 
 <figure><img src="../.gitbook/assets/截圖 2024-01-23 下午3.08.24.png" alt=""><figcaption></figcaption></figure>
