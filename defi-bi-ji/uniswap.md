@@ -14,7 +14,7 @@
 
 公式：
 
-> price\_ratio = 1 時，代表沒漲或疊。price\_ratio = 2，意思類似 ETH 從 1000 USDT 變 2000 USDT
+> price\_ratio = 1 時，代表沒漲或疊。price\_ratio = 2，意思類似 ETH 從 1000 USDT 變 2000 USDT，如果兩種資產價值都漲一倍（1000, 10000）變 (2000, 20000) 則 price\_ratio 為 4
 
 ```
 impermanent_loss = 2 * sqrt(price_ratio) / (1 + price_ratio) — 1
