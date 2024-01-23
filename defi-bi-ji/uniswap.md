@@ -6,6 +6,24 @@
 
 {% embed url="https://uniswapv3book.com/index.html" %}
 
+
+
+## 無償損失
+
+存入 Pool 內的資產，不論原始兩個 token 價格在後續的時間段上漲或是下跌，未來把 Pool 內的資產取出，換回原本的兩種資產時，其取出後的價值一定會少於當初不把兩種資產存入 Pool 的價值。
+
+公式：
+
+> price\_ratio = 1 時，代表沒漲或疊。price\_ratio = 2，意思類似 ETH 從 1000 USDT 變 2000 USDT
+
+```
+impermanent_loss = 2 * sqrt(price_ratio) / (1 + price_ratio) — 1
+```
+
+例如下圖：ETH 上漲兩倍後 impermanent\_loss 為 5.7%
+
+<figure><img src="../.gitbook/assets/截圖 2024-01-23 下午3.08.24.png" alt=""><figcaption></figcaption></figure>
+
 {% embed url="https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/understanding-returns" %}
 
 {% embed url="https://chainbulletin.com/impermanent-loss-explained-with-examples-math" %}
