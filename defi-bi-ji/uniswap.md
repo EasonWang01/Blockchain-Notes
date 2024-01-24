@@ -8,6 +8,18 @@
 
 
 
+## Fee
+
+### Swap Fee
+
+Swap 時的 Fee 會直接加入到 liquidity pool。
+
+UniswapV3 後每個 token pair 會有多個 pool （不同 swap fee) ，所以用戶在 add liquidity 時可以選擇 fee %，但在 UI 上 swap 時不能選擇要用哪個 fee 來 Swap，平台會自動幫你選。
+
+[https://docs.uniswap.org/concepts/protocol/fees#pool-fees-tiers](https://docs.uniswap.org/concepts/protocol/fees#pool-fees-tiers)
+
+[https://stackoverflow.com/questions/71990434/what-is-the-difference-between-these-two-pools-in-uniswap](https://stackoverflow.com/questions/71990434/what-is-the-difference-between-these-two-pools-in-uniswap)
+
 ## 無償損失
 
 存入 Pool 內的資產，不論原始兩個 token 價格在後續的時間段上漲或是下跌，未來把 Pool 內的資產取出，換回原本的兩種資產時，其取出後的價值一定會少於當初不把兩種資產存入 Pool 的價值。
