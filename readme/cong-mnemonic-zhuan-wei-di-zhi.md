@@ -6,6 +6,30 @@
 
 {% embed url="https://github.com/satoshilabs/slips/blob/master/slip-0044.md" %}
 
+## 原理
+
+1.Mnemonic 為 12 個英文單字，會先按照 BIP39 轉為 Seed（使用 PBKDF2 function）
+
+轉為 Seed 的過程為 one-way hashing，不可逆，意思為不可從  private key 轉回 Mnemonic。\
+[\
+Mnemonic Seed - A simple explanation of BIP39.![](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAWlBMVEX/////ZgD/hDH/jD//ijz/eyNvb2+Wlpb+/v4tLS3/9u/x8fH/cBAyMjL29vb/mVTp6en/8Ob/r3pUVFQ5OTnf39//uIljPCL/pGj/fyrGxsZZUUuYThxFRUWV5VjAAAAAXklEQVR4AWXIQRLBQBQFwH7AfIEEiOD+17SUKr1s/8RimRUAayAAAZutmGvFzjwQ5joF7MGBYwcEJ32vAAPOC5fiCgShK7cG7gjloYAYnyZefkOJ0how5p0BH5ibGl/zIwKmEKIt4wAAAABJRU5ErkJggg==)Learn Me A Bitcoin_https://learnmeabitcoin.com › technical › mnemonic_](https://learnmeabitcoin.com/technical/mnemonic)
+
+2.之後從 Seed derive 出地址的private key buffer（不同 path 可以產生不同地址）
+
+```
+btcRoot.derivePath("m/44'/3'/0'/0/0")
+```
+
+[https://learnmeabitcoin.com/technical/derivation-paths](https://learnmeabitcoin.com/technical/derivation-paths)
+
+3.之後在 private key buffer 前方加上在 version byte
+
+4.將結果經過兩次 sha256，取前四個 byte 為 checksum
+
+5.之後將原本的 private key buffer 最後串上第四部的 checksum
+
+6.使用 base58 encode 後即為 WIF 的 private key。
+
 ## 範例:
 
 以下產生 Doge chain 的地址
