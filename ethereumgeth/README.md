@@ -15,6 +15,8 @@ Geth 為 ethereum的Go語言實現
 ```
 git clone https://github.com/ethereum/go-ethereum
 
+sudo apt-get update
+
 sudo apt-get install -y build-essential golang
 
 cd go-ethereum
