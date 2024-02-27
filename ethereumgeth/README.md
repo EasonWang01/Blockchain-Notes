@@ -10,6 +10,10 @@ Geth 為 ethereum的Go語言實現
 
 ## 安裝
 
+\[2024/2 更新]
+
+查看此連結：[https://geth.ethereum.org/docs/getting-started/installing-geth](https://geth.ethereum.org/docs/getting-started/installing-geth)
+
 [https://geth.ethereum.org/downloads/](https://geth.ethereum.org/downloads/)
 
 ```
