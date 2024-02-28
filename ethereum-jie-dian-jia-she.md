@@ -20,3 +20,5 @@ The merge (POS) 之後必須要架設兩個 client 才能正常執行節點。
 叫做 validator node，可使用  consensus layer 的 client 架設，validator node 用來 stake 32 ETH, 並且存放錢包私鑰、產生區塊等。
 
 > validator node 只與 beacon node 連接
+
+[https://docs.prylabs.network/docs/concepts/nodes-networks](https://docs.prylabs.network/docs/concepts/nodes-networks)
