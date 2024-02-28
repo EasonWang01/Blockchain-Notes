@@ -57,6 +57,12 @@ bazel run //cmd/beacon-chain --config=release --execution-endpoint=<YOUR_ETH_EXE
 完整教學：\
 [https://docs.prylabs.network/docs/advanced/proof-of-stake-devnet#manual-setup-built-from-source](https://docs.prylabs.network/docs/advanced/proof-of-stake-devnet#manual-setup-built-from-source)
 
+> 執行 beacon node 後要等個幾分鐘，開始 sync 後才不會有類似如下的 error
+>
+> ```
+> ERROR execution: Beacon node is not respecting the follow distance. EL client is syncing. lastBlockNumber=0
+> ```
+
 其他參考：
 
 [https://github.com/rzmahmood/ethereum-pos-testnet](https://github.com/rzmahmood/ethereum-pos-testnet)
