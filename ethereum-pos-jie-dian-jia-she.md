@@ -1,4 +1,4 @@
-# ethereum 節點架設
+# ethereum POS 節點架設
 
 \[2024 更新]
 
@@ -21,4 +21,42 @@ The merge (POS) 之後必須要架設兩個 client 才能正常執行節點。
 
 > validator node 只與 beacon node 連接
 
-[https://docs.prylabs.network/docs/concepts/nodes-networks](https://docs.prylabs.network/docs/concepts/nodes-networks)
+{% embed url="https://docs.prylabs.network/docs/concepts/nodes-networks" %}
+
+## 實際架設範例
+
+以下使用 Prysm
+
+1.需要先安裝 bazel (專案建構工具)
+
+`brew install bazelisk`
+
+2.安裝 Prysm 並編譯可執行節點檔案
+
+```
+bazel build //cmd/beacon-chain:beacon-chain --config=release
+bazel build //cmd/validator:validator --config=release
+```
+
+{% embed url="https://docs.prylabs.network/docs/install/install-with-bazel#install-bazel-using-bazelisk" %}
+
+### 執行節點
+
+1.執行 execution node
+
+```
+./geth --mainnet --http --http.api eth,net,engine,admin --authrpc.jwtsecret=<PATH_TO_JWT_FILE> 
+```
+
+> \--execution-endpoint 為 Geth 的 RPC endpoint
+
+```
+bazel run //cmd/beacon-chain --config=release --execution-endpoint=<YOUR_ETH_EXECUTION_NODE_ENDPOINT> --mainnet
+```
+
+完整教學：\
+[https://docs.prylabs.network/docs/advanced/proof-of-stake-devnet#manual-setup-built-from-source](https://docs.prylabs.network/docs/advanced/proof-of-stake-devnet#manual-setup-built-from-source)
+
+其他參考：
+
+[https://github.com/rzmahmood/ethereum-pos-testnet](https://github.com/rzmahmood/ethereum-pos-testnet)
