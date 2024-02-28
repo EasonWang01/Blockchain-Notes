@@ -1,7 +1,3 @@
----
-description: 節點架設
----
-
 # ethereum 節點架設
 
 \[2024 更新]
@@ -15,4 +11,7 @@ The merge (POS) 之後必須要架設兩個 client 才能正常執行節點。
 <figure><img src=".gitbook/assets/截圖 2024-02-28 上午11.36.20.png" alt=""><figcaption></figcaption></figure>
 
 {% embed url="https://ethereum.org/developers/docs/nodes-and-clients#consensus-clients" %}
+
+從以下網站可以查看目前哪些節點較多人用：\
+[https://clientdiversity.org/#distribution](https://clientdiversity.org/#distribution)
 
