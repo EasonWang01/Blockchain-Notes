@@ -67,6 +67,14 @@ bazel run //cmd/beacon-chain --config=release --execution-endpoint=<YOUR_ETH_EXE
 
 {% embed url="https://github.com/rzmahmood/ethereum-pos-testnet" %}
 
+## Validator lifecycle
+
+每個 slot 為 12 秒，一個 epoch 為 32 個 slot：6.4 分鐘。
+
+文件描述特定 epoch 後 beacon chain 會執行特定事項 (beacon state transition)。
+
+[https://notes.ethereum.org/7CFxjwMgQSWOHIxLgJP2Bw#A-note-on-Ethereum-20-phase-0-validator-lifecycle](https://notes.ethereum.org/7CFxjwMgQSWOHIxLgJP2Bw#A-note-on-Ethereum-20-phase-0-validator-lifecycle)
+
 ## PoS deposit 合約
 
 此合約讓大家可以呼叫 deposit()，支付 32eth 同時，並且放入參數，為成為 PoS validator 必要條件，在此合約成功 deposit 後會 emit 事件，ETH beacon chain 監聽到後會把此申請人加入 queue。
