@@ -1,4 +1,4 @@
-# ethereum POS 節點架設
+# ethereum PoS 節點架設
 
 \[2024 更新]
 
@@ -65,4 +65,23 @@ bazel run //cmd/beacon-chain --config=release --execution-endpoint=<YOUR_ETH_EXE
 
 其他參考：
 
-[https://github.com/rzmahmood/ethereum-pos-testnet](https://github.com/rzmahmood/ethereum-pos-testnet)
+{% embed url="https://github.com/rzmahmood/ethereum-pos-testnet" %}
+
+## PoS deposit 合約
+
+此合約讓大家可以呼叫 deposit()，支付 32eth 同時，並且放入參數，為成為 PoS validator 必要條件，在此合約成功 deposit 後會 emit 事件，ETH beacon chain 監聽到後會把此申請人加入 queue。
+
+```
+bytes calldata pubkey,
+bytes calldata withdrawal_credentials,
+bytes calldata signature,
+bytes32 deposit_data_root
+```
+
+之後 deposit function 用 merkle tree 的方式去做 verify。
+
+> deposit\_date\_root 在 cli tool 產生的deposit.json 內，其使用如下參數：validator's public key, withdrawal credentials, the amount of ETH being staked, and the validator's signature.
+>
+> [https://github.com/ethereum/staking-deposit-cli](https://github.com/ethereum/staking-deposit-cli)
+
+<figure><img src=".gitbook/assets/截圖 2024-02-29 下午2.02.54.png" alt=""><figcaption></figcaption></figure>
