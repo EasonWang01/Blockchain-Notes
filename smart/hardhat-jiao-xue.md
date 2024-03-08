@@ -23,7 +23,7 @@ npx hardhat init
 
 1. 啟動本地節點
 
-> 如果沒有啟動節點與指定節點，預設都會使用 in-memory instance of Hardhat Network
+> \[可選] 如果沒有啟動節點與指定節點，預設都會使用 in-memory instance of Hardhat Network
 
 ```
 npx hardhat node
@@ -97,6 +97,56 @@ npx hardhat test --network localhost
 部署合約或 compile 後會產生此資料夾，裡面包含一些 json 檔案，為合約的 ABI
 
 {% embed url="https://hardhat.org/guides/compile-contracts.html#compiling-your-contracts" %}
+
+## 使用 Mainnet fork 測試
+
+> 使用 mainnet 特定 block data 來測試合約
+
+例如以下獲取主網特定地址的 USDC 餘額
+
+```javascript
+const { ethers } = require("hardhat");
+const { expect } = require("chai");
+
+describe("USDC Balance Check", function () {
+  it("Should return the USDC balance of the address", async function () {
+    const usdcAddress = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"; // USDC Contract Address
+    const addressToCheck = "0x7713974908Be4BEd47172370115e8b1219F4A5f0"; // Address whose balance you want to check
+
+    // USDC Contract ABI (Simplified; use the full ABI from Etherscan)
+    const usdcAbi = ["function balanceOf(address owner) view returns (uint256)"];
+    
+    // Connect to the USDC contract
+    const usdcContract = new ethers.Contract(usdcAddress, usdcAbi, ethers.provider);
+
+    // Fetch the balance
+    const balance = await usdcContract.balanceOf(addressToCheck);
+
+    // Log the balance (optional)
+    console.log("USDC Balance:", balance.toString());
+
+
+    // 也可手動改變地址 ETH 餘額
+    const mainnetAccount = addressToCheck; // Replace with a mainnet account address
+    await hre.network.provider.request({
+      method: "hardhat_impersonateAccount",
+      params: [mainnetAccount],
+    });
+    await hre.network.provider.send("hardhat_setBalance", [
+      mainnetAccount,
+      "0x8AC7230489E80000000", // 40960 ETH
+    ]);
+
+    const ethBalance = await ethers.provider.getBalance(addressToCheck);
+
+    // Log the balance (optional)
+    console.log("ETH Balance:", ethers.formatEther(ethBalance), "ETH");
+
+    // Assert (for example, checking if the balance is greater than a certain amount)
+    expect(balance).to.be.gt(ethers.parseUnits("100", 6)); // Check if balance is greater than 100 USDC
+  });
+});
+```
 
 ## Etherscan 驗證合約
 
