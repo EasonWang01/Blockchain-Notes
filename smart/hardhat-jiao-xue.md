@@ -2,7 +2,14 @@
 
 類似 Truffle 為一個智能合約開發 SDK。
 
-{% embed url="https://hardhat.org/getting-started/" %}
+{% embed url="https://hardhat.org/" %}
+
+### 安裝與初始化
+
+```
+mkdir hardhat-test && cd hardhat-test
+npx hardhat init
+```
 
 ### 專案結構
 
