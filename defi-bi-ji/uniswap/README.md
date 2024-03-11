@@ -36,7 +36,7 @@ impermanent_loss = 2 * sqrt(price_ratio) / (1 + price_ratio) — 1
 
 例如下圖：ETH 上漲兩倍後 impermanent\_loss 為 5.7%
 
-<figure><img src="../.gitbook/assets/截圖 2024-01-23 下午3.08.24.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/截圖 2024-01-23 下午3.08.24.png" alt=""><figcaption></figcaption></figure>
 
 {% embed url="https://docs.uniswap.org/contracts/v2/concepts/advanced-topics/understanding-returns" %}
 
