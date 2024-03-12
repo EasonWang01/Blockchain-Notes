@@ -70,7 +70,7 @@ contract NftExample is ERC721, Ownable {
 
 可以看到如下表格，當一次 mint 五個的時候，在以前 ERC721 標準下要執行五次 mint function，但 ERC721A 可以在 mint function 內加上第二個參數 (mint 的數量)，讓你一次 mint 多個，減少了不少 gas 花費。
 
-![](<../.gitbook/assets/截圖 2022-03-10 上午10.13.02.png>)
+![](<../../.gitbook/assets/截圖 2022-03-10 上午10.13.02.png>)
 
 {% embed url="https://www.azuki.com/erc721a" %}
 
@@ -97,4 +97,4 @@ contract test is Ownable, ERC721A {
 
 > 如果沒設置之後 mint 後再到 opensea 設置也可以
 
-[https://docs.opensea.io/docs/contract-level-metadata](https://docs.opensea.io/docs/contract-level-metadata)
+{% embed url="https://docs.opensea.io/docs/contract-level-metadata" %}
