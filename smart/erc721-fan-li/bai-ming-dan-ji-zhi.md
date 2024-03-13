@@ -124,3 +124,17 @@ contract WhitelistedNFT {
   }
 }
 ```
+
+可用以下腳本測試
+
+> 記得 leaves 至少要一個以上，不然 getProof 會回傳空 array
+
+```javascript
+const { MerkleTree } = require("merkletreejs");
+const keccak256 = require("keccak256");
+const leaves = ['0xaa2eAbb245944168705e3Ad21C9D266131E296E7', '0xaaA0ea4E952C2a9bB6FDaDf7cBa1a08eb20EE157'].map(x => keccak256(x))
+const tree = new MerkleTree(leaves, keccak256)
+const root = tree.getRoot().toString('hex')
+const leaf = keccak256('0xaa2eAbb245944168705e3Ad21C9D266131E296E7')
+const proof = tree.getProof(leaf)
+```
