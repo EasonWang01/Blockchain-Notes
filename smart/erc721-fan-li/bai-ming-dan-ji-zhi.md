@@ -130,7 +130,7 @@ contract WhitelistedNFT {
 }
 ```
 
-可用以下腳本測試
+可用以下 Node.js 腳本測試
 
 > 記得 leaves 至少要一個以上，不然 getProof 會回傳空 array
 
@@ -144,4 +144,80 @@ const leaf = keccak256('0xaa2eAbb245944168705e3Ad21C9D266131E296E7')
 const proof = tree.getProof(leaf)
 const rootHash = tree.getRoot().toString("hex");
 console.log(tree.verify(proof, leaf, rootHash)) // true
+```
+
+#### 實際合約與測試
+
+Hardhat 測試
+
+whitelist.sol
+
+```solidity
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
+
+contract Whitelist {
+    bytes32 public merkleRoot;
+
+    constructor(bytes32 _merkleRoot) {
+        merkleRoot = _merkleRoot;
+    }
+
+    function isWhitelisted(
+        bytes32[] calldata _merkleProof,
+        address _address
+    ) public view returns (bool) {
+        bytes32 leaf = keccak256(abi.encodePacked(_address));
+        return MerkleProof.verify(_merkleProof, merkleRoot, leaf);
+    }
+}
+```
+
+test.js
+
+```javascript
+const { expect } = require("chai");
+const { ethers } = require("hardhat");
+const { MerkleTree } = require("merkletreejs");
+const keccak256 = require("keccak256");
+
+describe("Whitelist Contract", function () {
+  let Whitelist;
+  let whitelistContract;
+  let accounts;
+  let whitelistAddresses;
+  let tree;
+  let rootHash;
+
+  before(async function () {
+    Whitelist = await ethers.getContractFactory("Whitelist");
+    accounts = await ethers.getSigners();
+
+    // Set up whitelist addresses
+    whitelistAddresses = [accounts[0].address, accounts[1].address];
+    const leaves = whitelistAddresses.map((addr) => keccak256(addr));
+    tree = new MerkleTree(leaves, keccak256, { sortPairs: true });
+    rootHash = tree.getHexRoot();
+    whitelistContract = await Whitelist.deploy(rootHash);
+  });
+
+  it("should allow whitelisted address", async function () {
+    const address = whitelistAddresses[0];
+    const leaf = keccak256(address);
+    const proof = tree.getHexProof(leaf);
+
+    expect(await whitelistContract.isWhitelisted(proof, address)).to.be.true;
+  });
+
+  it("should not allow non-whitelisted address", async function () {
+    const nonWhitelistedAddress = accounts[2].address;
+    const leaf = keccak256(nonWhitelistedAddress);
+    const proof = tree.getHexProof(leaf);
+
+    expect(await whitelistContract.isWhitelisted(proof, nonWhitelistedAddress))
+      .to.be.false;
+  });
+});
 ```
