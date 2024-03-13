@@ -64,3 +64,63 @@ function _verifyAndMint(bytes memory _signature, address account) internal{
 </strong>  return hash.recover(signature) == root;
 }
 </code></pre>
+
+## Merkle Tree 方式
+
+產生 root
+
+```javascript
+const { MerkleTree } = require('merkletreejs');
+const keccak256 = require('keccak256');
+
+// List of whitelisted addresses
+const whitelistAddresses = [
+  '0xAddress1...',
+  '0xAddress2...',
+  '0xAddress3...',
+  // ... more addresses
+];
+
+// Generate leaf nodes
+const leaves = whitelistAddresses.map(addr => keccak256(addr));
+const tree = new MerkleTree(leaves, keccak256, { sortPairs: true });
+
+// Get the root hash of the Merkle tree (to be used in the smart contract)
+const rootHash = tree.getRoot().toString('hex');
+```
+
+產生 proof
+
+> 用戶發送 mint 前，瀏覽器用個別地址跟 API Server 獲取 proof
+
+```javascript
+const address = '0xAddress1...'; // Address to generate proof for
+const leaf = keccak256(address);
+const proof = tree.getHexProof(leaf);
+
+console.log(proof); // This will be used in the smart contract for verification
+```
+
+contract&#x20;
+
+```javascript
+pragma solidity ^0.8.0;
+
+import "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
+
+contract WhitelistedNFT {
+  bytes32 public merkleRoot;
+
+  constructor(bytes32 _merkleRoot) {
+    merkleRoot = _merkleRoot;
+  }
+
+  function mint(bytes32[] calldata _merkleProof) public {
+    // Verify the provided address against the Merkle root
+    bytes32 leaf = keccak256(abi.encodePacked(msg.sender));
+    require(MerkleProof.verify(_merkleProof, merkleRoot, leaf), "Not in whitelist");
+
+    // Mint NFT logic here...
+  }
+}
+```
