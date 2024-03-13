@@ -128,6 +128,8 @@ contract WhitelistedNFT {
 可用以下 Node.js 腳本測試
 
 > 記得 leaves 至少要一個以上，不然 getProof 會回傳空 array
+>
+> 在 Node 端 verify 時要用 getHexProof 只用 getProof，但如果是要給合約的 proof 要用 byte32 格式，所以要用 getHexProof
 
 ```javascript
 const { MerkleTree } = require("merkletreejs");
@@ -136,7 +138,7 @@ const leaves = ['0xaa2eAbb245944168705e3Ad21C9D266131E296E7', '0xaaA0ea4E952C2a9
 const tree = new MerkleTree(leaves, keccak256)
 const root = tree.getRoot().toString('hex')
 const leaf = keccak256('0xaa2eAbb245944168705e3Ad21C9D266131E296E7')
-const proof = tree.getHexProof(leaf)
+const proof = tree.getProof(leaf)
 const rootHash = tree.getRoot().toString("hex");
 console.log(tree.verify(proof, leaf, rootHash)) // true
 ```
