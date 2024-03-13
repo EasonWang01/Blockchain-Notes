@@ -137,4 +137,6 @@ const tree = new MerkleTree(leaves, keccak256)
 const root = tree.getRoot().toString('hex')
 const leaf = keccak256('0xaa2eAbb245944168705e3Ad21C9D266131E296E7')
 const proof = tree.getProof(leaf)
+const rootHash = tree.getRoot().toString("hex");
+console.log(tree.verify(proof, leaf, rootHash)) // true
 ```
