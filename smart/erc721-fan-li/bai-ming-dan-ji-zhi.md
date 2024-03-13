@@ -98,11 +98,6 @@ const address = '0xAddress1...'; // Address to generate proof for
 const leaf = keccak256(address);
 const proof = tree.getHexProof(leaf);
 
-  const bytes32Proof = proof.map((node) => {
-    const buf = Buffer.from(node.data);
-    return "0x" + buf.toString("hex");
-  });
-
 console.log(bytes32Proof); // This will be used in the smart contract for verification
 ```
 
@@ -141,7 +136,7 @@ const leaves = ['0xaa2eAbb245944168705e3Ad21C9D266131E296E7', '0xaaA0ea4E952C2a9
 const tree = new MerkleTree(leaves, keccak256)
 const root = tree.getRoot().toString('hex')
 const leaf = keccak256('0xaa2eAbb245944168705e3Ad21C9D266131E296E7')
-const proof = tree.getProof(leaf)
+const proof = tree.getHexProof(leaf)
 const rootHash = tree.getRoot().toString("hex");
 console.log(tree.verify(proof, leaf, rootHash)) // true
 ```
