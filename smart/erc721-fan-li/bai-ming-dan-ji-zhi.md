@@ -98,7 +98,12 @@ const address = '0xAddress1...'; // Address to generate proof for
 const leaf = keccak256(address);
 const proof = tree.getHexProof(leaf);
 
-console.log(proof); // This will be used in the smart contract for verification
+  const bytes32Proof = proof.map((node) => {
+    const buf = Buffer.from(node.data);
+    return "0x" + buf.toString("hex");
+  });
+
+console.log(bytes32Proof); // This will be used in the smart contract for verification
 ```
 
 contract&#x20;
