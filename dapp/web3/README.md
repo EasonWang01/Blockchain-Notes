@@ -10,6 +10,17 @@ Web3 與 Web2 的不同之處在於 "去中心化"，由分散且不同人運營
 
 用戶在與 Dapp 網頁互動的時候會於瀏覽器安裝 Metamask 擴充工具，其為一個區塊鏈錢包，用來存放代幣，並且於執行網頁互動時支付交易手續費。
 
+## 2024 更新
+
+> web3 v4.6.0
+
+初始化方式改為
+
+```javascript
+const { Web3 } = require("web3");
+const web3 = new Web3();
+```
+
 ## 2021 更新： Metamask connect to web3
 
 > web3 v1.3.4
