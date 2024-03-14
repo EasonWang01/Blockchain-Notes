@@ -4,11 +4,20 @@
 
 v1.0 有 API更改，以下以 v1.0 為主
 
+## 初始化 Web3.js
+
+> v4 版本需要用以下方式引入
+
+```javascript
+const { Web3 } = require("web3");
+const web3 = new Web3();
+```
+
 ## 初始化合約
 
 ```javascript
 if (window.ethereum) {
-  window.web3 = new Web3(window.ethereum);
+  window.web3 = new Web3(window.ethereum); // 參數內填入 provider
   window.ethereum.enable();
 }
 try {
