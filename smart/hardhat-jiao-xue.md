@@ -148,6 +148,61 @@ describe("USDC Balance Check", function () {
 });
 ```
 
+## 測試檔案內設置區塊時間
+
+```typescript
+const { ethers } = require("hardhat");
+
+// Fast forward time by 7 days for testing
+await ethers.provider.send("evm_increaseTime", [7 * 24 * 60 * 60]);
+await ethers.provider.send("evm_mine");
+```
+
+## 部署合約
+
+要先去 hardhat.config.ts 檔案設置網路設置
+
+```typescript
+import { HardhatUserConfig } from "hardhat/config";
+import "@nomicfoundation/hardhat-toolbox";
+require('dotenv').config()
+
+const config: HardhatUserConfig = {
+  solidity: "0.8.24",
+  networks: {
+    bevmTestnet: {
+      url: "<rpc url>",
+      accounts: [`${process.env.PRIVATE_KEY}`]
+    }
+  }
+};
+
+export default config;
+```
+
+部署腳本 scripts/deploy.ts
+
+```typescript
+import { ethers } from "hardhat";
+
+async function main() {
+  const EthStaker = await ethers.deployContract("EthStaker");
+
+  await EthStaker.waitForDeployment();
+
+  console.log(
+    `EthStaker deployed to ${EthStaker.target}`
+  );
+}
+
+// We recommend this pattern to be able to use async/await everywhere
+// and properly handle errors.
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});
+```
+
 ## Etherscan 驗證合約
 
 {% embed url="https://hardhat.org/plugins/nomiclabs-hardhat-etherscan.html" %}
