@@ -233,4 +233,16 @@ main().catch((error) => {
 
 2.Error HH12: Trying to use a non-local installation of Hardhat
 
-[https://stackoverflow.com/a/69973620/4622645](https://stackoverflow.com/a/69973620/4622645)
+{% embed url="https://stackoverflow.com/a/69973620/4622645" %}
+
+3.TypeError: unsupported addressable value (argument="target", value=null, code=INVALID\_ARGUMENT, version=6.11.1)
+
+v6 之後要用 .target 取代 .address
+
+```typescript
+SimplifiedNFT1155 = await ethers.getContractFactory("SimplifiedNFT1155");
+simplifiedNFT1155 = await SimplifiedNFT1155.deploy("baseURI/");
+
+NFTStaker = await ethers.getContractFactory("NFTStaker");
+nftStaker = await NFTStaker.deploy(simplifiedNFT1155.target);
+```
