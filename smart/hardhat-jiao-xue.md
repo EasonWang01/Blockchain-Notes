@@ -205,6 +205,12 @@ main().catch((error) => {
 
 ## Etherscan 驗證合約
 
+> 設置好 hardhat config 網路後輸入以下
+
+```
+npx hardhat verify --network sepolia <要驗證的合約地址> <建構子參數>
+```
+
 {% embed url="https://hardhat.org/plugins/nomiclabs-hardhat-etherscan.html" %}
 
 ## 測試單一檔案
