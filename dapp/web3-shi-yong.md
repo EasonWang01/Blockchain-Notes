@@ -502,7 +502,7 @@ const getUSDTTransfers = async () => {
 
 ## 注意事項
 
-使用 CRA 5 版本以上引入 web3 會出現 error
+1.使用 CRA 5 版本以上引入 web3 會出現 error
 
 [https://stackoverflow.com/questions/70472965/web3-issue-react-application-not-compiling/70512623#70512623](https://stackoverflow.com/questions/70472965/web3-issue-react-application-not-compiling/70512623#70512623)
 
@@ -513,3 +513,20 @@ npm uninstall react-scripts
 npm i react-scripts@4.0.3
 ```
 
+2.Metamask - "Params specify an EIP-1559 transaction but the current network does not support EIP-1559"
+
+有些網路還沒升級到 EIP1559後版本，所以 metamask 有時呼叫 function 後會出現此錯誤。
+
+解決方法:
+
+> add type: "0x1"
+
+```javascript
+const response = await contract.methods.stake().send({
+  from: userAddress,
+  value: web3.utils.toWei(stakeAmount, "ether").toString(),
+  type: "0x1",
+});
+```
+
+const response = await contract.methods.stake().send({ from: userAddress, value: web3.utils.toWei(stakeAmount, "ether").toString(), type: "0x1", // gas: "1000000", // gasPrice: "100000", });
