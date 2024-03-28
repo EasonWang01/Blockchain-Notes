@@ -529,4 +529,4 @@ const response = await contract.methods.stake().send({
 });
 ```
 
-const response = await contract.methods.stake().send({ from: userAddress, value: web3.utils.toWei(stakeAmount, "ether").toString(), type: "0x1", // gas: "1000000", // gasPrice: "100000", });
+[https://ethereum.stackexchange.com/a/119863](https://ethereum.stackexchange.com/a/119863)
