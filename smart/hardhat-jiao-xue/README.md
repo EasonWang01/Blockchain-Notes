@@ -170,9 +170,10 @@ require('dotenv').config()
 const config: HardhatUserConfig = {
   solidity: "0.8.24",
   networks: {
-    bevmTestnet: {
+    someTestnet: {
       url: "<rpc url>",
-      accounts: [`${process.env.PRIVATE_KEY}`]
+      accounts: [`${process.env.PRIVATE_KEY}`],
+      gasPrice: 160000000000, // 160 GWei (部署的 Gas Price)
     }
   }
 };
@@ -203,12 +204,31 @@ main().catch((error) => {
 });
 ```
 
-## Etherscan 驗證合約
-
-> 設置好 hardhat config 網路後輸入以下
+之後輸入
 
 ```
-npx hardhat verify --network sepolia <要驗證的合約地址> <建構子參數>
+npx hardhat run scripts/deploy.ts --network someTestnet
+```
+
+[https://github.com/wighawag/hardhat-deploy#hardhat-deploy-in-a-nutshell](https://github.com/wighawag/hardhat-deploy#hardhat-deploy-in-a-nutshell)
+
+## Etherscan 驗證合約
+
+設置hardhat config
+
+> 不同網路有不同的 api key
+
+```typescript
+etherscan: {
+  //apiKey: process.env.ETHERSCAN_API_KEY,
+  apiKey: process.env.POLYGONSCAN_API_KEY,
+},
+```
+
+之後輸入以下
+
+```
+npx hardhat verify --network <網路名稱> <要驗證的合約地址> <建構子參數>
 ```
 
 {% embed url="https://hardhat.org/plugins/nomiclabs-hardhat-etherscan.html" %}
@@ -218,12 +238,6 @@ npx hardhat verify --network sepolia <要驗證的合約地址> <建構子參數
 可使用：[https://hardhat.org/plugins/hardhat-watcher.html](https://hardhat.org/plugins/hardhat-watcher.html)
 
 會監聽檔案改變，自動跑測試，並且可在 config 寫要執行哪個檔案
-
-## Hardhat 部署到正式網或測試網
-
-可使用 hardhat deploy plugin
-
-[https://github.com/wighawag/hardhat-deploy#hardhat-deploy-in-a-nutshell](https://github.com/wighawag/hardhat-deploy#hardhat-deploy-in-a-nutshell)
 
 ## 相關連結
 
