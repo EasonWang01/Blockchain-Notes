@@ -43,3 +43,10 @@ it("Should unstake correctly after the unbonding period", async function () {
 await ethers.provider.send("evm_increaseTime", [7 * 24 * 60 * 60]);
 await ethers.provider.send("evm_mine");
 ```
+
+## Event 參數
+
+```typescript
+await expect(<Contract instance>.connect(addr1).cancelUnstake(tokenId)).to.emit(<Contract instance>, <Event name>)
+.withArgs(addr1.address, tokenId, 1);
+```
