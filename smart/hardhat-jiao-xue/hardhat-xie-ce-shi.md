@@ -46,7 +46,16 @@ await ethers.provider.send("evm_mine");
 
 ## Event 參數
 
+> 記得 await 放在 expect 前
+
 ```typescript
-await expect(<Contract instance>.connect(addr1).cancelUnstake(tokenId)).to.emit(<Contract instance>, <Event name>)
+await expect(<Contract instance>.connect(addr1).test(tokenId)).to.emit(<Contract instance>, <Event name>)
 .withArgs(addr1.address, tokenId, 1);
+```
+
+## 測試 Require
+
+```typescript
+await expect(<Contract instance>.connect(addr1).test(tokenId))
+.to.be.revertedWith(<require 後的第二個參數>);
 ```
