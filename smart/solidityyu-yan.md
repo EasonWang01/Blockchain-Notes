@@ -8,6 +8,10 @@ Solidity 語言為撰寫 Ethereum smart contract 智能合約的程式語言，�
 
 {% embed url="https://docs.soliditylang.org/en/v0.4.24/units-and-global-variables.html" %}
 
+## 合約變數儲存 Storage 原理
+
+[https://coinsbench.com/solidity-layout-and-access-of-storage-variables-simply-explained-1ce964d7c738](https://coinsbench.com/solidity-layout-and-access-of-storage-variables-simply-explained-1ce964d7c738)
+
 ## Cheatsheet 對照表
 
 [https://reference.auditless.com/cheatsheet/](https://reference.auditless.com/cheatsheet/)
