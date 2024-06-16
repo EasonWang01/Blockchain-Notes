@@ -7,6 +7,7 @@
   * [Bitcoin其他知識](bitcoin-jie-shao/bitcoinqi-ta-zhi-shi.md)
 * [Bitcoin原理與實作](chapter1.md)
 * [BitcoinJS](readme/README.md)
+  * [BTC 地址格式種類](readme/btc-di-zhi-ge-shi-zhong-lei.md)
   * [從 Mnemonic 轉為地址](readme/cong-mnemonic-zhuan-wei-di-zhi.md)
 * [Serverless 架構實作](serverless.md)
 * [Docker常用指令](docker.md)
