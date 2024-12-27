@@ -101,8 +101,53 @@ npx hardhat test --network localhost
 ## 使用 Mainnet fork 測試
 
 > 使用 mainnet 特定 block data 來測試合約
+>
+> [https://hardhat.org/hardhat-network/docs/guides/forking-other-networks](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks)
 
-例如以下獲取主網特定地址的 USDC 餘額
+設置 hardhat.config.js 即可
+
+```javascript
+require("@nomicfoundation/hardhat-toolbox");
+
+/** @type import('hardhat/config').HardhatUserConfig */
+module.exports = {
+  solidity: "0.8.28",
+  networks: {
+      hardhat: {
+          forking: {
+              url: "https://eth-mainnet.g.alchemy.com/v2/<API KEY>",
+          },
+      },
+  },
+};
+```
+
+之後可獲取當前主網地址餘額
+
+貼上以下檔案到 /test 後，輸入 \`npx hardhat test\`
+
+```javascript
+const { expect } = require("chai");
+const { ethers } = require("hardhat"); // Import ethers from Hardhat
+
+describe("Query Account Balance on Forked Mainnet", function () {
+    it("should fetch the balance of the specified account", async function () {
+        // Replace this with the address you want to query
+        const targetAddress = "...";
+
+        // Use ethers to get the balance
+        const balance = await ethers.provider.getBalance(targetAddress);
+
+        // Log the balance for debugging
+        console.log(`Balance of ${targetAddress}: ${balance} ETH`);
+
+        // Verify that the balance is returned as a BigNumber
+        expect(balance).to.be.a("BigInt");
+    });
+});
+```
+
+或是以下獲取主網特定地址的 USDC 餘額
 
 ```javascript
 const { ethers } = require("hardhat");
@@ -111,7 +156,7 @@ const { expect } = require("chai");
 describe("USDC Balance Check", function () {
   it("Should return the USDC balance of the address", async function () {
     const usdcAddress = "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"; // USDC Contract Address
-    const addressToCheck = "0x7713974908Be4BEd47172370115e8b1219F4A5f0"; // Address whose balance you want to check
+    const addressToCheck = "..."; // Address whose balance you want to check
 
     // USDC Contract ABI (Simplified; use the full ABI from Etherscan)
     const usdcAbi = ["function balanceOf(address owner) view returns (uint256)"];
